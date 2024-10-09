@@ -26,11 +26,20 @@ public class SecurityConfig {
     @Autowired
     private CustomJwtDecoder customJwtDecoder;
 
-    private final String[] PUBLIC = {
-        "/login/verify_code", "/login/refresh", "/login/token", "/login/logout", "/api/upload", "/identity/users"
+    private final String[] POST_PUBLIC = {
+            "/login/verify_code",
+            "/login/refresh",
+            "/login/token",
+            "/login/logout",
+            "/api/upload",
+            "/identity/users"
     };
 
-    private final String[] View_Public = {"/category", "/product", "/vnpay-payment", "/api/images/**"};
+    private final String[] VIEW_PUBLIC = {
+            "/category",
+            "/product/**",
+            "/vnpay-payment",
+            "/api/images/**"};
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
@@ -38,9 +47,9 @@ public class SecurityConfig {
                 .csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable())
                 .authorizeHttpRequests(request -> request.requestMatchers("/v3/api-docs/**", "/swagger-ui/**")
                         .permitAll()
-                        .requestMatchers(HttpMethod.GET, View_Public)
+                        .requestMatchers(HttpMethod.GET, VIEW_PUBLIC)
                         .permitAll()
-                        .requestMatchers(HttpMethod.POST, PUBLIC)
+                        .requestMatchers(HttpMethod.POST, POST_PUBLIC)
                         .permitAll()
                         .anyRequest()
                         .authenticated());
