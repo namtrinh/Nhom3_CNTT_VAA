@@ -13,3 +13,5 @@ B
 backend/.gitignore,7\e\7e16691a9fc60084a157565ec422c8094d3df67c
 s
 Cbackend/src/main/java/org/galaxy/backend/Config/SecurityConfig.java,8\1\812dc01953f0453ff775d88de53bf71d53811cb7
+C
+frontend/.gitignore,e\2\e23a63a9f05477a70f6e75d709dbb4eae2db742d
