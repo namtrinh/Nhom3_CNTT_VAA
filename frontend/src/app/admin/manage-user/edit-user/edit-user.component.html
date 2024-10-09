@@ -1,0 +1,49 @@
+<div class="container">
+    <form (ngSubmit)="OnSubmit()" enctype="multipart/form-data">
+
+        <!-- Avatar input -->
+        <div class="form-group text-center">
+            @if (imgAvatar) {
+            <img class="avt" [src]="imgAvatar" alt="Avatar Preview" style="max-width: 200px; max-height: 200px;">
+            }
+            <input class="selectavt" type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*"
+                style="width:20vw;display:flex;margin:0 auto;">
+        </div>
+
+        <!-- Rest of the form -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="text" class="form-control" id="password" name="password" [(ngModel)]="user.password">
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="roles">Roles</label>
+
+                    @if (roles) {
+                    <select class="form-control select-custom" [(ngModel)]="user.roles" name="roles" multiple>
+                        @for (roleItem of roles; track $index) {
+                        <option class="option-custom" [ngValue]="roleItem.name">{{roleItem.name}}</option>
+                        }
+                    </select>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            <button class="btn btn-success mt-2" type="submit">Update</button>
+        </div>
+    </form>
+</div>

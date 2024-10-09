@@ -1,0 +1,49 @@
+package org.galaxy.backend.ServiceImpl;
+
+import java.util.List;
+
+import jakarta.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import org.galaxy.backend.Model.Order;
+import org.galaxy.backend.Model.User;
+import org.galaxy.backend.Repository.OrderRepository;
+import org.galaxy.backend.Service.OrderService;
+
+@Service
+@Transactional
+public class InvoiceServiceImpl implements OrderService {
+    @Autowired
+    private OrderRepository orderRepository;
+
+    @Override
+    public List<Order> getByUser(User user) {
+        return orderRepository.findByUser(user);
+    }
+
+    @Override
+    public Page<Order> findAll(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return orderRepository.findAllSortedByTime(pageable);
+    }
+
+    @Override
+    public Order save(Order entity) {
+        return orderRepository.save(entity);
+    }
+
+    @Override
+    public Order findById(String integer) {
+        return orderRepository.findById(integer).orElseThrow(() -> new RuntimeException("Not found"));
+    }
+
+    @Override
+    public void deleteById(String integer) {
+        orderRepository.deleteById(integer);
+    }
+}

@@ -1,0 +1,37 @@
+package org.galaxy.backend.Repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import org.galaxy.backend.Model.Category;
+import org.galaxy.backend.Model.Product;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, String> {
+    boolean existsByName(String name);
+
+    List<Product> findProductByCategory(Category category);
+
+    List<Product> findByNameContainingIgnoreCase(String name);
+
+    @Query(
+            value =
+                    "select * from product join category on category.category_id = product.category_id where product.category_id =: category_id",
+            nativeQuery = true)
+    List<Product> findByCategory(@Param("category_id") Category category_id);
+
+    @Query(value = "select * from product where product.discount != 0", nativeQuery = true)
+    List<Product> getAllSale();
+
+    @Query(value = "select * from product where product.discount = 0", nativeQuery = true)
+    List<Product> getAllNoSale();
+
+    @Query(value = "select quantity from product where product.product_id =:id", nativeQuery = true)
+    Integer findAvailableQuantityById(String id);
+
+    Product getBySeotitle(String seotitle);
+}

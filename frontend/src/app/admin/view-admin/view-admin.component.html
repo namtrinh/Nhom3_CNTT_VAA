@@ -1,0 +1,134 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Admin</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto align-items-center" style="margin-left: auto;">
+
+            @if (inf) {
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/admin/user-details', inf.user_id]">
+                    <i class="fas fa-user-circle"><img [src]=""></i> {{ inf.username }}
+                </a>
+            </li>
+            }
+
+            <li class="nav-item">
+                <button class="btn btn-link nav-link logout" (click)="logout()">
+                    Logout <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="sidebar" style="width: 250px;">
+    <div class="container" style="padding:20px;">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/admin/dashboard']"><i class="fas fa-tachometer-alt"></i>
+                    Dashboard</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/admin/list-invoices']"><i
+                        class="fa-solid fa-file-invoice-dollar"></i>
+                    Invoice <i class="fa-solid fa-chevron-down" style="float: right;"></i> </a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#sibaruser">
+                    <i class="fas fa-th-list"></i> User
+                    <i class="fa-solid fa-chevron-down" style="float: right;"></i>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="sibaruser">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a class="nav-link" [routerLink]="['/admin/list-user']"><i
+                                    class="fa-solid fa-arrow-right"></i>
+                                <span class="sub-item">List user</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" [routerLink]="['/admin/create-user']"><i
+                                    class="fa-solid fa-arrow-right"></i>
+                                <span class="sub-item">Create user</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#sibarproduct">
+                    <i class="fa-solid fa-table-list"></i> Product
+                    <i class="fa-solid fa-chevron-down" style="float: right;"></i>
+                </a>
+                <div class="collapse" id="sibarproduct">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a class="nav-link" [routerLink]="['/admin/product']"><i
+                                    class="fa-solid fa-arrow-right"></i> List product</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" [routerLink]="['/admin/create-product']"><i
+                                    class="fa-solid fa-arrow-right"></i> Create product</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#sibarcategory">
+                    <i class="fa-solid fa-table-list"></i> Category
+                    <i class="fa-solid fa-chevron-down" style="float: right;"></i>
+                </a>
+                <div class="collapse" id="sibarcategory">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a class="nav-link" [routerLink]="['/admin/category']"><i
+                                    class="fa-solid fa-arrow-right"></i> List category</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" [routerLink]="['/admin/create-category']"><i
+                                    class="fa-solid fa-arrow-right"></i> Create category</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            @if (check_role) {
+            <div>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/admin/role']"> <i class="fas fa-th-list"></i> Role</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/admin/list-permission']"> <i class="fas fa-th-list"></i>
+                        Permission</a>
+                </li>
+            </div>
+            }
+
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-cog"></i> Settings</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="main-content">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+
+                    <router-outlet></router-outlet>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

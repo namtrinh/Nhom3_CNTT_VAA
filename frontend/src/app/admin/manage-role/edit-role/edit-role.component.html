@@ -1,0 +1,19 @@
+<div class="container">
+    <form #create_role="ngForm" (ngSubmit)="OnSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Enter role name"
+            #name="ngModel"
+            [(ngModel)]="roles.name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input class="form-control" type="text" id="description" name="description"
+                placeholder="Enter role description" [(ngModel)]="roles.description" required> 
+        </div>
+        <br>
+        <button type="submit" [disabled]="!create_role.valid" class="btn btn-primary">Submit</button>
+        
+    </form>
+</div>

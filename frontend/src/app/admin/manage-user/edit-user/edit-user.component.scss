@@ -1,0 +1,22 @@
+.selected-role {
+    font-weight: bold; /* Đậm chữ */
+    background-color: #e0e0e0; /* Màu nền nhẹ */
+    color: #000; /* Màu chữ */
+}
+
+.form-control{
+    border:rgb(212, 209, 209) solid 2px;
+}
+
+.avt{
+    border-radius: 100px;
+    height: 17vw;
+    width: 17vw;
+
+}
+.selectavt{
+    display:flex;
+    margin: 0 auto;
+    max-width: 20vw;
+    width: 20vw;
+}

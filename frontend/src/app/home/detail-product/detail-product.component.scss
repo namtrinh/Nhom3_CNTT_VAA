@@ -1,0 +1,33 @@
+/* Đặt container vào giữa và thêm khoảng cách trên */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nút xác nhận */
+.btn-confirm {
+  background-color: #28a745;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.btn-confirm:hover {
+  background-color: #218838;
+}
+
+.buttons_added {
+  opacity: 1;
+  display: inline-flex;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.offers {
+  
+  float: right;
+}
+

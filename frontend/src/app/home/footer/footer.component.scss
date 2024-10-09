@@ -1,0 +1,57 @@
+
+//FOOTER
+.footer {
+    margin-top:30px;
+    background-color: #edf0f4;
+    padding: 5vh 0;
+    color: #333;
+    font-size: 1.1vw;
+}
+
+.footer .container.foo {
+    width: 80vw;
+    height: 50vh;
+    border-radius: 15px;
+}
+
+.footer h4 {
+    color: #555;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 2vh;
+}
+
+.footer ul li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #007bff;
+}
+
+.footer .list-inline {
+    padding: 0;
+}
+
+.footer .list-inline-item {
+    margin: 0 1vw;
+}
+
+.footer .list-inline-item a {
+    color: #555;
+}
+
+.footer .list-inline-item a:hover {
+    color: #007bff;
+}
+
+.footer p {
+    margin-top: 2vh;
+}

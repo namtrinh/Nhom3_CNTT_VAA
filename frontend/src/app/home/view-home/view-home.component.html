@@ -1,0 +1,74 @@
+<div class="full">
+
+  <nav class="head">
+    <div class="icon">
+      <img src="/assets/logo.png" alt="icon" style="width:30px;height:30px;cursor: pointer;" [routerLink]="['/']">
+    </div>
+    <div class="search">
+      <label for="search">
+        <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
+        <input type="search" style="border:none;" placeholder="What do you need ?" style="outline:none">
+      </label>
+    </div>
+
+    <div class="cart" [routerLink]="['/cart']">
+
+      <i class="fa-solid fa-cart-shopping"> Cart</i>
+    </div>
+
+    <div class="profile">
+      @if (checktokenkey) {
+      <div>
+        @if (inf) {
+        <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="fa-regular fa-user"></i>
+          <p>{{inf.username}}</p>
+        </button>
+        }
+        <ul class="dropdown-menu">
+          @if (inf) {
+          <li><button class="dropdown-item" [routerLink]="['/myinf',inf.user_id]">My information</button>
+          </li>
+          }
+          <li><button class="dropdown-item " (click)="logout()">Logout</button></li>
+          <li><button class="dropdown-item" [routerLink]="['/admin']">Go to Admin</button></li>
+        </ul>
+      </div>
+      }@else {
+      <div>
+        <i class="fa-regular fa-user" [routerLink]="['/login']" style="cursor: pointer;font-weight: 900;">Login</i>
+      </div>
+      }
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div style="padding-top: 0;">
+      <img style="width: 100%; min-height: 25px;" src="/assets/topzone.webp" alt="Top Zone Image">
+    </div>
+
+
+    <div class="menu">
+      <button class="btn btn-light" [routerLink]="['/category',0]" (click)="showCategoryId(null)">
+        <i class="fa-solid fa-list-ul"></i> All
+      </button>
+      @for (menu of category; track category) {
+
+      <button [routerLink]="['/category',menu.category_id]" class="btn btn-light" (click)="showCategoryId(null)"><i
+          [class]="menu.icon"></i> {{menu.name}}</button>
+      }
+    </div>
+
+    @if (showProduct) {
+    <app-product-by-category></app-product-by-category>>
+    }
+    @if(!showProduct) {
+    <router-outlet></router-outlet>
+
+    }
+  </div>
+
+  <app-footer></app-footer>
+
+</div>

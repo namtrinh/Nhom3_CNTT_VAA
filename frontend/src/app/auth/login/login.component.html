@@ -1,0 +1,27 @@
+<div class="form">
+	<div class="container">
+
+		<form #loginform=ngForm (ngSubmit)="login()" class="p-4 border rounded bg-light">
+			<div class="form-group mb-3">
+				<h3 class="mb-4" style="justify-content:center;display:flex;">Login </h3>
+				<h5 for="email">Email</h5>
+				<input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+			</div>
+			<div class="form-group mb-3">
+				<h5 for="password">Password</h5>
+				<input type="password" class="form-control" id="password" name="password" [(ngModel)]="password"
+					required>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Login</button>
+			<br><br>
+			<a [routerLink]="['/registry']" style="color:rgb(14, 134, 239)">You don't have account ? Registry now !</a>
+			@if (loginError) {
+			<div class="alert alert-danger mt-3">
+				{{ loginError }}
+			</div>
+			}
+
+		</form>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<div class="registry">
+    <div class="container">
+        <form #createForm="ngForm" (ngSubmit)="OnSubmit()" 
+            class="p-4 border rounded bg-light">
+            <h3 class="mb-4">Registry </h3>
+
+            <div class="form-group mb-3">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="email" minlength="4" #email="ngModel" required
+                    placeholder="Enter email" [(ngModel)]="user.email">
+                @if (email.errors && (email.dirty || email.touched)) {
+                <div class="invalid-feedback d-block">
+                    <div [hidden]="!email.errors?.['required']">Email is required</div>
+                    <div [hidden]="!email.errors?.['minlength']">At least 4 characters</div>
+                </div>
+                }
+            </div>
+            
+            <div class="form-group mb-3">
+                <label for="exampleInputUsername">Username</label>
+                <input type="text" class="form-control" name="username" minlength="8" required #username="ngModel"
+                    placeholder="Enter username" [(ngModel)]="user.username">
+                @if (username.errors && (username.dirty || username.touched)) {
+                <div class="invalid-feedback d-block">
+                    <div [hidden]="!username.errors?.['required']">Username is required</div>
+                    <div [hidden]="!username.errors?.['minlength']">At least 8 characters</div>
+                </div>
+                }
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" required #password="ngModel"
+                    placeholder="Enter password" minlength="8" [(ngModel)]="user.password">
+                @if (password.errors && (password.dirty || password.touched)) {
+                <div class="invalid-feedback d-block">
+                    <div [hidden]="!password.errors?.['required']">Password is required</div>
+                    <div [hidden]="!password.errors?.['minlength']">At least 8 characters</div>
+                </div>
+                }
+            </div>
+
+            <button type="submit" [disabled]="!createForm.valid" class="btn btn-primary w-100">Submit</button>
+           
+        </form>
+    </div>
+</div>

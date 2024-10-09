@@ -1,0 +1,13 @@
+<div class="container">
+    <form #create_category="ngForm" (ngSubmit)="OnSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Enter category name" #name="ngModel" [(ngModel)]="category.name" required>
+        </div>
+            <br>
+        <button type="submit" [disabled]="!create_category.valid" class="btn btn-primary">Submit</button>
+    </form>
+@if (checkcategory) {
+    <p style="color:red">{{checkcategory}}</p>
+}
+</div>

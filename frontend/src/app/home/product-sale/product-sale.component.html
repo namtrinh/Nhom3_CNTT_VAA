@@ -1,0 +1,47 @@
+<div class="douple-img">
+    <div class="douple 1" style="margin-right:15px;">
+        <img src="/assets/douple-1.png">
+    </div>
+    <div class="douple 2">
+        <img src="/assets/douple-2.png">
+    </div>
+</div>
+
+<div class="product-container">
+    <div class="pr-sale-poster">
+        <img src="/assets/pr-sale-poster.png" atl="pr-sale-poster">
+    </div>
+
+    <div class="product">
+        @for (products of product; track product) {
+        <div class="product-inf" [routerLink]="['/detail-product',products.product_id]">
+            <div class="img">
+                <img class="img-product" [src]="imgAvatars[products.product_id]">
+            </div>
+            <div class="product-name">
+                <p>{{products.name}}</p>
+
+                <div class="product-price" style=" text-decoration: line-through;">
+                    {{products.price | number:'1.0-0' }}₫
+                </div>
+
+                <div class="product-discount" style="color:rgb(255, 255, 255);">
+                    <p class="pr-discount-value">
+                        -{{products.discount}}%</p>
+
+                    <img class="pr-discount-ico" src="/assets/label.png">
+                </div>
+
+                <div class="product-price-sales">
+                    {{products.price - products.price*products.discount/100 | number:'1.0-0' }}₫
+                </div>
+
+                <div class="img-sale">
+                    <img src="/assets/sale.png" class="blink" style="width:50px;">
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+    <app-product-extend></app-product-extend>

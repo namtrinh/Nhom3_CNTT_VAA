@@ -1,0 +1,20 @@
+.container {
+    max-width: 400px; /* Giới hạn chiều rộng */
+    margin: auto; /* Căn giữa */
+}
+
+.bg-light {
+    background-color: #f8f9fa !important; /* Màu nền sáng */
+}
+
+.border {
+    border: 1px solid #dee2e6; /* Đường viền nhẹ */
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.btn-block {
+    width: 100%; /* Nút đầy chiều rộng */
+}

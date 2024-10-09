@@ -1,0 +1,149 @@
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: auto;
+    padding-top: 10px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    position: relative;
+    background-color: #f5f5f5;
+    width: 100%;
+    box-shadow: 3px 3px 5px 0px #a5a4a4;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.icon {
+    position: absolute;
+    left: 1vw;
+}
+.search {
+    margin: 0 auto;
+    display: flex;
+    left: 30vw;
+    position: fixed;
+    z-index: 1;
+    border: none;
+}
+.search i {
+    color: #666363;
+    border: none;
+}
+
+.search input[type="search"] {
+    margin-left: 1vw;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    width: 35vw;
+    height: 30px;
+    padding-left: 1vw;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cart {
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    font-size: 20px;
+    right: 150px;
+}
+.cart i {
+    color: #666363;
+}
+.cart:hover {
+    cursor: pointer;
+}
+
+.profile {
+    position: absolute;
+    right: 1px;
+    font-size: 20px;
+    display: flex;
+    margin: 0 auto;
+    
+}
+
+.profile .btn.btn-primary.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    border: none;
+    font-size: 19px;
+    background-color: #f5f5f5;
+}
+
+.profile i {
+    color: #666363;
+    margin-right: 0.1vw; /* Khoảng cách giữa icon và text */
+}
+
+.profile p {
+    color: #666363;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top:10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.menu button {
+    flex: 1; /* Mỗi button chiếm hết không gian có sẵn */
+    margin-right: 2px; /* Để tạo khoảng cách giữa các button */
+    border-radius: 0%;
+    border-radius: 5px;
+    background-color: rgb(250, 245, 245);
+    border: none;
+    color: #504e4e;
+    font-weight: 550;
+}
+
+.menu button:last-child {
+    margin-right: 0; 
+}
+.menu button:hover {
+    background-color: #e4dcdc;
+    border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        overflow-x: auto; 
+        white-space: nowrap; 
+        gap: 2px;
+      }
+      
+      .menu button {
+        flex: 0 0 auto; 
+        width: 80px; 
+        height: 40px; 
+        font-size: 14px;
+        padding: 8px;
+        background-color: white;
+      }
+      
+      .menu::-webkit-scrollbar {
+        display: none; /* Ẩn thanh cuộn ngang */
+      }
+      
+  }
+
+@media only screen and (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+
+}
+
+  

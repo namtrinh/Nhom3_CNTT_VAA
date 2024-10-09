@@ -1,0 +1,26 @@
+<div class="container">
+
+  <table class="table table-striped table">
+
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Edit</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      @for ( users of users; track user) {
+      <tr>
+        <td> {{users.email}}</td>
+        <td> {{users.username}}</td>
+        <td><button class="btn btn-info" data-bs-dismiss="modal" [routerLink]="['/admin/edit-user',users.user_id]"><i
+              class="fa-regular fa-pen-to-square"></i></button> </td>
+      </tr>
+      }
+    </tbody>
+
+  </table>
+</div>

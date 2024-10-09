@@ -1,0 +1,18 @@
+<div class="container">
+    <form #create_product="ngForm" (ngSubmit)="OnSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Enter product name" #name="ngModel" [(ngModel)]="product.name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input class="form-control" type="text" id="description" name="description" placeholder="" #description="ngModel" [(ngModel)]="product.description" required>
+        </div>
+            <br>
+        <button type="submit" [disabled]="!create_product.valid" class="btn btn-primary">Submit</button>
+    </form>
+@if (checkproduct) {
+    <p style="color:red">{{checkproduct}}</p>
+}
+</div>
