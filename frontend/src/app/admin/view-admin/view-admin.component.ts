@@ -28,13 +28,11 @@ export class ViewAdminComponent {
   public date = Date.now();
 
   logout() {
-    window.confirm.arguments
-    if (window.confirm("Are you sure you want to logout ?")) {
-      const token = localStorage.getItem('auth_token');
-      this.auth.logout(token).subscribe(
-        response => {
-          console.log('Logout successful');
-        });
+    if (window.confirm("Are you sure want to logout ?")) {
+      const token = localStorage.getItem("auth_token");
+      this.auth.logout(token).subscribe((data: any) => {
+        localStorage.removeItem('auth_token');
+      })
     }
   }
 

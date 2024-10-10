@@ -1,19 +1,16 @@
 <div class="container">
-  <h1 class="title">{{category_name}}</h1>
+  <h1 class="title">{{ category_name }}</h1>
   <div class="listproduct listproduct-block">
     @for (product of product; track product) {
       <div class="item" [routerLink]="['/detail-product',product.seotitle]">
         <div class="item-img">
-          <img class="lazyload thumb" [src]="imgAvatars[product.product_id]"
-               alt="Samsung Galaxy Watch7 LTE 40mm;y silicone">
+          <img  [src]="imgAvatars[product.product_id]">
         </div>
-        <h3>{{product.name}}</h3>
-        <strong class="price">{{product.price - product.price * product.discount/100 | number:'1.0-0' }}₫ </strong>
+        <h3 class="product_name">
+          {{product.name}}
+        </h3>
 
-        <div class="box-p">
-          <p class="price-old black">{{product.price}} &#x20AB;</p>
-          <span class="percent">-{{product.discount}}%</span>
-        </div>
+        <strong class="price">{{product.price | number:'1.0-0' }}₫ </strong>
 
         <div class="vote-txt">
           <i class="iconnewglobal-vote"></i>
@@ -24,3 +21,4 @@
     }
   </div>
 </div>
+

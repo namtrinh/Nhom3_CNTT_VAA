@@ -93,3 +93,13 @@ T
 $frontend/src/app/model/user.model.ts,7\8\78807eb32019f4642f0b7f311fd8ff9dadad0959
 h
 8backend/src/main/java/org/galaxy/backend/Model/User.java,4\a\4ae421ff0b74ae885e0fc875324b4ea0366e853f
+^
+.frontend/src/app/confirm-dialog.component.html,1\5\15f29e72843429b18c25b711c0f1b397b8a1758a
+h
+8frontend/src/app/home/view-home/view-home.component.html,9\d\9d4c11135b921cf65e00a1e54470494c51c71375
+k
+;frontend/src/app/admin/view-admin/view-admin.component.html,6\8\68c18f451e2484be66004e02fd9e5bec6d33e0cc
+i
+9frontend/src/app/admin/view-admin/view-admin.component.ts,a\c\acd13c4501f0ac94dbe183aca0f79da1d3627d93
+f
+6frontend/src/app/home/view-home/view-home.component.ts,7\7\779d79cfe5effa4b2336d881a8d74275ea4e1a45

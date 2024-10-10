@@ -1,0 +1,8 @@
+
+Ftypescript:S1128"*Remove this unused import of 'ElementRef'.(Ÿ¦ÕÕ
+Rtypescript:S1128"6Remove this unused import of '\u0629queueStateUpdate'.(Ÿ¦ÕÕ
+Htypescript:S1128",Remove this unused import of 'CommonModule'.( ºû‹
+Ntypescript:S1128"-Remove this unused import of 'BrowserModule'.(‚†éøÿÿÿÿ
+]typescript:S20045"ARefactor this code to not nest functions more than 4 levels deep.(´Ñáì
+|typescript:S3923M"[Remove this conditional structure or edit its code blocks so that they're not all the same.(¡¼¯‚úÿÿÿÿ
+htypescript:S1871R"LThis branch's code block is the same as the block for the branch on line 77.(å¥‡
