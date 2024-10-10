@@ -3,7 +3,7 @@
     <h1 class="title">More Products...</h1>
     <div class="listproduct listproduct-block">
         @for (product of products; track products) {
-        <div class="item" [routerLink]="['/detail-product',product.product_id]">
+        <div class="item" [routerLink]="['/detail-product',product.seotitle]">
             <div class="item-img">
                 <img class="lazyload thumb" [src]="imgAvatars[product.product_id]"
                     alt="Samsung Galaxy Watch7 LTE 40mm;y silicone">

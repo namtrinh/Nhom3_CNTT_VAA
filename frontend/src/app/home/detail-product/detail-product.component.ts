@@ -22,7 +22,7 @@ export class DetailProductComponent implements OnInit {
   quantity: number = 1;
   inf!: string;
   totalprice!: number;
-  id!: number;
+  seo!: string;
   product: Product = new Product();
   showQuantitySelection = false;
   imgAvatars: { [key: string]: string } = {};
@@ -40,12 +40,12 @@ export class DetailProductComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-    this.getById();
+    this.getBySeotitle();
   }
 
-  getById() {
-    this.id = this.Activeroute.snapshot.params['product_id'];
-    this.productService.getById(this.id).subscribe((data: any) => {
+  getBySeotitle() {
+    this.seo = this.Activeroute.snapshot.params['seotitle'];
+    this.productService.getBySeoTitle(this.seo).subscribe((data: any) => {
       this.product = data.result;
       if (this.product && this.product.product_id) {
         this.getImageFromService(this.product.image, this.product.product_id);
@@ -89,7 +89,7 @@ export class DetailProductComponent implements OnInit {
     this.totalprice = this.product.price * this.quantity;
     this.inf = this.product.name;
     this.vnPayService.submitOrder(this.totalprice, this.inf).subscribe(vnpayUrl => {
-      localStorage.setItem('productId', this.id.toString());
+    //  localStorage.setItem('productId', this.id.toString());
       window.location.href = vnpayUrl.vnpayUrl;
     }, (error: any) => {
       console.log(error);

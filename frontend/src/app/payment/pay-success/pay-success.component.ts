@@ -58,6 +58,7 @@ export class PaySuccessComponent implements OnInit {
     const newProduct: Product = {
       product_id: this.productID,
       name: '',
+      seotitle:'',
       image: '',
       quantity: 0,
       price: 0,

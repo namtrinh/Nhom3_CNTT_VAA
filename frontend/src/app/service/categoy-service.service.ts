@@ -1,34 +1,41 @@
-import { HttpClient } from "@angular/common/http";
-import { Inject, Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { Category } from "../model/category.model";
+import {HttpClient} from "@angular/common/http";
+import {Inject, Injectable} from "@angular/core";
+import {Observable} from "rxjs";
+import {Category} from "../model/category.model";
+
 @Injectable({
-    providedIn: 'root'
-  })
-  
-export class CategoryService{
+  providedIn: 'root'
+})
 
-    private baseUrl = "http://localhost:8888/identity/category";
-    constructor(private http:HttpClient){}
+export class CategoryService {
 
-    getAll():Observable<Category[]>{
-        return this.http.get<Category[]>(`${this.baseUrl}`)
-    }
+  private baseUrl = "http://localhost:8888/identity/category";
 
-    getById(category_id:number):Observable<Category>{
-        return this.http.get<Category>(`${this.baseUrl}/${category_id}`)
-    }
+  constructor(private http: HttpClient) {
+  }
 
-    createCategory(category:Category):Observable<Object>{
-        return this.http.post(`${this.baseUrl}`,category)
-    }
+  getAll(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.baseUrl}`)
+  }
 
-    editCategory(category_id:number,category:Category):Observable<Object>{
-        return this.http.put(`${this.baseUrl}/${category_id}`,category)
-    }
+  getById(category_id: number): Observable<Category> {
+    return this.http.get<Category>(`${this.baseUrl}/${category_id}`)
+  }
 
-    deleteCategory(category_id:number):Observable<Object>{
-        return this.http.delete(`${this.baseUrl}/${category_id}`)
-    }
+  getBySeoTitle(seotitle: string): Observable<Category> {
+    return this.http.get<Category>(`${this.baseUrl}/${seotitle}`)
+  }
+
+  createCategory(category: Category): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, category)
+  }
+
+  editCategory(category_id: number, category: Category): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${category_id}`, category)
+  }
+
+  deleteCategory(category_id: number): Observable<Object> {
+    return this.http.delete(`${this.baseUrl}/${category_id}`)
+  }
 
 }

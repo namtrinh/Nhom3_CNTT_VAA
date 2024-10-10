@@ -53,9 +53,9 @@ export const routes: Routes = [
   {
     path: '', component: ViewHomeComponent, children: [
       { path: '', component: ProductSaleComponent },
-      
+
       { path: 'b', component: ProductExtendComponent },
-      { path: 'detail-product/:product_id', component: DetailProductComponent },
+      { path: 'detail-product/:seotitle', component: DetailProductComponent },
       { path: 'myinf/:user_id', component: MyInfComponent },
       { path: 'edit_my_inf/:user_id', component: EditMyInfComponent },
       { path: 'cart', component: CartComponent },
@@ -93,7 +93,7 @@ export const routes: Routes = [
           { path: 'get-user-byrole:/:name', component: ListUserByroleComponent },
         ]
       },
-      //Permission 
+      //Permission
       { path: 'list-permission', component: ListPermissionComponent },
       // Home admin
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthService], data: { role: 1 } },

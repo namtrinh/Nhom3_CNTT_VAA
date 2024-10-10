@@ -14,7 +14,7 @@
 
     <div class="product">
         @for (products of product; track product) {
-        <div class="product-inf" [routerLink]="['/detail-product',products.product_id]">
+        <div class="product-inf" [routerLink]="['/detail-product',products.seotitle]">
             <div class="img">
                 <img class="img-product" [src]="imgAvatars[products.product_id]">
             </div>
