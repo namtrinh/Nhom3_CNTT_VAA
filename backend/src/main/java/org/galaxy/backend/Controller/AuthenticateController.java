@@ -112,17 +112,25 @@ public class AuthenticateController {
     }
 
     @PostMapping("/reset/reset-password")
-    public ResponseEntity<String> resetPassword(@RequestParam("reset_key") String reset_key,
-                                                @RequestParam("email") String email,
-                                                @RequestParam("newPassword") String newPassword) {
+    public ApiResponse<String> resetPassword(@RequestParam("reset_key") String reset_key,
+                                             @RequestParam("email") String email,
+                                             @RequestParam("newPassword") String newPassword) {
         String cachedResetKey = resetPasswordService.getResetKey(email);
 
         if (cachedResetKey == null || !cachedResetKey.equals(reset_key)) {
-            return ResponseEntity.badRequest().body("reset_key không hợp lệ hoặc đã hết hạn.");
+            return ApiResponse.<String>builder()
+                    .code(200)
+                    .message("reset_key is invalid or expired.")
+                    .result("false")
+                    .build();
         }
         userService.updatePassByEmail(email, newPassword);
         resetPasswordService.removeResetKey(email);
-        return ResponseEntity.ok("Mật khẩu đã được thay đổi thành công.");
+        return ApiResponse.<String>builder()
+                .code(200)
+                .message("Password has been updated successfully")
+                .result("true")
+                .build();
     }
 }
 

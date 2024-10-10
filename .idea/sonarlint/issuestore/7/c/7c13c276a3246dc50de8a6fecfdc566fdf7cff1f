@@ -1,14 +1,16 @@
 
-“	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ŞàÀ8÷“¼§2J$f93b3455-f01d-4678-b801-9e4ba1de1e9a
-“	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Úçè8÷“¼§2J$3d7d03e2-8586-4b90-aa5a-4b9694e3d889
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8¡¶¡»§2J$86c80443-b1c9-4515-bbee-df7bc08b8a18
+“	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ŞàÀ8¹‹»½§2J$5d0609df-4b3b-4b7f-a99c-30890945b870
+“	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¯Ş¹8º‹»½§2J$0b04a0bf-269a-409f-b648-19d4217d3169
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8º‹»½§2J$bc8fe16c-25d2-47e0-ab69-86859df9051f
 …
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8¨¶¡»§2J$e7bcce61-776b-4fce-9f79-cb78d5950861
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8¾‹»½§2J$bed07cbc-1893-4a97-b89d-f90e8c93f80d
 …
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8¦÷“¼§2J$f217e79c-6979-42fd-a3a8-26d244743b2a
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8¾‹»½§2J$d9f4bb25-70e1-464b-ae38-1b3eeb86da6f
 …
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8¦÷“¼§2J$611f40a0-3818-4072-8489-4c090390fb35
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8¾‹»½§2J$821c0656-5a29-47c9-b255-942dcba4ed7a
 …
-java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8§÷“¼§2J$8297b703-f571-46da-a2be-349656ccb9ad
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8¾‹»½§2J$08fea3ff-9a11-4801-8345-7ec898e097be
 ‘
-java:S1128"IRemove this unused import 'org.galaxy.backend.Repository.UserRepository'.(¯½ëµûÿÿÿÿ8£’û¼§2J$d007f1c4-9020-44d5-9a62-ab7c157130fc
+java:S1128"IRemove this unused import 'org.galaxy.backend.Repository.UserRepository'.(¯½ëµûÿÿÿÿ8üÊ¼½§2J$1fecd676-fc46-4f4c-8af8-b55f983a0af2
+Œ
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8üÊ¼½§2J$5b020269-ac36-4259-ade2-92ebe5f2b006
