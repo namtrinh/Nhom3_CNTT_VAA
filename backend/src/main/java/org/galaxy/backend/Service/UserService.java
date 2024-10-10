@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.galaxy.backend.Model.Permission.Roles;
+import org.galaxy.backend.Model.User;
 import org.galaxy.backend.ModelDTO.request.UsersRequest;
 import org.galaxy.backend.ModelDTO.response.UsersResponse;
 
@@ -22,4 +23,8 @@ public interface UserService {
     UsersResponse getInf();
 
     List<UsersResponse> findAllByRole(Set<Roles> role);
+
+    UsersResponse getUserByEmail(String email);
+
+    UsersResponse updatePassByEmail(String email, String password);
 }

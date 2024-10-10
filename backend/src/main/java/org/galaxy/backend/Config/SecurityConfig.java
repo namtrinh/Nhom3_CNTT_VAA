@@ -32,6 +32,7 @@ public class SecurityConfig {
             "/login/refresh",
             "/login",
             "/login/logout",
+            "/login/reset/**",
             "/api/upload",
             "/identity/users"
     };

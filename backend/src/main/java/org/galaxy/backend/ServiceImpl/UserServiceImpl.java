@@ -101,4 +101,19 @@ public class UserServiceImpl implements UserService {
         var users = userRepository.findAllByRoles(role);
         return users.stream().map(usersMapper::toUsers).collect(Collectors.toList());
     }
+
+    public UsersResponse getUserByEmail(String email){
+        return usersMapper.toUsers(userRepository.findUsersByEmail(email));
+    }
+
+    public UsersResponse updatePassByEmail(String email, String password){
+        if (!userRepository.existsByEmail(email)){
+            throw new RuntimeException("User not found");
+        }
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        user.setPassword(encoder.encode(password));
+        return usersMapper.toUsers(userRepository.save(user));
+    }
 }

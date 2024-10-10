@@ -9,7 +9,12 @@ import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.ModelDTO.response.AuthenticateResponse;
 import org.galaxy.backend.ModelDTO.response.CheckTokenResponse;
 import org.galaxy.backend.ModelDTO.response.LoginResponse;
+import org.galaxy.backend.Repository.UserRepository;
+import org.galaxy.backend.Service.ResetPasswordService;
+import org.galaxy.backend.Service.UserService;
+import org.galaxy.backend.Service.VerifyUser.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import org.galaxy.backend.ModelDTO.request.LogoutRequest;
@@ -18,12 +23,22 @@ import com.nimbusds.jose.JOSEException;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/login")
 @RequiredArgsConstructor
 public class AuthenticateController {
     @Autowired
     private AuthenticateService authenticateService;
+    @Autowired
+    private ResetPasswordService resetPasswordService;
+
+    @Autowired
+    private EmailService emailService;
+
+    @Autowired
+    private UserService userService;
 
     @PostMapping()
     public ApiResponse<LoginResponse> authenticate(@RequestBody AuthenticateRequest authenticateRequest) {
@@ -71,4 +86,43 @@ public class AuthenticateController {
                 .result(response)
                 .build();
     }
+
+    @PostMapping("/reset/forgot-password")
+    public ApiResponse<String> forgotPassword(@RequestParam("email") String email) {
+        var user = userService.getUserByEmail(email);
+        if (user == null) {
+            return ApiResponse.<String>builder()
+                    .code(404)
+                    .message("Couldn't find this email address")
+                    .result("false")
+                    .build();
+        }
+        String reset_key = UUID.randomUUID().toString();
+        resetPasswordService.storeResetKey(email, reset_key);
+
+        String resetLink = "http://localhost:4200/reset-password?reset_key=" + reset_key;
+        emailService.sendCodeToMail(email, "Reset your password", "Click this url to reset password: " + resetLink);
+
+        return ApiResponse.<String>builder()
+                .code(200)
+                .message("One url has been sent to your email")
+                .result("true")
+                .build();
+
+    }
+
+    @PostMapping("/reset/reset-password")
+    public ResponseEntity<String> resetPassword(@RequestParam("reset_key") String reset_key,
+                                                @RequestParam("email") String email,
+                                                @RequestParam("newPassword") String newPassword) {
+        String cachedResetKey = resetPasswordService.getResetKey(email);
+
+        if (cachedResetKey == null || !cachedResetKey.equals(reset_key)) {
+            return ResponseEntity.badRequest().body("reset_key không hợp lệ hoặc đã hết hạn.");
+        }
+        userService.updatePassByEmail(email, newPassword);
+        resetPasswordService.removeResetKey(email);
+        return ResponseEntity.ok("Mật khẩu đã được thay đổi thành công.");
+    }
 }
+

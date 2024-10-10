@@ -12,7 +12,7 @@ public class EmailService {
 
     public void sendCodeToMail(String to, String subject, String verificationCode) {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-
+        simpleMailMessage.setFrom("Firefly Galaxy <cunnconn01@gmail.com>");
         simpleMailMessage.setTo(to);
         simpleMailMessage.setSubject(subject); // Thiết lập tiêu đề email
         simpleMailMessage.setText(verificationCode); // Thiết lập nội dung email

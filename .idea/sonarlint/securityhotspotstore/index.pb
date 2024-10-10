@@ -103,3 +103,17 @@ i
 9frontend/src/app/admin/view-admin/view-admin.component.ts,a\c\acd13c4501f0ac94dbe183aca0f79da1d3627d93
 f
 6frontend/src/app/home/view-home/view-home.component.ts,7\7\779d79cfe5effa4b2336d881a8d74275ea4e1a45
+z
+Jbackend/src/main/java/org/galaxy/backend/Service/ResetPasswordService.java,5\0\5045ff67c96cbcd297c363bc3ef6a95fd3ad80b5
+s
+Cbackend/src/main/java/org/galaxy/backend/Service/EmailService1.java,e\3\e3e2639e79c71be8ef53d2433ae1bb9142ade5d6
+}
+Mbackend/src/main/java/org/galaxy/backend/Service/VerifyUser/EmailService.java,6\d\6d61a9baa3176320a987ea19e88cdc08389bb546
+w
+Gbackend/src/main/java/org/galaxy/backend/Repository/UserRepository.java,8\c\8cf6917d4d7c6d33c0480555280c604d745f2b3f
+q
+Abackend/src/main/java/org/galaxy/backend/Service/UserService.java,0\b\0be665c966ed3298a2d8a32e5541c263ff91930e
+y
+Ibackend/src/main/java/org/galaxy/backend/ServiceImpl/UserServiceImpl.java,8\8\88decd79ca510ff00905db60d472e1e5aac0abaa
+r
+Bbackend/src/main/java/org/galaxy/backend/Service/VNPayService.java,1\5\155e85455164cbf00117c7fec3f83dda94e2062e
