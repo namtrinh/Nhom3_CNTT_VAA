@@ -1,222 +1,220 @@
 .product-container {
-    padding-top:15px;
-    overflow: hidden;
+  padding-top: 15px;
+  overflow: hidden;
 }
+
 .pr-sale-poster {
-    width: 100%;
-    height: 100%;
-    position: relative; /* Để quản lý vị trí của các phần tử con */
+  width: 100%;
+  height: 100%;
+  position: relative; /* Để quản lý vị trí của các phần tử con */
 }
 
 .pr-sale-poster img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    animation: zoom 1.5s infinite;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  animation: zoom 1.5s infinite;
 }
 
 @keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .product {
-    padding: 15px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    padding-top: 15px;
-    background-color: #fed11d;
-    height: auto;
-    position: relative;
-    box-sizing: border-box;
-    border-radius: 0 0 10px 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding-top: 15px;
+  background-color: rgb(241, 237, 237);
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
 }
 
 .product-inf {
-    background-color: rgb(255, 255, 255);
-    height: 338px;
-    position: relative;
-    border-radius: 10px;
-    border: 1px solid white;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    min-height:370px;
+  background-color: rgb(255, 255, 255);
+  height: 338px;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  min-height: 370px;
 }
 
 .product-inf:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.product-inf img.img-product {
-    max-width: 100%;
-    max-height: 100%;
-    width: 154px;
-    height: 188px;
-    display: block;
-    margin: auto;
-    position: absolute;
-    bottom: 142px;
-    left: 0;
-    right: 0;
-    border-radius: 10px;
+.product_img {
+  justify-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  padding-top: 10px;
+}
+
+.product_img img {
+  height: auto;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+  width: 170px;
 }
 
 .pr-discount-value {
-    left: 13px;
-    top: 15px;
-    z-index: 2;
-    color: rgb(255, 255, 255);
-    position: absolute;
+  left: 13px;
+  top: 15px;
+  z-index: 2;
+  color: rgb(255, 255, 255);
+  position: absolute;
 }
+
 @keyframes pr-discount-value {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 p.pr-discount-value {
-    animation: pr-discount-value 1s infinite;
+  animation: pr-discount-value 1s infinite;
 }
 
 .pr-discount-ico {
-    left: -16px;
-    top: 0px;
-    width: 100px;
-    height: 50px;
-    z-index: 1;
-    position: absolute;
+  left: -16px;
+  top: 0px;
+  width: 100px;
+  height: 50px;
+  z-index: 1;
+  position: absolute;
 }
-.product-name {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 230px;
-    font-size: 18px;
-    display: block;
-    font-weight: bold;
+
+.product_name {
+  padding-top: 10px;
+  font-size: 17px;
+  text-align: center;
+  color: #333;
+  height: 48px;
+  font-weight: 500;
 }
 
 .product-price {
-    font-size: 20px;
-    position: absolute;
-    bottom: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: black;
-    font-weight: bold;
+  font-size: 19px;
+  top: 10px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 
-.product-price-sales {
-    text-align: left;
-    position: absolute;
-    font-size: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 30px;
-    color: red;
-    font-weight: 550;
-}
+
 .img-sale {
-    max-width: 10px;
-    width: 10px;
-    bottom: -32px;
-    position: absolute;
-    transform: translate(-5px, -55px);
+  max-width: 10px;
+  width: 10px;
+  bottom: -32px;
+  position: absolute;
+  transform: translate(-5px, -55px);
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .img-sale img.blink {
-    animation: blink 1s infinite;
+  animation: blink 1s infinite;
 }
 
 .douple-img {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-    margin-bottom: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  margin-bottom: 0;
 }
+
 .douple {
-    border-radius: 10px;
-    overflow: hidden;
-    width: 60%;
-    height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 60%;
+  height: 200px;
 }
 
 .douple img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .douple img:hover {
-    animation: zoom 1s infinite;
+  animation: zoom 1s infinite;
 }
+
 @keyframes douple-img {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .arrow-left {
-    left: 0px;
-    position: relative;
-    top: 320px;
-    z-index: 1;
+  left: 0px;
+  position: relative;
+  top: 320px;
+  z-index: 1;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
-    .product-inf {
-        flex-shrink: 0;
-        min-width: 150px;
-        min-height: 150px;
-        transition: transform 0.3s ease;
-        width: calc(100%);
-    }
-    .product {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        overflow-x: auto;
-        gap: 10px;
-    }
+  .product-inf {
+    flex-shrink: 0;
+    min-width: 150px;
+    min-height: 150px;
+    transition: transform 0.3s ease;
+    width: calc(100%);
+  }
+  .product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: auto;
+    gap: 10px;
+  }
 
-    .douple {
-        min-width: 150px;
-        max-height: 130px;
-    }
+  .douple {
+    min-width: 150px;
+    max-height: 130px;
+  }
 }

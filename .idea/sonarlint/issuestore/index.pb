@@ -87,3 +87,9 @@ l
 <frontend/src/app/home/product-sale/product-sale.component.ts,1\5\158c0f04ad1cc94801a178f40066eaa43c1cb47d
 n
 >frontend/src/app/home/product-sale/product-sale.component.scss,1\5\15334686451b0fee37a272787cc018cafc806f2c
+Q
+!frontend/src/app/model/userdto.ts,c\0\c0e5ab599969a940541e7b4175a8e0d3d31aafa9
+T
+$frontend/src/app/model/user.model.ts,7\8\78807eb32019f4642f0b7f311fd8ff9dadad0959
+h
+8backend/src/main/java/org/galaxy/backend/Model/User.java,4\a\4ae421ff0b74ae885e0fc875324b4ea0366e853f

@@ -3,6 +3,7 @@ package org.galaxy.backend.Model;
 import java.sql.Timestamp;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import org.galaxy.backend.Model.Permission.Roles;
@@ -40,6 +41,7 @@ public class User {
     private Timestamp time_created;
 
     @ManyToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(name = "users_user_id"),
