@@ -1,38 +1,26 @@
-<div class="product">
-    @for (products of product; track product) {
-    <div class="product-inf" [routerLink]="['/detail-product',products.product_id]">
-        <div class="img">
-            <img class="img-product" [src]="imgAvatars[products.product_id]">
+<div class="container">
+  <h1 class="title">{{category_name}}</h1>
+  <div class="listproduct listproduct-block">
+    @for (product of product; track product) {
+      <div class="item" [routerLink]="['/detail-product',product.seotitle]">
+        <div class="item-img">
+          <img class="lazyload thumb" [src]="imgAvatars[product.product_id]"
+               alt="Samsung Galaxy Watch7 LTE 40mm;y silicone">
         </div>
-        <div class="product-name">
-            <p>{{products.name}}</p>
+        <h3>{{product.name}}</h3>
+        <strong class="price">{{product.price - product.price * product.discount/100 | number:'1.0-0' }}₫ </strong>
+
+        <div class="box-p">
+          <p class="price-old black">{{product.price}} &#x20AB;</p>
+          <span class="percent">-{{product.discount}}%</span>
         </div>
 
-        @if (products.discount === 0 || products.discount === null) {
-        <div class="product-price" style="color:red">
-            {{products.price | currency:'VND':'symbol':'1.0-0'}}
+        <div class="vote-txt">
+          <i class="iconnewglobal-vote"></i>
+          <b>4.3</b>
+          (3)
         </div>
-
-        }@else{
-
-        <div class="product-price" style=" text-decoration: line-through;">
-            {{products.price | currency:'VND':'symbol':'1.0-0'}}
-        </div>
-        <div class="product-discount" style="color:rgb(255, 255, 255);">
-            <p class="pr-discount-value">
-                -{{products.discount}}%</p>
-
-            <img class="pr-discount-ico" src="/assets/label.png">
-        </div>
-
-        <div class="product-price-sales">
-            {{products.price - products.price*products.discount/100 | currency:'VND':'symbol':'1.0-0' }}
-        </div>
-        <div class="img-sale">
-            <img src="/assets/sale.png" class="blink" style="width:50px;">
-        </div>
-        }
-
-    </div>
+      </div>
     }
+  </div>
 </div>

@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Product } from '../../model/product.model';
-import { Category } from '../../model/category.model';
-import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { ProductService } from '../../service/product-service.service';
-import { ImageService } from '../../service/img-service.service';
+import {Component, OnInit} from '@angular/core';
+import {Product} from '../../model/product.model';
+import {Category} from '../../model/category.model';
+import {FormsModule} from '@angular/forms';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {ProductService} from '../../service/product-service.service';
+import {ImageService} from '../../service/img-service.service';
+import {CategoryService} from "../../service/categoy-service.service";
 
 @Component({
   selector: 'app-product-by-category',
@@ -17,22 +18,37 @@ import { ImageService } from '../../service/img-service.service';
 export class ProductByCategoryComponent implements OnInit {
   products: any;
   product!: Product[];
-  category: Category[] = [];
   imgAvatars: { [key: string]: string } = {};
   category_id!: number;
-  constructor(private router: Router, private productService: ProductService,
-    private imgService: ImageService, private active: ActivatedRoute) { }
+  category:Category = new Category()
+  category_name !: string
+
+  constructor(private router: Router,
+              private productService: ProductService,
+              private imgService: ImageService,
+              private active: ActivatedRoute,
+              private categoryService: CategoryService) {
+  }
 
   ngOnInit(): void {
-    // Only load data if it hasn't been loaded yet
+
     this.active.paramMap.subscribe((params) => {
       const categoryId = Number(params.get('category_id'));
       this.category_id = categoryId;
-      console.log('Category ID:', this.category_id);
+      this.getNameCategory(categoryId)
       this.getAllProduct(this.category_id);
-      // Set the flag to true after loading data
     });
   }
+
+  getNameCategory(category_id:number) {
+    this.categoryService.getById(category_id).subscribe((data:any) => {
+      this.category = data.result;
+      this.category_name = this.category.name
+      console.log(this.category_name)
+    })
+  }
+
+  a!: string[]
 
   getAllProduct(category_id: number) {
     // Check category_id
@@ -57,7 +73,7 @@ export class ProductByCategoryComponent implements OnInit {
     if (imageName) {
       this.imgService.getImage(imageName).subscribe(
         (data: any) => {
-          const blob = new Blob([data], { type: 'image/*' });
+          const blob = new Blob([data], {type: 'image/*'});
           this.imgAvatars[product_id] = URL.createObjectURL(blob);
         },
         (error) => {

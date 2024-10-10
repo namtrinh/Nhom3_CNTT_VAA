@@ -75,3 +75,15 @@ Efrontend/src/app/admin/manage-user/edit-user/edit-user.component.scss,4\0\4098
 0frontend/src/app/service/user-service.service.ts,1\3\130956eae3b55cd3e6890dab642f6bc5584658da
 f
 6frontend/src/app/home/edit-user/edit-user.component.ts,0\2\02aff95b230d11ea1c6d2b2f8c9e331d7d96797d
+|
+Lfrontend/src/app/home/product-by-category/product-by-category.component.html,a\f\af80e4ae351453d9a1d733a845bd7547bfb14087
+z
+Jfrontend/src/app/home/product-by-category/product-by-category.component.ts,4\c\4cb540925d48d50224f9d1a29bb16a1cef917b85
+r
+Bfrontend/src/app/home/product-extend/product-extend.component.scss,f\4\f4bada20b5df54e4f983ea649d2260fb5dc38e3c
+|
+Lfrontend/src/app/home/product-by-category/product-by-category.component.scss,2\4\248f22df790da45d45ee7abb6386514796de7043
+l
+<frontend/src/app/home/product-sale/product-sale.component.ts,1\5\158c0f04ad1cc94801a178f40066eaa43c1cb47d
+n
+>frontend/src/app/home/product-sale/product-sale.component.scss,1\5\15334686451b0fee37a272787cc018cafc806f2c

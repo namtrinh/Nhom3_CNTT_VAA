@@ -1,5 +1,4 @@
 <div class="container">
-
     <h1 class="title">More Products...</h1>
     <div class="listproduct listproduct-block">
         @for (product of products; track products) {
@@ -12,12 +11,7 @@
                 {{product.name}}
             </h3>
 
-            <strong class="price">{{product.price - product.price * product.discount/100 | number:'1.0-0' }}₫ </strong>
-
-            <div class="box-p">
-                <p class="price-old black">{{product.price}} &#x20AB;</p>
-                <span class="percent">-{{product.discount}}%</span>
-            </div>
+            <strong class="price">{{product.price | number:'1.0-0' }}₫ </strong>
 
             <div class="vote-txt">
                 <i class="iconnewglobal-vote"></i>
