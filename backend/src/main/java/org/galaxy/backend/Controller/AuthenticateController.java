@@ -64,9 +64,7 @@ public class AuthenticateController {
     @PostMapping(value = "/verify_code")
     public ApiResponse<AuthenticateResponse> verifyAuthCode(
             @RequestParam("email") String email, @RequestParam("auth_code") String authCode) {
-        // Gọi phương thức verifyAuthCode từ service
         AuthenticateResponse response = authenticateService.verifyAuthCode(email, authCode);
-        // Trả về phản hồi chứa token nếu xác thực thành công
         return ApiResponse.<AuthenticateResponse>builder()
                 .code(200)
                 .message("Your account has been successfully confirmed.")

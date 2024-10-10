@@ -7,6 +7,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
@@ -29,7 +30,7 @@ public class SecurityConfig {
     private final String[] POST_PUBLIC = {
             "/login/verify_code",
             "/login/refresh",
-            "/login/token",
+            "/login",
             "/login/logout",
             "/api/upload",
             "/identity/users"
@@ -39,12 +40,13 @@ public class SecurityConfig {
             "/category",
             "/product/**",
             "/vnpay-payment",
-            "/api/images/**"};
+            "/api/images/**"
+    };
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-                .csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable())
+                .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request -> request.requestMatchers("/v3/api-docs/**", "/swagger-ui/**")
                         .permitAll()
                         .requestMatchers(HttpMethod.GET, VIEW_PUBLIC)

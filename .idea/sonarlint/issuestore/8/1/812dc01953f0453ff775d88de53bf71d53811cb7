@@ -1,11 +1,9 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùñ»™şÿÿÿÿJ$243cd36d-792f-4ad5-929e-9ec808c891fd
-	java:S116"VRename this field "POST_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Şé¦øÿÿÿÿ8‘æ­›§2J$1283e1d0-8949-45ff-a158-c6dc274bc7a3
-	java:S116&"VRename this field "VIEW_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ğ—†úÿÿÿÿ8ãõ¬›§2J$314f4454-013c-4f06-a6f6-2afc1413b637
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$605d5374-608f-4464-be48-3bf6a91ee786
-
-java:S3305"RInject this field value directly into "filterChain", the only method that uses it.(’„ÑJ$f7cab62c-c172-4dfc-81e0-995b238852ac
-
-java:S1612/"LReplace this lambda with method reference 'AbstractHttpConfigurer::disable'.(å‚¢ªıÿÿÿÿJ$566e7373-ea11-4301-8592-b9af902c430f
-|	java:S125Q"<This block of commented-out lines of code should be removed.(“­æçşÿÿÿÿJ$3f8893ec-6702-4302-b4cf-a6883fe0544a
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùñ»™şÿÿÿÿ8®²Ş¬§2J$3bc48887-595e-4d1c-8d8b-15808cea344c
+	java:S116"VRename this field "POST_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Şé¦øÿÿÿÿ8³²Ş¬§2J$f142c36b-b349-468b-9d7b-76e78dea74c7
+	java:S116'"VRename this field "VIEW_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ğ—†úÿÿÿÿ8´²Ş¬§2J$73e42206-5c1d-4e49-9a69-13a28ae81305
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´²Ş¬§2J$1ce7b27a-96a9-4a27-ad76-fe062fbb1920
+•
+java:S3305"RInject this field value directly into "filterChain", the only method that uses it.(’„Ñ8¶²Ş¬§2J$2d7ab71b-1fa8-4f9d-a85c-a4948168e8e8
+ƒ	java:S125S"<This block of commented-out lines of code should be removed.(“­æçşÿÿÿÿ8á²Ş¬§2J$0f935fb6-40a0-4376-a496-1b42272b93d1
