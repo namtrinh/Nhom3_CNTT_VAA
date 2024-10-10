@@ -1,0 +1,7 @@
+
+ntypescript:S1128",Remove this unused import of 'CommonModule'.(Äº‹ÇJ$06f908cd-acdd-4b9e-a4f2-78ab89dda45a
+ùtypescript:S1874%"±'(next?: ((value: User) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription' is deprecated.(½¢Í¿üÿÿÿÿJ$30a67bbd-5edc-4e20-b419-ae148882c96f
+Œtypescript:S9054"FExpected an assignment or function call and instead saw an expression.(¬Æ÷ıÿÿÿÿJ$133d2573-ae30-47b6-b260-1e3da5670e01
+\typescript:S1087"Empty block statement.(Õ’µşÿÿÿÿJ$b87d2820-ec51-412f-a7b8-d19d6b5cda61
+ûtypescript:S1874E"³'(next?: ((value: Object) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription' is deprecated.(®âåšúÿÿÿÿJ$f3ccb0d0-aec1-47ee-bb6d-11333b78a490
+÷typescript:S1874S"´'(next?: ((value: Roles[]) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription' is deprecated.(ªÂøŞJ$12c6ede8-b3e3-44a4-a7dc-c99fc424cc08

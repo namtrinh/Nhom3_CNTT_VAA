@@ -65,3 +65,13 @@ Lfrontend/src/app/admin/manage-product/edit-product/edit-product.component.ts,f
 Nfrontend/src/app/admin/manage-product/list-product/list-product.component.html,4\7\475822438930f5663c03492a9b1305f46847dbc4
 X
 (frontend/src/app/model/category.model.ts,c\a\ca405a8e474c3db4dd8cb77bef7f6f4284a48abb
+u
+Efrontend/src/app/admin/manage-user/edit-user/edit-user.component.html,0\9\092bbbd63b3c21c87f69116380f1238efaa94a81
+s
+Cfrontend/src/app/admin/manage-user/edit-user/edit-user.component.ts,f\8\f8c946cf6713987fec41e3274120c30cb5e1193a
+u
+Efrontend/src/app/admin/manage-user/edit-user/edit-user.component.scss,4\0\4098fe51a7b4414818443c701086b5ce30e82686
+`
+0frontend/src/app/service/user-service.service.ts,1\3\130956eae3b55cd3e6890dab642f6bc5584658da
+f
+6frontend/src/app/home/edit-user/edit-user.component.ts,0\2\02aff95b230d11ea1c6d2b2f8c9e331d7d96797d

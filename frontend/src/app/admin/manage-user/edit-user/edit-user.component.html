@@ -12,7 +12,7 @@
 
         <!-- Rest of the form -->
         <div class="row">
-            <div class="col-md-6">
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" class="form-control" id="email" name="email" [(ngModel)]="user.email">
@@ -25,21 +25,14 @@
                     <label for="password">Password</label>
                     <input type="text" class="form-control" id="password" name="password" [(ngModel)]="user.password">
                 </div>
-
-            </div>
-            <div class="col-md-6">
                 <div class="form-group">
-                    <label for="roles">Roles</label>
-
-                    @if (roles) {
-                    <select class="form-control select-custom" [(ngModel)]="user.roles" name="roles" multiple>
-                        @for (roleItem of roles; track $index) {
-                        <option class="option-custom" [ngValue]="roleItem.name">{{roleItem.name}}</option>
-                        }
-                    </select>
+                  <select class="form-control" [(ngModel)]="user.roles" name="roles" multiple required>
+                    @for(roleItem of role; track role){
+                    <option [ngValue]="roleItem.name" (click)="selectRole()">{{ roleItem.name }}</option>
                     }
+                  </select>
                 </div>
-            </div>
+
         </div>
 
         <div class="form-group text-center">

@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../../../service/user-service.service';
-import { User } from '../../../model/user.model';
-import { RolesService } from '../../../service/role-service.service';
-import { Roles } from '../../../model/roles.model';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { routes } from '../../../app.routes';
-import { FormsModule } from '@angular/forms';
-import { format } from 'date-fns';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {UserService} from '../../../service/user-service.service';
+import {User} from '../../../model/user.model';
+import {RolesService} from '../../../service/role-service.service';
+import {Roles} from '../../../model/roles.model';
+import {CommonModule} from '@angular/common';
+import {BrowserModule} from '@angular/platform-browser';
+import {routes} from '../../../app.routes';
+import {FormsModule} from '@angular/forms';
+import {format} from 'date-fns';
 
 @Component({
   selector: 'app-edit-user',
@@ -23,11 +23,16 @@ export class EditUserComponent implements OnInit {
   user: User = new User();
   users: User[] = [];
   imgAvatar!: string;
-  roles: Roles[] = [];
+  role: Roles[] = [];
   selectedFile: File | null = null;
+  list_role:any;
+  select_role: boolean = false;
 
-  constructor(private router: Router, private userService: UserService, private activeRouter: ActivatedRoute,
-    private roleService: RolesService) { }
+  constructor(private router: Router,
+              private userService: UserService,
+              private activeRouter: ActivatedRoute,
+              private roleService: RolesService) {
+  }
 
   ngOnInit(): void {
     this.getUserById();
@@ -38,23 +43,18 @@ export class EditUserComponent implements OnInit {
     this.id = this.activeRouter.snapshot.params['user_id'];
     this.userService.getById(this.id).subscribe((data: any) => {
       this.user = data.result;
+      this.list_role = this.user.roles;
       this.getImageFromService(this.user.avatar);
-    },
-      error => {
-        console.log(error);
-      });
+    });
   }
 
   getImageFromService(imageName: string): void {
     if (imageName !== null && imageName !== undefined) {
       this.userService.getImage(imageName).subscribe(data => {
-        const blob = new Blob([data], { type: 'image/*' });
+        const blob = new Blob([data], {type: 'image/*'});
         this.imgAvatar = URL.createObjectURL(blob);
       });
-      (error: any) => {
-        console.error(error);
-      }
-    } else { }
+    }
   }
 
   onFileSelected(event: any): void {
@@ -67,64 +67,27 @@ export class EditUserComponent implements OnInit {
     reader.readAsDataURL(this.selectedFile);
   }
 
+  selectRole() {
+    this.select_role = true;
+  }
 
   private updateUser() {
-   
-    const formData = new FormData();
-    formData.append('email', this.user.email);
-    formData.append('username', this.user.username);
-    formData.append('password', this.user.password);
-    formData.append('time_created', this.user.time_created);
-
-    if (this.user.roles && this.user.roles.length > 0) {
-      this.user.roles.forEach((roles: string) => {
-        formData.append('roles[]', roles);
-      });
-    } else {
-      // Nếu không có vai trò mới, thêm vai trò cũ
-      this.user.roles.forEach((roles: string) => {
-        formData.append('roles[]', roles);
-      });
+    if (!this.select_role) {
+      this.user.roles = this.list_role.map((role:{name:string}) => role.name);
     }
-
-    if (this.selectedFile) {
-      formData.append('file', this.selectedFile);
-    } else {
-      formData.append('avatar', this.user.avatar);
-    }
-
-    this.userService.editUser(this.id, formData).subscribe(
-      (data: any) => {
-        console.log(data);
-        this.router.navigate(['/admin/list-user']);
-        setTimeout(() => {
-          window.location.reload();
-        })
-      },
-      error => {
-        console.log(error);
-      });
+    this.userService.editUser(this.id, this.user).subscribe(data => {
+      this.router.navigate(['/admin/list-user']);
+    });
   }
 
   getRoles() {
     this.roleService.getAllroles().subscribe((data: any) => {
-      this.roles = data.result;
-      console.log(this.roles);
-    }, error => {
-      console.log(error);
-    }
-    )
+      this.role = data.result;
+    })
   }
 
 
-
   OnSubmit() {
-    // if (!this.user.roles || this.user.roles.length === 0 || this.user.roles) {
-    //  this.user.roles = ["USER"];
-    ////  }
-    // if (this.user.email == "admin@a.o"){
-    //    this.user.roles = ["ADMIN"];
-    //  }
     this.updateUser();
   }
 }

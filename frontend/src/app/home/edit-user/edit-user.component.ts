@@ -66,29 +66,7 @@ export class EditMyInfComponent implements OnInit {
 
 
   private updateUser() {
-    const formData = new FormData();
-    formData.append('email', this.user.email);
-    formData.append('username', this.user.username);
-    formData.append('password', this.user.password);
-
-    if (this.user.roles && this.user.roles.length > 0) {
-        this.user.roles.forEach((roles: string) => {
-            formData.append('roles[]', roles);
-        });
-    } else {
-        // Nếu không có vai trò mới, thêm vai trò cũ
-        this.user.roles.forEach((roles: string) => {
-            formData.append('roles[]', roles);
-        });
-    }
-
-    if (this.selectedFile) {
-      formData.append('file', this.selectedFile);
-    } else {
-      formData.append('avatar', this.user.avatar);
-    }
-
-    this.userService.editUser(this.id, formData).subscribe(
+    this.userService.editUser(this.id, this.user).subscribe(
       (data: any) => {
         console.log(data);
         this.router.navigate(['/']);
