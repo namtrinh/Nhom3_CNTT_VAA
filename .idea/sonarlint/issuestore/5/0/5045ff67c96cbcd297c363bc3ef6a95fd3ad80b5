@@ -1,6 +1,6 @@
 
-“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÕ™‚8‰Ÿ’»§2J$db659497-137e-482f-a3bc-a723b3310594
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘ÃJ$746e69fb-9f44-41ce-b016-254d69e30c17
-¢	java:S116"`Rename this field "TOKEN_EXPIRATION_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª´Üü8¾Ìê¹§2J$cda5a18f-2675-460e-812c-f383c396fafb
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÕ™‚8‰Ÿ’»§2J$8e5eacdc-dd74-4138-888a-4e36536a8347
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘ÃJ$ae51098b-aa75-4366-8ffa-adea32d25535
+¢	java:S116"`Rename this field "TOKEN_EXPIRATION_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª´Üü8¾Ìê¹§2J$22a657c7-2ac4-4719-bef7-9000eefc54e1
 |
-java:S1068"9Remove this unused "TOKEN_EXPIRATION_TIME" private field.(ª´Üü8–·ë¹§2J$a5c94017-f38a-4798-996d-7f7198f90fb3
+java:S1068"9Remove this unused "TOKEN_EXPIRATION_TIME" private field.(ª´Üü8–·ë¹§2J$d9a4d841-03e5-46e1-abf9-fea3abe94264

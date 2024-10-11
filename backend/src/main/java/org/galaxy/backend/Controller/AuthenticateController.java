@@ -88,7 +88,7 @@ public class AuthenticateController {
     }
 
     @PostMapping("/reset/forgot-password")
-    public ApiResponse<String> forgotPassword(@RequestParam("email") String email) {
+    public ApiResponse<String> forgotPassword(@RequestParam String email) {
         var user = userService.getUserByEmail(email);
         if (user == null) {
             return ApiResponse.<String>builder()
@@ -100,7 +100,7 @@ public class AuthenticateController {
         String reset_key = UUID.randomUUID().toString();
         resetPasswordService.storeResetKey(email, reset_key);
 
-        String resetLink = "http://localhost:4200/reset-password?reset_key=" + reset_key;
+        String resetLink = "http://localhost:4200/reset-password?email=" + email + "&reset_key=" + reset_key;
         emailService.sendCodeToMail(email, "Reset your password", "Click this url to reset password: " + resetLink);
 
         return ApiResponse.<String>builder()
@@ -112,9 +112,9 @@ public class AuthenticateController {
     }
 
     @PostMapping("/reset/reset-password")
-    public ApiResponse<String> resetPassword(@RequestParam("reset_key") String reset_key,
-                                             @RequestParam("email") String email,
-                                             @RequestParam("newPassword") String newPassword) {
+    public ApiResponse<String> resetPassword(@RequestParam String reset_key,
+                                             @RequestParam String email,
+                                             @RequestParam String newPassword) {
         String cachedResetKey = resetPasswordService.getResetKey(email);
 
         if (cachedResetKey == null || !cachedResetKey.equals(reset_key)) {

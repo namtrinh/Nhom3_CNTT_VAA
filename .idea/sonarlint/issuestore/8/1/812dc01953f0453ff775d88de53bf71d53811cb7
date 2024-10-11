@@ -1,9 +1,9 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùñ»™şÿÿÿÿ8®²Ş¬§2J$9967763e-2a32-4529-a1d5-786e6dd581ad
-	java:S116"VRename this field "POST_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Şé¦øÿÿÿÿ8³²Ş¬§2J$92c719c1-a99c-4144-9adf-668f5a980b67
-	java:S116("VRename this field "VIEW_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ğ—†úÿÿÿÿ8´²Ş¬§2J$42709c0b-b003-4342-bdc5-35f3daae5709
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùñ»™şÿÿÿÿ8®²Ş¬§2J$7567d80c-f7f5-4790-bdf3-c4c314070181
+	java:S116"VRename this field "POST_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Şé¦øÿÿÿÿ8³²Ş¬§2J$ebd1a4c1-486f-49fc-93a7-0285bfa28d3e
+	java:S116("VRename this field "VIEW_PUBLIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨Ğ—†úÿÿÿÿ8´²Ş¬§2J$70841740-130a-487f-911d-7232ff77c34b
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´²Ş¬§2J$8a73a48e-de73-427c-a570-b2e6bfcf00a0
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´²Ş¬§2J$9272e1ab-59ce-4948-9492-133c56485f92
 •
-java:S3305"RInject this field value directly into "filterChain", the only method that uses it.(’„Ñ8¶²Ş¬§2J$0a541e78-334f-49a6-92db-f3f6fdf765b9
-ƒ	java:S125T"<This block of commented-out lines of code should be removed.(“­æçşÿÿÿÿ8á²Ş¬§2J$746f1f51-9297-407f-a19f-2ce87bd7ee99
+java:S3305"RInject this field value directly into "filterChain", the only method that uses it.(’„Ñ8¶²Ş¬§2J$c60a04f8-1c10-41d6-97d3-c6d80013803e
+ƒ	java:S125T"<This block of commented-out lines of code should be removed.(“­æçşÿÿÿÿ8á²Ş¬§2J$333e3e02-242f-4950-8025-ff044d2abf7f
