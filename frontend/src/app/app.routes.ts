@@ -37,6 +37,8 @@ import { FooterComponent } from './home/footer/footer.component';
 import { AuthService } from './service/auth-service.service';
 import { _401Component } from './401/401.component';
 import { ProductExtendComponent } from './home/product-extend/product-extend.component';
+import {RequiredResetPasComponent} from "./auth/required-reset-pas/required-reset-pas.component";
+import {ResetPassComponent} from "./auth/reset-pass/reset-pass.component";
 
 export const routes: Routes = [
 
@@ -47,6 +49,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registry', component: RegistryComponent },
   { path: 'verify-code', component: AuthCodeComponent },
+  { path: 'forgot-password', component: RequiredResetPasComponent },
+  { path: 'reset-password', component: ResetPassComponent },
 
   //View Client
   { path: '', redirectTo: '', pathMatch: 'full' },

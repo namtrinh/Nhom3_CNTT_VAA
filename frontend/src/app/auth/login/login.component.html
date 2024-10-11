@@ -16,6 +16,10 @@
 			<button type="submit" class="btn btn-primary">Login</button>
 			<br><br>
 			<a [routerLink]="['/registry']" style="color:rgb(14, 134, 239)">You don't have account ? Registry now !</a>
+      <br><br>
+      <div>
+      <a [routerLink]="['/forgot-password']"> Forgot password ?</a>
+      </div>
 			@if (loginError) {
 			<div class="alert alert-danger mt-3">
 				{{ loginError }}

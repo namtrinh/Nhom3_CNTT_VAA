@@ -16,6 +16,8 @@ export class AuthService {
   private refreshUrl = "http://localhost:8888/identity/login/refresh"
   private logoutUrl =  "http://localhost:8888/identity/login/logout"
   private authe_code = "http://localhost:8888/identity/login/verify_code"
+  private require_url = "http://localhost:8888/identity/login/reset/forgot-password"
+  private resetPass_url = "http://localhost:8888/identity/login/reset/reset-password"
   constructor(private http: HttpClient, private router: Router) {
     const token = localStorage.getItem(this.tokenKey);
   }
@@ -82,5 +84,17 @@ export class AuthService {
     localStorage.removeItem(this.tokenKey);
   }
 
+  requiredUrl(email:string):Observable<string>{
+    const params = new HttpParams()
+      .set('email',email.toString())
+    return this.http.post<string>(`${this.require_url}`,null,{params})
+  }
 
+  resetPassByEmail(reset_key:string,email:string,newPassword:string){
+    const params = new HttpParams()
+      .set('reset_key',reset_key)
+      .set('email',email.toString())
+      .set('newPassword',newPassword)
+    return this.http.post(`${this.resetPass_url}`,null,{params})
+  }
 }

@@ -1,0 +1,12 @@
+<div class="container">
+  <form>
+    <div class="form-control">
+      <input type="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter your email">
+    </div>
+    <div class="form-control">
+      <input type="text" [(ngModel)]="newPassword" class="form-control" placeholder="Enter your new password"
+             name="newPassword">
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="onSubmit()">Save</button>
+  </form>
+</div>

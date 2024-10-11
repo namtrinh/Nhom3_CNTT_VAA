@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {
   HttpInterceptor,
   HttpRequest,
@@ -6,9 +6,9 @@ import {
   HttpEvent,
   HttpErrorResponse
 } from '@angular/common/http';
-import { Observable, throwError, BehaviorSubject } from 'rxjs';
-import { catchError, switchMap, filter, take } from 'rxjs/operators';
-import { AuthService } from './auth.service';
+import {Observable, throwError, BehaviorSubject} from 'rxjs';
+import {catchError, switchMap, filter, take} from 'rxjs/operators';
+import {AuthService} from './auth.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -16,12 +16,17 @@ export class AuthInterceptor implements HttpInterceptor {
   private isRefreshing = false;
   private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+  }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    if (request.url.includes('/login/refresh') || request.url.includes('/login/token') || request.url.includes('/login/logout') ||
-      request.url.includes('/login/verify_code')) {
+    if (request.url.includes('/login/refresh') ||
+        request.url.includes('/login/token') ||
+        request.url.includes('/login/logout') ||
+        request.url.includes('/login/verify_code') ||
+        request.url.includes('/login/reset/forgot-password') ||
+        request.url.includes('/login/reset/reset-password')) {
       return next.handle(request);
     }
 
