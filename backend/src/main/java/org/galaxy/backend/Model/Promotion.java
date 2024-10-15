@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,7 +33,7 @@ public class Promotion {
 
     private Timestamp time_end;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JsonIgnore
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JsonBackReference
     private Product product;
 }

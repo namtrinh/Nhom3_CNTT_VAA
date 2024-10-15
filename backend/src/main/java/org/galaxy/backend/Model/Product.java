@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.*;
 
@@ -42,5 +43,6 @@ public class Product {
     private Brand brand;
 
     @OneToOne(mappedBy = "product")
+    @JsonManagedReference
     private Promotion promotion;
 }

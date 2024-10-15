@@ -2,14 +2,13 @@ package org.galaxy.backend.Model;
 
 import jakarta.persistence.*;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
 @Setter
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "category")
 public class Category {
     @Id
@@ -23,4 +22,6 @@ public class Category {
     private String sort;
 
     private String icon;
+
+    public Category(Integer integer) {}
 }

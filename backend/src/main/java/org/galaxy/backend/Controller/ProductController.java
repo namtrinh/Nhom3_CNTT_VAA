@@ -1,16 +1,21 @@
 package org.galaxy.backend.Controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
-import org.galaxy.backend.Repository.CategoryRepository;
+import org.galaxy.backend.Repository.ProductRepository;
 import org.galaxy.backend.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping(value = "/product")
@@ -22,16 +27,23 @@ public class ProductController {
     private String uploadDir;
 
     @Autowired
-    private CategoryRepository categoryRepository;
+    private ProductRepository productRepository;
 
     @GetMapping
+    public ApiResponse<List<Product>> findAll() {
+        var result = productRepository.findAll();
+        result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
+        return ApiResponse.<List<Product>>builder().code(200).result(result).build();
+    }
+
+    @GetMapping(value = "/findAllProductsWithPromotion")
     public ApiResponse<List<Product>> findAllProductsWithPromotion() {
         var result = productService.findAllProductsWithPromotion();
         result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
 
-    @GetMapping(value = "/get")
+    @GetMapping(value = "/findAllProductsWithoutPromotion")
     public ApiResponse<List<Product>> findAllProductsWithoutPromotion() {
         var result = productService.findAllProductsWithoutPromotion();
         result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
@@ -94,8 +106,28 @@ public class ProductController {
                 .build();
     }
 
-    @PutMapping(value = "/{product_id}")
-    public ApiResponse<Product> updateProduct(@PathVariable String product_id, @RequestBody Product product) {
+    @PutMapping(value = "/{product_id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ApiResponse<Product> updateProduct(
+            @PathVariable String product_id,
+            @RequestParam Map<String, String> params,
+            @RequestParam(value = "image", required = false) MultipartFile image)
+            throws IOException {
+
+        Product product = productService.findById(product_id);
+        if (image != null && !image.isEmpty()) {
+            String imagePath = "C:/My_Documents/KI_7/DACN/firefly-galaxy/" + uploadDir + image.getOriginalFilename();
+            image.transferTo(new File(imagePath));
+            product.setImage(image.getOriginalFilename());
+        }
+        product.setName(params.get("name"));
+        product.setQuantity(Integer.parseInt(params.get("quantity")));
+        product.setPrice(Double.parseDouble(params.get("price")));
+        product.setDescription(params.get("description"));
+        String categoryValue = params.get("category");
+        Category category = new Category();
+        category.setCategory_id(Integer.parseInt(categoryValue));
+        product.setCategory(category);
+
         return ApiResponse.<Product>builder()
                 .code(200)
                 .result(productService.editProduct(product_id, product))
