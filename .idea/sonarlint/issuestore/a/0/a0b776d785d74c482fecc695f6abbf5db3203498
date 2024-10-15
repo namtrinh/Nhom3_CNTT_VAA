@@ -1,8 +1,10 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8í­øù¨2J$3f682037-eb1b-436b-b547-ff4d43023ba2
-œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8ÖÏ“ƒ©2J$35f10637-e262-4b9e-93d3-013420353eb6
-™	java:S116#"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÖÏ“ƒ©2J$ea0c2bfa-b7a7-4f4b-b879-e7a105a20561
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8¿Ê‹‡©2J$572c4482-5f2f-4ef0-bc6e-f12a571f23d6
+œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8ÖÏ“ƒ©2J$0bcdc223-3fe4-4531-8c15-2a32c34f6558
+™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÖÏ“ƒ©2J$ffd12666-c323-4aa5-b361-8962f673958b
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ØÏ“ƒ©2J$3b07a97e-5738-4a1d-bc07-da4eafcb48bf
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ØÏ“ƒ©2J$f42e8392-3a5c-4674-8e0a-1d2b061f1bdd
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ØÏ“ƒ©2J$967bbd02-05fd-4e51-b193-2dd5275030da
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ØÏ“ƒ©2J$9db013b6-92b7-4d48-a0f5-0a28d60dcff3
+q
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8¯Ê“ˆ©2

@@ -23,7 +23,7 @@ export class CategoryService {
   }
 
   getBySeoTitle(seotitle: string): Observable<Category> {
-    return this.http.get<Category>(`${this.baseUrl}/${seotitle}`)
+    return this.http.get<Category>(`${this.baseUrl}/name/${seotitle}`)
   }
 
   createCategory(category: Category): Observable<Object> {

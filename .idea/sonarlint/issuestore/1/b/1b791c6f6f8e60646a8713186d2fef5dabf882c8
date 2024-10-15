@@ -1,3 +1,13 @@
 
-ï	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ìœı J$5857c2fb-56db-4839-916a-f3fb49ef1fca
-r	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(≤Ëè∑8º±òÅ©2
+ú	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ìœı 8µ≤Éá©2J$052269fa-748b-4280-b7e9-ea1a07d7a21c
+ò	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(≤Ëè∑8π≤Éá©2J$76ff664a-be4a-41ac-ac32-703b92495a3e
+É	java:S125!"<This block of commented-out lines of code should be removed.(ÇüÉ√˚ˇˇˇˇ8îô∏à©2J$52815591-a5c7-4fc4-880f-e10380790032
+ó
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(ª‘úø˝ˇˇˇˇ8‰Ü†á©2J$883a9cc8-a63d-4d13-bb2f-106c7bad8e72
+ï
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnoreProperties'.(ÙíàÓ8óô∏à©2J$63e2bf42-9704-4a7a-8978-031a2529adff
+ï
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(∆Åòµ8±∂íà©2J$b144e36c-347e-439e-8bcc-d3a800d45504
+r
+java:S1128
+"*Remove this unused import 'java.util.Set'.(ˆ≤Ñ§˛ˇˇˇˇ8òô∏à©2J$829f9e3c-af21-46af-8d68-8ddfd8580af7

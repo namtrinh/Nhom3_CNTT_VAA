@@ -28,6 +28,14 @@ public class CategoryController {
                 .build();
     }
 
+    @GetMapping(value = "/name/{seotitle}")
+    public ApiResponse<Category> getBySeotile(@PathVariable String seotitle) {
+        return ApiResponse.<Category>builder()
+                .code(200)
+                .result(categoryService.findBySeotitle(seotitle))
+                .build();
+    }
+
     @PostMapping
     public ApiResponse<Category> create(@RequestBody Category category) {
         return ApiResponse.<Category>builder()

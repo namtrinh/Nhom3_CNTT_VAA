@@ -2,6 +2,8 @@ package org.galaxy.backend.Model;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -35,11 +37,10 @@ public class Product {
     private Timestamp time_created;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JsonIgnoreProperties("products")
     private Category category;
 
     @ManyToOne
-    @JoinColumn(name = "brand_id")
     private Brand brand;
 
     @OneToOne(mappedBy = "product")

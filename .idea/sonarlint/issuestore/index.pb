@@ -193,3 +193,11 @@ J
 frontend/package-lock.json,7\5\75b3b81cff849b08343553e269c3327a04ab22e0
 N
 frontend/src/app/app.config.ts,3\7\375ca7f1011dac2f7046ec7d9b794f5ad89ada33
+o
+?backend/src/main/java/org/galaxy/backend/Model/OrderDetail.java,2\4\2439bd127514f0820099aa9dac4d2228b9e4f863
+u
+Ebackend/src/main/java/org/galaxy/backend/Service/CategoryService.java,a\9\a975e2b2b86b771cf59b381a40ae520ad2280996
+{
+Kbackend/src/main/java/org/galaxy/backend/Repository/CategoryRepository.java,5\9\59cdef754450da1f9789a42ef7d830f641beaa2b
+w
+Gbackend/src/main/java/org/galaxy/backend/Repository/CartRepository.java,7\4\74dbbd5fc969ed1b124814ed65579a05e2cc5236

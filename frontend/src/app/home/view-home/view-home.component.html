@@ -50,12 +50,12 @@
 
 
     <div class="menu">
-      <button class="btn btn-light" [routerLink]="['/category',0]" (click)="showCategoryId(null)">
+      <button class="btn btn-light" [routerLink]="['/category','all']" (click)="showCategoryId(null)">
         <i class="fa-solid fa-list-ul"></i> All
       </button>
       @for (menu of category; track category) {
 
-      <button [routerLink]="['/category',menu.category_id]" class="btn btn-light" (click)="showCategoryId(null)"><i
+      <button [routerLink]="['/category',menu.seotitle]" class="btn btn-light" (click)="showCategoryId(null)"><i
           [class]="menu.icon"></i> {{menu.name}}</button>
       }
     </div>

@@ -64,7 +64,7 @@ export const routes: Routes = [
       {path: 'myinf/:user_id', component: MyInfComponent},
       {path: 'edit_my_inf/:user_id', component: EditMyInfComponent},
       {path: 'cart', component: CartComponent},
-      {path: 'category/:category_id', component: ProductByCategoryComponent},
+      {path: 'category/:seotitle', component: ProductByCategoryComponent},
     ]
   },
 

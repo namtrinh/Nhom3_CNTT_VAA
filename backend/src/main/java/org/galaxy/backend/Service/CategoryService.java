@@ -25,6 +25,10 @@ public class CategoryService {
         return categoryRepository.findById(integer).orElseThrow(() -> new RuntimeException("Not found"));
     }
 
+    public Category findBySeotitle(String seotitle) {
+        return categoryRepository.getBySeotitle(seotitle);
+    }
+
     public void deleteById(Integer integer) {
         categoryRepository.deleteById(integer);
     }

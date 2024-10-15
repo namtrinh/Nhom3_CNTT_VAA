@@ -20,53 +20,58 @@ export class ProductByCategoryComponent implements OnInit {
   product!: Product[];
   imgAvatars: { [key: string]: string } = {};
   category_id!: number;
-  category:Category = new Category()
+  category: Category = new Category()
   category_name !: string
+  seotitle!: string | null;
+  categoryId!: any;
 
-  constructor(private router: Router,
-              private productService: ProductService,
+  constructor(private productService: ProductService,
               private imgService: ImageService,
               private active: ActivatedRoute,
               private categoryService: CategoryService) {
   }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.getAll();
     this.active.paramMap.subscribe((params) => {
-      const categoryId = Number(params.get('category_id'));
-      this.category_id = categoryId;
-      this.getNameCategory(categoryId)
-      this.getAllProduct(this.category_id);
+      const seoTitle = String(params.get('seotitle'));
+      this.seotitle = seoTitle;
+      this.getNameCategory(this.seotitle);
     });
   }
 
-  getNameCategory(category_id:number) {
-    this.categoryService.getById(category_id).subscribe((data:any) => {
-      this.category = data.result;
-      this.category_name = this.category.name
-      console.log(this.category_name)
-    })
+  getNameCategory(seotitle: string) {
+    this.categoryService.getBySeoTitle(seotitle).subscribe(
+      (data: any) => {
+        this.category = data.result;
+        this.categoryId = this.category.category_id;
+        this.category_name = this.category.name;
+        if (this.categoryId) {
+          this.getAllProduct(this.categoryId);
+        }
+      })
   }
 
-  a!: string[]
 
-  getAllProduct(category_id: number) {
-    // Check category_id
-    if (category_id === 0) {
+  getAll() {
+    const id = this.active.snapshot.params['seotitle'];
+    if (id === 'all') {
       this.productService.getAll().subscribe((data: any) => {
         this.product = data.result;
         this.product.forEach((product) => {
           this.getImageFromService(product.image, product.product_id);
-        });
-      });
-    } else {
-      this.productService.getProductByCategory(category_id).subscribe((data: any) => {
-        this.product = data.result;
-        this.product.forEach((product) => {
-          this.getImageFromService(product.image, product.product_id);
-        });
-      });
+        })
+      })
     }
+  }
+
+  getAllProduct(categoryId: number) {
+    this.productService.getProductByCategory(categoryId).subscribe((data: any) => {
+      this.product = data.result;
+      this.product.forEach((product) => {
+        this.getImageFromService(product.image, product.product_id);
+      });
+    });
   }
 
   private getImageFromService(imageName: string, product_id: string): void {
