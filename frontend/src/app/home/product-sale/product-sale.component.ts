@@ -21,7 +21,7 @@ import { DataService } from '../../service/data-service.service';
 })
 export class ProductSaleComponent implements OnInit {
   sale!: number;
-  product: Partial<Product>[] = [];
+  products: Partial<Product>[] = [];
   category: Category[] = [];
   promotions: Promotion[] = [];
 
@@ -37,10 +37,9 @@ export class ProductSaleComponent implements OnInit {
   }
 
   getAllProducts() {
-    this.promotionService.getAll().subscribe((data: any) => {
-      this.promotions = data.result;
-      this.product = this.promotions.map(promotions => promotions.product);
-      this.product.forEach((product) => {
+    this.productService.getAll().subscribe((data: any) => {
+      this.products = data.result;
+      this.products.forEach((product) => {
         if (product.image && product.product_id) {
           this.getImageFromService(product.image, product.product_id);
         }

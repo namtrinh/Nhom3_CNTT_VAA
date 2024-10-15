@@ -1,4 +1,5 @@
 import {Category} from "./category.model";
+import { Promotion } from "./promotion.model";
 
 export class Product {
   product_id!: string;
@@ -11,6 +12,7 @@ export class Product {
   time_created!: string;
   category!: Partial<Category>;
   selected: boolean = false;
+  promotion!:Partial<Promotion>;
 
 }
 

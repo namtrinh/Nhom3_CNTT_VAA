@@ -9,6 +9,7 @@ import { DetailInvoice } from '../../model/detail_invoice.model';
 import { Product } from '../../model/product.model';
 import { Category } from '../../model/category.model';
 import { format } from 'date-fns';
+import { Promotion } from '../../model/promotion.model';
 
 
 @Component({
@@ -64,6 +65,7 @@ export class PaySuccessComponent implements OnInit {
       price: 0,
       description: '',
       time_created: '',
+      promotion: new Promotion,
       category: new Category,
       selected: false
     };

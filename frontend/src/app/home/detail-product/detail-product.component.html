@@ -13,10 +13,10 @@
             <h2 class="product-title" style="font-size: 25px;font-weight:600"> {{product.name}}</h2>
             <p class="product-price" style="font-size:17px;"><strong>Price:</strong> {{product.price | number:'1.0-0'
                 }}₫</p>
-                @if (promotion.product.product_id == product.product_id) {
-           <p class="discount" style="font-size: 20px;font-weight:600;color:red"><strong>Sale:</strong>
-                {{product.price-(product.price*promotion.discount/100) | number:'1.0-0' }}₫</p>
-         }
+                @if (product.promotion.discount) {
+            <p class="discount" style="font-size: 20px;font-weight:600;color:red"><strong>Sale:</strong>
+                {{product.price-(product.price*product.promotion.discount /100) | number:'1.0-0' }}₫</p>
+            }
             <p><strong>Special Offers:</strong></p>
             <ul>
                 <li>0% Installment for 6 months</li>

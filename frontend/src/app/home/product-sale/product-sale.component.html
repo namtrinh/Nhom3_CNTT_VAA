@@ -12,29 +12,33 @@
     <img src="/assets/pr-sale-poster.png" atl="pr-sale-poster">
   </div>
   <div class="product">
-    @for (promotion of promotions; track promotions) {
+    @for (product of products; track products) {
 
-    <div class="product-inf"  (click)="goToProductDetail(promotion)">
+    <div class="product-inf" [routerLink]="['/detail-product', product.seotitle]">
       <div class="product_img">
-        @if (promotion.product.product_id) {
-        <img class="img-product" [src]="imgAvatars[promotion.product.product_id]">
+        @if (product.product_id) {
+        <img class="img-product" [src]="imgAvatars[product.product_id]">
         }
       </div>
       <h3 class="product_name">
-        <p>{{promotion.product.name }}</p>
+        <p>{{product.name }}</p>
       </h3>
 
       <strong class="product-price">
-        <p style=" text-decoration: line-through;">{{ promotion.product.price | number:'1.0-0' }}₫</p>
-        @if (promotion.product.price) {
+        <p style=" text-decoration: line-through;">{{ product.price | number:'1.0-0' }}₫</p>
+
+        @if (product.price && product.promotion && product.promotion.discount !== undefined) {
         <p style="color:red">
-          {{ promotion.product.price - promotion.product.price * promotion.discount / 100 | number:'1.0-0' }}₫</p>
-        }
+          {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
+        </p>
+      }
       </strong>
 
       <strong class="product-discount" style="color:rgb(255, 255, 255);">
+      
         <p class="pr-discount-value">
-          -{{promotion.discount }}%</p>
+          -{{product.promotion?.discount }}%</p>
+        
         <img class="pr-discount-ico" src="/assets/label.png">
       </strong>
 

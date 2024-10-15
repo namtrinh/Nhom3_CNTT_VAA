@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product-service.service';
-import { ActivatedRoute, NavigationEnd, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Product } from '../../model/product.model';
 import { FormsModule } from '@angular/forms';
 import { VNPayService } from '../../service/payment-service.service';
@@ -10,8 +10,6 @@ import { CartService } from '../../service/cart-service.service';
 import { Cart } from '../../model/cart.model';
 import { format } from 'date-fns';
 import { jwtDecode } from 'jwt-decode';
-import { DataService } from '../../service/data-service.service';
-import { Promotion } from '../../model/promotion.model';
 
 @Component({
   selector: 'app-detail-product',
@@ -26,7 +24,6 @@ export class DetailProductComponent implements OnInit {
   totalprice!: number;
   seo!: string;
   product: Product = new Product();
-  promotion:Promotion = new Promotion();
   showQuantitySelection = false;
   imgAvatars: { [key: string]: string } = {};
   showPay: boolean = false;
@@ -38,21 +35,12 @@ export class DetailProductComponent implements OnInit {
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
     private vnPayService: VNPayService,
-    private dataService:DataService,
-    private router:Router,
+
   ) { }
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
     this.getBySeotitle();
-    this.getData();
-  
-  }
-
-  getData(){
-    this.dataService.currentData.subscribe(data => {
-      this.promotion = data;
-    });
   }
 
   getBySeotitle() {
@@ -101,7 +89,6 @@ export class DetailProductComponent implements OnInit {
     this.totalprice = this.product.price * this.quantity;
     this.inf = this.product.name;
     this.vnPayService.submitOrder(this.totalprice, this.inf).subscribe(vnpayUrl => {
-      //  localStorage.setItem('productId', this.id.toString());
       window.location.href = vnpayUrl.vnpayUrl;
     }, (error: any) => {
       console.log(error);
