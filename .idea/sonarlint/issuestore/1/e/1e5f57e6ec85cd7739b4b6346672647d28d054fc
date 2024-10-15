@@ -1,14 +1,14 @@
 
-Œ	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİJ$1369f885-4143-4cc4-b263-570246b3aa62
-Œ	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä“ÊÖJ$aade72fb-79ff-4c4b-9376-e5452d7247d6
-Œ	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ÜÎJ$7f0ec9e5-163b-4ac9-86c0-fe3a7596bcab
-‘	java:S117t"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿJ$1cfab622-4a09-4413-869c-2875b73c080a
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“OJ$3b36a331-3400-416d-909c-2f99c9c833f3
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$befc3331-04a4-4f62-a7a3-9a5641f82f47
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$a6b968b2-9144-4458-8990-6b641a00fa43
-o
-java:S6837:"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼J$3e1cbe9d-aebc-4552-9ec1-4aaf23adb6b4
-o
-java:S6837["3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼J$8933ad47-7576-46f0-8b15-dfda093fc911
+“	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8Ì› ©2J$9bfc3437-ee61-49b8-a81b-335797c4d13a
+“	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä“ÊÖ8Ì› ©2J$bc26fd57-52ec-41cb-a5cb-dfbe67231eb5
+˜	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8Ì› ©2J$2f7b2994-2490-43bb-ab4a-83584dd3bf38
+™	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8Ì› ©2J$c55370ec-1ffa-47fe-954c-21f0d59f1c47
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8Ì› ©2J$532519bc-2b82-408d-abca-ed531d50cdf3
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Î› ©2J$bbcbdc51-76b3-4f53-b873-e971e688c74f
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Î› ©2J$e705bcc4-0175-489e-9ef2-70073f6d94f9
+v
+java:S6837L"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8Ô› ©2J$20510eea-281f-4a8f-af28-61f259f6d257
+v
+java:S6837]"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8Ô› ©2J$d06041ec-985b-47d1-9c14-dbdc9076ce65

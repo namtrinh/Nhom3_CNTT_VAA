@@ -1,0 +1,10 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Í¶«‚©2J$5993ccf2-0fb9-450a-bb9d-9a05da19714d
+ž	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8Î¶«‚©2J$22781b02-ca46-4853-a71f-87168d1ca368
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ýÿÿÿÿ8Î¶«‚©2J$aa658b32-c4ac-4bdc-8660-d3bd21ff0e1a
+ž	java:S116 "WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8Î¶«‚©2J$8c29f38d-4bc8-4e83-a8db-7ad9c4dc7e57
+•	java:S116""SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8Î¶«‚©2J$a439ceba-9ea4-42ae-89a0-39e4192978c0
+{
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8Ð¶«‚©2J$c5d363ad-2947-4a39-9291-a27b71708d20
+s
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8Ñ¶«‚©2J$1696f2ae-28b8-4fd2-84d8-3a247848301b

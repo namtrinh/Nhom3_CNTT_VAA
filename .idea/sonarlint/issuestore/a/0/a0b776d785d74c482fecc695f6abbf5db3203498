@@ -1,8 +1,8 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊJ$5ae2fc77-cd30-4322-819d-ff422cb5f5b3
-•	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿJ$25ec9119-ba7f-403a-ba9e-833c134dca58
-’	java:S116#"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“ŸJ$ceebb659-501a-4bd3-935f-1727f04d9603
-t
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„J$9f0dea5f-a1d0-4710-87f4-1b980b378b7b
-l
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„J$92e074db-2085-4c96-b046-1ae92e5cf82b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8í­øù¨2J$3f682037-eb1b-436b-b547-ff4d43023ba2
+œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8ÖÏ“ƒ©2J$35f10637-e262-4b9e-93d3-013420353eb6
+™	java:S116#"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÖÏ“ƒ©2J$ea0c2bfa-b7a7-4f4b-b879-e7a105a20561
+{
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ØÏ“ƒ©2J$3b07a97e-5738-4a1d-bc07-da4eafcb48bf
+s
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ØÏ“ƒ©2J$967bbd02-05fd-4e51-b193-2dd5275030da

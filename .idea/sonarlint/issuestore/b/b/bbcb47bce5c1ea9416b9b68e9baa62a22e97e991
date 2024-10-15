@@ -1,0 +1,9 @@
+
+Ntypescript:S1128"&Remove this unused import of 'OnInit'.(‹ÙÊ˜ùÿÿÿÿ8Ñ£¼Û§2
+™typescript:S3863"q'C:\My_Documents\KI_7\DACN\firefly-galaxy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(Õ·ÿìùÿÿÿÿ8Ò£¼Û§2
+”typescript:S3863"q'C:\My_Documents\KI_7\DACN\firefly-galaxy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(ƒ“˜Õ8Ó£¼Û§2
+”typescript:S3863"q'C:\My_Documents\KI_7\DACN\firefly-galaxy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(¨í«ê8Ó£¼Û§2
+[typescript:S1854"3Remove this useless assignment to variable "token".(°éËËøÿÿÿÿ8Ô£¼Û§2
+vtypescript:S1874("NThe signature '(error: any): Observable<never>' of 'throwError' is deprecated.(»¤ÐŠúÿÿÿÿ8Õ£¼Û§2
+Ytypescript:S18541"1Remove this useless assignment to variable "res".(À’˜Ìøÿÿÿÿ8Õ£¼Û§2
+[typescript:S1854@"3Remove this useless assignment to variable "token".(°éËËøÿÿÿÿ8Ö£¼Û§2
