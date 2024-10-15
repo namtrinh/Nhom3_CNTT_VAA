@@ -181,3 +181,15 @@ x
 Hbackend/src/main/java/org/galaxy/backend/Controller/BrandController.java,f\e\fe5374fd9d891f63a407a8219035e97c9f4f34f0
 |
 Lfrontend/src/app/admin/manage-product/list-product/list-product.component.ts,b\8\b88069156dfac40f23becdfc3e67cb95066b6bb6
+g
+7frontend/src/app/admin/dashboard/dashboard.component.ts,0\9\09f513f2b297a04c191910f87ab4df8229052751
+†
+Vfrontend/src/app/admin/manage-product/promotion-product/promotion-product.component.ts,d\7\d704230649ec4de45aa7f9b72287387dcc8859da
+n
+>frontend/src/app/admin/manage-user/list-user/list.component.ts,f\1\f136b0c33633664374357a2b989be0fc3dfa908f
+p
+@frontend/src/app/admin/manage-user/list-user/list.component.html,f\9\f9b7bb56edf7828b103aa6bd6939e1a038a3c25f
+J
+frontend/package-lock.json,7\5\75b3b81cff849b08343553e269c3327a04ab22e0
+N
+frontend/src/app/app.config.ts,3\7\375ca7f1011dac2f7046ec7d9b794f5ad89ada33

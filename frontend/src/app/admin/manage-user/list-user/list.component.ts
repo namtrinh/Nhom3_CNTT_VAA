@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../../../model/user.model';
-import { UserService } from '../../../service/user-service.service';
-import { EmailService } from '../../../service/email-service.service';
-import { HttpClientModule } from '@angular/common/http';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../../../model/user.model';
+import {UserService} from '../../../service/user-service.service';
+import {EmailService} from '../../../service/email-service.service';
+import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {FormsModule} from '@angular/forms';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -22,7 +22,8 @@ export class ListComponent implements OnInit {
   subject: string = 'FireFLy';
   text: string = 'hong co 1';
 
-  constructor(private userService: UserService, private emailService: EmailService) { }
+  constructor(private userService: UserService, private emailService: EmailService) {
+  }
 
   ngOnInit(): void {
     this.getUserList();
@@ -39,7 +40,9 @@ export class ListComponent implements OnInit {
   }
 
   deleteUser(user_id: string) {
-    this.userService.deleteUser(user_id).subscribe(() => this.getUserList());
+    if (window.confirm("Are you sure want to delete this user ?")) {
+      this.userService.deleteUser(user_id).subscribe(() => this.getUserList());
+    }
   }
 
   clickSendmail() {

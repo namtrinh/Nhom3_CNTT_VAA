@@ -1,123 +1,133 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { CreateUserComponent } from './admin/manage-user/create-user/create-user.component';
-import { ListComponent } from './admin/manage-user/list-user/list.component';
-import { UserDetailsComponent } from './admin/manage-user/user-details/user-details.component';
-import { LoginComponent } from './auth/login/login.component';
-import { EditUserComponent } from './admin/manage-user/edit-user/edit-user.component';
-import { ListRoleComponent } from './admin/manage-role/list-role/list-role.component';
-import { CreateRoleComponent } from './admin/manage-role/create-role/create-role.component';
-import { EditRoleComponent } from './admin/manage-role/edit-role/edit-role.component';
-import { ListPermissionComponent } from './admin/manage-permission/list-permission/list-permission.component';
-import { RegistryComponent } from './auth/registry/registry.component';
-import { ViewAdminComponent } from './admin/view-admin/view-admin.component';
-import { ViewHomeComponent } from './home/view-home/view-home.component';
-import { EditMyInfComponent } from './home/edit-user/edit-user.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { ListUserByroleComponent } from './admin/manage-role/list-user-byrole/list-user-byrole.component';
-import { ListProductComponent } from './admin/manage-product/list-product/list-product.component';
-import { CreateProductComponent } from './admin/manage-product/create-product/create-product.component';
-import { EditProductComponent } from './admin/manage-product/edit-product/edit-product.component';
-import { ListCategoryComponent } from './admin/manage-category/list-category/list-category.component';
-import { CreateCategoryComponent } from './admin/manage-category/create-category/create-category.component';
-import { EditCategoryComponent } from './admin/manage-category/edit-category/edit-category.component';
-import { PayFailComponent } from './payment/pay-fail/pay-fail.component';
-import { PaySuccessComponent } from './payment/pay-success/pay-success.component';
-import { MyInfComponent } from './home/detail-user/user-details.component';
-import { DetailProductComponent } from './home/detail-product/detail-product.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {AppComponent} from './app.component';
+import {CreateUserComponent} from './admin/manage-user/create-user/create-user.component';
+import {ListComponent} from './admin/manage-user/list-user/list.component';
+import {UserDetailsComponent} from './admin/manage-user/user-details/user-details.component';
+import {LoginComponent} from './auth/login/login.component';
+import {EditUserComponent} from './admin/manage-user/edit-user/edit-user.component';
+import {ListRoleComponent} from './admin/manage-role/list-role/list-role.component';
+import {CreateRoleComponent} from './admin/manage-role/create-role/create-role.component';
+import {EditRoleComponent} from './admin/manage-role/edit-role/edit-role.component';
+import {ListPermissionComponent} from './admin/manage-permission/list-permission/list-permission.component';
+import {RegistryComponent} from './auth/registry/registry.component';
+import {ViewAdminComponent} from './admin/view-admin/view-admin.component';
+import {ViewHomeComponent} from './home/view-home/view-home.component';
+import {EditMyInfComponent} from './home/edit-user/edit-user.component';
+import {DashboardComponent} from './admin/dashboard/dashboard.component';
+import {ListUserByroleComponent} from './admin/manage-role/list-user-byrole/list-user-byrole.component';
+import {ListProductComponent} from './admin/manage-product/list-product/list-product.component';
+import {CreateProductComponent} from './admin/manage-product/create-product/create-product.component';
+import {EditProductComponent} from './admin/manage-product/edit-product/edit-product.component';
+import {ListCategoryComponent} from './admin/manage-category/list-category/list-category.component';
+import {CreateCategoryComponent} from './admin/manage-category/create-category/create-category.component';
+import {EditCategoryComponent} from './admin/manage-category/edit-category/edit-category.component';
+import {PayFailComponent} from './payment/pay-fail/pay-fail.component';
+import {PaySuccessComponent} from './payment/pay-success/pay-success.component';
+import {MyInfComponent} from './home/detail-user/user-details.component';
+import {DetailProductComponent} from './home/detail-product/detail-product.component';
 
-import { ProductSaleComponent } from './home/product-sale/product-sale.component';
-import { ListInvoiceComponent } from './admin/manage-invoice/list-invoice/list-invoice.component';
-import { AuthCodeComponent } from './auth/auth-code/auth-code.component';
-import { TestComponent } from './test/test.component';
-import { CartComponent } from './home/cart/cart.component';
-import { ProductByCategoryComponent } from './home/product-by-category/product-by-category.component';
-import { FooterComponent } from './home/footer/footer.component';
-import { AuthService } from './service/auth-service.service';
-import { _401Component } from './401/401.component';
-import { ProductExtendComponent } from './home/product-extend/product-extend.component';
-import { RequiredResetPasComponent } from "./auth/required-reset-pas/required-reset-pas.component";
-import { ResetPassComponent } from "./auth/reset-pass/reset-pass.component";
-import { PromotionProductComponent } from './admin/manage-product/promotion-product/promotion-product.component';
+import {ProductSaleComponent} from './home/product-sale/product-sale.component';
+import {ListInvoiceComponent} from './admin/manage-invoice/list-invoice/list-invoice.component';
+import {AuthCodeComponent} from './auth/auth-code/auth-code.component';
+import {TestComponent} from './test/test.component';
+import {CartComponent} from './home/cart/cart.component';
+import {ProductByCategoryComponent} from './home/product-by-category/product-by-category.component';
+import {FooterComponent} from './home/footer/footer.component';
+import {AuthService} from './service/auth-service.service';
+import {_401Component} from './401/401.component';
+import {ProductExtendComponent} from './home/product-extend/product-extend.component';
+import {RequiredResetPasComponent} from "./auth/required-reset-pas/required-reset-pas.component";
+import {ResetPassComponent} from "./auth/reset-pass/reset-pass.component";
+import {PromotionProductComponent} from './admin/manage-product/promotion-product/promotion-product.component';
 
 export const routes: Routes = [
 
   //Test View
-  { path: 'a', component: TestComponent },
+  {path: 'a', component: TestComponent},
 
   //Auth
-  { path: 'login', component: LoginComponent },
-  { path: 'registry', component: RegistryComponent },
-  { path: 'verify-code', component: AuthCodeComponent },
-  { path: 'forgot-password', component: RequiredResetPasComponent },
-  { path: 'reset-password', component: ResetPassComponent },
+  {path: 'login', component: LoginComponent},
+  {path: 'registry', component: RegistryComponent},
+  {path: 'verify-code', component: AuthCodeComponent},
+  {path: 'forgot-password', component: RequiredResetPasComponent},
+  {path: 'reset-password', component: ResetPassComponent},
 
   //View Client
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  {path: '', redirectTo: '', pathMatch: 'full'},
   {
     path: '', component: ViewHomeComponent, children: [
-      { path: '', component: ProductSaleComponent },
+      {path: '', component: ProductSaleComponent},
 
-      { path: 'b', component: ProductExtendComponent },
-      { path: 'detail-product/:seotitle', component: DetailProductComponent },
-      { path: 'myinf/:user_id', component: MyInfComponent },
-      { path: 'edit_my_inf/:user_id', component: EditMyInfComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'category/:category_id', component: ProductByCategoryComponent },
+      {path: 'b', component: ProductExtendComponent},
+      {path: 'detail-product/:seotitle', component: DetailProductComponent},
+      {path: 'myinf/:user_id', component: MyInfComponent},
+      {path: 'edit_my_inf/:user_id', component: EditMyInfComponent},
+      {path: 'cart', component: CartComponent},
+      {path: 'category/:category_id', component: ProductByCategoryComponent},
     ]
   },
 
   {
-    path: 'admin', component: ViewAdminComponent, canActivate: [AuthService], data: { role: 1 }, children: [
+    path: 'admin', component: ViewAdminComponent, canActivate: [AuthService], data: {role: 1}, children: [
 
       //User
-      { path: 'list-user', component: ListComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'create-user', component: CreateUserComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'user-details/:user_id', component: UserDetailsComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'edit-user/:user_id', component: EditUserComponent, canActivate: [AuthService], data: { role: 1 } },
+      {path: 'list-user', component: ListComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'create-user', component: CreateUserComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'user-details/:user_id', component: UserDetailsComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'edit-user/:user_id', component: EditUserComponent, canActivate: [AuthService], data: {role: 1}},
 
       //Product
-      { path: 'product', component: ListProductComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'promotion-product', component: PromotionProductComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'create-product', component: CreateProductComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'edit-product/:product_id', component: EditProductComponent, canActivate: [AuthService], data: { role: 1 } },
+      {path: 'product', component: ListProductComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'promotion-product', component: PromotionProductComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'create-product', component: CreateProductComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'edit-product/:product_id', component: EditProductComponent, canActivate: [AuthService], data: {role: 1}},
 
       //Category
-      { path: 'category', component: ListCategoryComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'create-category', component: CreateCategoryComponent, canActivate: [AuthService], data: { role: 1 } },
-      { path: 'edit-category/:category_id', component: EditCategoryComponent, canActivate: [AuthService], data: { role: 1 } },
+      {path: 'category', component: ListCategoryComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'create-category', component: CreateCategoryComponent, canActivate: [AuthService], data: {role: 1}},
+      {
+        path: 'edit-category/:category_id',
+        component: EditCategoryComponent,
+        canActivate: [AuthService],
+        data: {role: 1}
+      },
 
       //Invoice
-      { path: 'list-invoices', component: ListInvoiceComponent, canActivate: [AuthService], data: { role: 1 } },
+      {path: 'list-invoices', component: ListInvoiceComponent, canActivate: [AuthService], data: {role: 1}},
 
       //Role
       {
         path: 'role', component: ListRoleComponent, children: [
-          { path: 'edit-role/:name', component: EditRoleComponent },
-          { path: 'create-role', component: CreateRoleComponent },
-          { path: 'get-user-byrole:/:name', component: ListUserByroleComponent },
+          {path: 'edit-role/:name', component: EditRoleComponent},
+          {path: 'create-role', component: CreateRoleComponent},
+          {path: 'get-user-byrole:/:name', component: ListUserByroleComponent},
         ]
       },
+
       //Permission
-      { path: 'list-permission', component: ListPermissionComponent },
+      {path: 'list-permission', component: ListPermissionComponent},
+
       // Home admin
-      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthService], data: { role: 1 } },
+      {path: 'dashboard', component: DashboardComponent, canActivate: [AuthService], data: {role: 1}},
     ]
   },
 
   //Payment
-  { path: 'payment-fail', component: PayFailComponent },
-  { path: 'payment-success', component: PaySuccessComponent },
+  {path: 'payment-fail', component: PayFailComponent},
+  {path: 'payment-success', component: PaySuccessComponent},
 
-  { path: '???', component: _401Component }
+  {path: '???', component: _401Component}
 
 ]
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRouting { }
+export class AppRouting {
+}
+
 function get(): import("@angular/router").Route {
   throw new Error('Function not implemented.');
 }

@@ -67,10 +67,12 @@ export class ListProductComponent implements OnInit {
 
   // Component.ts
   deletePr(product_id: string) {
-    this.productService.deleteProduct(product_id).subscribe(
-      (data: any) => {
-        this.getAllPR();
-      });
+    if (window.confirm("Are you sure want to delete this product ?")) {
+      this.productService.deleteProduct(product_id).subscribe(
+        (data: any) => {
+          this.getAllPR();
+        });
+    }
   }
 
   clicksales() {
@@ -95,7 +97,6 @@ export class ListProductComponent implements OnInit {
       setTimeout(() => {
         window.location.reload();
       },0)
-
     }))
   }
 
