@@ -22,7 +22,6 @@ export class CreateCategoryComponent {
       this.router.navigate(['/admin/category']);
     })
   }
-
   OnSubmit() {
     this.create();
   }

@@ -31,13 +31,14 @@ export class ListProductComponent implements OnInit {
     private promotionService: PromotionService) { }
 
   ngOnInit(): void {
+
     this.getAllPR();
   }
 
   getAllPR() {
     this.productService.findAllProductsWithoutPromotion().subscribe((data: any) => {
       if (!this.searchTerm) {
-        this.products = data.result; 
+        this.products = data.result;
       } else {
         const lowerSearchTerm = this.searchTerm.toLowerCase();
         this.products = data.result.filter((product: { name: string; }) =>
@@ -91,6 +92,10 @@ export class ListProductComponent implements OnInit {
     }
     this.promotionService.create(this.promotion).subscribe((data => {
       this.showToast()
+      setTimeout(() => {
+        window.location.reload();
+      },0)
+
     }))
   }
 
