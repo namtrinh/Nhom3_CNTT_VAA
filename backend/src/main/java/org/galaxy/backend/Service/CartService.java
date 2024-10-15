@@ -3,13 +3,12 @@ package org.galaxy.backend.Service;
 import java.util.List;
 import java.util.Optional;
 
+import org.galaxy.backend.Model.Cart;
+import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Repository.CartRepository;
 import org.galaxy.backend.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import org.galaxy.backend.Model.Cart;
-import org.galaxy.backend.Model.Product;
 
 @Service
 public class CartService {

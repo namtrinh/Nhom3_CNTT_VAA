@@ -4,12 +4,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+import org.galaxy.backend.Model.Permission.Roles;
+import org.galaxy.backend.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
-import org.galaxy.backend.Model.Permission.Roles;
-import org.galaxy.backend.Model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, String> {
@@ -27,8 +26,4 @@ public interface UserRepository extends JpaRepository<User, String> {
     List<User> findAllByRoles(Set<Roles> roles);
 
     User findUsersByEmail(String email);
-
-
-
-
 }

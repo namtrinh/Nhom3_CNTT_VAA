@@ -2,16 +2,15 @@ package org.galaxy.backend.Controller;
 
 import java.util.List;
 
+import org.galaxy.backend.Model.Category;
+import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.Repository.CategoryRepository;
+import org.galaxy.backend.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-
-import org.galaxy.backend.Model.Category;
-import org.galaxy.backend.Model.Product;
-import org.galaxy.backend.Service.ProductService;
 
 @RestController
 @RequestMapping(value = "/product")
@@ -30,6 +29,14 @@ public class ProductController {
         var result = productService.findAll();
         result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
+    }
+
+    @GetMapping(value = "/get")
+    public ApiResponse<List<Product>> findAllProductIgnorePromote() {
+        return ApiResponse.<List<Product>>builder()
+                .code(200)
+                .result(productService.findAllProductIgnorePromote())
+                .build();
     }
 
     @GetMapping("/products")
@@ -60,22 +67,6 @@ public class ProductController {
         return ApiResponse.<List<Product>>builder()
                 .code(200)
                 .result(productService.findProductsByCategory(category))
-                .build();
-    }
-
-    @GetMapping(value = "/sale")
-    public ApiResponse<List<Product>> getAllSale() {
-        return ApiResponse.<List<Product>>builder()
-                .code(201)
-                .result(productService.getAllSale())
-                .build();
-    }
-
-    @GetMapping(value = "/ig-sale")
-    public ApiResponse<List<Product>> getAllNoSale() {
-        return ApiResponse.<List<Product>>builder()
-                .code(201)
-                .result(productService.getAllNoSale())
                 .build();
     }
 

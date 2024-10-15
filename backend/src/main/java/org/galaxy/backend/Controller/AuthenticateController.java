@@ -1,29 +1,26 @@
 package org.galaxy.backend.Controller;
 
 import java.text.ParseException;
+import java.util.UUID;
 
 import org.galaxy.backend.ModelDTO.request.AuthenticateRequest;
 import org.galaxy.backend.ModelDTO.request.CheckTokenRequest;
+import org.galaxy.backend.ModelDTO.request.LogoutRequest;
 import org.galaxy.backend.ModelDTO.request.RefreshTokenRequest;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.ModelDTO.response.AuthenticateResponse;
 import org.galaxy.backend.ModelDTO.response.CheckTokenResponse;
 import org.galaxy.backend.ModelDTO.response.LoginResponse;
-import org.galaxy.backend.Repository.UserRepository;
+import org.galaxy.backend.Service.AuthenticateService;
 import org.galaxy.backend.Service.ResetPasswordService;
 import org.galaxy.backend.Service.UserService;
 import org.galaxy.backend.Service.VerifyUser.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import org.galaxy.backend.ModelDTO.request.LogoutRequest;
-import org.galaxy.backend.Service.AuthenticateService;
 import com.nimbusds.jose.JOSEException;
 
 import lombok.RequiredArgsConstructor;
-
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/login")
@@ -31,6 +28,7 @@ import java.util.UUID;
 public class AuthenticateController {
     @Autowired
     private AuthenticateService authenticateService;
+
     @Autowired
     private ResetPasswordService resetPasswordService;
 
@@ -42,12 +40,19 @@ public class AuthenticateController {
 
     @PostMapping()
     public ApiResponse<LoginResponse> authenticate(@RequestBody AuthenticateRequest authenticateRequest) {
-        var result = authenticateService.Authenticate(authenticateRequest);
-        return ApiResponse.<LoginResponse>builder()
-                .code(200)
-                .message("A verification code has been sent to you !")
-                .result(result)
-                .build();
+        try {
+            var result = authenticateService.Authenticate(authenticateRequest);
+            return ApiResponse.<LoginResponse>builder()
+                    .code(200)
+                    .message("A verification code has been sent to you!")
+                    .result(result)
+                    .build();
+        } catch (Exception e) {
+            return ApiResponse.<LoginResponse>builder()
+                    .code(500)
+                    .message("Email or password is incorrect !")
+                    .build();
+        }
     }
 
     @PostMapping("/refresh")
@@ -108,13 +113,11 @@ public class AuthenticateController {
                 .message("One url has been sent to your email")
                 .result("true")
                 .build();
-
     }
 
     @PostMapping("/reset/reset-password")
-    public ApiResponse<String> resetPassword(@RequestParam String reset_key,
-                                             @RequestParam String email,
-                                             @RequestParam String newPassword) {
+    public ApiResponse<String> resetPassword(
+            @RequestParam String reset_key, @RequestParam String email, @RequestParam String newPassword) {
         String cachedResetKey = resetPasswordService.getResetKey(email);
 
         if (cachedResetKey == null || !cachedResetKey.equals(reset_key)) {
@@ -133,4 +136,3 @@ public class AuthenticateController {
                 .build();
     }
 }
-

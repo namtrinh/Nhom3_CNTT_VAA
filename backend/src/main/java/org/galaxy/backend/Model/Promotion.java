@@ -23,9 +23,9 @@ public class Promotion {
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String promotion_id;
 
-    private String name;
+    private String pr_name;
 
-    private Float discountt;
+    private Float discount;
 
     private Timestamp time_started;
 

@@ -1,12 +1,14 @@
 package org.galaxy.backend.Model;
 
 import java.sql.Timestamp;
+import java.util.Set;
 
 import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.*;
 
@@ -28,7 +30,6 @@ public class Product {
     private String image;
     private Integer quantity;
     private Double price;
-    private Double discount;
     private String description;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
@@ -41,4 +42,8 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "brand_id")
     private Brand brand;
+
+    @OneToMany
+    @JsonIgnore
+    private Set<Promotion> promotion;
 }

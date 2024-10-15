@@ -3,13 +3,13 @@ package org.galaxy.backend.Model;
 import java.sql.Timestamp;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import org.galaxy.backend.Model.Permission.Roles;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.*;
 

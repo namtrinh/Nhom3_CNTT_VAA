@@ -2,11 +2,10 @@ package org.galaxy.backend.Service;
 
 import java.util.List;
 
+import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.Repository.PromotionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import org.galaxy.backend.Model.Promotion;
 
 @Service
 public class PromotionService {

@@ -3,12 +3,11 @@ package org.galaxy.backend.Controller;
 import java.util.Collections;
 import java.util.List;
 
+import org.galaxy.backend.Model.Brand;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
+import org.galaxy.backend.Service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import org.galaxy.backend.Model.Brand;
-import org.galaxy.backend.Service.BrandService;
 
 @RestController
 @RequestMapping(value = "/brand")

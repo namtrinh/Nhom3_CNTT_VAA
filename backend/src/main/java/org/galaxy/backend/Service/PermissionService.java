@@ -3,13 +3,12 @@ package org.galaxy.backend.Service;
 import java.util.List;
 
 import org.galaxy.backend.Mapper.PermissionMapper;
+import org.galaxy.backend.Model.Permission.Permission;
 import org.galaxy.backend.ModelDTO.request.PermissionRequest;
 import org.galaxy.backend.ModelDTO.response.PermissionResponse;
 import org.galaxy.backend.Repository.PermissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import org.galaxy.backend.Model.Permission.Permission;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

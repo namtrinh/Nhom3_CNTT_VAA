@@ -2,12 +2,11 @@ package org.galaxy.backend.Controller;
 
 import java.util.List;
 
+import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
+import org.galaxy.backend.Service.PromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import org.galaxy.backend.Model.Promotion;
-import org.galaxy.backend.Service.PromotionService;
 
 @RestController
 @RequestMapping(value = "/promotions")

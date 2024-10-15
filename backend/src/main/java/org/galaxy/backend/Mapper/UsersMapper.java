@@ -1,11 +1,10 @@
 package org.galaxy.backend.Mapper;
 
+import org.galaxy.backend.Model.User;
+import org.galaxy.backend.ModelDTO.request.UsersRequest;
 import org.galaxy.backend.ModelDTO.response.UsersResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-
-import org.galaxy.backend.Model.User;
-import org.galaxy.backend.ModelDTO.request.UsersRequest;
 
 @Mapper(componentModel = "spring")
 public interface UsersMapper {

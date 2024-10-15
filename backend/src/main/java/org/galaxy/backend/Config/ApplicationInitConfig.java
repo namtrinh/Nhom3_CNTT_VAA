@@ -2,6 +2,7 @@ package org.galaxy.backend.Config;
 
 import java.util.HashSet;
 
+import org.galaxy.backend.Model.Permission.PredefinedRole;
 import org.galaxy.backend.Model.Permission.Roles;
 import org.galaxy.backend.Model.User;
 import org.galaxy.backend.Repository.RoleRepository;
@@ -11,8 +12,6 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import org.galaxy.backend.Model.Permission.PredefinedRole;
 
 import lombok.extern.slf4j.Slf4j;
 

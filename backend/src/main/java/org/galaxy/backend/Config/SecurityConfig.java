@@ -28,34 +28,28 @@ public class SecurityConfig {
     private CustomJwtDecoder customJwtDecoder;
 
     private final String[] POST_PUBLIC = {
-            "/login/verify_code",
-            "/login/refresh",
-            "/login",
-            "/login/logout",
-            "/login/reset/**",
-            "/api/upload",
-            "/identity/users"
+        "/login/verify_code",
+        "/login/refresh",
+        "/login",
+        "/login/logout",
+        "/login/reset/**",
+        "/api/upload",
+        "/identity/users"
     };
 
-    private final String[] VIEW_PUBLIC = {
-            "/category",
-            "/product/**",
-            "/vnpay-payment",
-            "/api/images/**"
-    };
+    private final String[] VIEW_PUBLIC = {"/category", "/product/**", "/vnpay-payment", "/api/images/**"};
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity
-                .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers("/v3/api-docs/**", "/swagger-ui/**")
-                        .permitAll()
-                        .requestMatchers(HttpMethod.GET, VIEW_PUBLIC)
-                        .permitAll()
-                        .requestMatchers(HttpMethod.POST, POST_PUBLIC)
-                        .permitAll()
-                        .anyRequest()
-                        .authenticated());
+        httpSecurity.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests(request -> request.requestMatchers(
+                        "/v3/api-docs/**", "/swagger-ui/**")
+                .permitAll()
+                .requestMatchers(HttpMethod.GET, VIEW_PUBLIC)
+                .permitAll()
+                .requestMatchers(HttpMethod.POST, POST_PUBLIC)
+                .permitAll()
+                .anyRequest()
+                .authenticated());
         // registry authentication provider to support jwt token
 
         httpSecurity.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwtConfigurer -> jwtConfigurer

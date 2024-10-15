@@ -8,6 +8,8 @@ import java.util.UUID;
 
 import org.galaxy.backend.Exception.AppException;
 import org.galaxy.backend.Exception.ErrorCode;
+import org.galaxy.backend.Model.InvalidateToken;
+import org.galaxy.backend.Model.User;
 import org.galaxy.backend.ModelDTO.request.AuthenticateRequest;
 import org.galaxy.backend.ModelDTO.request.CheckTokenRequest;
 import org.galaxy.backend.ModelDTO.request.LogoutRequest;
@@ -27,8 +29,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
-import org.galaxy.backend.Model.InvalidateToken;
-import org.galaxy.backend.Model.User;
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;

@@ -5,10 +5,9 @@ import java.util.List;
 import org.galaxy.backend.ModelDTO.request.PermissionRequest;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.ModelDTO.response.PermissionResponse;
+import org.galaxy.backend.Service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import org.galaxy.backend.Service.PermissionService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -2,13 +2,12 @@ package org.galaxy.backend.Repository;
 
 import java.util.List;
 
+import org.galaxy.backend.Model.Category;
+import org.galaxy.backend.Model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
-import org.galaxy.backend.Model.Category;
-import org.galaxy.backend.Model.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, String> {
@@ -24,14 +23,15 @@ public interface ProductRepository extends JpaRepository<Product, String> {
             nativeQuery = true)
     List<Product> findByCategory(@Param("category_id") Category category_id);
 
-    @Query(value = "select * from product where product.discount != 0", nativeQuery = true)
-    List<Product> getAllSale();
-
-    @Query(value = "select * from product where product.discount = 0", nativeQuery = true)
-    List<Product> getAllNoSale();
-
     @Query(value = "select quantity from product where product.product_id =:id", nativeQuery = true)
     Integer findAvailableQuantityById(String id);
 
     Product getBySeotitle(String seotitle);
+
+    @Query(
+            value =
+                    "SELECT * FROM product LEFT JOIN product_promotion on product.product_id = product_promotion.product_product_id"
+                            + " where product.promotion is null",
+            nativeQuery = true)
+    List<Product> findAllProductIgnorePromote();
 }

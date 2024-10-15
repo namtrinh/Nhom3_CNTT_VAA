@@ -2,10 +2,9 @@ package org.galaxy.backend.Service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
+import org.springframework.data.domain.Page;
 
 public interface ProductService {
     List<Product> findAll();
@@ -24,9 +23,7 @@ public interface ProductService {
 
     List<Product> searchProduct(String name);
 
-    public List<Product> getAllSale();
-
-    public List<Product> getAllNoSale();
-
     public Product getBySeotitle(String seotitle);
+
+    List<Product> findAllProductIgnorePromote();
 }

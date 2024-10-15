@@ -1,9 +1,9 @@
 package org.galaxy.backend.Service;
 
-import org.springframework.stereotype.Service;
-
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
+
+import org.springframework.stereotype.Service;
 
 @Service
 public class ResetPasswordService {

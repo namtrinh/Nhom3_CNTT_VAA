@@ -5,13 +5,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import org.galaxy.backend.Exception.AppException;
 import org.galaxy.backend.Exception.ErrorCode;
 import org.galaxy.backend.Mapper.UsersMapper;
@@ -24,6 +17,12 @@ import org.galaxy.backend.Repository.RoleRepository;
 import org.galaxy.backend.Repository.UserRepository;
 import org.galaxy.backend.Service.UserService;
 import org.galaxy.backend.Service.VerifyUser.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
@@ -102,16 +101,15 @@ public class UserServiceImpl implements UserService {
         return users.stream().map(usersMapper::toUsers).collect(Collectors.toList());
     }
 
-    public UsersResponse getUserByEmail(String email){
+    public UsersResponse getUserByEmail(String email) {
         return usersMapper.toUsers(userRepository.findUsersByEmail(email));
     }
 
-    public UsersResponse updatePassByEmail(String email, String password){
-        if (!userRepository.existsByEmail(email)){
+    public UsersResponse updatePassByEmail(String email, String password) {
+        if (!userRepository.existsByEmail(email)) {
             throw new RuntimeException("User not found");
         }
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         user.setPassword(encoder.encode(password));
         return usersMapper.toUsers(userRepository.save(user));

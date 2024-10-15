@@ -2,12 +2,11 @@ package org.galaxy.backend.Controller;
 
 import java.util.List;
 
+import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
+import org.galaxy.backend.Service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import org.galaxy.backend.Model.Category;
-import org.galaxy.backend.Service.CategoryService;
 
 @RestController
 @RequestMapping(value = "/category")
