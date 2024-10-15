@@ -20,12 +20,9 @@ export class ProductService {
 
   }
 
-  getAllSale(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}/sale`)
-  }
+  getAllIgnorePromotion(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}/get`)
 
-  getAllNoSale(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}/ig-sale`)
   }
 
   getById(product_id: number): Observable<Product> {

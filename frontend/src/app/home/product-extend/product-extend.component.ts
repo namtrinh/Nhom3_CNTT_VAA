@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-product-extend',
   standalone: true,
-  imports: [RouterLink,CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './product-extend.component.html',
   styleUrl: './product-extend.component.scss'
 })
@@ -24,7 +24,7 @@ export class ProductExtendComponent implements OnInit {
   constructor(private productService: ProductService, private imgService: ImageService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getAll();
+    this.getAlll();
   }
 
   loadProducts(): void {
@@ -39,14 +39,12 @@ export class ProductExtendComponent implements OnInit {
     this.loadProducts();
   }
 
-  getAll() {
-    this.productService.getAllNoSale().subscribe((data: any) => {
+  getAlll() {
+    this.productService.getAllIgnorePromotion().subscribe((data: any) => {
       this.products = data.result;
       this.products.forEach((product) => {
         this.getImageFromService(product.image, product.product_id)
-
       })
-      console.log(this.products);
     })
   }
 

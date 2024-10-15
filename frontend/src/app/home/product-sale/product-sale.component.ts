@@ -7,6 +7,10 @@ import { Category } from '../../model/category.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { ProductExtendComponent } from "../product-extend/product-extend.component";
+import { PromotionService } from '../../service/promotion-service.service';
+import { Promotion } from '../../model/promotion.model';
+import { DataService } from '../../service/data-service.service';
+
 
 @Component({
   selector: 'app-main',
@@ -16,28 +20,31 @@ import { ProductExtendComponent } from "../product-extend/product-extend.compone
   styleUrl: './product-sale.component.scss'
 })
 export class ProductSaleComponent implements OnInit {
-  sale!:number;
-  products: any;
-  product!: Product[];
-  category:Category[] = [];
+  sale!: number;
+  product: Partial<Product>[] = [];
+  category: Category[] = [];
+  promotions: Promotion[] = [];
 
   imgAvatars: { [key: string]: string } = {};
-  constructor(private router: Router, private productService: ProductService,
-    private imgService: ImageService) { }
+  constructor(private router: Router,
+    private productService: ProductService,
+    private imgService: ImageService,
+    private promotionService: PromotionService,
+    private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.getAllPoduct();
-   
+    this.getAllProducts();
   }
 
-  getAllPoduct() {
-    this.productService.getAllSale().subscribe((data: any) => {
-      this.product = data.result;
+  getAllProducts() {
+    this.promotionService.getAll().subscribe((data: any) => {
+      this.promotions = data.result;
+      this.product = this.promotions.map(promotions => promotions.product);
       this.product.forEach((product) => {
-        this.getImageFromService(product.image, product.product_id)
-      }, (error: any) => {
-        console.log(error);
-      })
+        if (product.image && product.product_id) {
+          this.getImageFromService(product.image, product.product_id);
+        }
+      });
     })
   }
 
@@ -54,5 +61,8 @@ export class ProductSaleComponent implements OnInit {
     } else { }
   }
 
-  
+  goToProductDetail(promotion:Promotion) {
+    this.dataService.changeData(promotion); // Gửi dữ liệu sản phẩm đến DataService
+    this.router.navigate(['/detail-product', promotion.product.seotitle]);
+  }
 }

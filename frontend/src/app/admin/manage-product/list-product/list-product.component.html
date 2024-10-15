@@ -71,7 +71,7 @@
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" id="name" name="name"
-                                        [(ngModel)]="promotion.name" required>
+                                        [(ngModel)]="promotion.pr_name" required>
                                     @if (formsale.controls['name']?.invalid && formsale.controls['name']?.touched) {
                                     <div class="text-danger">
                                         Name is required.
@@ -81,7 +81,7 @@
                                 <div class="form-group">
                                     <label for="discountt">Discount: %</label>
                                     <input type="number" class="form-control" id="discountt" name="discountt"
-                                        [(ngModel)]="promotion.discountt" min="0" max="100" required>
+                                        [(ngModel)]="promotion.discount" min="0" max="100" required>
                                     @if (formsale.controls['discountt']?.invalid &&
                                     formsale.controls['discountt']?.touched) {
                                     <div class="text-danger">
@@ -116,7 +116,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="button" [disabled]="!formsale.valid" class="btn btn-primary"
-                                (click)="createPromotion()" data-bs-dismiss="modal" >Save</button>
+                                (click)="createPromotion()" data-bs-dismiss="modal">Save</button>
                         </div>
                     </div>
                 </div>

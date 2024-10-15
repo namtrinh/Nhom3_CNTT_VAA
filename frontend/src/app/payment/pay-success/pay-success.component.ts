@@ -62,7 +62,6 @@ export class PaySuccessComponent implements OnInit {
       image: '',
       quantity: 0,
       price: 0,
-      discount: 0,
       description: '',
       time_created: '',
       category: new Category,

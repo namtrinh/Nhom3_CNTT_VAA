@@ -15,22 +15,31 @@ import { HttpBackend, HttpClient, HttpClientModule } from '@angular/common/http'
 })
 export class LoginComponent {
 
-  email!: string;
-  password!: string;
-  loginError!: string;
-  window: any;
-  userRole!: string;
+  email: string = '';
+  password: string = '';
+  loginError: string = '';
+  isLoading: boolean = false; // Trạng thái loading
 
   constructor(private authService: AuthService, private router: Router) { }
 
   login() {
+    this.isLoading = true;
+    localStorage.setItem('useremail', this.email);
 
-    localStorage.setItem('useremail', this.email)
-    this.router.navigate(['/verify-code']);
     this.authService.login(this.email, this.password)
       .subscribe(
-        data => { }
-      );
+        (data: any) => {
+          if (data.code === 200) {
+            setTimeout(() => {
+              this.isLoading = false;
+              this.router.navigate(['/verify-code']);
+            }, 2000);
+          } else {
+            this.isLoading = false;
+            this.loginError = data.message;
+            console.log(this.loginError);
+          }
+        })
   }
 
   isLoggedIn(): boolean {

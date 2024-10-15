@@ -4,12 +4,7 @@ import {UserService} from '../../../service/user-service.service';
 import {User} from '../../../model/user.model';
 import {RolesService} from '../../../service/role-service.service';
 import {Roles} from '../../../model/roles.model';
-import {CommonModule} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
-import {routes} from '../../../app.routes';
 import {FormsModule} from '@angular/forms';
-import {format} from 'date-fns';
-
 @Component({
   selector: 'app-edit-user',
   standalone: true,
