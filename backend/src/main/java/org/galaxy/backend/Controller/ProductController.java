@@ -25,18 +25,17 @@ public class ProductController {
     private CategoryRepository categoryRepository;
 
     @GetMapping
-    public ApiResponse<List<Product>> getAll() {
-        var result = productService.findAll();
+    public ApiResponse<List<Product>> findAllProductsWithPromotion() {
+        var result = productService.findAllProductsWithPromotion();
         result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
 
     @GetMapping(value = "/get")
-    public ApiResponse<List<Product>> findAllProductIgnorePromote() {
-        return ApiResponse.<List<Product>>builder()
-                .code(200)
-                .result(productService.findAllProductIgnorePromote())
-                .build();
+    public ApiResponse<List<Product>> findAllProductsWithoutPromotion() {
+        var result = productService.findAllProductsWithoutPromotion();
+        result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
+        return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
 
     @GetMapping("/products")

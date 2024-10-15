@@ -19,8 +19,13 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public List<Product> findAll() {
-        return productRepository.findAll();
+    public List<Product> findAllProductsWithPromotion() {
+        return productRepository.findAllProductsWithPromotion();
+    }
+
+    @Override
+    public List<Product> findAllProductsWithoutPromotion() {
+        return productRepository.findAllProductsWithoutPromotion();
     }
 
     @Override
@@ -67,9 +72,5 @@ public class ProductServiceImpl implements ProductService {
 
     public Product getBySeotitle(String seotitle) {
         return productRepository.getBySeotitle(seotitle);
-    }
-
-    public List<Product> findAllProductIgnorePromote() {
-        return productRepository.findAllProductIgnorePromote();
     }
 }

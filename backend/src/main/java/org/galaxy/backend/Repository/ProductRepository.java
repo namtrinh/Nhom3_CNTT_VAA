@@ -28,10 +28,9 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     Product getBySeotitle(String seotitle);
 
-    @Query(
-            value =
-                    "SELECT * FROM product LEFT JOIN product_promotion on product.product_id = product_promotion.product_product_id"
-                            + " where product.promotion is null",
-            nativeQuery = true)
-    List<Product> findAllProductIgnorePromote();
+    @Query("SELECT p FROM Product p WHERE p.promotion IS NOT NULL")
+    List<Product> findAllProductsWithPromotion();
+
+    @Query("SELECT p FROM Product p WHERE p.promotion IS NULL")
+    List<Product> findAllProductsWithoutPromotion();
 }

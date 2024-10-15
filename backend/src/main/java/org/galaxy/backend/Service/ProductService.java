@@ -7,7 +7,9 @@ import org.galaxy.backend.Model.Product;
 import org.springframework.data.domain.Page;
 
 public interface ProductService {
-    List<Product> findAll();
+    List<Product> findAllProductsWithPromotion();
+
+    List<Product> findAllProductsWithoutPromotion();
 
     Page<Product> getProducts(int pageNo, int pageSize);
 
@@ -24,6 +26,4 @@ public interface ProductService {
     List<Product> searchProduct(String name);
 
     public Product getBySeotitle(String seotitle);
-
-    List<Product> findAllProductIgnorePromote();
 }
