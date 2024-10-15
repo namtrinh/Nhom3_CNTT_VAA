@@ -52,7 +52,6 @@ export class ProductByCategoryComponent implements OnInit {
       })
   }
 
-
   getAll() {
     const id = this.active.snapshot.params['seotitle'];
     if (id === 'all') {
