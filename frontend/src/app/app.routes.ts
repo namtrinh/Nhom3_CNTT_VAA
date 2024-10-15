@@ -37,8 +37,9 @@ import { FooterComponent } from './home/footer/footer.component';
 import { AuthService } from './service/auth-service.service';
 import { _401Component } from './401/401.component';
 import { ProductExtendComponent } from './home/product-extend/product-extend.component';
-import {RequiredResetPasComponent} from "./auth/required-reset-pas/required-reset-pas.component";
-import {ResetPassComponent} from "./auth/reset-pass/reset-pass.component";
+import { RequiredResetPasComponent } from "./auth/required-reset-pas/required-reset-pas.component";
+import { ResetPassComponent } from "./auth/reset-pass/reset-pass.component";
+import { PromotionProductComponent } from './admin/manage-product/promotion-product/promotion-product.component';
 
 export const routes: Routes = [
 
@@ -78,6 +79,7 @@ export const routes: Routes = [
 
       //Product
       { path: 'product', component: ListProductComponent, canActivate: [AuthService], data: { role: 1 } },
+      { path: 'promotion-product', component: PromotionProductComponent, canActivate: [AuthService], data: { role: 1 } },
       { path: 'create-product', component: CreateProductComponent, canActivate: [AuthService], data: { role: 1 } },
       { path: 'edit-product/:product_id', component: EditProductComponent, canActivate: [AuthService], data: { role: 1 } },
 

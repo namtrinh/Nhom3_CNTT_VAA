@@ -5,11 +5,12 @@ import { Cart } from '../../model/cart.model';
 import { Product } from '../../model/product.model';
 import { FormsModule } from '@angular/forms';
 import { ImageService } from '../../service/img-service.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

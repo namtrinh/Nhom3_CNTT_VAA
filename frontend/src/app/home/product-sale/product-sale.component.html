@@ -31,14 +31,14 @@
         <p style="color:red">
           {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
         </p>
-      }
+        }
       </strong>
 
       <strong class="product-discount" style="color:rgb(255, 255, 255);">
-      
+
         <p class="pr-discount-value">
           -{{product.promotion?.discount }}%</p>
-        
+
         <img class="pr-discount-ico" src="/assets/label.png">
       </strong>
 

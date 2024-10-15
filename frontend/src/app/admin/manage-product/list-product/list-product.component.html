@@ -3,10 +3,10 @@
 
     <div class="search-container">
         <input class="search-input" type="search" [(ngModel)]="searchTerm" placeholder="Tìm kiếm..."
-            (ngModelChange)="getAllRoles()" />
+            (ngModelChange)="getAllPR()" />
         <button class="btn btn-primary" style="margin-left:40px;" (click)="clicksales()">Sales</button>
-    </div>
 
+    </div>
 
     <table class="table table-striped table">
         <thead>
@@ -44,7 +44,7 @@
                         [routerLink]="['/admin/edit-product',product.product_id]">Edit
                     </button>
                 </td>
-                <td> <button class="btn btn-danger" (click)="deleterole(product.product_id)">Delete</button></td>
+                <td> <button class="btn btn-danger" (click)="deletePr(product.product_id)">Delete</button></td>
 
                 @if (clicksale) {
                 <td>

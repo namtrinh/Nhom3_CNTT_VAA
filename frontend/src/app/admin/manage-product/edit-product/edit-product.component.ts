@@ -4,8 +4,8 @@ import { ProductService } from '../../../service/product-service.service';
 import { Product } from '../../../model/product.model';
 import { ImageService } from '../../../service/img-service.service';
 import { FormsModule } from '@angular/forms';
-import {CategoryService} from "../../../service/categoy-service.service";
-import {Category} from "../../../model/category.model";
+import { CategoryService } from "../../../service/categoy-service.service";
+import { Category } from "../../../model/category.model";
 
 @Component({
   selector: 'app-edit-product',
@@ -23,14 +23,14 @@ export class EditProductComponent implements OnInit {
   product: Product = new Product();
   selectedFile: File | null = null;
   imgAvatar!: string;
-  category:Category[] = [];
+  category: Category[] = [];
   cate!: string;
-  time!:string;
+  time!: string;
   constructor(private active: ActivatedRoute,
-              private router: Router,
-              private productService: ProductService,
-              private imgService: ImageService,
-  private categoryService:CategoryService) { }
+    private router: Router,
+    private productService: ProductService,
+    private imgService: ImageService,
+    private categoryService: CategoryService) { }
 
   private getById() {
     this.id = this.active.snapshot.params['product_id'];
@@ -64,19 +64,33 @@ export class EditProductComponent implements OnInit {
 
 
   private updateProduct() {
-    this.productService.editById(this.id, this.product).subscribe(
-      (data: any) => {
-        console.log(data);
-        this.router.navigate(['/admin/product']);
-      },
-      error => {
-        console.log(error);
-      }
-    )
+    const formData = new FormData();
+    formData.append('name', this.product.name);
+    formData.append('quantity', this.product.quantity.toString());
+    formData.append('price', this.product.price.toString());
+    formData.append('description', this.product.description);
+    if (this.product.category?.category_id) {
+      formData.append('category', this.product.category.category_id.toString());
   }
 
-  getCategory(){
-    this.categoryService.getAll().subscribe((data:any) =>{
+    if (this.selectedFile) {
+        formData.append('image', this.selectedFile);
+    }
+
+    this.productService.editById(this.id, formData).subscribe(
+        (data: any) => {
+            console.log(data);
+            this.router.navigate(['/admin/product']);
+        },
+        error => {
+            console.log(error);
+        }
+    );
+}
+
+
+  getCategory() {
+    this.categoryService.getAll().subscribe((data: any) => {
       this.category = data.result;
     })
   }

@@ -25,8 +25,8 @@ export class PromotionService{
         return this.http.post<Promotion>(`${this.promotionUrl}`,promotion)
     }
 
-    deleteById(id:string):void{
-        this.http.delete(`${this.promotionUrl}/${id}`)
+    deleteById(promotion_id:string):Observable<Object>{
+       return this.http.delete(`${this.promotionUrl}/${promotion_id}`)
     }
 
     updateById(id:string, promotion:Promotion):Observable<Object>{

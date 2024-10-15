@@ -31,13 +31,13 @@ export class ListProductComponent implements OnInit {
     private promotionService: PromotionService) { }
 
   ngOnInit(): void {
-    this.getAllRoles();
+    this.getAllPR();
   }
 
-  getAllRoles() {
-    this.productService.getAll().subscribe((data: any) => {
+  getAllPR() {
+    this.productService.findAllProductsWithoutPromotion().subscribe((data: any) => {
       if (!this.searchTerm) {
-        this.products = data.result; // Nếu không có từ khóa tìm kiếm, hiển thị toàn bộ danh sách
+        this.products = data.result; 
       } else {
         const lowerSearchTerm = this.searchTerm.toLowerCase();
         this.products = data.result.filter((product: { name: string; }) =>
@@ -46,8 +46,6 @@ export class ListProductComponent implements OnInit {
       }
       this.products.forEach((products) => {
         this.getImageFromService(products.image, products.product_id);
-      }, (error: any) => {
-        console.log(error);
       })
     })
   }
@@ -67,10 +65,10 @@ export class ListProductComponent implements OnInit {
 
 
   // Component.ts
-  deleterole(product_id: string) {
+  deletePr(product_id: string) {
     this.productService.deleteProduct(product_id).subscribe(
       (data: any) => {
-        this.getAllRoles();
+        this.getAllPR();
       });
   }
 
@@ -91,7 +89,7 @@ export class ListProductComponent implements OnInit {
     this.promotion.product = {
       product_id: this.selectedProductId
     }
-    this.promotionService.create(this.promotion).subscribe((data=>{
+    this.promotionService.create(this.promotion).subscribe((data => {
       this.showToast()
     }))
   }
@@ -110,5 +108,11 @@ export class ListProductComponent implements OnInit {
     setTimeout(() => {
       this.isVisible = false;
     }, 3000);
+  }
+
+  getprWithpromotion(){
+    this.productService.findAllProductsWithPromotion().subscribe((data:any) =>{
+      this.products =data.result;
+    })
   }
 }

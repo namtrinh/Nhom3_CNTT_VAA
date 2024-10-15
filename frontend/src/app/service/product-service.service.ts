@@ -17,11 +17,15 @@ export class ProductService {
 
   getAll(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}`)
+  }
+
+  findAllProductsWithPromotion(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}/findAllProductsWithPromotion`)
 
   }
 
-  getAllIgnorePromotion(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}/get`)
+  findAllProductsWithoutPromotion(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}/findAllProductsWithoutPromotion`)
 
   }
 
@@ -33,7 +37,7 @@ export class ProductService {
     return this.http.get<Product>(`${this.baseUrl}/v/${seotitle}`);
   }
 
-  editById(product_id: number, product: Product): Observable<Object> {
+  editById(product_id: number, product: FormData): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${product_id}`, product);
   }
 

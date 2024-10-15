@@ -40,7 +40,7 @@ export class ProductExtendComponent implements OnInit {
   }
 
   getAlll() {
-    this.productService.getAllIgnorePromotion().subscribe((data: any) => {
+    this.productService.findAllProductsWithoutPromotion().subscribe((data: any) => {
       this.products = data.result;
       this.products.forEach((product) => {
         this.getImageFromService(product.image, product.product_id)

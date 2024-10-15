@@ -37,7 +37,7 @@ export class ProductSaleComponent implements OnInit {
   }
 
   getAllProducts() {
-    this.productService.getAll().subscribe((data: any) => {
+    this.productService.findAllProductsWithPromotion().subscribe((data: any) => {
       this.products = data.result;
       this.products.forEach((product) => {
         if (product.image && product.product_id) {
