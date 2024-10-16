@@ -21,7 +21,7 @@ export class UserService {
   getByRole(role:string): Observable<User[]> {
   return this.httpClient.get<User[]>(`${this.basUrl}/role/${role}`)}
 
-  createUser(user: FormData): Observable<Object> {
+  createUser(user: User): Observable<Object> {
     return this.httpClient.post(`${this.basUrl}`, user)
   }
   editUser(user_id: string, user: User): Observable<Object> {

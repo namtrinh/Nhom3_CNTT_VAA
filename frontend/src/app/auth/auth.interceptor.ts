@@ -21,13 +21,15 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    if (request.url.includes('/login/refresh') ||
+    if (request.url.includes('/users') ||
+      request.url.includes('/login') ||
+        request.url.includes('/login/refresh') ||
         request.url.includes('/login/token') ||
         request.url.includes('/login/logout') ||
         request.url.includes('/login/verify_code') ||
         request.url.includes('/login/reset/forgot-password') ||
         request.url.includes('/login/reset/reset-password')) {
-      return next.handle(request);
+        return next.handle(request);
     }
 
     const token = this.authService.getToken();

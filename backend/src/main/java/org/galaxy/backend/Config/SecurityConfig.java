@@ -28,16 +28,21 @@ public class SecurityConfig {
     private CustomJwtDecoder customJwtDecoder;
 
     private final String[] POST_PUBLIC = {
-        "/login/verify_code",
-        "/login/refresh",
-        "/login",
-        "/login/logout",
-        "/login/reset/**",
-        "/api/upload",
-        "/identity/users"
+            "/users",
+            "/login/verify_code",
+            "/login/refresh",
+            "/login",
+            "/login/logout",
+            "/login/reset/**",
+            "/api/upload",
+            "/identity/users"
     };
 
-    private final String[] VIEW_PUBLIC = {"/category", "/product/**", "/vnpay-payment", "/api/images/**"};
+    private final String[] VIEW_PUBLIC = {
+            "/category",
+            "/product/**",
+            "/vnpay-payment",
+            "/api/images/**"};
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {

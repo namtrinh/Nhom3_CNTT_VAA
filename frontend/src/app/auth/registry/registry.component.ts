@@ -15,30 +15,17 @@ import { format } from 'date-fns';
 })
 export class RegistryComponent {
 
+
   user: User = new User();
-  selectedFile: File | null = null;
 
-  constructor(private userService: UserService, private router: Router) { }
-  ngOnInit() {
-    
-  }
-
-  onFileSelected(event: any): void {
-    this.selectedFile = event.target.files[0] as File;
+  constructor(private userService: UserService, private router: Router) {
   }
 
   createUser() {
     this.user.time_created = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-    const formData = new FormData();
-    formData.append('email', this.user.email);
-    formData.append('username', this.user.username);
-    formData.append('password', this.user.password);
-    formData.append('time_created',this.user.time_created);
-    if (this.selectedFile) {
-      formData.append('file', this.selectedFile);
-    }
-  
-    this.userService.createUser(formData).subscribe({
+
+
+    this.userService.createUser(this.user).subscribe({
       next: (data) => {
         console.log(data);
         this.router.navigate(['/login']);
@@ -48,13 +35,13 @@ export class RegistryComponent {
       }
     });
   }
-  
 
   OnSubmit() {
     this.createUser();
-    console.log(this.user);
   }
-  
+
 }
+
+
 
 

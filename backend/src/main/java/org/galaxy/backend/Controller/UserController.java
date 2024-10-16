@@ -45,7 +45,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ApiResponse<UsersResponse> handleFileUpload(@ModelAttribute @Valid UsersRequest usersRequest) {
+    public ApiResponse<UsersResponse> handleFileUpload(@RequestBody @Valid UsersRequest usersRequest) {
         return ApiResponse.<UsersResponse>builder()
                 .code(HttpStatus.CREATED.value())
                 .result(userService.CreateUser(usersRequest))

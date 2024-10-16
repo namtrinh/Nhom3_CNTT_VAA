@@ -201,3 +201,15 @@ Ebackend/src/main/java/org/galaxy/backend/Service/CategoryService.java,a\9\a975
 Kbackend/src/main/java/org/galaxy/backend/Repository/CategoryRepository.java,5\9\59cdef754450da1f9789a42ef7d830f641beaa2b
 w
 Gbackend/src/main/java/org/galaxy/backend/Repository/CartRepository.java,7\4\74dbbd5fc969ed1b124814ed65579a05e2cc5236
+w
+Gfrontend/src/app/admin/manage-user/create-user/create-user.component.ts,c\e\ce2a9c27ccdf2a93c564a87b4fe55f78983ebdae
+d
+4frontend/src/app/auth/registry/registry.component.ts,8\c\8cf60623651a943961ba003b7752e041bceccae0
+f
+6frontend/src/app/auth/registry/registry.component.html,5\2\52b71058e2828b739d78de19b52a811791936ecf
+x
+Hbackend/src/main/java/org/galaxy/backend/Controller/RolesController.java,1\5\155d0315dad1668e73ab410c98b1b24f0d9f41ec
+{
+Kbackend/src/main/java/org/galaxy/backend/ModelDTO/request/UsersRequest.java,4\3\4395b81ea39166d29c9b12e29e2bfaeeb2351b80
+y
+Ifrontend/src/app/admin/manage-user/create-user/create-user.component.html,a\d\ad3a4f9574771bf9c111bc83ff559e54f6ef5628
