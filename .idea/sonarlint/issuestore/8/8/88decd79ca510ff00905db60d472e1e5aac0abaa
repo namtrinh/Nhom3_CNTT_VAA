@@ -1,22 +1,24 @@
 
-˜	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8Ø¶Ÿ½§2J$a4583141-063f-4e5f-ad37-ab3b85d10608
-˜	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8Ù¶Ÿ½§2J$ee4655d2-174d-4038-9afb-ec80bff89037
-˜	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8Ù¶Ÿ½§2J$e8ebd677-cff2-4c07-8764-abc5878ca6a6
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8Ù¶Ÿ½§2J$ef6c9738-f2e3-45b1-9f0d-31ef786c25ea
-	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8Û¶Ÿ½§2J$78f95952-6763-421c-8e6e-84e2158bb5e2
+˜	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8üÓà±ª2J$07604a62-e5ee-420a-8a9f-7b0b838c4318
+˜	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8üÓà±ª2J$94e60fb8-989b-4aad-87ae-39cc94b1be57
+˜	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8üÓà±ª2J$1a72f2fb-5cfc-441b-826e-aee76e81bb6a
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8üÓà±ª2J$2c8b24bb-921b-4542-9ebc-053c61ac44c0
+	java:S112r"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8ÿÓà±ª2J$e597d547-fb00-4071-b49b-0dec80e4b879
 —
-java:S1192;"ODefine a constant instead of duplicating this literal "User not found" 4 times.(ÖÕ³ÿÿÿÿÿ8Ü¶Ÿ½§2J$f78edbd1-3d9e-454b-86a9-2fa769a7318c
+java:S1192<"ODefine a constant instead of duplicating this literal "User not found" 4 times.(ÖÕ³ÿÿÿÿÿ8ÿÓà±ª2J$20b15078-8bb1-48e2-b49d-05a4631faa4d
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ş¶Ÿ½§2J$8a9a8208-d0b3-46cf-91af-1ce5ad599bba
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8€Ôà±ª2J$4ab95dd4-8394-470b-b8fe-17b0ff33206e
 …
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8Ş¶Ÿ½§2J$86113330-1947-4801-b6ea-36434e4f213f
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8Ôà±ª2J$7f184eb4-1812-4a3e-9da0-549069191d52
 …
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ş¶Ÿ½§2J$7a90c902-abba-4d51-ac81-85a00eb508e2
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ôà±ª2J$d710fa77-e384-44fb-a743-3111b9db7a27
 …
-java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8Ş¶Ÿ½§2J$4fed8e87-7254-4b5f-b8e0-271bcf89c60f
-½
-java:S6204D"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ê¶Ÿ½§2J$53e9650a-1da4-4feb-afbe-1cffd95840b9
-m	java:S106T"+Replace this use of System.out by a logger.(…Çº8ì¶Ÿ½§2J$ac111912-2b28-4188-b054-2f140f2dd4e0
-r	java:S106W"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8í¶Ÿ½§2J$a09adeb1-e7a7-4bfb-9c29-c3874d69e66d
-½
-java:S6204f"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ñ¶Ÿ½§2J$92160392-25ed-41cd-8c06-ce154578f196
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8Ôà±ª2J$0c9ff1b7-0a7e-4d63-b9a8-623172c28cbf
+—
+java:S6204G"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ªâã8–Û ²ª2
+m	java:S106W"+Replace this use of System.out by a logger.(…Çº8Ôà±ª2J$9d2ace84-daad-4bf5-a01a-6535fbc2a8eb
+r	java:S106Z"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8Ôà±ª2J$d8430601-6011-4816-bfb0-7ac32c0584fa
+—
+java:S6204i"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¡Û ²ª2
+T
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8¥Û ²ª2

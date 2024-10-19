@@ -10,4 +10,5 @@ export class User {
   roles!: string[];
   time_created!: string;
   selected: boolean = false;
+  activated!:boolean;
 }

@@ -25,7 +25,6 @@ export class CreateUserComponent {
   createUser() {
     this.user.time_created = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
 
-
     this.userService.createUser(this.user).subscribe({
       next: (data) => {
         console.log(data);

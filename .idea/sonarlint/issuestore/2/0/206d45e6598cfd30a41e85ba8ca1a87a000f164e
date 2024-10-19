@@ -1,10 +1,10 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Í¶«‚©2J$29ff1ca2-070a-476f-8f2e-c3d15b9f69a2
-ž	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8Î¶«‚©2J$89116ae4-28ab-44a7-8a14-4176d0a17983
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ýÿÿÿÿ8Î¶«‚©2J$3e7f5907-3b8e-4fa5-906b-8b515c02c886
-ž	java:S116 "WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8Î¶«‚©2J$8384eb17-a304-4dcf-b950-b6c4d214c25f
-•	java:S116""SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8Î¶«‚©2J$00d8b0d8-0ec0-4ae3-9c19-2e717b290586
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8õº‘´ª2J$5fd09eac-810d-48de-aa82-7328d1ddb747
+ž	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8÷º‘´ª2J$836499f7-05a8-401c-afd1-890fe94ae0c9
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ýÿÿÿÿ8÷º‘´ª2J$ebfd8c74-b33b-49e1-aa2a-f4596cecaaae
+ž	java:S116 "WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8÷º‘´ª2J$cef62dd9-62d3-416f-bef3-f01d9f60a4db
+•	java:S116""SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8÷º‘´ª2J$739ba9e1-dd8f-4694-8531-31fae12eaf91
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8Ð¶«‚©2J$be22565d-ce98-4096-99a5-81bf9cfa5b6f
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8úº‘´ª2J$71616cab-3724-49a2-adc0-698394d70726
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8Ñ¶«‚©2J$bf1f4fac-2709-4acf-898c-51f4f7459e32
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8úº‘´ª2J$4b0b0fa5-5efd-4b31-863e-c1be37c33a2f

@@ -106,8 +106,8 @@ public class AuthenticateService {
         var token = generateToken(user);
         // Xoá mã xác thực sau khi xác minh thành công
         user.setVerificationCode(null);
+        user.setActivated(true);
         userRepository.save(user);
-
         return AuthenticateResponse.builder().token(token).authenticate(true).build();
     }
 

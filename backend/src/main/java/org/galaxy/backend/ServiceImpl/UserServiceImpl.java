@@ -1,5 +1,6 @@
 package org.galaxy.backend.ServiceImpl;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -48,6 +49,7 @@ public class UserServiceImpl implements UserService {
         HashSet<Roles> roles = new HashSet<>();
         roleRepository.findById(PredefinedRole.USER_ROLE).ifPresent(roles::add);
         user.setRoles(roles);
+        user.setActivated(false);
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
         user.setPassword(passwordEncoder.encode(usersRequest.getPassword()));
         return usersMapper.toUsers(userRepository.save(user));
@@ -63,8 +65,10 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<UsersResponse> findAllUser() {
-        var users = userRepository.findAllUser();
-        return users.stream().map(usersMapper::toUsers).collect(Collectors.toList());
+        List<User> users = userRepository.findAllUser(); // Lấy danh sách người dùng từ repository
+        return users.stream() // Chuyển đổi danh sách User thành danh sách UsersResponse
+                .map(usersMapper::toUsers) // Ánh xạ từng User thành UsersResponse
+                .collect(Collectors.toList()); // Thu thập thành danh sách
     }
 
     public UsersResponse editUsers(String user_id, UsersRequest usersRequest) {

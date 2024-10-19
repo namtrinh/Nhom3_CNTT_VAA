@@ -1,25 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Admin</a>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto align-items-center" style="margin-left: auto;">
-
-            @if (inf) {
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/admin/user-details', inf.user_id]">
-                    <i class="fas fa-user-circle"></i> {{ inf.username }}
-                </a>
-            </li>
-            }
-
-            <li class="nav-item">
-                <button class="btn btn-link nav-link logout" (click)="logout()">
-                    Logout <i class="fa-solid fa-right-from-bracket"></i>
-                </button>
-            </li>
-        </ul>
-    </div>
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Admin</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto align-items-center d-flex flex-row" style="margin-left: auto;">
+      @if (inf) {
+        <li class="nav">
+          <button class="btn btn-link nav-link" [routerLink]="['/admin/user-details', inf.user_id]">
+            <i class="fas fa-user-circle"></i> {{ inf.username }}
+          </button>
+        </li>
+      }
+      <li class="nav">
+        <button class="btn btn-link nav-link logout" (click)="logout()">
+          Logout <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
 </nav>
+
 
 <div class="sidebar" style="width: 250px;">
     <div class="container" style="padding:20px;">
@@ -80,6 +78,25 @@
                     </ul>
                 </div>
             </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#sibarpromotion">
+              <i class="fa-solid fa-table-list"></i> Promotion
+              <i class="fa-solid fa-chevron-down" style="float: right;"></i>
+            </a>
+            <div class="collapse" id="sibarpromotion">
+              <ul class="nav nav-collapse">
+                <li>
+                  <a class="nav-link" [routerLink]="['/admin/promotion']"><i class="fa-solid fa-circle"></i>
+                    List Promotion</a>
+                </li>
+                <li>
+                  <a class="nav-link" [routerLink]="['/admin/create-promotion']"><i
+                    class="fa-solid fa-circle"></i> Create Promotion</a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#sibarcategory">

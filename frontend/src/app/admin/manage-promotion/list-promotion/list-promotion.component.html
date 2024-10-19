@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-striped table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Discount %</th>
+      <th>Time Start</th>
+      <th>Time End</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (promotion of promotions; track promotions) {
+        <tr>
+          <td>{{ promotion.pr_name }}</td>
+          <td>{{ promotion.discount }}</td>
+          <td>{{ promotion.time_started }}</td>
+          <td>{{ promotion.time_end }}</td>
+          <td>
+            <button class="btn btn-primary" [routerLink]="['/admin/update-promotion',promotion.promotion_id]"><i
+              class="fa-regular fa-pen-to-square"></i></button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteById(promotion.promotion_id)"><i
+              class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

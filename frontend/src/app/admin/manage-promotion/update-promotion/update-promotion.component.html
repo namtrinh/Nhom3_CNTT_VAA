@@ -1,0 +1,43 @@
+<!-- promotion-edit.component.html -->
+<div class="container mt-5">
+  <form (ngSubmit)="onSubmit()" class="p-4 border rounded shadow" novalidate>
+    <h2 class="mb-4">Update Promotion Program</h2>
+
+    <div class="mb-3">
+      <label for="pr_name" class="form-label">Program Name:</label>
+      <input type="text" id="pr_name" class="form-control" [(ngModel)]="promotion.pr_name" name="pr_name" required>
+      <div class="invalid-feedback">
+        Please enter the program name.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="discount" class="form-label">Discount (%):</label>
+      <input type="number" id="discount" class="form-control" [(ngModel)]="promotion.discount" name="discount" required>
+      <div class="invalid-feedback">
+        Please enter a valid discount.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="time_started" class="form-label">Start Time:</label>
+      <input type="datetime-local" id="time_started" class="form-control" [(ngModel)]="promotion.time_started"
+             name="time_started" required>
+      <div class="invalid-feedback">
+        Please select a start time.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="time_end" class="form-label">End Time:</label>
+      <input type="datetime-local" id="time_end" class="form-control" [(ngModel)]="promotion.time_end" name="time_end"
+             required>
+      <div class="invalid-feedback">
+        Please select an end time.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+
+  </form>
+</div>

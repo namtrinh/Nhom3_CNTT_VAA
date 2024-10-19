@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../service/product-service.service';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Product } from '../../model/product.model';
-import { FormsModule } from '@angular/forms';
-import { VNPayService } from '../../service/payment-service.service';
-import { ImageService } from '../../service/img-service.service';
-import { CommonModule } from '@angular/common';
-import { CartService } from '../../service/cart-service.service';
-import { Cart } from '../../model/cart.model';
-import { format } from 'date-fns';
-import { jwtDecode } from 'jwt-decode';
+import {Component, OnInit} from '@angular/core';
+import {ProductService} from '../../service/product-service.service';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {Product} from '../../model/product.model';
+import {FormsModule} from '@angular/forms';
+import {VNPayService} from '../../service/payment-service.service';
+import {ImageService} from '../../service/img-service.service';
+import {CommonModule} from '@angular/common';
+import {CartService} from '../../service/cart-service.service';
+import {Cart} from '../../model/cart.model';
+import {format} from 'date-fns';
+import {jwtDecode} from 'jwt-decode';
 
 @Component({
   selector: 'app-detail-product',
@@ -29,14 +29,15 @@ export class DetailProductComponent implements OnInit {
   showPay: boolean = false;
   cart: Cart = new Cart();
   isVisible: boolean = false;
+
   constructor(
     private cartService: CartService,
     private imgService: ImageService,
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
     private vnPayService: VNPayService,
-
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
@@ -57,7 +58,7 @@ export class DetailProductComponent implements OnInit {
     if (imageName) {
       this.imgService.getImage(imageName).subscribe(
         (data: any) => {
-          const blob = new Blob([data], { type: 'image/*' });
+          const blob = new Blob([data], {type: 'image/*'});
           this.imgAvatars[product_id] = URL.createObjectURL(blob);
         });
     }

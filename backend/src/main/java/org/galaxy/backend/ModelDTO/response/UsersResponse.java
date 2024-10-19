@@ -3,6 +3,7 @@ package org.galaxy.backend.ModelDTO.response;
 import java.sql.Timestamp;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Email;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -26,6 +27,8 @@ public class UsersResponse {
     private String password;
 
     private String verificationCode;
+
+    private Boolean activated;
 
     private String address;
 

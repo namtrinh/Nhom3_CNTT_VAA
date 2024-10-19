@@ -3,6 +3,7 @@ package org.galaxy.backend.Model;
 import java.sql.Timestamp;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import org.galaxy.backend.Model.Permission.Roles;
@@ -18,7 +19,7 @@ import lombok.*;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "users")
 public class User {
     @Id
@@ -34,6 +35,8 @@ public class User {
     private String email;
 
     private String address;
+
+    private Boolean activated;
 
     private String verificationCode;
 

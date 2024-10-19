@@ -1,4 +1,6 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äÄ·º
-g	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñû°‹
-l	java:S116#"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùìü
+ï	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äÄ·ºJ$4fd99209-234b-423c-9469-48445d16b830
+ç	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñû°‹J$460e23e1-b030-4d42-9682-674054e56410
+í	java:S116&"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùìüJ$3805bbd7-82b6-400b-bf8a-c87132e79317
+ç
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonProperty'.(À√ßœ8¬àì¥™2J$8669d352-aafc-4512-955d-218302c0b569

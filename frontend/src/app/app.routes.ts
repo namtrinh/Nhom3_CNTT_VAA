@@ -40,6 +40,9 @@ import {ProductExtendComponent} from './home/product-extend/product-extend.compo
 import {RequiredResetPasComponent} from "./auth/required-reset-pas/required-reset-pas.component";
 import {ResetPassComponent} from "./auth/reset-pass/reset-pass.component";
 import {PromotionProductComponent} from './admin/manage-product/promotion-product/promotion-product.component';
+import {ListPromotionComponent} from "./admin/manage-promotion/list-promotion/list-promotion.component";
+import {CreatePromotionComponent} from "./admin/manage-promotion/create-promotion/create-promotion.component";
+import {UpdatePromotionComponent} from "./admin/manage-promotion/update-promotion/update-promotion.component";
 
 export const routes: Routes = [
 
@@ -82,6 +85,11 @@ export const routes: Routes = [
       {path: 'promotion-product', component: PromotionProductComponent, canActivate: [AuthService], data: {role: 1}},
       {path: 'create-product', component: CreateProductComponent, canActivate: [AuthService], data: {role: 1}},
       {path: 'edit-product/:product_id', component: EditProductComponent, canActivate: [AuthService], data: {role: 1}},
+
+      //Promotion
+      {path: 'promotion', component: ListPromotionComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'create-promotion', component: CreatePromotionComponent, canActivate: [AuthService], data: {role: 1}},
+      {path: 'update-promotion/:promotion_id', component: UpdatePromotionComponent, canActivate: [AuthService], data: {role: 1}},
 
       //Category
       {path: 'category', component: ListCategoryComponent, canActivate: [AuthService], data: {role: 1}},
