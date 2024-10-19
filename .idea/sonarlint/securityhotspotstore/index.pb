@@ -213,3 +213,7 @@ Hbackend/src/main/java/org/galaxy/backend/Controller/RolesController.java,1\5\1
 Kbackend/src/main/java/org/galaxy/backend/ModelDTO/request/UsersRequest.java,4\3\4395b81ea39166d29c9b12e29e2bfaeeb2351b80
 y
 Ifrontend/src/app/admin/manage-user/create-user/create-user.component.html,a\d\ad3a4f9574771bf9c111bc83ff559e54f6ef5628
+r
+Bbackend/src/main/java/org/galaxy/backend/Config/DocsApiConfig.java,8\d\8d21845f1f6e1398729b1fe5b0e217ee40a91372
+‚
+Rfrontend/src/app/admin/manage-product/create-product/create-product.component.html,2\1\211773220ddf5bd426a01f5ba00f59cc98505708

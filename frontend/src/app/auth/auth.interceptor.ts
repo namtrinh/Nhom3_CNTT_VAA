@@ -21,8 +21,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    if (request.url.includes('/users') ||
-      request.url.includes('/login') ||
+    if (
         request.url.includes('/login/refresh') ||
         request.url.includes('/login/token') ||
         request.url.includes('/login/logout') ||

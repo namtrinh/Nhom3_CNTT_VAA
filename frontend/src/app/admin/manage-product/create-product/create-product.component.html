@@ -28,7 +28,7 @@
 
         <div class="form-group mb-3">
             <label for="price">Price</label>
-            <input class="form-control" type="number" id="price" name="price" placeholder="Enter price" 
+            <input class="form-control" type="number" id="price" name="price" placeholder="Enter price"
                 #price="ngModel" [(ngModel)]="product.price" required>
         </div>
 
@@ -36,12 +36,16 @@
             <label for="categorySelect">Category</label>
             <select class="form-control" id="categorySelect" name="category" [(ngModel)]="product.category.category_id">
                 <option value="" disabled>-- Select Category --</option>
-                <option *ngFor="let category of categorys" [value]="category.category_id">{{ category.name }}</option>
+              @for (category of categorys; track categorys){
+                <option [value]="category.category_id">{{ category.name }}</option>
+              }
             </select>
         </div>
 
         <button type="submit" [disabled]="!create_product.valid" class="btn btn-primary btn-block">Submit</button>
     </form>
 
-    <p *ngIf="checkproduct" class="text-danger text-center mt-3">{{checkproduct}}</p>
+  @if (checkproduct){
+    <p class="text-danger text-center mt-3">{{checkproduct}}</p>
+  }
 </div>

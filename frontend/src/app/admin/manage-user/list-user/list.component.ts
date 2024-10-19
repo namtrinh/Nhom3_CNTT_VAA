@@ -31,6 +31,7 @@ export class ListComponent implements OnInit {
 
   getUserList() {
     this.userService.getList().subscribe((data: any) => {
+      console.log(data.result)
       this.user = this.item_name
         ? data.result.filter((users: { username: string }) =>
           users.username.toLowerCase().includes(this.item_name.toLowerCase())
