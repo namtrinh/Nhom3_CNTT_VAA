@@ -1,12 +1,12 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ÀæÈª2J$02955935-12ec-4346-9d81-a7cd7af0cfaf
-œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8ÂæÈª2J$aacb4304-2800-4335-b247-1f54b9b3e1c2
-™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÃæÈª2J$279f3977-cc1e-42b2-867f-5be916bfe474
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ÀæÈª2J$e51d1b1c-af92-4f57-b16b-a28c02ec8c39
+œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8ÂæÈª2J$7c2f4b7e-9606-4e19-b270-1a9db96d08bc
+™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÃæÈª2J$12c870b6-00f8-4c13-9556-f6607212caed
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ÅæÈª2J$aadb1ae1-735b-4a1b-b292-653957f1266a
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ÅæÈª2J$b5ddf1d4-fc0b-4810-895f-11ba5b027e11
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ÆæÈª2J$f2bbe003-b1b3-4bc8-9b0b-a213b53d86eb
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ÆæÈª2J$2ce88474-e39d-469b-a879-0e3510be7431
 —
-java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8óÖÉª2J$ae8a1646-2e8a-4888-9af3-ca65a47723ab
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8óÖÉª2J$d3b60669-27f2-40c2-aaa9-cf26e4cf3bbf
 •
-java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8³î¾Êª2J$717ab220-7ff3-4080-ab75-d53d598d2cab
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8³î¾Êª2J$1e26f89d-406c-47c9-8f2b-950635b6e57e

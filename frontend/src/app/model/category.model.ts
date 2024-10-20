@@ -3,4 +3,5 @@ export class Category{
     seotitle!:string;
     name!:string;
     icon!:string
+  sort!:number
 }

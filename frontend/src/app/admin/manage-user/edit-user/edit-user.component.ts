@@ -5,6 +5,8 @@ import {User} from '../../../model/user.model';
 import {RolesService} from '../../../service/role-service.service';
 import {Roles} from '../../../model/roles.model';
 import {FormsModule} from '@angular/forms';
+import {Location} from "@angular/common";
+
 @Component({
   selector: 'app-edit-user',
   standalone: true,
@@ -26,7 +28,8 @@ export class EditUserComponent implements OnInit {
   constructor(private router: Router,
               private userService: UserService,
               private activeRouter: ActivatedRoute,
-              private roleService: RolesService) {
+              private roleService: RolesService,
+              private location:Location) {
   }
 
   ngOnInit(): void {
@@ -71,7 +74,7 @@ export class EditUserComponent implements OnInit {
       this.user.roles = this.list_role.map((role:{name:string}) => role.name);
     }
     this.userService.editUser(this.id, this.user).subscribe(data => {
-      this.router.navigate(['/admin/list-user']);
+     this.location.back();
     });
   }
 

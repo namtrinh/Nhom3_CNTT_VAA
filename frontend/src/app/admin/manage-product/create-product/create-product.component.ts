@@ -20,6 +20,7 @@ export class CreateProductComponent implements OnInit {
   checkproduct: any;
   product: Product = new Product();
   categorys: Category[] = [];
+  categoryId!:number;
 
   constructor(
     public productService: ProductService,
@@ -33,6 +34,9 @@ export class CreateProductComponent implements OnInit {
   }
 
   create() {
+    this.product.category = {
+      category_id: this.categoryId
+    }
     this.product.time_created = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
     this.productService.createProduct(this.product).subscribe((data: any) => {
       this.router.navigate(['/admin/product']);
@@ -43,7 +47,7 @@ export class CreateProductComponent implements OnInit {
 
   getCategory() {
     this.categoryService.getAll().subscribe((data: any) => {
-      this.categorys = data.result; 
+      this.categorys = data.result;
     })
   }
 

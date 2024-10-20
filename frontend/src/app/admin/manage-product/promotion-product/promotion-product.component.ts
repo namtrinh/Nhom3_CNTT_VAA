@@ -6,37 +6,45 @@ import {ImageService} from '../../../service/img-service.service';
 import {CommonModule} from '@angular/common';
 import {Promotion} from '../../../model/promotion.model';
 import {PromotionService} from '../../../service/promotion-service.service';
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-promotion-product',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, FormsModule],
   templateUrl: './promotion-product.component.html',
   styleUrl: './promotion-product.component.scss'
 })
 export class PromotionProductComponent implements OnInit {
   product: any;
+  selectedPromotionId: string = '';
+  imgAvatars: { [key: string]: string } = {};
+  products: Product[] = []
+  promotion: Promotion[] = []
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
               private promotionService: PromotionService,) {
   }
 
-  imgAvatars: { [key: string]: string } = {};
-  products: Product[] = []
-  promotion: Promotion = new Promotion
-
   ngOnInit(): void {
-    this.getAllwithPromotion()
+    this.getPromotion()
+    this.filterProducts()
   }
 
-  getAllwithPromotion() {
+  filterProducts() {
     this.productService.findAllProductsWithPromotion().subscribe((data: any) => {
-      this.products = data.result;
-      console.log(this.products);
-      this.products.forEach((products) => {
-        this.getImageFromService(products.image, products.product_id);
-      })
+      if (this.selectedPromotionId) {
+        this.products = data.result.filter((product: Product) => product.promotion?.promotion_id === this.selectedPromotionId);
+        this.products.forEach((products) => {
+          this.getImageFromService(products.image, products.product_id);
+        })
+      } else {
+        this.products = data.result;
+        this.products.forEach((products) => {
+          this.getImageFromService(products.image, products.product_id);
+        })
+      }
     })
   }
 
@@ -46,38 +54,15 @@ export class PromotionProductComponent implements OnInit {
         (data: any) => {
           const blob = new Blob([data], {type: 'image/*'});
           this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        error => {
-          console.log(error);
-        });
-    } else {
+        })
     }
   }
 
-  delete(product_id: string) {
-    const formData = new FormData();
-    formData.append('name', this.product.name);
-    formData.append('quantity', this.product.quantity.toString());
-    formData.append('price', this.product.price.toString());
-    formData.append('description', this.product.description);
-    if (this.product.category?.category_id) {
-      formData.append('category', this.product.category.category_id.toString());
-    }
-    if (this.product.promotion.promotion_id) {
-      formData.append('promotion', 'null')
-    }
-
-    console.log(this.product.promotion.promotion_id)
-
-
-    this.productService.editById(product_id, formData).subscribe(
-      (data: any) => {
-        console.log(data);
-      },
-      error => {
-        console.log(error);
-      }
-    );
+  getPromotion() {
+    this.promotionService.getAll().subscribe((data: any) => {
+      this.promotion = data.result;
+    })
   }
+
 }
 

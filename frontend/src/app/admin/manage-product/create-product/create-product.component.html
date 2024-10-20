@@ -34,7 +34,7 @@
 
         <div class="form-group mb-4">
             <label for="categorySelect">Category</label>
-            <select class="form-control" id="categorySelect" name="category" [(ngModel)]="product.category.category_id">
+            <select class="form-control" id="categorySelect" name="category" [(ngModel)]="categoryId">
                 <option value="" disabled>-- Select Category --</option>
               @for (category of categorys; track categorys){
                 <option [value]="category.category_id">{{ category.name }}</option>
@@ -42,7 +42,7 @@
             </select>
         </div>
 
-        <button type="submit" [disabled]="!create_product.valid" class="btn btn-primary btn-block">Submit</button>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
 
   @if (checkproduct){

@@ -7,4 +7,5 @@ export class Promotion {
     time_started!: string;
     time_end!: string;
     product!: Partial<Product>;
+    sort!:number;
 }

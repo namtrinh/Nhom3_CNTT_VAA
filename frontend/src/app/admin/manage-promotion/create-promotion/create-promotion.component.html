@@ -37,6 +37,14 @@
       </div>
     </div>
 
+    <div class="mb-3">
+      <label for="sort" class="form-label">Sort</label>
+      <input type="number" id="sort" class="form-control" [(ngModel)]="promotion.sort" name="sort" required>
+      <div class="invalid-feedback">
+        Please enter a valid sort.
+      </div>
+    </div>
+
     <button type="submit" class="btn btn-primary">Update</button>
 
   </form>

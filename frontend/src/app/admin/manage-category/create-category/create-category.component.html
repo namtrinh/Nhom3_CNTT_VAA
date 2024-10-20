@@ -1,13 +1,35 @@
 <div class="container">
-    <form #create_category="ngForm" (ngSubmit)="OnSubmit()">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input class="form-control" type="text" id="name" name="name" placeholder="Enter category name" #name="ngModel" [(ngModel)]="category.name" required>
-        </div>
-            <br>
-        <button type="submit" [disabled]="!create_category.valid" class="btn btn-primary">Submit</button>
-    </form>
-@if (checkcategory) {
-    <p style="color:red">{{checkcategory}}</p>
-}
+  <form #create_category="ngForm" (ngSubmit)="OnSubmit()">
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" type="text" id="name" name="name" placeholder="Enter category name"
+             [(ngModel)]="category.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="seotitle">SEO Title</label>
+      <input class="form-control" type="text" id="seotitle" name="seotitle" placeholder="Enter SEO title"
+             [(ngModel)]="category.seotitle" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sort">Sort</label>
+      <input class="form-control" type="text" id="sort" name="sort" placeholder="Enter sort value"
+             [(ngModel)]="category.sort">
+    </div>
+
+    <div class="form-group">
+      <label for="icon">Icon</label>
+      <input class="form-control" type="text" id="icon" name="icon" placeholder="Enter icon class"
+             [(ngModel)]="category.icon">
+    </div>
+    <br>
+
+    <button type="submit" [disabled]="!create_category.valid" class="btn btn-primary">Submit</button>
+  </form>
+
+  @if (checkcategory) {
+    <p style="color:red">{{ checkcategory }}</p>
+  }
 </div>

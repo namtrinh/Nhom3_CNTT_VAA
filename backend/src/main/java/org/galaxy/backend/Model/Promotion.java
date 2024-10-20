@@ -32,6 +32,8 @@ public class Promotion {
 
     private Float discount;
 
+    private Byte sort;
+
     private Timestamp time_started;
 
     private Timestamp time_end;

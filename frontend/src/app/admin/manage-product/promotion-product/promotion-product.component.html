@@ -1,49 +1,64 @@
 <div class="container">
-    <table class="table table-striped table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Image</th>
-                <th>Price</th>
-                <th>Discount</th>
-                <th>Price sale</th>
-                <th>Detail</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (product of products; track products) {
-            <tr>
-                <td>{{product.name}}</td>
-                <td> @if(imgAvatars[product.product_id]){<img [src]="imgAvatars[product.product_id]"
-                        alt="{{ product.product_id }}" style="width:100px;height:100px">
-                    }
-                </td>
 
-                <td>{{product.price | number:'1.0-0' }}₫</td>
-                <td>  @if ( product.promotion.discount) {{{product.promotion.discount}}}%</td>
-                @if ( product.promotion.discount) {
-                <td>{{product.price - (product.price * product.promotion.discount /100)| number:'1.0-0' }}₫</td>
-                }
-                <td>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo" [routerLink]="['/admin/role/get-user-byrole:',product.name]">Detail
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary"
-                        [routerLink]="['/admin/edit-product',product.product_id]">Edit
-                    </button>
-                </td>
-                <td>
-                    @if (product.product_id) {
-                    <button class="btn btn-danger" (click)="delete(product.product_id)">Delete</button>
-                    }
-                </td>
+  <div class="form-group">
+    <label for="promotion">Filter by promotion</label>
+    <p></p>
+    <select class="form-control" id="promotion" [(ngModel)]="selectedPromotionId" (change)="filterProducts()">
+      <option value="" ngDefaultControl>-- All product --</option>
+      @for (promotions of promotion; track promotion) {
+        <option [value]="promotions.promotion_id">
+          {{ promotions.pr_name }}
+        </option>
+      }
+    </select>
+  </div>
 
-            </tr>
-            }
-        </tbody>
-    </table>
+  <table class="table table-striped table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Discount</th>
+      <th>Price sale</th>
+      <th>Detail</th>
+      <th>Edit</th>
+
+    </tr>
+    </thead>
+    <tbody>
+      @for (product of products; track products) {
+        <tr>
+          <td>{{ product.name }}</td>
+          <td> @if (imgAvatars[product.product_id]) {
+            <img [src]="imgAvatars[product.product_id]"
+                 alt="{{ product.product_id }}" style="width:100px;height:100px">
+          }
+          </td>
+
+          <td>{{ product.price | number:'1.0-0' }}₫</td>
+          <td>  @if (product.promotion.discount) {
+            {{ product.promotion.discount }}
+          }%
+          </td>
+          @if (product.promotion.discount) {
+            <td
+              style="color:red">{{ product.price - (product.price * product.promotion.discount / 100)| number:'1.0-0' }}
+              ₫
+            </td>
+          }
+          <td>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo" [routerLink]="['/admin/role/get-user-byrole:',product.name]">Detail
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary"
+                    [routerLink]="['/admin/edit-product',product.product_id]">Edit
+            </button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </div>

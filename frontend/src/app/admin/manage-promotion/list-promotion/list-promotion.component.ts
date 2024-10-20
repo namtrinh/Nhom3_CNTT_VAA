@@ -26,7 +26,6 @@ export class ListPromotionComponent implements OnInit {
   getAll() {
     this.promotionService.getAll().subscribe((data: any) => {
       this.promotions = data.result;
-      console.log(this.promotions)
       this.promotions.forEach(promotion => {
         promotion.time_started = new Date(promotion.time_started).toISOString().slice(0, 16); // YYYY-MM-DDTHH:mm
         promotion.time_end = new Date(promotion.time_end).toISOString().slice(0, 16); // YYYY-MM-DDTHH:mm

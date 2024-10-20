@@ -1,0 +1,4 @@
+
+rtypescript:S1128
+")Remove this unused import of 'Promotion'.(é°®Œ8±¶Ïª2J$6eac3c47-5496-4061-82b2-0accc2307937
+ütypescript:S1874)"³'(next?: ((value: Object) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription' is deprecated.(ˆ‡Î8±¶Ïª2J$65346121-c2a5-46b3-9a7c-a600832ba51f

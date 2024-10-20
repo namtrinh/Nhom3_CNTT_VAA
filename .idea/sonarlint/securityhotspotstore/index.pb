@@ -273,3 +273,9 @@ Y
 )frontend/src/app/model/promotion.model.ts,1\8\182c643ec12d815bb25b45b5b058335b79ace811
 à
 Xfrontend/src/app/admin/manage-product/promotion-product/promotion-product.component.html,6\a\6a8eb181555b205a82dd86eb14749ef2e930a9fc
+à
+Xfrontend/src/app/admin/manage-product/promotion-product/promotion-product.component.scss,6\f\6f063ad3096bcab4ae2876e358ea719198f6260f
+Ä
+Pfrontend/src/app/admin/manage-product/create-product/create-product.component.ts,9\2\922bd8ccab9160b45a411dd0ae1d54487bee8ea2
+Å
+Qfrontend/src/app/admin/manage-category/list-category/list-category.component.html,6\4\640e9b3c7317bcf6fc06ad3381bc127c9faef051
