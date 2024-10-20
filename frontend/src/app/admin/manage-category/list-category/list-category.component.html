@@ -10,6 +10,7 @@
       <th>Name</th>
       <th>SeoTitle</th>
       <th>Icon</th>
+      <th>Sort</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
@@ -22,6 +23,7 @@
           <td>{{ category.name }}</td>
           <td>{{ category.seotitle }}</td>
           <td style="font-size: 20px;"><i class="{{category.icon}}"></i></td>
+          <td>{{ category.sort }}</td>
           <td>
             <button class="btn btn-primary" [routerLink]="['/admin/edit-category',category.category_id]"> Edit</button>
           </td>

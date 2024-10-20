@@ -7,10 +7,10 @@
   height: 100%;
   max-width: 400px;
   background-color: #fce7cf;
-  color: #fff;
-  padding-top: 56px; /* Đảm bảo rằng padding này đủ cho navbar */
-  overflow-y: scroll; /* Cho phép cuộn nhưng không hiển thị thanh cuộn */
-  scrollbar-width: none; /* Ẩn thanh cuộn cho Firefox */
+  font-weight: 550;
+  padding-top: 56px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .sidebar::-webkit-scrollbar {
