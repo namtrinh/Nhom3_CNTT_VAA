@@ -21,7 +21,7 @@ public class CategoryService {
         return categoryRepository.save(entity);
     }
 
-    public Category findById(Integer integer) {
+    public Category findById(String integer) {
         return categoryRepository.findById(integer).orElseThrow(() -> new RuntimeException("Not found"));
     }
 
@@ -29,11 +29,11 @@ public class CategoryService {
         return categoryRepository.getBySeotitle(seotitle);
     }
 
-    public void deleteById(Integer integer) {
-        categoryRepository.deleteById(integer);
+    public void deleteById(String category_id) {
+        categoryRepository.deleteById(category_id);
     }
 
-    public Category editCategory(Integer integer, Category category) {
+    public Category editCategory(String integer, Category category) {
         category.setCategory_id(integer);
         return categoryRepository.save(category);
     }

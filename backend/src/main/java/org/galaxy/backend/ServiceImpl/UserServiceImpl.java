@@ -44,6 +44,9 @@ public class UserServiceImpl implements UserService {
         if (userRepository.existsByEmail(usersRequest.getEmail())) {
             throw new AppException(ErrorCode.USERS_EXISTED);
         }
+        if (hasSpecialCharacter(usersRequest.getPassword())) {
+            throw new AppException(ErrorCode.INVALID_PASSWORD); // Ném ngoại lệ nếu không có ký tự đặc biệt
+        }
         User user = usersMapper.toUsersDTO(usersRequest);
 
         HashSet<Roles> roles = new HashSet<>();
@@ -53,6 +56,19 @@ public class UserServiceImpl implements UserService {
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
         user.setPassword(passwordEncoder.encode(usersRequest.getPassword()));
         return usersMapper.toUsers(userRepository.save(user));
+    }
+
+    private boolean hasSpecialCharacter(String password) {
+        String specialCharacters = "!#$%^&*()_+-=[]{};':\"\\\\|,.<>?/";
+        if (password != null) {
+            // Duyệt qua từng ký tự trong mật khẩu
+            for (char c : password.toCharArray()) {
+                if (specialCharacters.indexOf(c) >= 0) {
+                    return true; // Có ký tự đặc biệt
+                }
+            }
+        }
+        return false; // Không có ký tự đặc biệt
     }
 
     public UsersResponse getUser(String user_id) {
@@ -65,10 +81,10 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<UsersResponse> findAllUser() {
-        List<User> users = userRepository.findAllUser(); // Lấy danh sách người dùng từ repository
-        return users.stream() // Chuyển đổi danh sách User thành danh sách UsersResponse
-                .map(usersMapper::toUsers) // Ánh xạ từng User thành UsersResponse
-                .collect(Collectors.toList()); // Thu thập thành danh sách
+        List<User> users = userRepository.findAllUser();
+        return users.stream()
+                .map(usersMapper::toUsers)
+                .collect(Collectors.toList());
     }
 
     public UsersResponse editUsers(String user_id, UsersRequest usersRequest) {
@@ -99,7 +115,7 @@ public class UserServiceImpl implements UserService {
         return usersMapper.toUsers(user);
     }
 
-    @Override
+
     public List<UsersResponse> findAllByRole(Set<Roles> role) {
         var users = userRepository.findAllByRoles(role);
         return users.stream().map(usersMapper::toUsers).collect(Collectors.toList());

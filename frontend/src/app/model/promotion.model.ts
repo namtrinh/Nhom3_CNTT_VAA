@@ -6,6 +6,5 @@ export class Promotion {
     discount!:number;
     time_started!: string;
     time_end!: string;
-    product!: Partial<Product>;
     sort!:number;
 }

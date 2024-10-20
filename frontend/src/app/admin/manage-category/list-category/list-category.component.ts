@@ -27,7 +27,7 @@ export class ListCategoryComponent implements OnInit {
     })
   }
 
-  delete(category_id: number) {
+  delete(category_id: string) {
     this.categoryService.deleteCategory(category_id).subscribe((data: any) => {
       this.getAll();
     })

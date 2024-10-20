@@ -1,0 +1,10 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ
+l	java:S116"RRename this field "cart_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌˆöÒúÿÿÿÿ
+r	java:S116"XRename this field "product_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ÊŠüÿÿÿÿ
+u	java:S116"[Rename this field "product_quantity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÆÙšùÿÿÿÿ
+g	java:S116!"SRename this field "time_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²óåP
+N
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„
+F
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„

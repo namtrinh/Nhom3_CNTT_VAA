@@ -1,14 +1,14 @@
 
-“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8šŞ˜Ëª2J$3d631896-1812-4524-b816-142ab90576a8
-“	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä“ÊÖ8šŞ˜Ëª2J$514ad579-6529-42ca-975f-1b2a57c03fb8
-˜	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8šŞ˜Ëª2J$b5fec326-ad60-4106-bb95-25ac471ebe25
-™	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8šŞ˜Ëª2J$eb43f5b9-f8ed-4273-a2b3-5c5764229850
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8šŞ˜Ëª2J$bc108d2f-19ed-462c-bdb0-b3d3e563bb38
+“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8šŞ˜Ëª2J$a673ef01-d074-4d80-a8a9-8f12a1ba91a4
+“	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä“ÊÖ8šŞ˜Ëª2J$707c19a8-9819-4fbd-8f34-6bb2460ea6a5
+˜	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8šŞ˜Ëª2J$234470c2-a015-4123-baa2-853bf2de552d
+™	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8ÇÃ»Óª2J$452464ff-281c-4241-ab4c-789a52db34c4
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8šŞ˜Ëª2J$2421c41f-7ed3-4d43-90e0-327f4cd5bf1b
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8 Ş˜Ëª2J$47ed133d-a2fb-4c21-b1fb-bfebbc9ab2e2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8 Ş˜Ëª2J$501b6450-4c17-4a45-8a11-c832466c57e2
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¡Ş˜Ëª2J$9807be0d-fd61-4f74-a344-c64cf5802ae3
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¡Ş˜Ëª2J$0d2c539f-4d0c-4e4c-98ce-e3b8eb74187f
 v
-java:S6837M"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8¢Ş˜Ëª2J$828d4c28-6a36-4fac-8581-c96a6d45574a
+java:S6837M"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8¢Ş˜Ëª2J$33bf3522-19ec-4a29-904d-99a2ca7efc88
 v
-java:S6837^"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8¢Ş˜Ëª2J$43d3998b-39d7-47d5-bbf6-0b61a3790b3e
+java:S6837^"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8¢Ş˜Ëª2J$0105b1c9-1142-495c-ae63-ac7dcc80d59a

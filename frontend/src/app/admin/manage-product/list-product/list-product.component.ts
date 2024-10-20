@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { ProductService } from '../../../service/product-service.service';
-import { Product } from '../../../model/product.model';
-import { ImageService } from '../../../service/img-service.service';
-import { FormsModule } from '@angular/forms';
-import { PromotionService } from '../../../service/promotion-service.service';
-import { Promotion } from '../../../model/promotion.model';
-import { CommonModule } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {ProductService} from '../../../service/product-service.service';
+import {Product} from '../../../model/product.model';
+import {ImageService} from '../../../service/img-service.service';
+import {FormsModule} from '@angular/forms';
+import {PromotionService} from '../../../service/promotion-service.service';
+import {Promotion} from '../../../model/promotion.model';
+import {CommonModule} from '@angular/common';
+import {CategoryService} from "../../../service/categoy-service.service";
+import {Category} from "../../../model/category.model";
 
 @Component({
   selector: 'app-list-product',
@@ -17,36 +19,35 @@ import { CommonModule } from '@angular/common';
 })
 export class ListProductComponent implements OnInit {
 
-  searchTerm: string = ''; // Từ khóa tìm kiếm
+  searchTerm: string = '';
   products: Product[] = [];
   imgAvatars: { [key: string]: string } = {};
   clicksale: boolean = false;
-  product: Product = new Product();
+  product: any;
   promotion: Promotion = new Promotion();
-  selectedProductId!: string;
-  isVisible: boolean = false;
+  category: Category[] = []
+  selectedCategoryId: string = '';
+
   constructor(private productService: ProductService,
-    private router: Router,
-    private imgService: ImageService,
-    private promotionService: PromotionService) { }
-
-  ngOnInit(): void {
-
-    this.getAllPR();
+              private imgService: ImageService,
+              private categoryService: CategoryService) {
   }
 
-  getAllPR() {
+  ngOnInit(): void {
+    this.getAllCategory()
+    this.filterProducts()
+  }
+
+  filterProducts() {
     this.productService.findAllProductsWithoutPromotion().subscribe((data: any) => {
-      if (!this.searchTerm) {
-        this.products = data.result;
-      } else {
-        const lowerSearchTerm = this.searchTerm.toLowerCase();
-        this.products = data.result.filter((product: { name: string; }) =>
-          product.name.toLowerCase().includes(lowerSearchTerm)
-        );
-      }
-      this.products.forEach((products) => {
-        this.getImageFromService(products.image, products.product_id);
+      const lowerSearchTerm = this.searchTerm.toLowerCase();
+      this.products = data.result.filter((product: Product) => {
+        const matchesCategory = !this.selectedCategoryId || product.category?.category_id === this.selectedCategoryId;
+        const matchesSearchTerm = !this.searchTerm || product.name.toLowerCase().includes(lowerSearchTerm);
+        return matchesCategory && matchesSearchTerm;
+      });
+      this.products.forEach((product) => {
+        this.getImageFromService(product.image, product.product_id);
       })
     })
   }
@@ -55,70 +56,24 @@ export class ListProductComponent implements OnInit {
     if (imageName) {
       this.imgService.getImage(imageName).subscribe(
         (data: any) => {
-          const blob = new Blob([data], { type: 'image/*' });
+          const blob = new Blob([data], {type: 'image/*'});
           this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        error => {
-          console.log(error);
-        });
-    } else { }
+        })
+    }
   }
 
-
-  // Component.ts
   deletePr(product_id: string) {
     if (window.confirm("Are you sure want to delete this product ?")) {
       this.productService.deleteProduct(product_id).subscribe(
         (data: any) => {
-          this.getAllPR();
+          this.filterProducts();
         });
     }
   }
 
-  clicksales() {
-    this.clicksale = true;
-  }
-
-  h(evt: any, productId: string) {
-    const isChecked = evt.target.checked;
-    const product = this.products.find(products => products.product_id === productId);
-    if (isChecked && product) {
-      product.selected = isChecked;
-      this.selectedProductId = productId;
-    }
-  }
-
-  createPromotion() {
-    this.promotion.product = {
-      product_id: this.selectedProductId
-    }
-    this.promotionService.create(this.promotion).subscribe((data => {
-      this.showToast()
-    //  setTimeout(() => {
-    //    window.location.reload();
-   //   },0)
-    }))
-  }
-
-  resetCheckbox() {
-    if (this.selectedProductId) {
-      const product = this.products.find(p => p.product_id === this.selectedProductId);
-      if (product) {
-        product.selected = false;
-      }
-    }
-  }
-
-  showToast() {
-    this.isVisible = true;
-    setTimeout(() => {
-      this.isVisible = false;
-    }, 3000);
-  }
-
-  getprWithpromotion(){
-    this.productService.findAllProductsWithPromotion().subscribe((data:any) =>{
-      this.products =data.result;
+  getAllCategory() {
+    this.categoryService.getAll().subscribe((data: any) => {
+      this.category = data.result
     })
   }
 }

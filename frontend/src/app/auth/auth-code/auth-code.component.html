@@ -1,7 +1,9 @@
-<div class="background">
+
 <div class="container">
-    <h2 class="text-center mb-4">Nhập Mã Xác Nhận</h2>
-    <form #verify="ngForm" (ngSubmit)="submit()" class="bg-light p-4 border rounded shadow">
+
+    <form #verify="ngForm" (ngSubmit)="submit()" class="form p-4 border rounded shadow">
+      <h2 class="text-center mb-4">Nhập Mã Xác Nhận</h2>
+
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email"
@@ -12,7 +14,6 @@
             <input type="text" class="form-control" id="auth_code" [(ngModel)]="auth_code" name="auth_code"
                 placeholder="Nhập mã xác nhận" required>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Xác nhận</button>
+        <button type="submit" class="btn btn-danger btn-block">Xác nhận</button>
     </form>
-</div>
 </div>

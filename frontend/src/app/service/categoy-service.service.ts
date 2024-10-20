@@ -18,7 +18,7 @@ export class CategoryService {
     return this.http.get<Category[]>(`${this.baseUrl}`)
   }
 
-  getById(category_id: number): Observable<Category> {
+  getById(category_id: string): Observable<Category> {
     return this.http.get<Category>(`${this.baseUrl}/${category_id}`)
   }
 
@@ -30,11 +30,11 @@ export class CategoryService {
     return this.http.post(`${this.baseUrl}`, category)
   }
 
-  editCategory(category_id: number, category: Category): Observable<Object> {
+  editCategory(category_id: string, category: Category): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${category_id}`, category)
   }
 
-  deleteCategory(category_id: number): Observable<Object> {
+  deleteCategory(category_id: string): Observable<Object> {
     return this.http.delete(`${this.baseUrl}/${category_id}`)
   }
 

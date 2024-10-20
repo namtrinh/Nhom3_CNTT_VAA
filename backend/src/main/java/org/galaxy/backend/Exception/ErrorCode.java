@@ -18,8 +18,8 @@ public enum ErrorCode {
     UNAUTHORIZATION(1003, "You don't have permission", HttpStatus.UNAUTHORIZED),
     UNAUTHENTICATED(1004, "Unauthenticated", HttpStatus.UNAUTHORIZED),
     VERIFY_ERROR(9999, "Incorrect verification code", HttpStatus.UNAUTHORIZED),
-    EXPIRE_TOKEN(9999, "This token has expired", HttpStatus.BAD_REQUEST);
-
+    EXPIRE_TOKEN(9999, "This token has expired", HttpStatus.BAD_REQUEST),
+    INVALID_PASSWORD(9999,"The password cannot contain special characters.", HttpStatus.BAD_REQUEST);
     private int code;
     private String message;
     private HttpStatusCode statusCode;

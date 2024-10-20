@@ -16,7 +16,7 @@ export class EditCategoryComponent implements OnInit {
    this.getById();
   }
 
-  id!:number;
+  id!:string;
   category:Category = new Category();
   constructor(private router: Router, private categoryService: CategoryService,private routeractive:ActivatedRoute){}
 

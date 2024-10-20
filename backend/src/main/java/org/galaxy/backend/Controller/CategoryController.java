@@ -17,11 +17,12 @@ public class CategoryController {
     @GetMapping
     public ApiResponse<List<Category>> getAllCategories() {
         var result = categoryService.findAll();
+        result.sort((a,b) -> a.getSort().compareTo(b.getSort()));
         return ApiResponse.<List<Category>>builder().code(200).result(result).build();
     }
 
     @GetMapping(value = "/{category_id}")
-    public ApiResponse<Category> getById(@PathVariable Integer category_id) {
+    public ApiResponse<Category> getById(@PathVariable String category_id) {
         return ApiResponse.<Category>builder()
                 .code(200)
                 .result(categoryService.findById(category_id))
@@ -45,7 +46,7 @@ public class CategoryController {
     }
 
     @PutMapping(value = "/{category_id}")
-    public ApiResponse<Category> edit(@PathVariable Integer category_id, @RequestBody Category category) {
+    public ApiResponse<Category> edit(@PathVariable String category_id, @RequestBody Category category) {
         return ApiResponse.<Category>builder()
                 .code(200)
                 .result(categoryService.editCategory(category_id, category))
@@ -53,7 +54,7 @@ public class CategoryController {
     }
 
     @DeleteMapping(value = "/{category_id}")
-    public void delete(@PathVariable Integer category_id) {
+    public void delete(@PathVariable String category_id) {
         categoryService.deleteById(category_id);
     }
 }

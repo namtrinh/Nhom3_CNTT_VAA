@@ -126,7 +126,7 @@ public class ProductController {
         product.setDescription(params.get("description"));
         String categoryValue = params.get("category");
         Category category = new Category();
-        category.setCategory_id(Integer.parseInt(categoryValue));
+        category.setCategory_id(categoryValue);
         product.setCategory(category);
 
         if (params.get("promotion") != null) {
@@ -145,10 +145,18 @@ public class ProductController {
 
     @DeleteMapping(value = "/{product_id}")
     public ApiResponse<String> deleteProduct(@PathVariable String product_id) {
-        productService.deleteById(product_id);
-        return ApiResponse.<String>builder()
-                .result("Product have been deleted")
-                .code(200)
-                .build();
+        try {
+            productService.deleteById(product_id);
+            return ApiResponse.<String>builder()
+                    .result("Product has been deleted")
+                    .code(200)
+                    .build();
+        } catch (Exception e) {
+            return ApiResponse.<String>builder()
+                    .result("Error deleting product: " + e.getMessage())
+                    .code(500)
+                    .build();
+        }
     }
+
 }

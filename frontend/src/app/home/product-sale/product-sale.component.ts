@@ -60,8 +60,4 @@ export class ProductSaleComponent implements OnInit {
     } else { }
   }
 
-  goToProductDetail(promotion:Promotion) {
-    this.dataService.changeData(promotion); // Gửi dữ liệu sản phẩm đến DataService
-    this.router.navigate(['/detail-product', promotion.product.seotitle]);
-  }
 }

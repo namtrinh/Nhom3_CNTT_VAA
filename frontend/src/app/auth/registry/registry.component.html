@@ -1,47 +1,50 @@
-<div class="registry">
-    <div class="container">
-        <form #createForm="ngForm" (ngSubmit)="OnSubmit()"
-            class="p-4 border rounded bg-light">
-            <h3 class="mb-4">Registry </h3>
+<div class="container">
+    <form #createForm="ngForm" (ngSubmit)="OnSubmit()"
+          class="form p-4 border rounded">
+      <p style="font-size:30px;justify-content: center; display: flex;font-weight: 600;" class="mb-4">Registry </p>
 
-            <div class="form-group mb-3">
-                <label>Email address</label>
-                <input type="email" class="form-control" name="email" minlength="4" #email="ngModel" required
-                    placeholder="Enter email" [(ngModel)]="user.email">
-                @if (email.errors && (email.dirty || email.touched)) {
-                <div class="invalid-feedback d-block">
-                    <div [hidden]="!email.errors?.['required']">Email is required</div>
-                    <div [hidden]="!email.errors?.['minlength']">At least 4 characters</div>
-                </div>
-                }
-            </div>
+      <div class="form-group mb-3">
+        <h2>Email address</h2>
+        <input type="email" class="form-control" name="email" minlength="4" #email="ngModel" required
+               placeholder="Enter email" [(ngModel)]="user.email">
+        @if (email.errors && (email.dirty || email.touched)) {
+          <div class="invalid-feedback d-block">
+            <div [hidden]="!email.errors?.['required']">Email is required</div>
+            <div [hidden]="!email.errors?.['minlength']">At least 4 characters</div>
+          </div>
+        }
+      </div>
 
-            <div class="form-group mb-3">
-                <label>Username</label>
-                <input type="text" class="form-control" name="username" minlength="8" required #username="ngModel"
-                    placeholder="Enter username" [(ngModel)]="user.username">
-                @if (username.errors && (username.dirty || username.touched)) {
-                <div class="invalid-feedback d-block">
-                    <div [hidden]="!username.errors?.['required']">Username is required</div>
-                    <div [hidden]="!username.errors?.['minlength']">At least 8 characters</div>
-                </div>
-                }
-            </div>
+      <div class="form-group mb-3">
+        <h2>Username</h2>
+        <input type="text" class="form-control" name="username" minlength="8" required #username="ngModel"
+               placeholder="Enter username" [(ngModel)]="user.username">
+        @if (username.errors && (username.dirty || username.touched)) {
+          <div class="invalid-feedback d-block">
+            <div [hidden]="!username.errors?.['required']">Username is required</div>
+            <div [hidden]="!username.errors?.['minlength']">At least 8 characters</div>
+          </div>
+        }
+      </div>
 
-            <div class="form-group mb-3">
-                <label>Password</label>
-                <input type="password" class="form-control" name="password" required #password="ngModel"
-                    placeholder="Enter password" minlength="8" [(ngModel)]="user.password">
-                @if (password.errors && (password.dirty || password.touched)) {
-                <div class="invalid-feedback d-block">
-                    <div [hidden]="!password.errors?.['required']">Password is required</div>
-                    <div [hidden]="!password.errors?.['minlength']">At least 8 characters</div>
-                </div>
-                }
-            </div>
+      <div class="form-group mb-3">
+        <h2>Password</h2>
+        <input type="password" class="form-control" name="password" required #password="ngModel"
+               placeholder="Enter password" minlength="8" [(ngModel)]="user.password">
+        @if (password.errors && (password.dirty || password.touched)) {
+          <div class="invalid-feedback d-block">
+            <div [hidden]="!password.errors?.['required']">Password is required</div>
+            <div [hidden]="!password.errors?.['minlength']">At least 8 characters</div>
+          </div>
+        }
+      </div>
 
-            <button type="submit" [disabled]="!createForm.valid" class="btn btn-primary w-100">Submit</button>
+      <button type="submit" [disabled]="!createForm.valid" class="btn btn-danger w-100">Register</button>
+      <p></p>
+      @if (createForm) {
+        <p style="color: #d32020;font-size: 18px;">{{ message }}</p>
+      }
+    </form>
 
-        </form>
-    </div>
-</div>
+  </div>
+

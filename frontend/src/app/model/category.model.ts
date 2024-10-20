@@ -1,7 +1,7 @@
 export class Category{
-    category_id!:number;
+    category_id:any;
     seotitle!:string;
     name!:string;
-    icon!:string
-  sort!:number
+    icon!:string;
+  sort!:number;
 }

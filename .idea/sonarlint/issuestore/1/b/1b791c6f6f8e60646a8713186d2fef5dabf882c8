@@ -1,7 +1,11 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8µ²ƒ‡©2J$69ea307c-1076-4d7a-aaa1-5bcd4eee3aa5
-˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²è·8¹²ƒ‡©2J$6ac778b6-eab4-4865-bb47-5bf703b2fe4f
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8µ²ƒ‡©2J$7e7c5c8c-caac-48f4-b36c-0a0e42405fd0
+˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8¹²ƒ‡©2J$9c7b6334-fd82-473c-b322-cb401e6aaccb
+{
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¶ê³Öª2J$674a8ba8-885c-45b0-bc15-d2e29db8714f
+s
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¶ê³Öª2J$00075e4d-d11e-452b-a882-4ccb3a862027
 —
-java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8è÷”Æª2J$53865da3-6d3b-4bc2-863b-a7f6ef88d844
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8è÷”Æª2J$ffd72fbb-f193-4e13-9758-a8d73dd5d9e0
 •
-java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8è÷”Æª2J$d02f13cf-7a90-4f56-9727-41f0e86f7e82
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8è÷”Æª2J$265545bf-e7da-4b05-ad51-b7768f2f1980
