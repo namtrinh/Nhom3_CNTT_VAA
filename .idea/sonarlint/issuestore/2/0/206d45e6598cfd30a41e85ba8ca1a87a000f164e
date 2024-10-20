@@ -1,10 +1,14 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8õº‘´ª2J$5fd09eac-810d-48de-aa82-7328d1ddb747
-	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8÷º‘´ª2J$836499f7-05a8-401c-afd1-890fe94ae0c9
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8÷º‘´ª2J$ebfd8c74-b33b-49e1-aa2a-f4596cecaaae
-	java:S116 "WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8÷º‘´ª2J$cef62dd9-62d3-416f-bef3-f01d9f60a4db
-•	java:S116""SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8÷º‘´ª2J$739ba9e1-dd8f-4694-8531-31fae12eaf91
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Øì¿Êª2J$285f1f1d-17b8-4561-82ed-9a0059cbd7ce
+	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8Úì¿Êª2J$c00c6f9b-d290-452f-bed7-3a989ee4b558
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8Úì¿Êª2J$4f93e7c0-48df-44b1-a3e1-4b0925a8795a
+	java:S116#"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8Úì¿Êª2J$4208ad6d-96c4-42b2-a325-da011eb513fe
+•	java:S116%"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8Úì¿Êª2J$519bb54f-380d-4303-863d-459acbf37fde
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8úº‘´ª2J$71616cab-3724-49a2-adc0-698394d70726
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8İì¿Êª2J$817595d4-ac75-4ff2-8d2b-af9fc82f319e
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8úº‘´ª2J$4b0b0fa5-5efd-4b31-863e-c1be37c33a2f
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8İì¿Êª2J$6fa92ef4-4793-46e9-be15-02ae34caadc3
+•
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8Şì¿Êª2J$3ed112e4-791a-4f62-afbe-0431582e7815
+—
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8ÑáÁÊª2J$590eaed2-656d-4be7-8707-d7deed690e95

@@ -37,7 +37,7 @@ export class ProductService {
     return this.http.get<Product>(`${this.baseUrl}/v/${seotitle}`);
   }
 
-  editById(product_id: number, product: FormData): Observable<Object> {
+  editById(product_id: string, product: FormData): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${product_id}`, product);
   }
 

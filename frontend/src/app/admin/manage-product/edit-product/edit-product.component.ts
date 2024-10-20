@@ -6,6 +6,8 @@ import { ImageService } from '../../../service/img-service.service';
 import { FormsModule } from '@angular/forms';
 import { CategoryService } from "../../../service/categoy-service.service";
 import { Category } from "../../../model/category.model";
+import {PromotionService} from "../../../service/promotion-service.service";
+import {Promotion} from "../../../model/promotion.model";
 
 @Component({
   selector: 'app-edit-product',
@@ -18,6 +20,7 @@ export class EditProductComponent implements OnInit {
   ngOnInit(): void {
     this.getById();
     this.getCategory();
+    this.getPromotion();
   }
   id: any;
   product: Product = new Product();
@@ -26,11 +29,14 @@ export class EditProductComponent implements OnInit {
   category: Category[] = [];
   cate!: string;
   time!: string;
+  promotion:Promotion[] = []
+
   constructor(private active: ActivatedRoute,
     private router: Router,
     private productService: ProductService,
     private imgService: ImageService,
-    private categoryService: CategoryService) { }
+    private categoryService: CategoryService,
+    private promotionService:PromotionService) { }
 
   private getById() {
     this.id = this.active.snapshot.params['product_id'];
@@ -39,6 +45,11 @@ export class EditProductComponent implements OnInit {
       if (!this.product.category) {
         this.product.category = { category_id: 1 }; // hoặc gán category mặc định
       }
+
+      if (!this.product.promotion) {
+        this.product.promotion = { promotion_id: null }; // hoặc gán promotion mặc định
+      }
+
       this.getImageFromService(this.product.image);
     });
   }
@@ -73,6 +84,12 @@ export class EditProductComponent implements OnInit {
       formData.append('category', this.product.category.category_id.toString());
   }
 
+
+    if (this.product.promotion.promotion_id) {
+      formData.append('promotion', this.product.promotion.promotion_id)
+    }
+
+    console.log(this.product.promotion.promotion_id)
     if (this.selectedFile) {
         formData.append('image', this.selectedFile);
     }
@@ -92,6 +109,12 @@ export class EditProductComponent implements OnInit {
   getCategory() {
     this.categoryService.getAll().subscribe((data: any) => {
       this.category = data.result;
+    })
+  }
+
+  getPromotion(){
+    this.promotionService.getAll().subscribe((data: any) => {
+      this.promotion = data.result;
     })
   }
 

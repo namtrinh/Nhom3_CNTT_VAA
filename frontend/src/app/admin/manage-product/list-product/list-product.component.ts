@@ -94,9 +94,9 @@ export class ListProductComponent implements OnInit {
     }
     this.promotionService.create(this.promotion).subscribe((data => {
       this.showToast()
-      setTimeout(() => {
-        window.location.reload();
-      },0)
+    //  setTimeout(() => {
+    //    window.location.reload();
+   //   },0)
     }))
   }
 

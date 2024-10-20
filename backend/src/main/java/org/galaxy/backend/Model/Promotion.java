@@ -1,7 +1,10 @@
 package org.galaxy.backend.Model;
 
 import java.sql.Timestamp;
+import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -33,7 +36,7 @@ public class Promotion {
 
     private Timestamp time_end;
 
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JsonBackReference
-    private Product product;
+    @OneToMany(mappedBy = "promotion",fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
+    @JsonIgnoreProperties("promotion")
+    private Set<Product> product;
 }

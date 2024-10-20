@@ -43,7 +43,7 @@ public class Product {
     @ManyToOne
     private Brand brand;
 
-    @OneToOne(mappedBy = "product")
-    @JsonManagedReference
+    @ManyToOne
+    @JsonIgnoreProperties("product")
     private Promotion promotion;
 }

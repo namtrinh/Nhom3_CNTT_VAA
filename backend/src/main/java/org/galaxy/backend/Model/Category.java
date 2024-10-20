@@ -27,10 +27,9 @@ public class Category {
     private String sort;
 
     private String icon;
-/*
+
     @OneToMany(mappedBy = "category", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JsonIgnoreProperties("category")
     private Set<Product> products;
 
- */
 }

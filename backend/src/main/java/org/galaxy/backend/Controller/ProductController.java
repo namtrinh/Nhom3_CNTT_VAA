@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
+import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.Repository.ProductRepository;
 import org.galaxy.backend.Service.ProductService;
@@ -128,6 +129,14 @@ public class ProductController {
         category.setCategory_id(Integer.parseInt(categoryValue));
         product.setCategory(category);
 
+        if (params.get("promotion") != null) {
+            String promotionValue = params.get("promotion");
+            Promotion promotion = new Promotion();
+            promotion.setPromotion_id(promotionValue);
+            product.setPromotion(promotion);
+        } else {
+            product.setPromotion(null); // Nếu không có chương trình khuyến mãi, có thể đặt về null
+        }
         return ApiResponse.<Product>builder()
                 .code(200)
                 .result(productService.editProduct(product_id, product))

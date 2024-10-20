@@ -54,13 +54,30 @@ export class PromotionProductComponent implements OnInit {
     }
   }
 
-  delete(promotion_id: string) {
-    if (window.confirm("Are you sure want to delete this promotion ?")) {
-      this.promotionService.deleteById(promotion_id).subscribe(
-        (data: any) => {
-          this.getAllwithPromotion();
-        });
+  delete(product_id: string) {
+    const formData = new FormData();
+    formData.append('name', this.product.name);
+    formData.append('quantity', this.product.quantity.toString());
+    formData.append('price', this.product.price.toString());
+    formData.append('description', this.product.description);
+    if (this.product.category?.category_id) {
+      formData.append('category', this.product.category.category_id.toString());
     }
+    if (this.product.promotion.promotion_id) {
+      formData.append('promotion', 'null')
+    }
+
+    console.log(this.product.promotion.promotion_id)
+
+
+    this.productService.editById(product_id, formData).subscribe(
+      (data: any) => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }
 
