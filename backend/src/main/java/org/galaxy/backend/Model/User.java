@@ -1,6 +1,7 @@
 package org.galaxy.backend.Model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -39,6 +40,13 @@ public class User {
     private Boolean activated;
 
     private String verificationCode;
+
+    private LocalDateTime verificationCodeExpiry;
+
+    private int requestCount; // Số lần yêu cầu
+
+    private LocalDateTime lastRequestTime; // Thời gian yêu cầu gần nhất
+
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp time_created;

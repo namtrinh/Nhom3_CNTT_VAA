@@ -1,6 +1,7 @@
 package org.galaxy.backend.Service;
 
 import java.text.ParseException;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.StringJoiner;
@@ -87,20 +88,48 @@ public class AuthenticateService {
         boolean authenticated = passwordEncoder.matches(authenticateRequest.getPassword(), users.getPassword());
         if (!authenticated) throw new AppException(ErrorCode.UNAUTHENTICATED);
 
+        // Kiểm tra thời gian và số lần yêu cầu gửi mã
+        LocalDateTime now = LocalDateTime.now();
+
+        // Nếu đã có thời gian yêu cầu gần nhất
+        if (users.getLastRequestTime() != null) {
+            // Kiểm tra thời gian đã trôi qua
+            if (now.isBefore(users.getLastRequestTime().plusMinutes(10))) {
+                // Nếu số lần yêu cầu đã vượt quá giới hạn
+                if (users.getRequestCount() >= 5) {
+                    throw new AppException(ErrorCode.REQUEST_LIMIT_EXCEEDED);
+                }
+            } else {
+                // Reset số lần yêu cầu nếu đã quá 10 phút
+                users.setRequestCount(0);
+            }
+        }
+
+        // Tăng số lần yêu cầu và cập nhật thời gian yêu cầu
+        users.setRequestCount(users.getRequestCount() + 1);
+        users.setLastRequestTime(now);
+
+        // Tạo mã xác thực và thiết lập thời gian sống
         String auth_code = VerifyCodeGeneration.generateVerificationCode();
         users.setVerificationCode(auth_code);
+        users.setVerificationCodeExpiry(now.plusMinutes(1)); // Thời gian sống mã xác thực là 1 phút
+
         userRepository.save(users);
 
+        // Gửi mã xác thực qua email
         emailService.sendCodeToMail(users.getEmail(), "Mã xác nhận của bạn là: ", "Mã của bạn là: " + auth_code);
         return LoginResponse.builder().authenticate(true).build();
     }
 
+
     public AuthenticateResponse verifyAuthCode(String email, String authCode) {
         var user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Email is incorrect"));
-
         // Kiểm tra mã xác thực
         if (!user.getVerificationCode().equals(authCode)) {
             throw new AppException(ErrorCode.VERIFY_ERROR);
+        }
+        if (user.getVerificationCodeExpiry() == null || LocalDateTime.now().isAfter(user.getVerificationCodeExpiry())) {
+            throw new AppException(ErrorCode.VERIFY_CODE_EXPIRED);
         }
         // Mã xác thực hợp lệ, tạo token
         var token = generateToken(user);
@@ -117,10 +146,10 @@ public class AuthenticateService {
 
         Date expiryTime = isRefresh
                 ? Date.from(signedJWT
-                        .getJWTClaimsSet()
-                        .getIssueTime()
-                        .toInstant()
-                        .plus(REFRESHABLE_DURATION, ChronoUnit.SECONDS))
+                .getJWTClaimsSet()
+                .getIssueTime()
+                .toInstant()
+                .plus(REFRESHABLE_DURATION, ChronoUnit.SECONDS))
                 : signedJWT.getJWTClaimsSet().getExpirationTime();
 
         boolean verified = signedJWT.verify(verifier);

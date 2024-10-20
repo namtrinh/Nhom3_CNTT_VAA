@@ -3,7 +3,6 @@ import {User} from '../../model/user.model';
 import {UserService} from '../../service/user-service.service';
 import {Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
-import {CommonModule} from '@angular/common';
 import {format} from 'date-fns';
 
 @Component({
@@ -24,8 +23,6 @@ export class RegistryComponent {
 
   createUser() {
     this.user.time_created = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-
-
     this.userService.createUser(this.user).subscribe({
       next: (data) => {
         console.log(data);

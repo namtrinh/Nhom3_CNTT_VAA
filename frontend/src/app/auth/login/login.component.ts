@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { FormsModule } from '@angular/forms';
-import { User } from '../../model/user.model';
-import * as jwtDecode from 'jwt-decode';
-import { HttpBackend, HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -14,32 +11,34 @@ import { HttpBackend, HttpClient, HttpClientModule } from '@angular/common/http'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
   email: string = '';
   password: string = '';
-  loginError: string = '';
-  isLoading: boolean = false; // Trạng thái loading
+  loginError: string | null = null;
+  isLoading: boolean = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   login() {
     this.isLoading = true;
-    localStorage.setItem('useremail', this.email);
+    this.loginError = null;
 
     this.authService.login(this.email, this.password)
-      .subscribe(
-        (data: any) => {
+      .subscribe({
+        next: data => {
+          localStorage.setItem('useremail', this.email);
+          this.isLoading = false;
           if (data.code === 200) {
+
             setTimeout(() => {
-              this.isLoading = false;
               this.router.navigate(['/verify-code']);
             }, 2000);
-          } else {
-            this.isLoading = false;
-            this.loginError = data.message;
-            console.log(this.loginError);
           }
-        })
+        },
+        error: e => {
+          this.isLoading = false;
+          this.loginError = e.error.message || 'An error has occurred, please try again.';
+        }
+      });
   }
 
   isLoggedIn(): boolean {

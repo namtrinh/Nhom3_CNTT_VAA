@@ -40,19 +40,10 @@ public class AuthenticateController {
 
     @PostMapping()
     public ApiResponse<LoginResponse> authenticate(@RequestBody AuthenticateRequest authenticateRequest) {
-        try {
-            var result = authenticateService.Authenticate(authenticateRequest);
             return ApiResponse.<LoginResponse>builder()
                     .code(200)
-                    .message("A verification code has been sent to you!")
-                    .result(result)
+                    .result(authenticateService.Authenticate(authenticateRequest))
                     .build();
-        } catch (Exception e) {
-            return ApiResponse.<LoginResponse>builder()
-                    .code(500)
-                    .message("Email or password is incorrect !")
-                    .build();
-        }
     }
 
     @PostMapping("/refresh")

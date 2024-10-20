@@ -4,7 +4,7 @@
       <p style="font-size:30px;justify-content: center; display: flex;font-weight: 600;" class="mb-4">Registry </p>
 
       <div class="form-group mb-3">
-        <h2>Email address</h2>
+        <label>Email address</label>
         <input type="email" class="form-control" name="email" minlength="4" #email="ngModel" required
                placeholder="Enter email" [(ngModel)]="user.email">
         @if (email.errors && (email.dirty || email.touched)) {
@@ -16,7 +16,7 @@
       </div>
 
       <div class="form-group mb-3">
-        <h2>Username</h2>
+        <label>Username</label>
         <input type="text" class="form-control" name="username" minlength="8" required #username="ngModel"
                placeholder="Enter username" [(ngModel)]="user.username">
         @if (username.errors && (username.dirty || username.touched)) {
@@ -28,7 +28,7 @@
       </div>
 
       <div class="form-group mb-3">
-        <h2>Password</h2>
+        <label>Password</label>
         <input type="password" class="form-control" name="password" required #password="ngModel"
                placeholder="Enter password" minlength="8" [(ngModel)]="user.password">
         @if (password.errors && (password.dirty || password.touched)) {
@@ -39,10 +39,10 @@
         }
       </div>
 
-      <button type="submit" [disabled]="!createForm.valid" class="btn btn-danger w-100">Register</button>
-      <p></p>
-      @if (createForm) {
-        <p style="color: #d32020;font-size: 18px;">{{ message }}</p>
+      <button type="submit" class="btn btn-danger w-100">Register</button>
+
+      @if (message) {
+        <div class="alert alert-danger mt-3">{{ message }}</div>
       }
     </form>
 

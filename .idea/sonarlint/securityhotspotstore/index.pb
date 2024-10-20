@@ -299,3 +299,13 @@ Ofrontend/src/app/admin/manage-category/list-category/list-category.component.ts
 Qfrontend/src/app/admin/manage-category/edit-category/edit-category.component.html,6\8\68461c065fc791ec5fa2ab1ad2717ede25a558c9
 
 Ofrontend/src/app/admin/manage-category/edit-category/edit-category.component.ts,8\f\8f91b6f646631513ac562850e0c1ec214f492558
+}
+Mbackend/src/main/java/org/galaxy/backend/Exception/GlobalExceptionHandle.java,d\e\de4a71b6d6928bdbe5e72cf4860fa003ec40c529
+w
+Gbackend/src/main/java/org/galaxy/backend/ModelDTO/request/AuthUser.java,c\9\c97d21b392618e08c8b1238aade8c2d4ec20ce5a
+|
+Lbackend/src/main/java/org/galaxy/backend/ModelDTO/request/LogoutRequest.java,9\d\9d0e6ccd7775cb11b12058ebc3371e96b873e2d8
+r
+Bbackend/src/main/java/org/galaxy/backend/Service/BrandService.java,3\0\30fcda513ea897408661664f3a6a279c52cd691d
+‚
+Rbackend/src/main/java/org/galaxy/backend/ModelDTO/request/AuthenticateRequest.java,8\0\808ca2329f7e2b28087b6e5e049595a1779c4dc7
