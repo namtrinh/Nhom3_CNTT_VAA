@@ -1,9 +1,12 @@
-import { DetailInvoice } from "./detail_invoice.model";
+import {DetailInvoice} from "./detail_invoice.model";
+import {User} from "./user.model";
 
 export class Invoice {
-    invoice_id!: string;
-    description!: string;
-    payment_id!: string;
-    time_created!: string;
-    detailInvoice: DetailInvoice = new DetailInvoice;
+  order_id!: string;
+  payment_id!: string;
+  description!: string;
+  address!: string;
+  time_created!: string;
+  order_detail!: Partial<DetailInvoice>
+  user!: Partial<User>
 }

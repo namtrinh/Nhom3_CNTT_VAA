@@ -1,0 +1,5 @@
+
+ptypescript:S1128"'Remove this unused import of 'Product'.(¹ÍƒÌ8…”†ÿª2J$f8bcd9c6-5692-45be-8f7e-e0cc0075a7c4
+›typescript:S4325&"RThis assertion is unnecessary since it does not change the type of the expression.(Ûºˆ›8”†ÿª2J$1a001af3-c1f1-413c-94e5-a3f088b76c79
+€typescript:S1874>"±'(next?: ((value: Blob) => void) | null | undefined, error?: ((error: any) => void) | null | undefined, complete?: (() => void) | null | undefined): Subscription' is deprecated.(ÔÛéöıÿÿÿÿ8”†ÿª2J$a8f14538-9215-4b63-861e-9395ec993447
+ctypescript:S108F"Empty block statement.(½œÂôûÿÿÿÿ8”†ÿª2J$9bc53221-4a03-46a9-8c8a-c2ee253ccd48

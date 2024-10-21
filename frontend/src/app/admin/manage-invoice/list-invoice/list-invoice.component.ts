@@ -13,7 +13,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 export class ListInvoiceComponent implements OnInit {
 
   invoice:Invoice[] = [];
-  totalItems: number = 0; 
+  totalItems: number = 0;
   page: number = 0;
   size: number = 10;
 

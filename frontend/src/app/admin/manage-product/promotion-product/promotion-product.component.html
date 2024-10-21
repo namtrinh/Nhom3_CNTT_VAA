@@ -17,6 +17,7 @@
     <thead>
     <tr>
       <th>Name</th>
+      <td>Seotitle</td>
       <th>Image</th>
       <th>Price</th>
       <th>Discount</th>
@@ -30,6 +31,7 @@
       @for (product of products; track products) {
         <tr>
           <td>{{ product.name }}</td>
+          <td>{{product.seotitle}}</td>
           <td> @if (imgAvatars[product.product_id]) {
             <img [src]="imgAvatars[product.product_id]"
                  alt="{{ product.product_id }}" style="width:100px;height:100px">

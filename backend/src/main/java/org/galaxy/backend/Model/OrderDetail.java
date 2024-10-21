@@ -21,12 +21,13 @@ public class OrderDetail {
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String order_detail_id;
 
-    private String product_name;
-
     private Integer total_amount;
 
     private Double total_price;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Product> products;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Promotion> promotion;
 }

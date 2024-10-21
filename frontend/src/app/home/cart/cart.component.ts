@@ -6,23 +6,29 @@ import { Product } from '../../model/product.model';
 import { FormsModule } from '@angular/forms';
 import { ImageService } from '../../service/img-service.service';
 import { CommonModule } from '@angular/common';
+import {VNPayService} from "../../service/payment-service.service";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
 export class CartComponent implements OnInit {
 
-  constructor(private cartService: CartService, private imgService: ImageService) { }
+  constructor(private cartService: CartService,
+              private imgService: ImageService,
+              private paymentService:VNPayService,
+              private router:Router) { }
 
   cart: Cart[] = [];
   user_Id!: string;
   product!: number;
-  carts: Cart = new Cart();
+  totalPrice!:number;
   item: any;
+  urlPayment!:string;
   maxQuantity: number = 10;
   imgAvatars: { [key: string]: string } = {};
 
@@ -35,15 +41,20 @@ export class CartComponent implements OnInit {
     this.getAllByUserId();
   }
 
+  payment(totalPrice:number,productName:any){
+    this.paymentService.submitOrder(totalPrice,productName).subscribe((data:any) =>{
+      this.urlPayment = data.vnpayUrl;
+      window.location.href = this.urlPayment;
+    })
+  }
+
   getAllByUserId() {
-    {
       this.cartService.getByUserId(this.user_Id).subscribe((data: any) => {
         this.cart = data.result;
         this.cart.forEach((cart) => {
           this.getImageFromService(cart.product.image, cart.cart_id)
         })
       })
-    }
   }
 
   private getImageFromService(imageName: any, product_id: string): void {

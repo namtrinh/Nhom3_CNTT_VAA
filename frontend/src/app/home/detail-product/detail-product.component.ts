@@ -89,8 +89,8 @@ export class DetailProductComponent implements OnInit {
   submitOrder() {
     this.totalprice = this.product.price * this.quantity;
     this.inf = this.product.name;
-    this.vnPayService.submitOrder(this.totalprice, this.inf).subscribe(vnpayUrl => {
-      window.location.href = vnpayUrl.vnpayUrl;
+    this.vnPayService.submitOrder(this.totalprice, this.inf).subscribe(data => {
+      window.location.href = data.vnpayUrl;
     }, (error: any) => {
       console.log(error);
     });

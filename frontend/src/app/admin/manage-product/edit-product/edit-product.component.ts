@@ -77,6 +77,7 @@ export class EditProductComponent implements OnInit {
   private updateProduct() {
     const formData = new FormData();
     formData.append('name', this.product.name);
+    formData.append('seotitle', this.product.seotitle)
     formData.append('quantity', this.product.quantity.toString());
     formData.append('price', this.product.price.toString());
     formData.append('description', this.product.description);

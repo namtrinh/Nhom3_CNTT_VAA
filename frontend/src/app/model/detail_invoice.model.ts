@@ -1,9 +1,12 @@
-import { Product } from "./product.model";
+import {Product} from "./product.model";
+import {Promotion} from "./promotion.model";
 
 
 export class DetailInvoice {
-    detail_invoice_id!: string;
-    total_amount!: number;
-    total_price!: number;
-    products!:Partial<Product[]>;
+  order_detail_id!: string;
+  total_amount!: number;
+  total_price!: number;
+  products!: Partial<Product[]>;
+  promotion!: Partial<Promotion>;
 }
+

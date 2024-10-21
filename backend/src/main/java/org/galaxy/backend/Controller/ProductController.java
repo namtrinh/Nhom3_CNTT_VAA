@@ -121,6 +121,7 @@ public class ProductController {
             product.setImage(image.getOriginalFilename());
         }
         product.setName(params.get("name"));
+        product.setSeotitle(params.get("seotitle"));
         product.setQuantity(Integer.parseInt(params.get("quantity")));
         product.setPrice(Double.parseDouble(params.get("price")));
         product.setDescription(params.get("description"));
