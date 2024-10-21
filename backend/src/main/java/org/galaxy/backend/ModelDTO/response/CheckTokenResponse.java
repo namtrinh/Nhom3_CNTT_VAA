@@ -9,6 +9,5 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class CheckTokenResponse {
-    // response result, check token
     protected boolean valid;
 }

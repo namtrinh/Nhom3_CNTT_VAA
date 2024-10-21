@@ -37,7 +37,7 @@ import {FooterComponent} from './home/footer/footer.component';
 import {AuthService} from './service/auth-service.service';
 import {_401Component} from './401/401.component';
 import {ProductExtendComponent} from './home/product-extend/product-extend.component';
-import {RequiredResetPasComponent} from "./auth/required-reset-pas/required-reset-pas.component";
+import {RequiredResetPasComponent} from "./auth/required-reset-pass/required-reset-pas.component";
 import {ResetPassComponent} from "./auth/reset-pass/reset-pass.component";
 import {PromotionProductComponent} from './admin/manage-product/promotion-product/promotion-product.component';
 import {ListPromotionComponent} from "./admin/manage-promotion/list-promotion/list-promotion.component";
@@ -55,7 +55,7 @@ export const routes: Routes = [
   {path: 'registry', component: RegistryComponent, canActivate: [RouteGuard]},
   {path: 'verify-code', component: AuthCodeComponent, canActivate: [RouteGuard]},
   {path: 'forgot-password', component: RequiredResetPasComponent, canActivate: [RouteGuard]},
-  {path: 'reset-password', component: ResetPassComponent, canActivate: [RouteGuard]},
+  {path: 'reset-password', component: ResetPassComponent},
 
   //View Client
   {path: '', redirectTo: '', pathMatch: 'full'},

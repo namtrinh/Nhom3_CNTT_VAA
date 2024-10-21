@@ -16,7 +16,7 @@ public interface UserRepository extends JpaRepository<User, String> {
             nativeQuery = true,
             value = "select * from users JOIN users_roles ON users.user_id = users_roles.users_user_id"
                     + " JOIN roles ON roles.name = users_roles.roles_name "
-                    + " where roles.name = 'USER' or roles.name = 'MANAGER'")
+                    + " where roles.name = 'USER'")
     List<User> findAllUser();
 
     boolean existsByEmail(String email);

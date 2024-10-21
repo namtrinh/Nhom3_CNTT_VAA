@@ -1,0 +1,13 @@
+<div class="container">
+  <form  (ngSubmit)="require()"  class="form p-4 border rounded">
+    <div class="form-group mb-3">
+      <label for="email">Email</label>
+      <input class="form-control" type="email" [(ngModel)]="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Required now</button>
+
+    @if (!errorReset){
+    <div class="alert alert-danger">{{ message }}</div>
+    }
+  </form>
+</div>

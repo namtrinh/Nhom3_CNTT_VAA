@@ -1,9 +1,0 @@
-
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Š€á¼J$bfa0a767-d712-45e3-a320-c9591b61d0e8
-”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8¢ÄÔÙª2J$080d1f9b-5999-4328-9736-37097add3c39
-y
-java:S1128"7Remove this unused import 'jakarta.persistence.Column'.(Ó‰ÙE8¶áÔÙª2J$31f72969-cc0e-4d7c-b3c4-8fe7f35f812f
-‚
-java:S1128"?Remove this unused import 'jakarta.persistence.GeneratedValue'.(‘ŒÇŒ8¶áÔÙª2J$7676fa21-4bf9-4503-b432-4a192fb67b0c
-Š
-java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8¶áÔÙª2J$2034d15f-8623-4c81-b8cb-00ecf697ac10

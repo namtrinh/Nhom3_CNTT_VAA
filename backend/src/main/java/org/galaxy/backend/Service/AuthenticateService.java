@@ -107,8 +107,7 @@ public class AuthenticateService {
         users.setVerificationCodeExpiry(now.plusMinutes(1));
 
         userRepository.save(users);
-
-        // Gửi mã xác thực qua email
+        
         emailService.sendCodeToMail(users.getEmail(), "Mã xác nhận của bạn là: ", "Mã của bạn là: " + auth_code);
         return LoginResponse.builder().authenticate(true).build();
     }

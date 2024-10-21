@@ -1,12 +1,30 @@
 <div class="container">
-  <form>
-    <div class="form-control">
-      <input type="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter your email">
+  <form class="form p-4 border rounded">
+    <p class="mb-4" style="font-size:30px; justify-content: center; display: flex; font-weight: 600;">Reset Password</p>
+
+    <div class="form-group mb-3">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter your email">
     </div>
-    <div class="form-control">
-      <input type="text" [(ngModel)]="newPassword" class="form-control" placeholder="Enter your new password"
-             name="newPassword">
+
+    <div class="form-group mb-3">
+      <label for="newPassword">Password</label>
+      <input type="password" id="newPassword" [(ngModel)]="newPassword" class="form-control" placeholder="Enter your new password"
+             name="newPassword" (input)="checkPasswordMatch()">
     </div>
+    <div class="form-group mb-3">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" class="form-control" placeholder="Confirm your new password"
+             name="confirmPassword" (input)="checkPasswordMatch()"
+             [ngClass]="{'is-invalid': !isPasswordMatch && confirmPassword}">
+      @if (!isPasswordMatch && confirmPassword){
+      <h3 class="invalid-feedback">
+        Passwords do not match.
+      </h3>
+      }
+    </div>
+
+
     <button class="btn btn-primary" type="submit" (click)="onSubmit()">Save</button>
   </form>
 </div>

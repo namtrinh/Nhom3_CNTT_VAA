@@ -93,23 +93,33 @@ public class AuthenticateController {
                     .result("false")
                     .build();
         }
-        String reset_key = UUID.randomUUID().toString();
-        resetPasswordService.storeResetKey(email, reset_key);
+        try {
+            String reset_key = UUID.randomUUID().toString();
+            resetPasswordService.storeResetKey(email, reset_key);
 
-        String resetLink = "http://localhost:4200/reset-password?email=" + email + "&reset_key=" + reset_key;
-        emailService.sendCodeToMail(email, "Reset your password", "Click this url to reset password: " + resetLink);
+            String resetLink = "http://localhost:4200/reset-password?email=" + email + "&reset_key=" + reset_key;
+            emailService.sendCodeToMail(email, "Reset your password", "Click this url to reset password: " + resetLink);
 
-        return ApiResponse.<String>builder()
-                .code(200)
-                .message("One url has been sent to your email")
-                .result("true")
-                .build();
+            return ApiResponse.<String>builder()
+                    .code(200)
+                    .message("One url has been sent to your email")
+                    .result("true")
+                    .build();
+        } catch (IllegalStateException e) {
+            return ApiResponse.<String>builder()
+                    .code(429) // Mã lỗi 429 Too Many Requests
+                    .message(e.getMessage()) // Thông báo lỗi nếu vượt quá giới hạn
+                    .result("false")
+                    .build();
+        }
     }
 
     @PostMapping("/reset/reset-password")
     public ApiResponse<String> resetPassword(
             @RequestParam String reset_key, @RequestParam String email, @RequestParam String newPassword) {
         String cachedResetKey = resetPasswordService.getResetKey(email);
+
+
 
         if (cachedResetKey == null || !cachedResetKey.equals(reset_key)) {
             return ApiResponse.<String>builder()
