@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { InvoiceService } from '../../../service/order-service.service';
-import { Invoice } from '../../../model/order.model';
+import {  OrderService } from '../../../service/order-service.service';
+
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Order } from '../../../model/order.model';
 
 @Component({
   selector: 'app-list-invoice',
@@ -12,20 +13,20 @@ import { NgxPaginationModule } from 'ngx-pagination';
 })
 export class ListInvoiceComponent implements OnInit {
 
-  invoice: Invoice[] = [];
+  order:Order[] = []
   totalItems: number = 0;
   page: number = 0;
   size: number = 10;
 
-  constructor(private invoiceService: InvoiceService) { }
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
     this.loadInvoice();
   }
 
   loadInvoice(): void {
-    this.invoiceService.getAll(this.page, this.size).subscribe(data => {
-      this.invoice = data.result.content;
+    this.orderService.getAll(this.page, this.size).subscribe(data => {
+      this.order = data.result.content;
       this.totalItems = data.totalElements;
     }); (error: any) => {
       console.log(error);

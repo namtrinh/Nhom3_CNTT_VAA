@@ -10,17 +10,17 @@
             </tr>
         </thead>
         <tbody>
-            @for ( invoices of invoice; track invoice ) {
+            @for ( orders of order; track order ) {
             <tr>
-                <td> {{invoices.payment_id}}</td>
-                <td> {{invoices.time_created}}</td>
+                <td> {{orders.payment_id}}</td>
+                <td> {{orders.time_created}}</td>
          <!--      <td> {{invoices.detailInvoice.total_amount}}</td> -->
              <!--  <td> {{invoices.detailInvoice.total_price}}</td>-->
-                <td> {{invoices.description}}</td>
+                <td> {{orders.description}}</td>
             </tr>
             }
         </tbody>
         <button (click)="onPageChange(page - 1)" [disabled]="page === 0">Previous</button>
-        <button (click)="onPageChange(page + 1)" [disabled]="invoice.length < size">Next</button>
+        <button (click)="onPageChange(page + 1)" [disabled]="order.length < size">Next</button>
     </table>
 </div>
