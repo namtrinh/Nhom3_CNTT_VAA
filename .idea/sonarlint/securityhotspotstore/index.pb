@@ -355,3 +355,5 @@ W
 'frontend/src/app/model/invoice.model.ts,6\7\671e4e631f5e0f905ae36f8b1edcc2032d333596
 ^
 .frontend/src/app/model/detail_invoice.model.ts,c\4\c46ef9968d532131ace1165a88a7b93007b3ca29
+g
+7frontend/src/app/service/orderDetail-service.service.ts,0\a\0afe79d6f265728e1f6a9f587641f3f626f01e89

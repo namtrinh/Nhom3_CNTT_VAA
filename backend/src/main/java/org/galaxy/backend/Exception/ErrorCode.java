@@ -19,8 +19,8 @@ public enum ErrorCode {
     UNAUTHENTICATED(1004, "Unauthenticated", HttpStatus.UNAUTHORIZED),
     VERIFY_ERROR(9999, "Incorrect verification code", HttpStatus.UNAUTHORIZED),
     EXPIRE_TOKEN(9999, "This token has expired", HttpStatus.BAD_REQUEST),
-    INVALID_PASSWORD(9999,"The password cannot contain special characters.", HttpStatus.BAD_REQUEST),
-    VERIFY_CODE_EXPIRED(401,"The code has expired", HttpStatus.UNAUTHORIZED),
+    INVALID_PASSWORD(9999, "The password cannot contain special characters.", HttpStatus.BAD_REQUEST),
+    VERIFY_CODE_EXPIRED(401, "The code has expired", HttpStatus.UNAUTHORIZED),
     REQUEST_LIMIT_EXCEEDED(401, "The request limit is exceeded", HttpStatus.UNAUTHORIZED);
 
     private int code;

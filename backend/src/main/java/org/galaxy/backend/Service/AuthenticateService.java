@@ -107,11 +107,10 @@ public class AuthenticateService {
         users.setVerificationCodeExpiry(now.plusMinutes(1));
 
         userRepository.save(users);
-        
+
         emailService.sendCodeToMail(users.getEmail(), "Mã xác nhận của bạn là: ", "Mã của bạn là: " + auth_code);
         return LoginResponse.builder().authenticate(true).build();
     }
-
 
     public AuthenticateResponse verifyAuthCode(String email, String authCode) {
         var user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Email is incorrect"));
@@ -137,10 +136,10 @@ public class AuthenticateService {
 
         Date expiryTime = isRefresh
                 ? Date.from(signedJWT
-                .getJWTClaimsSet()
-                .getIssueTime()
-                .toInstant()
-                .plus(REFRESHABLE_DURATION, ChronoUnit.SECONDS))
+                        .getJWTClaimsSet()
+                        .getIssueTime()
+                        .toInstant()
+                        .plus(REFRESHABLE_DURATION, ChronoUnit.SECONDS))
                 : signedJWT.getJWTClaimsSet().getExpirationTime();
 
         boolean verified = signedJWT.verify(verifier);

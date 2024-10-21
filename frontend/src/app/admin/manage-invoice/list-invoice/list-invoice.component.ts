@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InvoiceService } from '../../../service/invoice-service.service';
-import { Invoice } from '../../../model/invoice.model';
+import { InvoiceService } from '../../../service/order-service.service';
+import { Invoice } from '../../../model/order.model';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
@@ -12,7 +12,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 })
 export class ListInvoiceComponent implements OnInit {
 
-  invoice:Invoice[] = [];
+  invoice: Invoice[] = [];
   totalItems: number = 0;
   page: number = 0;
   size: number = 10;
@@ -27,7 +27,7 @@ export class ListInvoiceComponent implements OnInit {
     this.invoiceService.getAll(this.page, this.size).subscribe(data => {
       this.invoice = data.result.content;
       this.totalItems = data.totalElements;
-    });(error: any) =>{
+    }); (error: any) => {
       console.log(error);
     }
   }

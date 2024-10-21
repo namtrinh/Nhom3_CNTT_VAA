@@ -1,6 +1,5 @@
 package org.galaxy.backend.ServiceImpl;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -82,9 +81,7 @@ public class UserServiceImpl implements UserService {
 
     public List<UsersResponse> findAllUser() {
         List<User> users = userRepository.findAllUser();
-        return users.stream()
-                .map(usersMapper::toUsers)
-                .collect(Collectors.toList());
+        return users.stream().map(usersMapper::toUsers).collect(Collectors.toList());
     }
 
     public UsersResponse editUsers(String user_id, UsersRequest usersRequest) {
@@ -114,7 +111,6 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USERS_EMPTY));
         return usersMapper.toUsers(user);
     }
-
 
     public List<UsersResponse> findAllByRole(Set<Roles> role) {
         var users = userRepository.findAllByRoles(role);

@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { InvoiceService } from '../../service/invoice-service.service';
-import { Invoice } from '../../model/invoice.model';
+import { InvoiceService } from '../../service/order-service.service';
+import { Invoice } from '../../model/order.model';
 
 import { FormsModule, NgForm } from '@angular/forms';
-import { DetailInvoiceService } from '../../service/detail_invoice-service.service';
-import { DetailInvoice } from '../../model/detail_invoice.model';
+import { DetailInvoiceService } from '../../service/orderDetail-service.service';
+import { DetailInvoice } from '../../model/order_detail.model';
 import { Product } from '../../model/product.model';
 import { Category } from '../../model/category.model';
 import { format } from 'date-fns';
@@ -59,7 +59,7 @@ export class PaySuccessComponent implements OnInit {
     const newProduct: Product = {
       product_id: this.productID,
       name: '',
-      seotitle:'',
+      seotitle: '',
       image: '',
       quantity: 0,
       price: 0,

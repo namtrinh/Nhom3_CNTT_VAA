@@ -40,10 +40,10 @@ public class AuthenticateController {
 
     @PostMapping()
     public ApiResponse<LoginResponse> authenticate(@RequestBody AuthenticateRequest authenticateRequest) {
-            return ApiResponse.<LoginResponse>builder()
-                    .code(200)
-                    .result(authenticateService.Authenticate(authenticateRequest))
-                    .build();
+        return ApiResponse.<LoginResponse>builder()
+                .code(200)
+                .result(authenticateService.Authenticate(authenticateRequest))
+                .build();
     }
 
     @PostMapping("/refresh")
@@ -118,8 +118,6 @@ public class AuthenticateController {
     public ApiResponse<String> resetPassword(
             @RequestParam String reset_key, @RequestParam String email, @RequestParam String newPassword) {
         String cachedResetKey = resetPasswordService.getResetKey(email);
-
-
 
         if (cachedResetKey == null || !cachedResetKey.equals(reset_key)) {
             return ApiResponse.<String>builder()

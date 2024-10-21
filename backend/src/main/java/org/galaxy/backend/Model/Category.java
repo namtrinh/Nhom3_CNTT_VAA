@@ -1,14 +1,14 @@
 package org.galaxy.backend.Model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.Set;
+
 import jakarta.persistence.*;
 
-import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.*;
 
 @Entity
 @Getter
@@ -30,8 +30,7 @@ public class Category {
 
     private String icon;
 
-    @OneToMany(mappedBy = "category",cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JsonIgnoreProperties("category")
     private Set<Product> products;
-
 }

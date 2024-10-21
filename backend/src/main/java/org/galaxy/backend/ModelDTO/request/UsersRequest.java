@@ -3,7 +3,6 @@ package org.galaxy.backend.ModelDTO.request;
 import java.sql.Timestamp;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 

@@ -3,6 +3,7 @@ package org.galaxy.backend.ServiceImpl;
 import java.util.List;
 
 import jakarta.persistence.EntityNotFoundException;
+
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Repository.ProductRepository;
@@ -21,16 +22,13 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-
     public List<Product> findAllProductsWithPromotion() {
         return productRepository.findAllProductsWithPromotion();
     }
 
-
     public List<Product> findAllProductsWithoutPromotion() {
         return productRepository.findAllProductsWithoutPromotion();
     }
-
 
     public Product save(Product entity) {
         if (productRepository.existsByName(entity.getName())) {
@@ -39,11 +37,9 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.save(entity);
     }
 
-
     public Product findById(String product_id) {
         return productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
     }
-
 
     public void deleteById(String productId) {
         if (!productRepository.existsById(productId)) {
@@ -57,7 +53,6 @@ public class ProductServiceImpl implements ProductService {
         return this.productRepository.save(product);
     }
 
-
     public List<Product> findProductsByCategory(Category category) {
         return productRepository.findProductByCategory(category);
     }
@@ -70,7 +65,6 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> searchProduct(String name) {
         return productRepository.findByNameContainingIgnoreCase(name);
     }
-
 
     public Product getBySeotitle(String seotitle) {
         return productRepository.getBySeotitle(seotitle);

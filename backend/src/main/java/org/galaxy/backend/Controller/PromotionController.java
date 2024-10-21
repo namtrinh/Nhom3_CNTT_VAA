@@ -18,7 +18,7 @@ public class PromotionController {
     @GetMapping
     public ApiResponse<List<Promotion>> getAll() {
         List<Promotion> promotionList = promotionService.findAll();
-        promotionList.sort((a,b) -> a.getSort().compareTo(b.getSort()));
+        promotionList.sort((a, b) -> a.getSort().compareTo(b.getSort()));
         return ApiResponse.<List<Promotion>>builder()
                 .code(200)
                 .result(promotionList)

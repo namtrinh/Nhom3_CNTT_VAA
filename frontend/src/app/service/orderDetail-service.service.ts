@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { DetailInvoice } from "../model/detail_invoice.model";
+import { OrderDetail} from "../model/order_detail.model";
 import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 
@@ -7,12 +7,12 @@ import { HttpClient } from "@angular/common/http";
     providedIn: 'root'
 })
 
-export class DetailInvoiceService{
+export class OrderDetailService{
     private baseUrl = "http://localhost:8888/identity/detail-invoice";
 
     constructor(private http: HttpClient){}
 
-    create(detailInvoice: DetailInvoice): Observable<Object>{
-        return this.http.post(`${this.baseUrl}`,detailInvoice)
+    create(orderDetail: OrderDetail): Observable<Object>{
+        return this.http.post(`${this.baseUrl}`,orderDetail)
     }
 }

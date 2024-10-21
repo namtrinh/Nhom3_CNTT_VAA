@@ -17,7 +17,7 @@ public class CategoryController {
     @GetMapping
     public ApiResponse<List<Category>> getAllCategories() {
         var result = categoryService.findAll();
-        result.sort((a,b) -> a.getSort().compareTo(b.getSort()));
+        result.sort((a, b) -> a.getSort().compareTo(b.getSort()));
         return ApiResponse.<List<Category>>builder().code(200).result(result).build();
     }
 

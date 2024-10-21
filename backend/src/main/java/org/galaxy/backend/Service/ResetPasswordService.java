@@ -3,8 +3,10 @@ package org.galaxy.backend.Service;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import lombok.Getter;
+
 import org.springframework.stereotype.Service;
+
+import lombok.Getter;
 
 @Service
 public class ResetPasswordService {
@@ -37,7 +39,8 @@ public class ResetPasswordService {
             cache.put(email, new ResetKeyInfo(reset_key, expirationTime));
             logResetRequest(email);
         } else {
-            throw new IllegalStateException("The limit of the number of reset requests in 10 minutes has been exceeded.");
+            throw new IllegalStateException(
+                    "The limit of the number of reset requests in 10 minutes has been exceeded.");
         }
     }
 
