@@ -40,8 +40,4 @@ export class LoginComponent {
         }
       });
   }
-
-  isLoggedIn(): boolean {
-    return this.authService.isLoggedIn();
-  }
 }

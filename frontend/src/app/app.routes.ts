@@ -43,6 +43,7 @@ import {PromotionProductComponent} from './admin/manage-product/promotion-produc
 import {ListPromotionComponent} from "./admin/manage-promotion/list-promotion/list-promotion.component";
 import {CreatePromotionComponent} from "./admin/manage-promotion/create-promotion/create-promotion.component";
 import {UpdatePromotionComponent} from "./admin/manage-promotion/update-promotion/update-promotion.component";
+import {RouteGuard} from "./route-guard.guard";
 
 export const routes: Routes = [
 
@@ -51,10 +52,10 @@ export const routes: Routes = [
 
   //Auth
   {path: 'login', component: LoginComponent},
-  {path: 'registry', component: RegistryComponent},
-  {path: 'verify-code', component: AuthCodeComponent},
-  {path: 'forgot-password', component: RequiredResetPasComponent},
-  {path: 'reset-password', component: ResetPassComponent},
+  {path: 'registry', component: RegistryComponent, canActivate: [RouteGuard]},
+  {path: 'verify-code', component: AuthCodeComponent, canActivate: [RouteGuard]},
+  {path: 'forgot-password', component: RequiredResetPasComponent, canActivate: [RouteGuard]},
+  {path: 'reset-password', component: ResetPassComponent, canActivate: [RouteGuard]},
 
   //View Client
   {path: '', redirectTo: '', pathMatch: 'full'},
@@ -89,7 +90,12 @@ export const routes: Routes = [
       //Promotion
       {path: 'promotion', component: ListPromotionComponent, canActivate: [AuthService], data: {role: 1}},
       {path: 'create-promotion', component: CreatePromotionComponent, canActivate: [AuthService], data: {role: 1}},
-      {path: 'update-promotion/:promotion_id', component: UpdatePromotionComponent, canActivate: [AuthService], data: {role: 1}},
+      {
+        path: 'update-promotion/:promotion_id',
+        component: UpdatePromotionComponent,
+        canActivate: [AuthService],
+        data: {role: 1}
+      },
 
       //Category
       {path: 'category', component: ListCategoryComponent, canActivate: [AuthService], data: {role: 1}},
