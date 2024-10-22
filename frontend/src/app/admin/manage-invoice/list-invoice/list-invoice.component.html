@@ -1,26 +1,31 @@
 <div class="container">
-    <table class="table table-striped table">
-        <thead>
-            <tr>
-                <th>Payment ID</th>
-                <th>Time Created</th>
-                <th>Amount</th>
-                <th>Price</th>
-                <th>Note</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for ( orders of order; track order ) {
-            <tr>
-                <td> {{orders.payment_id}}</td>
-                <td> {{orders.time_created}}</td>
-         <!--      <td> {{invoices.detailInvoice.total_amount}}</td> -->
-             <!--  <td> {{invoices.detailInvoice.total_price}}</td>-->
-                <td> {{orders.description}}</td>
-            </tr>
-            }
-        </tbody>
-        <button (click)="onPageChange(page - 1)" [disabled]="page === 0">Previous</button>
-        <button (click)="onPageChange(page + 1)" [disabled]="order.length < size">Next</button>
-    </table>
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Payment ID</th>
+      <th>User</th>
+      <th>Address</th>
+      <th>Time Created</th>
+      <th>Detail</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (orders of order; track order) {
+        <tr>
+          <td> {{ orders.order_id}}</td>
+          <td> {{ orders.payment_id }}</td>
+          <td>{{ orders.user.email }}</td>
+          <td>{{ orders.user.address}}</td>
+          <td> {{ orders.time_created }}</td>
+          <td>
+            <button class="btn btn-primary"><i
+              class="fa-regular fa-pen-to-square"></i></button>
+          </td>
+        </tr>
+      }
+    </tbody>
+    <button (click)="onPageChange(page - 1)" [disabled]="page === 0">Previous</button>
+    <button (click)="onPageChange(page + 1)" [disabled]="order.length < size">Next</button>
+  </table>
 </div>

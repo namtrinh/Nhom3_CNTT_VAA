@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SharedDataService} from "../service/shared-data.service";
+import {RouterLink} from "@angular/router";
+
+
+
 
 @Component({
-  selector: 'app-test',
-  standalone: true,
-  imports: [],
+  selector: 'app-component-a',
   templateUrl: './test.component.html',
-  styleUrl: './test.component.scss'
+  standalone: true,
+  imports: [
+    RouterLink
+  ]
 })
-export class TestComponent {
+export class TestComponent implements OnInit{
+  constructor(private sharedDataService: SharedDataService) {}
 
+  sendData() {
+    const dataorder = [{ productName: 'Test Product' }, 'userId123'];
+    console.log('Sending data:', dataorder);
+    this.sharedDataService.updateDataA(dataorder); // Gửi dữ liệu
+  }
+
+  ngOnInit(): void {
+    this.sendData()
+  }
 }

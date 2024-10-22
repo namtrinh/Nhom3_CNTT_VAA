@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 import { ProductExtendComponent } from "../product-extend/product-extend.component";
 import { PromotionService } from '../../service/promotion-service.service';
 import { Promotion } from '../../model/promotion.model';
-import { DataService } from '../../service/data-service.service';
+
 
 
 @Component({
@@ -29,8 +29,7 @@ export class ProductSaleComponent implements OnInit {
   constructor(private router: Router,
     private productService: ProductService,
     private imgService: ImageService,
-    private promotionService: PromotionService,
-    private dataService: DataService) { }
+    private promotionService: PromotionService) { }
 
   ngOnInit(): void {
     this.getAllProducts();

@@ -127,3 +127,9 @@
     -webkit-appearance:none;
     margin:0;
 }
+
+.checkbox-container input[type="checkbox"] {
+  transform: scale(1.5); /* Tăng kích thước checkbox lên 1.5 lần */
+  margin-right: 10px;    /* Thêm khoảng cách bên phải để đẹp hơn */
+  cursor: pointer;        /* Thay đổi con trỏ khi hover */
+}

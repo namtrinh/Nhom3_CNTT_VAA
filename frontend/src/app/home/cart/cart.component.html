@@ -1,60 +1,65 @@
 <h1 style="text-align: center;color:rgb(206, 44, 22);font-weight:900;padding-top:20px">Cart</h1>
 
+<div class="container">
+  <button class="btn btn-primary" (click)="payment()">Payment</button>
+</div>
+
 @for (carts of cart; track cart) {
-  <div class="container">
+<div class="container">
     <li class="product-item">
 
-      <div class="imgsp">
-        <a href="" target="_blank">
-          <img [src]="imgAvatars[carts.cart_id]" loading="lazy">
-        </a>
-        <div>
-          <button class="delete-btn" (click)="deleteCart(carts.cart_id)">Xóa</button>
-
-          <button (click)="payment(carts.product_quantity * carts.product_price,carts.product.name)"
-                  style="transform: translateX(610%);" class=" btn btn-primary">Buy now
-          </button>
-        </div>
+      <div class="checkbox-container">
+        <input type="checkbox" (change)="toggleSelection(carts)" [(ngModel)]="carts.selected">
       </div>
-      <div class="infosp">
-        <div class="name-price">
-          <div class="name-container">
-            <a href="" class="product-item__name">
-              {{ carts.product.name }}
+
+        <div class="imgsp">
+            <a href="" target="_blank">
+                <img [src]="imgAvatars[carts.cart_id]" loading="lazy">
             </a>
-          </div>
-          <div class="price-area">
-            <span>{{ carts.product.price | number:'1.0-0' }} ₫</span>
-          </div>
+            <div>
+                <button class="delete-btn" (click)="deleteCart(carts.cart_id)">Xóa</button>
+
+              <button (click)="payment()" style="transform: translateX(610%);" class="btn btn-primary">Buy now</button>
+            </div>
         </div>
-        <div class="product-note">
-          <div class="product-note__btn">
-            <span>Online giá rẻ quá</span>
-            <span class="product-note__labelExpand">(Xem chi tiết)</span>
-          </div>
-          <div class="product-note__list">
-            <ul>
-              <li>Giá và khuyến mãi có thể kết thúc sớm</li>
-            </ul>
-          </div>
+        <div class="infosp">
+            <div class="name-price">
+                <div class="name-container">
+                    <a href="" class="product-item__name">
+                        {{carts.product.name}}
+                    </a>
+                </div>
+                <div class="price-area">
+                    <span>{{carts.product.price | number:'1.0-0'}} ₫</span>
+                </div>
+            </div>
+            <div class="product-note">
+                <div class="product-note__btn">
+                    <span>Online giá rẻ quá</span>
+                    <span class="product-note__labelExpand">(Xem chi tiết)</span>
+                </div>
+                <div class="product-note__list">
+                    <ul>
+                        <li>Giá và khuyến mãi có thể kết thúc sớm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="choosenumber">
+                <div class="buttons_added">
+                    <button class="minus is-form" type="button" value="-" (click)="decreaseQuantity(carts)">-</button>
+
+                    <!-- Trường nhập số lượng sản phẩm -->
+                    <input aria-label="quantity" [(ngModel)]="carts.product_quantity" class="input-qty"
+                        [max]="maxQuantity" [min]="1" type="number" readonly>
+
+                    <!-- Nút tăng số lượng -->
+                    <button class="plus is-form" type="button" value="+" (click)="increaseQuantity(carts)">+</button>
+
+                </div>
+            </div>
+
         </div>
-        <div class="choosenumber">
-          <div class="buttons_added">
-            <button class="minus is-form" type="button" value="-" (click)="decreaseQuantity(carts)">-</button>
-
-            <!-- Trường nhập số lượng sản phẩm -->
-            <input aria-label="quantity" [(ngModel)]="carts.product_quantity" class="input-qty"
-                   [max]="maxQuantity" [min]="1" type="number" readonly>
-
-            <!-- Nút tăng số lượng -->
-            <button class="plus is-form" type="button" value="+" (click)="increaseQuantity(carts)">+</button>
-
-          </div>
-        </div>
-
-
-      </div>
 
     </li>
-  </div>
+</div>
 }

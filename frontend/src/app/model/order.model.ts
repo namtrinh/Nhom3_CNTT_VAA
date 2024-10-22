@@ -7,6 +7,6 @@ export class Order {
   description!: string;
   address!: string;
   time_created!: string;
-  order_detail!: Partial<OrderDetail>
-  user!: Partial<User>
+  orderDetail: OrderDetail = new OrderDetail();
+  user!: Partial<User>;
 }

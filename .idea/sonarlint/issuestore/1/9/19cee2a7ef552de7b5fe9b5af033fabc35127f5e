@@ -1,3 +1,4 @@
 
-Ltypescript:S1128")Remove this unused import of 'OnDestroy'.(ù§ïˆ8ßÖ­§2
-Ntypescript:S1128"&Remove this unused import of 'NgForm'.(é‘íÂüÿÿÿÿ8àÖ­§2
+rtypescript:S1128")Remove this unused import of 'OnDestroy'.(ù§ïˆ8şõ¤«2J$e68b4966-7cff-45b1-8476-41f1d904c9a5
+ltypescript:S1257"Remove this commented out code.(ó™Øıÿÿÿÿ8ÿõ¤«2J$0b44aed0-9ebb-4941-87b8-1d9e3603ee52
+©typescript:S6582Y"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(Ÿ–çğùÿÿÿÿ8Œå‚¥«2J$05112c05-28b9-4ab2-92de-6dc60235dfb1

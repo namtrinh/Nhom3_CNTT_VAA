@@ -6,7 +6,7 @@ export class OrderDetail {
   order_detail_id!: string;
   total_amount!: number;
   total_price!: number;
-  products!: Partial<Product>;
+  products: Partial<Product[]> =[];
   promotion!: Partial<Promotion>;
 }
 

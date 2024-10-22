@@ -1,14 +1,10 @@
 
 œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8 ËÏª2J$941d0c93-06aa-45ce-9aae-8f3ac5892ad9
-	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8¡ ËÏª2J$9588b3a4-91ab-49e7-a46e-f2f927b80ced
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8¡ ËÏª2J$fd06eaf6-d656-4ed9-a435-a88e788a9afa
-	java:S116%"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8¡ ËÏª2J$6b59932a-b296-43ac-ac02-11836fdcb736
-•	java:S116'"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8¢ ËÏª2J$b776e051-7af2-46d5-a1a2-07414a743b97
+	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8¡ ËÏª2J$9588b3a4-91ab-49e7-a46e-f2f927b80ced
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8¡ ËÏª2J$fd06eaf6-d656-4ed9-a435-a88e788a9afa
+	java:S116#"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8¡ ËÏª2J$6b59932a-b296-43ac-ac02-11836fdcb736
+•	java:S116%"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8¢ ËÏª2J$b776e051-7af2-46d5-a1a2-07414a743b97
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¦ ËÏª2J$1abb1f38-699d-4c83-84f1-2f344aa31c9f
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¦ ËÏª2J$1abb1f38-699d-4c83-84f1-2f344aa31c9f
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¦ ËÏª2J$6b505f82-8270-488b-84ff-b09207a457be
-•
-java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8¦ ËÏª2J$997b6d4a-7c9b-4ede-b845-3e0ebb047310
-—
-java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8§ ËÏª2J$3e27eb0b-b9b7-4bdd-a89a-f0b24532cde3
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¦ ËÏª2J$6b505f82-8270-488b-84ff-b09207a457be

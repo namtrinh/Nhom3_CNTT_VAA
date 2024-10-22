@@ -9,5 +9,6 @@ export class Cart{
     product!:Partial<Product>;
     user!:Partial<User>;
     time_add!:string;
+    selected!:boolean;
 
 }

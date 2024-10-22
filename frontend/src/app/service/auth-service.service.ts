@@ -20,8 +20,6 @@ export class AuthService implements CanActivate {
                 // Phân quyền bằng số
                 switch (userRole) {
                     case 'ROLE_ADMIN':
-                        return 0;
-                    case 'ROLE_MANAGER':
                         return 1;
                     case 'ROLE_USER':
                         return 2;

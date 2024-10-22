@@ -10,6 +10,7 @@ import {CartService} from '../../service/cart-service.service';
 import {Cart} from '../../model/cart.model';
 import {format} from 'date-fns';
 import {jwtDecode} from 'jwt-decode';
+import {SharedDataService} from "../../service/shared-data.service";
 
 @Component({
   selector: 'app-detail-product',
@@ -36,6 +37,7 @@ export class DetailProductComponent implements OnInit {
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
     private vnPayService: VNPayService,
+    private sharedDataService: SharedDataService
   ) {
   }
 
@@ -90,7 +92,9 @@ export class DetailProductComponent implements OnInit {
     this.totalprice = this.product.price * this.quantity;
     this.inf = this.product.name;
     this.vnPayService.submitOrder(this.totalprice, this.inf).subscribe(data => {
-      window.location.href = data.vnpayUrl;
+     window.location.href = data.vnpayUrl;
+      localStorage.setItem('productId', this.product.product_id);
+      console.log(localStorage.getItem('productId'));
     }, (error: any) => {
       console.log(error);
     });

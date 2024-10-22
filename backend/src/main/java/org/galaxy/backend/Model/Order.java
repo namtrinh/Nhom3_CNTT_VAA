@@ -28,8 +28,7 @@ public class Order {
 
     private Boolean status;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id") // The foreign key column that refers to the Users table
+    @ManyToOne(cascade = CascadeType.MERGE)
     private User user;
 
     private String address;
@@ -37,6 +36,6 @@ public class Order {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp time_created;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
     private OrderDetail orderDetail;
 }

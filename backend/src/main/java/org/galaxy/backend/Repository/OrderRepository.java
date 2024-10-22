@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
 public interface OrderRepository extends JpaRepository<Order, String> {
     List<Order> findByUser(User user);
 
-    @Query(value = "SELECT i FROM order i ORDER BY i.time_created DESC", nativeQuery = true)
+    @Query(value = "SELECT * FROM orders  ORDER BY time_created DESC", nativeQuery = true)
     Page<Order> findAllSortedByTime(Pageable pageable);
 }

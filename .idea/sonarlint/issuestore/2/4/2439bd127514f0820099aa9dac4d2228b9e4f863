@@ -1,9 +1,9 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8©Â­ÿª2J$98ef9211-d1a3-4900-a423-ba0c4abe422b
-{	java:S116"ZRename this field "order_detail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùõúÿÿÿÿ8Å©±ÿª2
-x	java:S116"WRename this field "total_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Œ÷íøÿÿÿÿ8Æ©±ÿª2
-w	java:S116"VRename this field "total_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’èš¥ıÿÿÿÿ8Æ©±ÿª2
-U
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8Ô©±ÿª2
-M
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8Õ©±ÿª2
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8©Â­ÿª2J$45f1317d-280e-444b-825e-a16695fc59a6
+¡	java:S116"ZRename this field "order_detail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùõúÿÿÿÿ8Å©±ÿª2J$4b3b84db-35bf-44b6-ba7c-085c3c524950
+	java:S116"WRename this field "total_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Œ÷íøÿÿÿÿ8Æ©±ÿª2J$f568c03d-69b7-4552-b9f7-96d7f59bb435
+	java:S116"VRename this field "total_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’èš¥ıÿÿÿÿ8Æ©±ÿª2J$edfa05c0-379c-47a6-9e71-daa42cc9a355
+{
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8Ô©±ÿª2J$1080df3e-51fc-4e7a-bf10-ae1ca1f27070
+s
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8Õ©±ÿª2J$36d9668a-80e5-4932-89df-246668671f62

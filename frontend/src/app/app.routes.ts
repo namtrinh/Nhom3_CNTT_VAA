@@ -44,11 +44,13 @@ import {ListPromotionComponent} from "./admin/manage-promotion/list-promotion/li
 import {CreatePromotionComponent} from "./admin/manage-promotion/create-promotion/create-promotion.component";
 import {UpdatePromotionComponent} from "./admin/manage-promotion/update-promotion/update-promotion.component";
 import {RouteGuard} from "./route-guard.guard";
+import {Test1Component} from "./test/test1.component";
 
 export const routes: Routes = [
 
   //Test View
   {path: 'a', component: TestComponent},
+  {path: 'b', component: Test1Component},
 
   //Auth
   {path: 'login', component: LoginComponent},
