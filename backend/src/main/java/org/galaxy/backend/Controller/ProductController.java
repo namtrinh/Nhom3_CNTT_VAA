@@ -72,7 +72,7 @@ public class ProductController {
                 .result(productService.findById(product_id))
                 .build();
     }
-
+/*
     @GetMapping(value = "/product")
     @ResponseBody
     public ApiResponse<List<Product>> getProductByCategory(@RequestParam Category category) {
@@ -81,7 +81,8 @@ public class ProductController {
                 .result(productService.findProductsByCategory(category))
                 .build();
     }
-
+ */
+/*
     @GetMapping(value = "/category")
     public ApiResponse<List<Product>> getProductsByCategory(@RequestParam Category category_id) {
         return ApiResponse.<List<Product>>builder()
@@ -90,6 +91,8 @@ public class ProductController {
                 .build();
     }
 
+ */
+/*
     @GetMapping(value = "/search_pr")
     @ResponseBody
     public ApiResponse<List<Product>> searchProducts(@RequestParam String name) {
@@ -98,6 +101,8 @@ public class ProductController {
                 .result(productService.searchProduct(name))
                 .build();
     }
+
+ */
 
     @PostMapping
     public ApiResponse<Product> createProduct(@RequestBody Product product) {

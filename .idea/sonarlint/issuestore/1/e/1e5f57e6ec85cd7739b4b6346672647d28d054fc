@@ -1,14 +1,12 @@
 
-“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8êşª2J$ea6561cd-08f6-47e1-a719-d3c677dbcdb1
-“	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä“ÊÖ8êşª2J$837a5793-a49d-45ea-a5dc-bb92f3156bef
-˜	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8êşª2J$c2c812a7-a983-455f-9e9d-68c1cffb8482
-™	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8êşª2J$3fd75401-919b-46ee-8276-a3efc97d50a3
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8êşª2J$b90da529-7c1d-44f7-a612-269412b61bcb
+“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8’ÂÉ«2J$31f956c0-aa12-4697-b1bc-3612a160c99f
+˜	java:S117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8”ÂÉ«2J$73140be1-dd74-4f31-a483-00822b8f19c5
+™	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8–ÂÉ«2J$1e9e4efd-f9f0-4742-adb7-4b9d93c2cf95
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8—ÂÉ«2J$42a3bd73-b934-464b-ba31-2b182b8c399e
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8œêşª2J$2d4ee7ce-9a0f-44c4-8710-02717fb72442
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¶ÂÉ«2J$8972a2fa-c995-4941-9d1a-b5c9288401a6
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8êşª2J$47bd1d1d-e158-42da-ac8c-474bb879d1cc
-v
-java:S6837M"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8£êşª2J$6e643015-1f43-431f-8a63-142099f7d3c7
-v
-java:S6837^"3Remove this superfluous "@ResponseBody" annotation.(Ü¥¼8£êşª2J$ad3d8dd2-dfae-47e6-949d-ee0df7d00b3d
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¶ÂÉ«2J$329b629e-34a5-496f-b770-49b2f923bebb
+}	java:S125N"<This block of commented-out lines of code should be removed.(ÈùÔ`8×ÂÉ«2J$4ae91c9b-5af5-48c3-976d-f06ecd81cadc
+~	java:S125W"<This block of commented-out lines of code should be removed.(ä“ÊÖ8£úÂÉ«2J$4fe5b334-8877-42dc-ad1d-eca1a16eb043
+~	java:S125b"<This block of commented-out lines of code should be removed.(ğõĞé8ÿÕÃÉ«2J$3a3d7563-082f-4b40-ad0d-323e718cd7f6

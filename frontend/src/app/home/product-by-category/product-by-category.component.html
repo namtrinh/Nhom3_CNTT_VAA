@@ -3,7 +3,7 @@
   <div class="listproduct listproduct-block">
     @for (product of products; track trackByFunction) {
       <div class="item"
-           [routerLink]="['/detail-product', product.seotitle]">
+           [routerLink]="[product.seotitle]">
         <div class="item-img">
           <img [src]="imgAvatars[product.product_id]">
         </div>

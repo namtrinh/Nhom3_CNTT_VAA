@@ -1,30 +1,30 @@
 
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í‘ğ
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Îº‡úÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ºÖ‰
-e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¿;
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–âÚ›ıÿÿÿÿ
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ñ¹²ùÿÿÿÿ
-k	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âò“øşÿÿÿÿ
-e	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó²Ş
-k	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µä”Çşÿÿÿÿ
-f	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á×—Æ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í‘ğ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Îº‡úÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ºÖ‰
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¿;
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–âÚ›ıÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ñ¹²ùÿÿÿÿ
+k	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âò“øşÿÿÿÿ
+e	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó²Ş
+k	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µä”Çşÿÿÿÿ
+f	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á×—Æ
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã
 x
-java:S1488S"bImmediately return this expression instead of assigning it to the temporary variable "paymentUrl".(¸É¶Ï
+java:S1488R"bImmediately return this expression instead of assigning it to the temporary variable "paymentUrl".(¸É¶Ï
 E
-java:S37405"/Provide the parametrized type for this generic.(›µ´ê
+java:S37404"/Provide the parametrized type for this generic.(›µ´ê
 E
-java:S37405"/Provide the parametrized type for this generic.(›µ´ê
+java:S37404"/Provide the parametrized type for this generic.(›µ´ê
 J
-java:S37409"/Provide the parametrized type for this generic.(ÔöŠÿÿÿÿÿ
+java:S37408"/Provide the parametrized type for this generic.(ÔöŠÿÿÿÿÿ
 E
-java:S3740X"/Provide the parametrized type for this generic.(ùúÔó
+java:S3740W"/Provide the parametrized type for this generic.(ùúÔó
 E
-java:S3740X"/Provide the parametrized type for this generic.(ùúÔó
+java:S3740W"/Provide the parametrized type for this generic.(ùúÔó
 E
-java:S3740Y"/Provide the parametrized type for this generic.(á§äÖ
+java:S3740X"/Provide the parametrized type for this generic.(á§äÖ
 e
-java:S1192g"ODefine a constant instead of duplicating this literal "vnp_SecureHash" 3 times.(Á×—Æ
+java:S1192f"ODefine a constant instead of duplicating this literal "vnp_SecureHash" 3 times.(Á×—Æ
 D
-java:S1905<")Remove this unnecessary cast to "String".(­Óµûÿÿÿÿ
+java:S1905;")Remove this unnecessary cast to "String".(­Óµûÿÿÿÿ

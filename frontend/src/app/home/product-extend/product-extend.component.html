@@ -2,7 +2,7 @@
     <h1 class="title">More Products...</h1>
     <div class="listproduct listproduct-block">
         @for (product of products; track products) {
-        <div class="item" [routerLink]="['/detail-product',product.seotitle]">
+        <div class="item"  [routerLink]="['/category',product.category?.seotitle, product.seotitle]">
             <div class="item-img">
                 <img  [src]="imgAvatars[product.product_id]">
             </div>

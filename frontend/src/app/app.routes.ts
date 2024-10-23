@@ -68,11 +68,11 @@ export const routes: Routes = [
       {path: '', component: ProductSaleComponent},
 
       {path: 'b', component: ProductExtendComponent},
-      {path: 'detail-product/:seotitle', component: DetailProductComponent},
+      {path: 'category/:seotitle/:seotitle', component: DetailProductComponent},
       {path: 'myinf/:user_id', component: MyInfComponent},
       {path: 'edit_my_inf/:user_id', component: EditMyInfComponent},
       {path: 'cart', component: CartComponent},
-      {path: ':seotitle', component: ProductByCategoryComponent},
+      {path: 'category/:seotitle', component: ProductByCategoryComponent},
     ]
   },
 
