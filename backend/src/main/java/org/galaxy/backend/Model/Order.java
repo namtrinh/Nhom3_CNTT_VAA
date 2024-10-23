@@ -36,6 +36,6 @@ public class Order {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp time_created;
 
-    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
-    private OrderDetail orderDetail;
+
+    private String orderDetail_id;
 }

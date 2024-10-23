@@ -7,6 +7,6 @@ export class OrderDetail {
   total_amount!: number;
   total_price!: number;
   products: Partial<Product[]> =[];
-  promotion!: Partial<Promotion>;
+  promotions: Partial<Promotion[]> = [];
 }
 

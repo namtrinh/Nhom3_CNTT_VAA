@@ -23,10 +23,10 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>SeoTitle</th>
       <th>Image</th>
       <th>Quantity</th>
       <th>Price</th>
-      <th>SeoTitle</th>
       <th>Edit</th>
       <th>Delete</th>
       <th>Detail</th>
@@ -35,16 +35,16 @@
     <tbody>
       @for (product of products; track products) {
         <tr>
-          <td>{{product.product_id}}</td>
+          <td>{{ product.product_id }}</td>
           <td>{{ product.name }}</td>
+          <td>{{ product.seotitle }}</td>
           <td> @if (imgAvatars[product.product_id]) {
             <img [src]="imgAvatars[product.product_id]"
                  alt="{{ product.product_id }}" style="width:100px;height:100px">
           }
           </td>
           <td>{{ product.quantity }}</td>
-          <td>{{ product.price }}</td>
-          <td>{{ product.seotitle }}</td>
+          <td>{{ product.price | number:'1.0-0' }} ₫</td>
           <td>
             <button type="button" class="btn btn-primary"
                     [routerLink]="['/admin/edit-product',product.product_id]"><i

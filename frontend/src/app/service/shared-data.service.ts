@@ -5,17 +5,16 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedDataService {
-  // Tạo BehaviorSubject mặc định là null
-  private dataSubjectA = new BehaviorSubject<any>(null);
 
-  // Biến observable mà component sẽ subscribe
-  currentDataA = this.dataSubjectA.asObservable();
+  private dataset: any;
 
-  constructor() { }
-
-  // Phương thức cập nhật dữ liệu
-  updateDataA(data: any) {
-    console.log('Updating data in service:', data);  // Kiểm tra xem dữ liệu có được cập nhật hay không
-    this.dataSubjectA.next(data);  // Gửi dữ liệu mới
+  setData(data: any) {
+   sessionStorage.setItem('datasets', JSON.stringify(data));
   }
+
+  getData() {
+    this.dataset = sessionStorage.getItem('datasets');
+    return this.dataset ? JSON.parse(this.dataset) :null
+  }
+
 }

@@ -16,13 +16,9 @@ import {RouterLink} from "@angular/router";
 export class TestComponent implements OnInit{
   constructor(private sharedDataService: SharedDataService) {}
 
-  sendData() {
-    const dataorder = [{ productName: 'Test Product' }, 'userId123'];
-    console.log('Sending data:', dataorder);
-    this.sharedDataService.updateDataA(dataorder); // Gửi dữ liệu
-  }
+
 
   ngOnInit(): void {
-    this.sendData()
+
   }
 }

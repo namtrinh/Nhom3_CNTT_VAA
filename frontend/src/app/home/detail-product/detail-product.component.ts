@@ -37,7 +37,6 @@ export class DetailProductComponent implements OnInit {
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
     private vnPayService: VNPayService,
-    private sharedDataService: SharedDataService
   ) {
   }
 
@@ -71,7 +70,11 @@ export class DetailProductComponent implements OnInit {
     const decodedToken = jwtDecode(token) as any;
     const user_Id = decodedToken.userId;
     this.cart.time_add = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-    this.cart.product_price = this.product.price;
+    if (this.product.promotion && this.product.promotion.discount) {
+      this.cart.product_price = this.product.price - (this.product.price * this.product.promotion.discount / 100);
+    }else{
+      this.cart.product_price = this.product.price;
+    }
     this.cart.product_quantity = this.quantity;
     this.cart.product = {
       product_id: this.product.product_id
@@ -80,8 +83,6 @@ export class DetailProductComponent implements OnInit {
       user_id: user_Id
     };
     this.cartService.addToCart(this.cart).subscribe((data: any) => {
-      console.log(data.result);
-      console.log(this.cart.user.user_id)
       this.showToast();
     }, (error: any) => {
       console.error('Error adding to cart:', error);

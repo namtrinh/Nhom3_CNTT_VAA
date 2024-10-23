@@ -5,7 +5,3 @@
 java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¶ê³Öª2J$674a8ba8-885c-45b0-bc15-d2e29db8714f
 s
 java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¶ê³Öª2J$00075e4d-d11e-452b-a882-4ccb3a862027
-—
-java:S1128"ORemove this unused import 'com.fasterxml.jackson.annotation.JsonBackReference'.(»Ôœ¿ıÿÿÿÿ8è÷”Æª2J$ffd72fbb-f193-4e13-9758-a8d73dd5d9e0
-•
-java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8è÷”Æª2J$265545bf-e7da-4b05-ad51-b7768f2f1980

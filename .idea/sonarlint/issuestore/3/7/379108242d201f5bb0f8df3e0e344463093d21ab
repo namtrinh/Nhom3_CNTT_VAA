@@ -1,7 +1,7 @@
 
 ˜	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¼üíùÿÿÿÿ8©¼¯Ûª2J$25ee3bb9-feab-4fdc-b21d-43198f202242
 œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ª¼¯Ûª2J$3ac25ea8-4729-4f9f-8ebb-8ac517ba72fc
-Ž	java:S112Í"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ª¼¯Ûª2J$16c8547f-625a-4b64-bb27-80bc1f60f69f
+Ž	java:S112Ì"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ª¼¯Ûª2J$16c8547f-625a-4b64-bb27-80bc1f60f69f
 —	java:S1168"URename this field "SIGNER_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëü§™8°¼¯Ûª2J$6234256a-bd52-4053-ab91-16e3295febb7
 ›	java:S116<"YRename this field "VALID_DURATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆçï˜8°¼¯Ûª2J$e1eefffc-a350-475a-ae85-48d88357b346
 ¡	java:S116@"_Rename this field "REFRESHABLE_DURATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÐ²8°¼¯Ûª2J$6bb31187-1911-4826-b538-c366f3e56fee

@@ -12,12 +12,5 @@ export class Test1Component implements OnInit {
 
   ngOnInit() {
     // Lắng nghe dữ liệu từ service
-    this.sharedDataService.currentDataA.subscribe((data: any) => {
-      if (data) {
-        console.log('Received data:', data);
-      } else {
-        console.log('No data received');
-      }
-    });
   }
 }

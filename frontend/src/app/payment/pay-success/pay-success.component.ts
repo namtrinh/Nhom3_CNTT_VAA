@@ -30,8 +30,10 @@ export class PaySuccessComponent implements OnInit {
   user: User = new User();
   totalQuantity!: number;
   selectedProduct: any
+  totalQuantityProduct!: number;
 
   product: Product[] = [];
+  promotion: Promotion[] = [];
 
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
@@ -46,16 +48,14 @@ export class PaySuccessComponent implements OnInit {
       this.paymentTime = params['paymentTime'] || null;
       this.transactionId = params['transactionId'] || null;
 
-      const storedArray = localStorage.getItem('myArray');
-      this.selectedProduct = storedArray ? JSON.parse(storedArray) : {products: [], user: {}};
-
-
+      const storedArray = sessionStorage.getItem('myArray');
+      this.selectedProduct = storedArray ? JSON.parse(storedArray) : {
+        products: [], user: {}, promotions:[], totalPrice: 0,
+        totalQuantityProduct: 0
+      };
       this.user = this.selectedProduct.user;
       this.product = this.selectedProduct.products
-      //   this.totalQuantity = this.orderDetail.products.reduce((sum, product) => sum + product.quantity, 0);
-
-      console.log('sp', this.product)
-      console.log('Người dùng:', this.user);
+     // this.promotion = this.selectedProduct.promotions;
 
       this.createOrderDetail();
     });
@@ -64,31 +64,25 @@ export class PaySuccessComponent implements OnInit {
   createOrder(detail_id: string) {
     this.order.payment_id = this.transactionId;
     this.order.time_created = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-    this.order.orderDetail.order_detail_id = detail_id;
+    this.order.orderDetail_id = detail_id;
     this.order.address = this.user.address;
     this.order.user = {
       user_id: this.user.user_id,
     };
     this.orderService.create(this.order).subscribe((data: any) => {
-      console.log(data);
-      // localStorage.removeItem('selectedProducts'); // Bạn có thể xóa nếu không cần giữ lại
+      console.log(data.result);
+        sessionStorage.removeItem('myArray');
     });
   }
 
   createOrderDetail() {
-    this.orderDetail.total_amount = this.totalQuantity;
-    this.orderDetail.total_price = this.totalPrice;
+    this.orderDetail.total_amount = this.selectedProduct.totalQuantityProduct;
+    this.orderDetail.total_price = this.selectedProduct.totalPrice;
 
     this.orderDetail.products = this.product
-    console.log(this.orderDetail.products);
-
     const updatedProducts: Product[] = [];
-
     this.orderDetail.products?.forEach((selectedProduct: any) => {
-      // Kiểm tra xem selectedProduct và selectedProduct.product có tồn tại không
       if (selectedProduct.product && selectedProduct.product.product_id) {
-        console.log('Product found:', selectedProduct);
-
         const newProduct: Product = {
           category: new Category(),
           description: '',
@@ -100,20 +94,13 @@ export class PaySuccessComponent implements OnInit {
           selected: false,
           seotitle: '',
           time_created: '',
-          product_id: selectedProduct.product.product_id, // Gán giá trị product_id từ selectedProduct
+          product_id: selectedProduct.product.product_id,
         };
-
-        // Thêm sản phẩm mới vào mảng tạm thời
         updatedProducts.push(newProduct);
-      } else {
-        console.error('selectedProduct hoặc product_id không hợp lệ', selectedProduct);
       }
     });
-
-    // Gán danh sách sản phẩm đã cập nhật vào orderDetail.products
     this.orderDetail.products = updatedProducts;
 
-    // Tiến hành tạo chi tiết đơn hàng
     this.orderDetailService.create(this.orderDetail).subscribe((data: any) => {
       const detail_id = data.result.order_detail_id;
       this.createOrder(detail_id);

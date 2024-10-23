@@ -1,8 +1,7 @@
 
-Mtypescript:S1128"*Remove this unused import of 'ElementRef'.(Ÿ¦ÕÕ8Òû´ª2
-Ytypescript:S1128"6Remove this unused import of '\u0629queueStateUpdate'.(Ÿ¦ÕÕ8Òû´ª2
-Otypescript:S1128",Remove this unused import of 'CommonModule'.( ºû‹8Óû´ª2
-Utypescript:S1128"-Remove this unused import of 'BrowserModule'.(‚†éøÿÿÿÿ8Óû´ª2
-dtypescript:S20045"ARefactor this code to not nest functions more than 4 levels deep.(´Ñáì8Óû´ª2
-~typescript:S3923M"[Remove this conditional structure or edit its code blocks so that they're not all the same.(°äŸŸ8Óû´ª2
-otypescript:S1871R"LThis branch's code block is the same as the block for the branch on line 77.(å¥‡8Óû´ª2
+stypescript:S1128"*Remove this unused import of 'ElementRef'.(Ÿ¦ÕÕ8Ô„äÇ«2J$4c23f07a-a52f-4fbe-9215-8e9ad6a5ce21
+typescript:S1128"6Remove this unused import of '\u0629queueStateUpdate'.(Ÿ¦ÕÕ8Ô„äÇ«2J$c6045a97-f45c-4282-8959-36c19abddaf1
+utypescript:S1128",Remove this unused import of 'CommonModule'.( ºû‹8Ô„äÇ«2J$6085c657-b5f8-4632-9537-5d63b7b49811
+{typescript:S1128"-Remove this unused import of 'BrowserModule'.(‚†éøÿÿÿÿ8Ô„äÇ«2J$e3744944-8d50-491e-8576-458f0816da4e
+Štypescript:S20045"ARefactor this code to not nest functions more than 4 levels deep.(´Ñáì8Õ„äÇ«2J$4ed8ec19-0ccc-40a1-aab9-46fcb8161e3e
+ltypescript:S125M"Remove this commented out code.(í¶˜Úüÿÿÿÿ8Õ„äÇ«2J$305ccf5a-3c87-4241-99c1-0071b0b42085

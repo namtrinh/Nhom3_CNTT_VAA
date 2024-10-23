@@ -15,4 +15,8 @@ export class OrderDetailService{
     create(orderDetail: OrderDetail): Observable<Object>{
         return this.http.post(`${this.baseUrl}`,orderDetail)
     }
+
+    getById(id:string):Observable<OrderDetail>{
+      return this.http.get<OrderDetail>(`${this.baseUrl}/${id}`)
+    }
 }

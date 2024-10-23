@@ -1,0 +1,56 @@
+<div class="container mt-3">
+  <div class="card shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h1 class="order-inf h3 mb-0">Payment ID : {{ order.payment_id }}</h1>
+    </div>
+    <div class="card-body">
+      <div class="row mb-3">
+        <div class="order-inf col-md-6">
+          <p><strong>Order ID:</strong> {{ order.order_id }}</p>
+          <p><strong>Email:</strong> {{ order.user.email }}</p>
+          <p><strong>Username:</strong> {{ order.user.username }}</p>
+          <p><strong>Address:</strong> {{ order.address }}</p>
+        </div>
+        <div class="order-inf col-md-6">
+          <p ><strong>Time Created:</strong> {{ order.time_created }}</p>
+          <p><strong>Total Quantity:</strong> {{ orderDetail.total_amount }}</p>
+        </div>
+      </div>
+
+      <h2 class="h5 mt-4 mb-3">Products</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead class="thead-dark">
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Category</th>
+          </tr>
+          </thead>
+          <tbody>
+            @for (product of orderDetail.products; track orderDetail.products) {
+              <tr [routerLink]="['/detail-product',product?.seotitle]">
+                <td>{{ product?.name }}</td>
+                <td>{{ product?.quantity }}</td>
+                @if (product?.price && product?.promotion?.discount !== undefined) {
+                  <td>
+                    {{ ((product?.price || 0) - ((product?.price || 0) * (product?.promotion?.discount || 0) / 100)) | number: '1.0-0' }}
+                    ₫
+                  </td>
+                }
+                <td>{{ product?.category?.name }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      <br><br>
+
+      <div class="order-total">
+        <p><strong>Total Price:</strong> <span style="color: red;font-weight: 550"> {{ orderDetail.total_price | number:'1.0-0' }}
+          ₫</span></p>
+      </div>
+    </div>
+  </div>
+</div>

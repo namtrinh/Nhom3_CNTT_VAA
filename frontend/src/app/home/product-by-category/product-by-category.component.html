@@ -1,17 +1,16 @@
 <div class="container">
-  <h1 class="title">{{ category_name }}</h1>
+  <h1 class="title">{{ category_name || 'All Products' }}</h1>
   <div class="listproduct listproduct-block">
-    @for (product of product; track product) {
-      <div class="item" [routerLink]="['/detail-product',product.seotitle]">
+    @for (product of products; track trackByFunction) {
+      <div class="item"
+           [routerLink]="['/detail-product', product.seotitle]">
         <div class="item-img">
           <img [src]="imgAvatars[product.product_id]">
         </div>
         <h3 class="product_name">
           {{ product.name }}
         </h3>
-
         <strong class="price">{{ product.price | number:'1.0-0' }}₫ </strong>
-
         <div class="vote-txt">
           <i class="iconnewglobal-vote"></i>
           <b>4.3</b>
@@ -21,4 +20,3 @@
     }
   </div>
 </div>
-

@@ -29,5 +29,5 @@ public class OrderDetail {
     private Set<Product> products;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private Set<Promotion> promotion;
+    private Set<Promotion> promotions;
 }

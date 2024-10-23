@@ -12,7 +12,7 @@ export class Product {
   time_created!: string;
   category!: Partial<Category>;
   selected: boolean = false;
-  promotion!:Partial<Promotion>;
+  promotion:Partial<Promotion> = new Promotion();
 
 }
 

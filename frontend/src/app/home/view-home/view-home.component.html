@@ -7,7 +7,7 @@
     <div class="search">
       <label for="search">
         <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
-        <input type="search" style="border:none;" placeholder="What do you need ?" style="outline:none">
+        <input type="search" id="search" style="border:none;" placeholder="What do you need ?" style="outline:none">
       </label>
     </div>
 
@@ -50,12 +50,12 @@
 
 
     <div class="menu">
-      <button class="btn btn-light" [routerLink]="['/category','all']" (click)="showCategoryId(null)">
+      <button class="btn btn-light" [routerLink]="['all']">
         <i class="fa-solid fa-list-ul"></i> All
       </button>
       @for (menu of category; track category) {
 
-      <button [routerLink]="['/category',menu.seotitle]" class="btn btn-light" (click)="showCategoryId(null)"><i
+      <button [routerLink]="[menu.seotitle]" class="btn btn-light"><i
           [class]="menu.icon"></i> {{menu.name}}</button>
       }
     </div>

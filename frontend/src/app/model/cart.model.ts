@@ -6,7 +6,7 @@ export class Cart{
     cart_id!:string;
     product_price!:number;
     product_quantity!:number;
-    product!:Partial<Product>;
+    product:Partial<Product> = new Product();
     user!:Partial<User>;
     time_add!:string;
     selected!:boolean;

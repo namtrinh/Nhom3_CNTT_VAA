@@ -31,11 +31,13 @@ export class CartComponent implements OnInit {
   product!: number;
   totalPrice!: number;
   item: any;
-  urlPayment!: string;
   maxQuantity: number = 10;
   imgAvatars: { [key: string]: string } = {};
   carts!: Cart;
-  productID: any;
+  totalQuantityProduct!: number
+  selectedProducts: any[] = [];
+  countProduct!: number;
+  priceSale!:number | undefined
 
   ngOnInit(): void {
     const token = localStorage.getItem('auth_token');
@@ -52,22 +54,22 @@ export class CartComponent implements OnInit {
       alert('Vui lòng chọn ít nhất một sản phẩm để thanh toán!');
       return;
     }
-
-    const totalAmount = this.selectedProducts.reduce((sum, cart) => sum + (cart.product_quantity * cart.product.price), 0);
-    console.log(totalAmount);
-
-    this.paymentService.submitOrder(totalAmount, 'Sản phẩm đã chọn').subscribe((data: any) => {
+    console.log(this.totalPrice)
+    this.paymentService.submitOrder(this.totalPrice, 'Sản phẩm đã chọn').subscribe((data: any) => {
       const urlPayment = data.vnpayUrl;
       window.location.href = urlPayment;
-      localStorage.setItem('myArray', JSON.stringify({
-        user: this.selectedProducts[0].user,
-        products: this.selectedProducts.map(cart => {
-          return ({
-            product: cart.product
-          });
-        })
-      }));
-
+      sessionStorage.setItem('myArray', JSON.stringify({
+          user: this.selectedProducts[0].user,
+          totalPrice: this.totalPrice,
+          totalQuantityProduct: this.totalQuantityProduct,
+          products: this.selectedProducts.map(cart => {
+            return ({
+              product: cart.product
+            });
+          }),
+        }
+      ));
+      console.log(sessionStorage.getItem('myArray'))
     });
   }
 
@@ -100,6 +102,7 @@ export class CartComponent implements OnInit {
     if (carts.product_quantity < this.maxQuantity) {
       carts.product_quantity++;
       this.updateCart(carts);
+      this.updateTotalPrice()
     }
   }
 
@@ -107,6 +110,7 @@ export class CartComponent implements OnInit {
     if (carts.product_quantity > 1) {
       carts.product_quantity--;
       this.updateCart(carts);
+      this.updateTotalPrice()
     }
   }
 
@@ -122,13 +126,25 @@ export class CartComponent implements OnInit {
     });
   }
 
-  selectedProducts: any[] = [];
 
   toggleSelection(cart: any): void {
     if (cart.selected) {
       this.selectedProducts.push(cart);
     } else {
-      this.selectedProducts = this.selectedProducts.filter(item => item.cart_id !== cart.cart_id); // Bỏ chọn
+      this.selectedProducts = this.selectedProducts.filter(item => item.cart_id !== cart.cart_id);
     }
+    this.countProduct = this.selectedProducts.length;
+    this.updateTotalPrice()
+  }
+
+
+  updateTotalPrice(): void {
+    this.totalPrice = this.selectedProducts.reduce((sum, selectedCart) => {
+      return sum + (selectedCart.product_quantity * selectedCart.product_price);
+    }, 0);
+
+    this.totalQuantityProduct = this.selectedProducts.reduce((sum, selectedCart) => {
+      return sum + selectedCart.product_quantity;
+    }, 0);
   }
 }

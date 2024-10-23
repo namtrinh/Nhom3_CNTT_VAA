@@ -74,7 +74,7 @@ export class ViewHomeComponent implements OnInit {
 
   showCategoryId(seotitle: string | null) {
 
-    if (seotitle === null) {
+  /*  if (seotitle === null) {
       setTimeout(() => {
         this.showProduct = true;
         window.location.reload();
@@ -87,4 +87,6 @@ export class ViewHomeComponent implements OnInit {
     }
   }
 
+   */
+}
 }

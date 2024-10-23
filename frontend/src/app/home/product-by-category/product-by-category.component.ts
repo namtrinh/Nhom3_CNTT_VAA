@@ -16,14 +16,12 @@ import {CategoryService} from "../../service/categoy-service.service";
   styleUrls: ['./product-by-category.component.scss']
 })
 export class ProductByCategoryComponent implements OnInit {
-  products: any;
-  product!: Product[];
+  products: Product[] = []
   imgAvatars: { [key: string]: string } = {};
   category_id!: number;
   category: Category = new Category()
   category_name !: string
   seotitle!: string | null;
-  categoryId!: any;
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -32,45 +30,35 @@ export class ProductByCategoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAll();
     this.active.paramMap.subscribe((params) => {
       const seoTitle = String(params.get('seotitle'));
       this.seotitle = seoTitle;
-      this.getNameCategory(this.seotitle);
+      this.getProductFromCategory(this.seotitle);
     });
   }
 
-  getNameCategory(seotitle: string) {
-    this.categoryService.getBySeoTitle(seotitle).subscribe(
-      (data: any) => {
-        this.category = data.result;
-        this.categoryId = this.category.category_id;
-        this.category_name = this.category.name;
-        if (this.categoryId) {
-          this.getAllProduct(this.categoryId);
-        }
-      })
-  }
-
-  getAll() {
-    const id = this.active.snapshot.params['seotitle'];
-    if (id === 'all') {
+  getProductFromCategory(seotitle: string) {
+    if (seotitle === 'all') {
       this.productService.getAll().subscribe((data: any) => {
-        this.product = data.result;
-        this.product.forEach((product) => {
+        this.products = data.result;
+        this.products.forEach((product) => {
           this.getImageFromService(product.image, product.product_id);
-        })
-      })
+        });
+      });
+    } else {
+      this.categoryService.getBySeoTitle(seotitle).subscribe((data: any) => {
+        this.category = data.result;
+        this.category_name = this.category.name;
+        this.products = this.category.products;
+        this.products.forEach((product) => {
+          this.getImageFromService(product.image, product.product_id);
+        });
+      });
     }
   }
 
-  getAllProduct(categoryId: number) {
-    this.productService.getProductByCategory(categoryId).subscribe((data: any) => {
-      this.product = data.result;
-      this.product.forEach((product) => {
-        this.getImageFromService(product.image, product.product_id);
-      });
-    });
+  trackByFunction(index: number, product: any): number {
+    return product.product_id;
   }
 
   private getImageFromService(imageName: string, product_id: string): void {
@@ -83,7 +71,7 @@ export class ProductByCategoryComponent implements OnInit {
         (error) => {
           console.error(error);
         }
-      );
+      )
     }
   }
 }
