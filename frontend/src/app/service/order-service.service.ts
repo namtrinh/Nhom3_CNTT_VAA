@@ -8,9 +8,13 @@ import { Observable } from "rxjs";
     providedIn: 'root'
 })
 export class OrderService {
-    private pathUrl = "http://localhost:8888/identity/invoice";
+    private pathUrl = "http://localhost:8888/identity/order";
 
     constructor(private http: HttpClient) { }
+
+  findAll():Observable<Order[]>{
+    return  this.http.get<Order[]>(`${this.pathUrl}/all`)
+  }
 
     getAll(page: number, size: number): Observable<any> {
         const params = new HttpParams()

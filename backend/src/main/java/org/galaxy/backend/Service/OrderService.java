@@ -17,4 +17,6 @@ public interface OrderService {
     Order findById(String integer);
 
     void deleteById(String integer);
+
+    List<Order> getAll();
 }

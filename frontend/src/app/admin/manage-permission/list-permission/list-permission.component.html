@@ -10,7 +10,7 @@
         </thead>
         <tbody>
 
-            @for (item of permission;track permission) {}
+            @for (item of permission;track item.name) {}
             <tr>
                 <td>{{item.name}}</td>
                 <td>{{item.description}}</td>

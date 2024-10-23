@@ -1,0 +1,10 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8‰—İË«2J$003bc50f-2b20-44dc-8105-f643add05f10
+™	java:S116"WRename this field "statistic_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Î˜”8‘—İË«2J$af4ff4b4-052f-41e2-9229-2f40662b7d15
+›	java:S116"YRename this field "sum_totalPrice" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥åİÉ8‘—İË«2J$54e8b074-c81f-4189-a561-cbbfd3ccf7cb
+	java:S116"\Rename this field "sum_totalQuantity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÌ·u8‘—İË«2J$af2d1922-fac8-4a00-be22-38509bcf15e3
+	java:S116"WRename this field "date_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š‡´ıÿÿÿÿ8‘—İË«2J$63c01332-89d1-4501-ba21-0d25def9e175
+{
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8×ÃàË«2J$4e364532-88a8-4c26-927b-b60aa1e2bb45
+s
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8×ÃàË«2J$597b5129-2719-4db5-a8f6-37d944864c4b

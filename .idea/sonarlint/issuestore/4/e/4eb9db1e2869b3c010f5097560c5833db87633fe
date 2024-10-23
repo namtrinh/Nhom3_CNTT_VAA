@@ -1,0 +1,7 @@
+
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8ÈÙ¨Ì«2J$9c8a85ec-6f96-4d8d-a1f4-95342525752a
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÎÙ¨Ì«2J$2d36c0bd-f9c9-4687-9ee4-59f0f1836fa2
+€
+java:S6856"8Bind path variable "statistic_id" to a method parameter.(ÿ†ñèÿÿÿÿÿ8ÏÙ¨Ì«2J$265b76d9-a88a-4c58-930c-7aedfd9a3cb8
+•	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êýµ¡øÿÿÿÿ8ÖÙ¨Ì«2J$022a25ef-bab9-483e-b71f-3c7036423139

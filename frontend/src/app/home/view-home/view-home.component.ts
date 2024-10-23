@@ -1,9 +1,7 @@
-import { Component, ElementRef, OnInit, ɵqueueStateUpdate } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { UserService } from '../../service/user-service.service';
 import { AuthService } from '../../auth/auth.service';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CategoryService } from '../../service/categoy-service.service';
 import { Category } from '../../model/category.model';

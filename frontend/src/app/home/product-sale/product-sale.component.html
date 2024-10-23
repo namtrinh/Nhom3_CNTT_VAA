@@ -12,7 +12,7 @@
     <img src="/assets/pr-sale-poster.png" atl="pr-sale-poster">
   </div>
   <div class="product">
-    @for (product of products; track products) {
+    @for (product of products; track product.product_id) {
 
     <div class="product-inf" [routerLink]="['/category',product.category?.seotitle, product.seotitle]">
       <div class="product_img">

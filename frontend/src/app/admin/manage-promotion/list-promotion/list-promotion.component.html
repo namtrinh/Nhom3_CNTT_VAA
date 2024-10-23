@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-      @for (promotion of promotions; track promotions) {
+      @for (promotion of promotions; track promotion.promotion_id) {
         <tr>
           <td> {{promotion.promotion_id}}</td>
           <td>{{ promotion.pr_name }}</td>

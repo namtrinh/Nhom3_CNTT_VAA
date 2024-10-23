@@ -57,10 +57,6 @@ export class ProductByCategoryComponent implements OnInit {
     }
   }
 
-  trackByFunction(index: number, product: any): number {
-    return product.product_id;
-  }
-
   private getImageFromService(imageName: string, product_id: string): void {
     if (imageName) {
       this.imgService.getImage(imageName).subscribe(

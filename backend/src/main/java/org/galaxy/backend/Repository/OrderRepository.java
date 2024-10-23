@@ -1,7 +1,9 @@
 package org.galaxy.backend.Repository;
 
+import java.sql.Timestamp;
 import java.util.List;
 
+import feign.Param;
 import org.galaxy.backend.Model.Order;
 import org.galaxy.backend.Model.User;
 import org.springframework.data.domain.Page;
@@ -16,4 +18,6 @@ public interface OrderRepository extends JpaRepository<Order, String> {
 
     @Query(value = "SELECT * FROM orders  ORDER BY time_created DESC", nativeQuery = true)
     Page<Order> findAllSortedByTime(Pageable pageable);
+
+    List<Order> findAllByTime_createdBetween(@Param Timestamp time_created);
 }

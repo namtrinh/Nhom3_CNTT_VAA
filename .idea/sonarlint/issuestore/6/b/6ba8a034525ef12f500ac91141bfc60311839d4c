@@ -1,2 +1,3 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…3J$05e82765-2f92-4b2b-a756-bafb08320547
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ëäÂ8åÛ©Ó«2J$87cbcd30-a8ce-4bca-a9f5-fbf90dafa342
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38åÛ©Ó«2J$b42b00ae-50ae-4185-96ea-1296b8f5298e

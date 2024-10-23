@@ -7,25 +7,23 @@
       <th>User</th>
       <th>Address</th>
       <th>Time Created</th>
-      <th>Detail</th>
+
     </tr>
     </thead>
     <tbody>
-      @for (orders of order; track order) {
+      @for (orders of order; track orders.order_id) {
         <tr [routerLink]="['/admin/detail-order',orders.orderDetail_id]" (click)="sendData(orders)">
           <td> {{ orders.order_id}}</td>
           <td> {{ orders.payment_id }}</td>
           <td>{{ orders.user.email }}</td>
           <td>{{ orders.user.address}}</td>
           <td> {{ orders.time_created }}</td>
-          <td [routerLink]="['/admin/detail-order',orders.orderDetail_id]">
-            <button class="btn btn-primary"><i
-              class="fa-regular fa-pen-to-square"></i></button>
-          </td>
+
         </tr>
       }
+    <br>
     </tbody>
-    <button (click)="onPageChange(page - 1)" [disabled]="page === 0">Previous</button>
-    <button (click)="onPageChange(page + 1)" [disabled]="order.length < size">Next</button>
+    <button class="btn btn-warning" (click)="onPageChange(page - 1)" [disabled]="page === 0">Return</button>
+    <button class="btn btn-danger" (click)="onPageChange(page + 1)" [disabled]="order.length < size">Next</button>
   </table>
 </div>

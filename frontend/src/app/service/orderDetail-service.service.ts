@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
 })
 
 export class OrderDetailService{
-    private baseUrl = "http://localhost:8888/identity/detail-invoice";
+    private baseUrl = "http://localhost:8888/identity/detail-order";
 
     constructor(private http: HttpClient){}
 

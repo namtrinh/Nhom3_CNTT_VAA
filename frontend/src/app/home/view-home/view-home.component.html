@@ -53,7 +53,7 @@
       <button class="btn btn-light" [routerLink]="['category/all']">
         <i class="fa-solid fa-list-ul"></i> All
       </button>
-      @for (menu of category; track category) {
+      @for (menu of category; track menu.category_id) {
 
       <button [routerLink]="['category',menu.seotitle]" class="btn btn-light"><i
           [class]="menu.icon"></i> {{menu.name}}</button>

@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../../../model/user.model';
 import {UserService} from '../../../service/user-service.service';
 import {EmailService} from '../../../service/email-service.service';
-import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {FormsModule} from '@angular/forms';
 import {RouterLink} from '@angular/router';
@@ -10,7 +9,7 @@ import {RouterLink} from '@angular/router';
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [HttpClientModule, NgxPaginationModule, FormsModule, RouterLink],
+  imports: [NgxPaginationModule, FormsModule, RouterLink],
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })

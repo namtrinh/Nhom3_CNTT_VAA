@@ -25,6 +25,10 @@ public class InvoiceServiceImpl implements OrderService {
         return orderRepository.findByUser(user);
     }
 
+    public List<Order> getAll(){
+        return this.orderRepository.findAll();
+    }
+
     @Override
     public Page<Order> findAll(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);

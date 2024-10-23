@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/detail-invoice")
-public class DetailInvoiceController {
+@RequestMapping("/detail-order")
+public class DetailOrderController {
     @Autowired
     private OrderDetailService orderDetailService;
 

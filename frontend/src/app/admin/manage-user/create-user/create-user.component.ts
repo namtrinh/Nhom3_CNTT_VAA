@@ -1,4 +1,4 @@
-import {HttpClientModule} from '@angular/common/http';
+import {} from '@angular/common/http';
 import {Component} from '@angular/core';
 import {FormGroup, FormsModule} from '@angular/forms';
 import {UserService} from '../../../service/user-service.service';

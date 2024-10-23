@@ -17,7 +17,7 @@
     </thead>
     <tbody>
 
-      @for (category of categorys; track categorys) {
+      @for (category of categorys; track category.category_id) {
         <tr>
           <td>{{ category.category_id }}</td>
           <td>{{ category.name }}</td>

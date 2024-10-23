@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            @for (role of roles; track roles) {
+            @for (role of roles; track role.name) {
             <tr>
                 <td>{{role.name}}</td>
                 <td>{{role.description}}</td>

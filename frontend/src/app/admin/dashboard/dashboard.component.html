@@ -1,3 +1,47 @@
 <div class="container">
-<button class="btn btn-primary" [routerLink]="['/']">Go to Home</button>
+  <div class="row bs-3">
+    <div class="col-md-6 form-group">
+      <label for="monthstart">Time start</label>
+      <select id="monthstart" class="form-select">
+        <option value="" disabled selected>Chọn tháng</option>
+        @for (month of arrayMonth; track arrayMonth) {
+          <option value="1">{{ month }}</option>
+        }
+      </select><br>
+      <select id="yearstart" class="form-select">
+        <option value="" disabled selected>Chọn năm</option>
+        @for (year of arrayYear; track arrayYear) {
+          <option value="2020">{{ year }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="col-md-6 form-group">
+      <label for="monthend">Time end</label>
+      <select id="monthend" class="form-select">
+        <option value="" disabled selected>Chọn tháng</option>
+        @for (month of arrayMonth; track arrayMonth) {
+          <option value="1">{{ month }}</option>
+        }
+      </select><br>
+      <select id="yearend" class="form-select">
+        <option value="" disabled selected>Chọn năm</option>
+        @for (year of arrayYear; track arrayYear) {
+          <option value="2020">{{ year }}</option>
+        }
+      </select>
+    </div>
+  </div>
+
+
+  <div class="chart">
+    <canvas baseChart
+
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+    >
+    </canvas>
+  </div>
 </div>

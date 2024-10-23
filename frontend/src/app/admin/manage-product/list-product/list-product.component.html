@@ -10,7 +10,7 @@
     <p></p>
     <select class="form-control" id="category" [(ngModel)]="selectedCategoryId" (change)="filterProducts()">
       <option value=''>-- All product --</option>
-      @for (categories of category; track category) {
+      @for (categories of category; track categories.category_id) {
         <option [value]="categories.category_id">
           {{ categories.name }}
         </option>

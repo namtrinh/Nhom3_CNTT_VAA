@@ -11,11 +11,19 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/invoice")
-public class InvoiceController {
+@RequestMapping("/order")
+public class OrderController {
 
     @Autowired
     private OrderService orderService;
+
+    @GetMapping(value = "/all")
+    public ApiResponse<List<Order>> findAll(){
+        return ApiResponse.<List<Order>>builder()
+                .code(200)
+                .result(orderService.getAll())
+                .build();
+    }
 
     @GetMapping
     public ApiResponse<Page<Order>> getAll(
@@ -24,7 +32,7 @@ public class InvoiceController {
         return ApiResponse.<Page<Order>>builder().code(200).result(invoices).build();
     }
 
-    @GetMapping(value = "/my-invoice/{user}")
+    @GetMapping(value = "/my-order/{user}")
     public ApiResponse<List<Order>> getAllByUser_id(@PathVariable User user) {
         return ApiResponse.<List<Order>>builder()
                 .code(200)
