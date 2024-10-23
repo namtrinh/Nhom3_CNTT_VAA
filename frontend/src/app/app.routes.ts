@@ -113,12 +113,7 @@ export const routes: Routes = [
 
       //Invoice
       {path: 'list-orders', component: ListOrderComponent, canActivate: [AuthService], data: {role: 1}},
-      {
-        path: 'detail-order/:order_detail_id',
-        component: OrderDetailComponent,
-        canActivate: [AuthService],
-        data: {role: 1}
-      },
+      {path: 'detail-order/:order_detail_id', component: OrderDetailComponent, canActivate: [AuthService], data: {role: 1}},
 
       //Role
       {
