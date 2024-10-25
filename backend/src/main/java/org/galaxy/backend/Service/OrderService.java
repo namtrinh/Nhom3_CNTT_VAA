@@ -1,5 +1,6 @@
 package org.galaxy.backend.Service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.galaxy.backend.Model.Order;
@@ -19,4 +20,6 @@ public interface OrderService {
     void deleteById(String integer);
 
     List<Order> getAll();
+
+    List<Order> getByTime(String startDate, String endDate);
 }

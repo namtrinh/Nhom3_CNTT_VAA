@@ -1,10 +1,10 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Ğÿƒ«2J$35ffc582-d875-4f6f-b265-528604bf8035
-•	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8Òÿƒ«2J$decc198f-2575-432a-b896-e937f670375b
-œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8Òÿƒ«2J$f2b56931-01d4-4617-b307-55c5459bd3b0
-™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8Òÿƒ«2J$870f2deb-bf5c-46d3-8655-18fa35675ac0
-›	java:S116("YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8Ò¨ê¨«2J$5a7f3fdd-6344-4891-9f66-0df931f478e8
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Ğÿƒ«2J$c3ca174d-d3ab-41c1-a3d2-b50626c09da4
+•	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8Òÿƒ«2J$cbcac20b-7955-4739-8f9e-a551708138a2
+œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8Òÿƒ«2J$b1243d0b-e37c-4cdb-994a-fdf7bc237ed7
+™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8Òÿƒ«2J$dec01ded-f523-4418-816a-9af7fdc7840e
+›	java:S116("YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8Ò¨ê¨«2J$e80326b1-2cda-4d4c-9eba-8b525296f96e
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8×ÿƒ«2J$e002b0dc-27fd-423e-a44b-d91ba3179933
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8×ÿƒ«2J$33517f07-5a9f-4e2f-b48f-89f84a324ead
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8×ÿƒ«2J$be5dfb95-f8fa-4802-a4d4-3ac926019c78
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8×ÿƒ«2J$49967efd-b38f-4265-b1b6-647dcf61d8d7

@@ -1,5 +1,6 @@
 package org.galaxy.backend.Controller;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.galaxy.backend.Model.Order;
@@ -40,11 +41,19 @@ public class OrderController {
                 .build();
     }
 
-    @GetMapping(value = "/{invoice_id}")
-    public ApiResponse<Order> getById(@PathVariable String invoice_id) {
+    @GetMapping(value = "/{order_id}")
+    public ApiResponse<Order> getById(@PathVariable String order_id) {
         return ApiResponse.<Order>builder()
                 .code(200)
-                .result(orderService.findById(invoice_id))
+                .result(orderService.findById(order_id))
+                .build();
+    }
+
+    @GetMapping(value = "/date")
+    public ApiResponse<List<Order>> getByTime(@RequestParam String startDate, @RequestParam String endDate) {
+        return ApiResponse.<List<Order>>builder()
+                .code(200)
+                .result(orderService.getByTime(startDate, endDate))
                 .build();
     }
 

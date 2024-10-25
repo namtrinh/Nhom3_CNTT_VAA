@@ -1,47 +1,37 @@
 <div class="container">
-  <div class="row bs-3">
-    <div class="col-md-6 form-group">
-      <label for="monthstart">Time start</label>
-      <select id="monthstart" class="form-select">
-        <option value="" disabled selected>Chọn tháng</option>
-        @for (month of arrayMonth; track arrayMonth) {
-          <option value="1">{{ month }}</option>
-        }
-      </select><br>
-      <select id="yearstart" class="form-select">
-        <option value="" disabled selected>Chọn năm</option>
-        @for (year of arrayYear; track arrayYear) {
-          <option value="2020">{{ year }}</option>
-        }
-      </select>
-    </div>
+  <div class="form-group">
+    <label for="viewMode">Chế độ hiển thị:</label>
+    <select id="viewMode" class="form-control" [(ngModel)]="currentMode" (change)="updateChartData()">
+      <option value="day">Theo ngày</option>
+      <option value="month">Theo tháng</option>
+    </select>
+  </div>
 
-    <div class="col-md-6 form-group">
-      <label for="monthend">Time end</label>
-      <select id="monthend" class="form-select">
-        <option value="" disabled selected>Chọn tháng</option>
-        @for (month of arrayMonth; track arrayMonth) {
-          <option value="1">{{ month }}</option>
-        }
-      </select><br>
-      <select id="yearend" class="form-select">
-        <option value="" disabled selected>Chọn năm</option>
-        @for (year of arrayYear; track arrayYear) {
-          <option value="2020">{{ year }}</option>
-        }
-      </select>
+  <!-- Phần form nhập liệu và biểu đồ -->
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <form (ngSubmit)="getByTime()" class="row g-3">
+        <div class="col-md-6 form-group">
+          <label for="startDate">Time Start</label>
+          <input type="datetime-local" id="startDate" class="form-control" [(ngModel)]="startDate" name="startDate">
+        </div>
+
+        <div class="col-md-6 form-group">
+          <label for="endDate">Time End</label>
+          <input type="datetime-local" id="endDate" class="form-control" [(ngModel)]="endDate" name="endDate">
+        </div>
+
+        <button class="btn btn-warning mt-3" type="submit">Get Now</button>
+      </form>
     </div>
   </div>
 
-
-  <div class="chart">
+  <div class="chart mt-4">
     <canvas baseChart
-
             [datasets]="barChartData"
             [labels]="barChartLabels"
             [options]="barChartOptions"
-            [legend]="barChartLegend"
-    >
+            [legend]="barChartLegend">
     </canvas>
   </div>
 </div>

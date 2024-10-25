@@ -1,6 +1,8 @@
 package org.galaxy.backend.Repository;
 
+import java.sql.Time;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import feign.Param;
@@ -19,5 +21,7 @@ public interface OrderRepository extends JpaRepository<Order, String> {
     @Query(value = "SELECT * FROM orders  ORDER BY time_created DESC", nativeQuery = true)
     Page<Order> findAllSortedByTime(Pageable pageable);
 
-    List<Order> findAllByTime_createdBetween(@Param Timestamp time_created);
+    @Query(value = "select * from orders where orders.time_created between :startDate and :endDate", nativeQuery = true)
+    List<Order> findByTime_createdBetween(@Param("startDate") String startDate, @Param("endDate") String endDate);
+
 }

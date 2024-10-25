@@ -1,5 +1,6 @@
 package org.galaxy.backend.ServiceImpl;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import jakarta.transaction.Transactional;
@@ -48,5 +49,9 @@ public class InvoiceServiceImpl implements OrderService {
     @Override
     public void deleteById(String integer) {
         orderRepository.deleteById(integer);
+    }
+
+    public List<Order> getByTime(String startDate, String endDate) {
+        return orderRepository.findByTime_createdBetween(startDate, endDate);
     }
 }

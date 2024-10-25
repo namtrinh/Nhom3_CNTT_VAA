@@ -153,8 +153,6 @@ w
 Gbackend/src/main/java/org/galaxy/backend/Controller/UserController.java,c\8\c8188bc8e55447f04b9e6c751428b84229d955c0
 x
 Hbackend/src/main/java/org/galaxy/backend/Controller/ImageController.java,5\b\5b71089b82e602cb4401ac8671411ddffb170670
-z
-Jbackend/src/main/java/org/galaxy/backend/Controller/InvoiceController.java,0\d\0d53d0d57436fc894856e7265919fac3d94c68ec
 q
 Abackend/src/main/java/org/galaxy/backend/Exception/ErrorCode.java,c\7\c7676587435795d6b42441dfb9de4a5e6f185ece
 Ö
@@ -271,8 +269,6 @@ Xfrontend/src/app/admin/manage-product/promotion-product/promotion-product.compo
 Pfrontend/src/app/admin/manage-product/create-product/create-product.component.ts,9\2\922bd8ccab9160b45a411dd0ae1d54487bee8ea2
 Å
 Qfrontend/src/app/admin/manage-category/list-category/list-category.component.html,6\4\640e9b3c7317bcf6fc06ad3381bc127c9faef051
-Ä
-Pbackend/src/main/java/org/galaxy/backend/Controller/DetailInvoiceController.java,c\2\c2693dcb4f2e7c9967053671401227cec04bf421
 `
 0frontend/src/app/auth/login/login.component.scss,3\e\3e3751d7a247afb243a85f606173ba38e0cbcb2b
 f
