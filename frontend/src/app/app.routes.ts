@@ -78,6 +78,8 @@ export const routes: Routes = [
 
   {
     path: 'admin', component: ViewAdminComponent, canActivate: [AuthService], data: {role: 1}, children: [
+      // Home admin
+      {path: 'dashboard', component: DashboardComponent, canActivate: [AuthService], data: {role: 1}},
 
       //User
       {path: 'list-user', component: ListComponent, canActivate: [AuthService], data: {role: 1}},
@@ -127,8 +129,7 @@ export const routes: Routes = [
       //Permission
       {path: 'list-permission', component: ListPermissionComponent},
 
-      // Home admin
-      {path: 'dashboard', component: DashboardComponent, canActivate: [AuthService], data: {role: 1}},
+
     ]
   },
 

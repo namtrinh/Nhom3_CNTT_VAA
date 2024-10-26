@@ -1,22 +1,23 @@
 <div class="container">
-  <div class="form-group">
-    <label for="viewMode">Chế độ hiển thị:</label>
-    <select id="viewMode" class="form-control" [(ngModel)]="currentMode" (change)="updateChartData()">
-      <option value="day">Theo ngày</option>
-      <option value="month">Theo tháng</option>
-    </select>
-  </div>
 
-  <!-- Phần form nhập liệu và biểu đồ -->
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <form (ngSubmit)="getByTime()" class="row g-3">
-        <div class="col-md-6 form-group">
+  <div class="row">
+    <div class="col-md-12 d-flex align-items-end g-3">
+
+      <div class="col-md-4 form-group">
+        <label for="viewMode">Show by:</label>
+        <select id="viewMode" class="form-control" [(ngModel)]="currentMode" (change)="updateChartData()">
+          <option value="day">Day</option>
+          <option value="month">Month</option>
+        </select>
+      </div>
+
+      <form (ngSubmit)="getByTime()" class="d-flex align-items-end">
+        <div class="col-md-4 form-group me-2">
           <label for="startDate">Time Start</label>
           <input type="datetime-local" id="startDate" class="form-control" [(ngModel)]="startDate" name="startDate">
         </div>
 
-        <div class="col-md-6 form-group">
+        <div class="col-md-4 form-group me-2">
           <label for="endDate">Time End</label>
           <input type="datetime-local" id="endDate" class="form-control" [(ngModel)]="endDate" name="endDate">
         </div>
