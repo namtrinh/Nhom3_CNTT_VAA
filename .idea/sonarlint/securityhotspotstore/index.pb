@@ -415,3 +415,11 @@ Nbackend/src/main/java/org/galaxy/backend/Controller/DetailOrderController.java
 Nbackend/src/main/java/org/galaxy/backend/Repository/OrderDetailRepository.java,a\0\a06476f4077e464aabad0b087491182b04a11b42
 z
 Jfrontend/src/app/admin/manage-invoice/list-order/list-order.component.scss,5\2\526653498ea1223b716b9336e407f61b55d09eed
+H
+frontend/src/styles.scss,7\7\77963f9de543db9a086e5f213aad32e7fd32340a
+t
+Dfrontend/src/app/home/product-category/product-category.component.ts,1\5\158746eec4949cbb5c16a6ac29b9144d5fbc7280
+u
+Efrontend/src/app/home/product-category/product-category.component.css,e\7\e7eb9cd36fcc9e9c3e73d8fe5eab8b1d0d250460
+v
+Ffrontend/src/app/home/product-category/product-category.component.html,d\6\d64df8c1782c05bfa47826cf59e732080800a27d

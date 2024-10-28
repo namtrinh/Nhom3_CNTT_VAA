@@ -49,8 +49,7 @@ export class ProductByCategoryComponent implements OnInit {
       this.categoryService.getBySeoTitle(seotitle).subscribe((data: any) => {
         this.category = data.result;
         this.category_name = this.category.name;
-        this.products = this.category.products;
-        this.products.forEach((product) => {
+          this.category.products.forEach((product) => {
           this.getImageFromService(product.image, product.product_id);
         });
       });

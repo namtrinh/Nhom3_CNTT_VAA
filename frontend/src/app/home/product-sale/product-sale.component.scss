@@ -1,20 +1,21 @@
+
 .product-container {
   padding-top: 15px;
   overflow: hidden;
 }
-
 .pr-sale-poster {
-  width: 100%;
-  height: 100%;
-  position: relative; /* Để quản lý vị trí của các phần tử con */
+  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+  height: auto; /* Chiều cao tự động điều chỉnh */
+  position: relative; /* Để quản lý vị trí hình ảnh bên trong */
 }
 
 .pr-sale-poster img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  animation: zoom 1.5s infinite;
+  width: 100%; /* Chiếm toàn bộ chiều rộng của khối chứa */
+  height: 100%; /* Chiếm toàn bộ chiều cao của khối chứa */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị bóp méo và lấp đầy không gian */
+  animation: zoom 1.5s infinite; /* Giữ lại animation nếu cần */
 }
+
 
 @keyframes zoom {
   0% {
@@ -31,7 +32,7 @@
 .product {
   padding: 15px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* 5 cột trên màn hình lớn */
   gap: 15px;
   padding-top: 15px;
   background-color: rgb(241, 237, 237);
@@ -82,22 +83,6 @@
   position: absolute;
 }
 
-@keyframes pr-discount-value {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-p.pr-discount-value {
-  animation: pr-discount-value 1s infinite;
-}
-
 .pr-discount-ico {
   left: -16px;
   top: 0px;
@@ -124,7 +109,6 @@ p.pr-discount-value {
   text-align: center;
 }
 
-
 .img-sale {
   max-width: 10px;
   width: 10px;
@@ -133,20 +117,16 @@ p.pr-discount-value {
   transform: translate(-5px, -55px);
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .img-sale img.blink {
   animation: blink 1s infinite;
+}
+.douple-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  margin-bottom: 0;
 }
 
 .douple-img {
@@ -174,16 +154,11 @@ p.pr-discount-value {
 .douple img:hover {
   animation: zoom 1s infinite;
 }
-
-@keyframes douple-img {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+/* Media Queries để điều chỉnh trên các kích thước màn hình khác nhau */
+@media (max-width: 600px) {
+  .douple {
+    width: 90%; /* Chiều rộng 90% trên màn hình nhỏ hơn */
+    height: auto; /* Chiều cao tự động điều chỉnh */
   }
 }
 
@@ -198,23 +173,22 @@ p.pr-discount-value {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
-  .product-inf {
-    flex-shrink: 0;
-    min-width: 150px;
-    min-height: 150px;
-    transition: transform 0.3s ease;
-    width: calc(100%);
-  }
+/* Responsive */
+@media only screen and (max-width: 1450px) {
   .product {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    overflow-x: auto;
-    gap: 10px;
-  }
-
-  .douple {
-    min-width: 150px;
-    max-height: 130px;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình nhỏ hơn 1200px */
   }
 }
+
+@media only screen and (max-width: 1150px) {
+  .product {
+    grid-template-columns: repeat(3, 1fr); /* 3 cột trên màn hình nhỏ hơn 992px */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .product {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn 768px */
+  }
+}
+

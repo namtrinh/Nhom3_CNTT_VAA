@@ -9,6 +9,30 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-info-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px; /* Điều chỉnh theo độ rộng mong muốn */
+    text-align: left; /* Giữ nguyên các phần tử bên trong không bị căn giữa */
+  }
+
+
+
+  .product-img-container {
+    text-align: left; /* Giữ nguyên các phần tử bên trong không bị căn giữa */
+  }
+
+
+}
+
 /* Nút xác nhận */
 .btn-confirm {
   background-color: #28a745;
@@ -26,8 +50,7 @@
   white-space: nowrap;
   vertical-align: top;
 }
+
 .offers {
-  
   float: right;
 }
-

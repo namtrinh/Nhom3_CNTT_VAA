@@ -1,9 +1,9 @@
 <div class="douple-img">
   <div class="douple 1" style="margin-right:15px;">
-    <img src="/assets/douple-1.png">
+    <img [src]="imgLeft">
   </div>
   <div class="douple 2">
-    <img src="/assets/douple-2.png">
+    <img [src]="imgRight">
   </div>
 </div>
 
@@ -14,40 +14,42 @@
   <div class="product">
     @for (product of products; track product.product_id) {
 
-    <div class="product-inf" [routerLink]="['/category',product.category?.seotitle, product.seotitle]">
-      <div class="product_img">
-        @if (product.product_id) {
-        <img class="img-product" [src]="imgAvatars[product.product_id]">
-        }
+      <div class="product-inf" [routerLink]="['/category',product.category?.seotitle, product.seotitle]">
+        <div class="product_img">
+          @if (product.product_id) {
+            <img class="img-product" [src]="imgAvatars[product.product_id]">
+          }
+        </div>
+        <h3 class="product_name">
+          <p>{{ product.name }}</p>
+        </h3>
+
+        <strong class="product-price">
+          <p style=" text-decoration: line-through;">{{ product.price | number:'1.0-0' }}₫</p>
+
+          @if (product.price && product.promotion && product.promotion.discount !== undefined) {
+            <p style="color:red">
+              {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
+            </p>
+          }
+        </strong>
+
+        <strong class="product-discount" style="color:rgb(255, 255, 255);">
+
+          <p class="pr-discount-value">
+            -{{ product.promotion?.discount }}%</p>
+
+          <img class="pr-discount-ico" src="/assets/label.png">
+        </strong>
+
+        <div class="img-sale">
+          <img src="/assets/sale.png" class="blink" style="width:50px;">
+        </div>
       </div>
-      <h3 class="product_name">
-        <p>{{product.name }}</p>
-      </h3>
-
-      <strong class="product-price">
-        <p style=" text-decoration: line-through;">{{ product.price | number:'1.0-0' }}₫</p>
-
-        @if (product.price && product.promotion && product.promotion.discount !== undefined) {
-        <p style="color:red">
-          {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
-        </p>
-        }
-      </strong>
-
-      <strong class="product-discount" style="color:rgb(255, 255, 255);">
-
-        <p class="pr-discount-value">
-          -{{product.promotion?.discount }}%</p>
-
-        <img class="pr-discount-ico" src="/assets/label.png">
-      </strong>
-
-      <div class="img-sale">
-        <img src="/assets/sale.png" class="blink" style="width:50px;">
-      </div>
-    </div>
     }
 
   </div>
-
+</div>
   <app-product-extend></app-product-extend>
+<app-product-category></app-product-category>
+

@@ -3,39 +3,35 @@
     <p class="tagline">Experience the future of smartphones today!</p>
   </div>
 
-  <div class="product-content d-flex justify-content-between align-items-start">
+  <div class="product-content d-flex flex-column flex-md-row justify-content-between align-items-start">
     <!-- Product Image on the left -->
-
-    <div class="product-img-container mx-3">
+    <div class="product-img-container mx-3 mb-3 mb-md-0">
       <img [src]="imgAvatars[product.product_id]" alt="iPhone 15 Plus" class="product-img img-fluid"
            style="max-width: 250px; max-height:250px;">
+      <h2 class="product-title" style="font-size: 1.5rem; font-weight: 600;">{{ product.name }}</h2>
+      <p class="product-price" style="font-size: 1.2rem;"><strong>Price:</strong> {{ product.price | number:'1.0-0' }}₫</p>
 
-      <h2 class="product-title" style="font-size: 25px;font-weight:600"> {{ product.name }}</h2>
-      <p class="product-price" style="font-size:17px;"><strong>Price:</strong> {{
-          product.price | number:'1.0-0'
-        }}₫</p>
-      @if (product.price && product.promotion && product.promotion.discount !== undefined) {
-        <p class="discount" style="font-size: 20px;font-weight:600;color:red"><strong>Sale:</strong>
-          {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫</p>
-      }
+      <ng-container *ngIf="product.price && product.promotion && product.promotion.discount !== undefined">
+        <p class="discount" style="font-size: 1.2rem; font-weight: 600; color: red;">
+          <strong>Sale:</strong> {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
+        </p>
+      </ng-container>
+
       <p><strong>Special Offers:</strong></p>
       <ul>
         <li>0% Installment for 6 months</li>
         <li>Old exchange, new buy: Save up to 2,000,000 VND</li>
         <li>Official 12-month warranty</li>
       </ul>
-
     </div>
 
     <!-- Product Info on the right -->
     <div class="product-info-container flex-grow-1">
       <div class="info">
-
-        <div class="specs mt-3" style="font-size: 17px;">
+        <div class="specs mt-3" style="font-size: 1rem;">
           <p><strong>Key Specifications:</strong></p>
           <table class="table table-bordered table-striped">
             <tbody>
-
             <tr>
               <td><strong>Screen</strong>: 6.7-inch Super Retina XDR</td>
             </tr>
@@ -45,7 +41,6 @@
             <tr>
               <td><strong>Chip</strong>: A16 Bionic</td>
             </tr>
-
             <tr>
               <td><strong>Storage</strong>: 512GB</td>
             </tr>
@@ -55,7 +50,6 @@
             <tr>
               <td><strong>Security</strong>: Face ID</td>
             </tr>
-
             <tr>
               <td><strong>Charging</strong>: Wireless</td>
             </tr>
@@ -65,42 +59,39 @@
             <tr>
               <td><strong>Battery</strong>: 20 hours video playback</td>
             </tr>
-
             </tbody>
           </table>
         </div>
 
         <div class="offers">
-          @if (showQuantitySelection) {
+          <ng-container *ngIf="showQuantitySelection">
             <div class="quantity-selection mt-4">
-              <div class="quantity-selection">
-                <div class="input-group">
-                  <button class="btn btn-secondary" type="button" (click)="decreaseQuantity()">-</button>
-                  <input aria-label="quantity" [(ngModel)]="quantity" class="form-control text-center"
-                         [min]="1" type="number" style="max-width:70px;" readonly>
-                  <button class="btn btn-secondary" type="button" (click)="increaseQuantity()">+</button>
-                </div>
-
-                <p class="total-price"
-                   style="font-size: 20px;padding-top:30px;font-weight:700;color:rgb(255, 60, 42)">Total
-                  price:
-                  {{ product.price * quantity | currency:'symbol':'' }} VND</p>
+              <div class="input-group">
+                <button class="btn btn-secondary" type="button" (click)="decreaseQuantity()">-</button>
+                <input aria-label="quantity" [(ngModel)]="quantity" class="form-control text-center"
+                       [min]="1" type="number" style="max-width: 70px;" readonly>
+                <button class="btn btn-secondary" type="button" (click)="increaseQuantity()">+</button>
               </div>
+              <p class="total-price"
+                 style="font-size: 1.2rem; padding-top: 30px; font-weight: 700; color: rgb(255, 60, 42);">
+                Total price: {{ product.price * quantity | currency:'symbol':'' }} VND
+              </p>
             </div>
-          }
+          </ng-container>
         </div>
+
         <div class="d-grid gap-2 mt-3">
           <button type="button" class="btn btn-warning" (click)="addToCart()" id="liveToastBtn">
             Add To Cart
           </button>
-
-          @if (!showQuantitySelection) {
+          <ng-container *ngIf="!showQuantitySelection; else confirmButton">
             <button type="button" class="btn btn-danger" (click)="showQuantitySelection = true">
               Buy Now
             </button>
-          } @else {
-            <button class="btn btn-primary" (click)="submitOrder()">Confirm</button>
-          }
+          </ng-container>
+          <ng-template #confirmButton>
+            <button type="button" class="btn btn-primary" (click)="submitOrder()">Confirm</button>
+          </ng-template>
         </div>
       </div>
     </div>
@@ -110,18 +101,17 @@
     <p><strong>Note:</strong> Prices and promotions are subject to change without prior notice. For more details,
       visit our <a href="#">website</a>.</p>
   </div>
-
 </div>
 
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
-  @if (isVisible) {
+  <ng-container *ngIf="isVisible">
     <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header" style="background-color: #0d6efd;color:white">
+      <div class="toast-header" style="background-color: #0d6efd; color: white;">
         <strong class="me-auto">Notification</strong>
       </div>
       <div class="toast-body">
         The product has been successfully added to the cart
       </div>
     </div>
-  }
+  </ng-container>
 </div>

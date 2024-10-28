@@ -19,6 +19,7 @@ import {provideCharts, withDefaultRegisterables} from "ng2-charts";
   bootstrap: [AppComponent] // Nếu có
   , imports: [BrowserModule,
               AppRouting,
+
     ],
   providers: [
     provideCharts(withDefaultRegisterables()),
