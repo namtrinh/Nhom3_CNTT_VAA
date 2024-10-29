@@ -1,5 +1,6 @@
 <div class="container">
   <h1 class="title">More Products...</h1>
+  <img class="poster" src="/assets/poster/poster-more.png">
     <div class="listproduct listproduct-block">
       @for (product of products; track product.product_id) {
         <div class="item" [routerLink]="['/category', product.category?.seotitle, product.seotitle]">

@@ -1,7 +1,7 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8µ²ƒ‡©2J$7e7c5c8c-caac-48f4-b36c-0a0e42405fd0
-˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8¹²ƒ‡©2J$9c7b6334-fd82-473c-b322-cb401e6aaccb
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8µ²ƒ‡©2J$a431027e-9afe-4b9f-800d-04a5de97a849
+˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8¹²ƒ‡©2J$6f2de2d2-f27a-4903-a442-47da5b73eb3e
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¶ê³Öª2J$674a8ba8-885c-45b0-bc15-d2e29db8714f
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¶ê³Öª2J$9ab8cb06-8efc-4543-85b1-80e8675db7a7
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¶ê³Öª2J$00075e4d-d11e-452b-a882-4ccb3a862027
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¶ê³Öª2J$c98f1ae9-cf3b-47e7-8893-271be14a3be8

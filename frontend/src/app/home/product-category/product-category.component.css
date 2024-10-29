@@ -2,13 +2,15 @@
   margin-top: 30px;
   background-color: rgb(241, 237, 237);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .title {
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 550;
-  text-align: center; /* Căn giữa tiêu đề */
+  font-size: 30px;
+  color: #DD0000;
 }
 
 .listproduct-block {
@@ -107,10 +109,14 @@
   display: none;
 }
 
-/* Responsive */
 @media only screen and (max-width: 1450px) {
   .listproduct {
     grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình nhỏ hơn 1200px */
+  }
+
+  .poster{
+    max-width: 80%;
+    max-height:80%
   }
 }
 
@@ -118,11 +124,24 @@
   .listproduct {
     grid-template-columns: repeat(3, 1fr); /* 3 cột trên màn hình nhỏ hơn 992px */
   }
+  .poster{
+    max-width: 60%;
+    max-height:60%
+  }
 }
 
 @media only screen and (max-width: 800px) {
   .listproduct {
     grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn 768px */
   }
+  .poster{
+    max-width: 40%;
+    max-height:40%
+  }
+}
+
+.poster{
+  min-width: 100%;
+  max-height:500px;
 }
 

@@ -6,5 +6,6 @@ export class Category {
   name!: string;
   icon!: string;
   sort!: number;
+  poster!:string;
   products:Product[] = [];
 }

@@ -30,6 +30,8 @@ public class Category {
 
     private String icon;
 
+    private String poster;
+
     @OneToMany(mappedBy = "category", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JsonIgnoreProperties("category")
     private Set<Product> products;

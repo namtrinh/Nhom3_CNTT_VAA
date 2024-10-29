@@ -129,15 +129,6 @@
   margin-bottom: 0;
 }
 
-.douple-img {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 15px;
-  margin-bottom: 0;
-}
-
 .douple {
   border-radius: 10px;
   overflow: hidden;
@@ -154,13 +145,6 @@
 .douple img:hover {
   animation: zoom 1s infinite;
 }
-/* Media Queries để điều chỉnh trên các kích thước màn hình khác nhau */
-@media (max-width: 600px) {
-  .douple {
-    width: 90%; /* Chiều rộng 90% trên màn hình nhỏ hơn */
-    height: auto; /* Chiều cao tự động điều chỉnh */
-  }
-}
 
 .arrow-left {
   left: 0px;
@@ -176,19 +160,28 @@
 /* Responsive */
 @media only screen and (max-width: 1450px) {
   .product {
-    grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình nhỏ hơn 1200px */
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .douple {
+    height: 160px;
   }
 }
 
 @media only screen and (max-width: 1150px) {
   .product {
-    grid-template-columns: repeat(3, 1fr); /* 3 cột trên màn hình nhỏ hơn 992px */
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .douple {
+    height: 130px;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .product {
-    grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn 768px */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .douple {
+    height: 100px;
   }
 }
 

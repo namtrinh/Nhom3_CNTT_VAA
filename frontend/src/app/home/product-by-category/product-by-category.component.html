@@ -1,5 +1,6 @@
 <div class="container">
   <h1 class="title">{{ category_name || 'All Products' }}</h1>
+  <img class="poster" src="/assets/poster/{{category.poster}}.png">
   <div class="listproduct listproduct-block">
     @for (product of products; track product.product_id) {
       <div class="item"
