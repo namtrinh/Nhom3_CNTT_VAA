@@ -1,3 +1,5 @@
 
-	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ψ‚© ψÿÿÿÿ8°Τ¨ϋ¨2J$579bfaea-86bf-4004-b1cf-bd03d4e3cc4d
-	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(λω‘Γ8°Τ¨ϋ¨2J$ad6fd213-d860-4c8c-b67c-9006db7173da
+	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ψ‚© ψÿÿÿÿ8°Τ¨ϋ¨2J$b4f69975-9d39-4bda-9db9-83ba0ae9812d
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(λω‘Γ8°Τ¨ϋ¨2J$673d8223-a848-4009-8553-c8cbcabc0b03
+†
+java:S1128">Remove this unused import 'org.galaxy.backend.Model.Category'.(©αιϊÿÿÿÿ8ΕλπΌ­2J$46e9ec08-d317-4436-b28d-92827b6ebde8

@@ -1,24 +1,22 @@
 
-˜	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8˜ğÍÓª2J$de38de20-d93a-4a84-8ace-9d0c86aa3c7f
-˜	java:S117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8™ğÍÓª2J$63961bbd-5eae-4ee1-b4dc-e4cd0e57936d
-˜	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8™ğÍÓª2J$e5652b02-3f1e-42dc-9d17-14439887341b
+˜	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8˜ğÍÓª2J$de38de20-d93a-4a84-8ace-9d0c86aa3c7f
+˜	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8™ğÍÓª2J$63961bbd-5eae-4ee1-b4dc-e4cd0e57936d
+˜	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8™ğÍÓª2J$e5652b02-3f1e-42dc-9d17-14439887341b
 ¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8£ğÍÓª2J$0cb48db7-08d5-473b-8769-1dba373acd4e
-	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8§ğÍÓª2J$bfa91730-840d-4c70-84a7-2e024d5cdcb3
+	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8§ğÍÓª2J$bfa91730-840d-4c70-84a7-2e024d5cdcb3
 —
-java:S1192L"ODefine a constant instead of duplicating this literal "User not found" 4 times.(ÖÕ³ÿÿÿÿÿ8§ğÍÓª2J$61db6d27-4f7c-42ad-aca2-14aab9e0327f
+java:S1192K"ODefine a constant instead of duplicating this literal "User not found" 4 times.(ÖÕ³ÿÿÿÿÿ8§ğÍÓª2J$61db6d27-4f7c-42ad-aca2-14aab9e0327f
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$17112d0c-f758-49fa-830e-a9316738e6ad
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$17112d0c-f758-49fa-830e-a9316738e6ad
 …
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$b52606de-1eef-4706-ab85-c13acd0fb332
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$b52606de-1eef-4706-ab85-c13acd0fb332
 …
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$52f6c518-65b3-40e0-90c7-24e33e78cdeb
+java:S6813$"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$52f6c518-65b3-40e0-90c7-24e33e78cdeb
 …
-java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$72f8f62b-5651-48f9-bc5f-5453aa33d366
+java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ğÍÓª2J$72f8f62b-5651-48f9-bc5f-5453aa33d366
 ½
-java:S6204W"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ª™¨¹8ÌğÍÓª2J$ac4e1828-08f5-42e4-8b18-23fd0874c643
-m	java:S106g"+Replace this use of System.out by a logger.(…Çº8åğÍÓª2J$e010e263-c7e4-4027-9a67-46f82d91930c
-r	java:S106j"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8çğÍÓª2J$d109574a-5a07-4a05-9c68-4dec6e46af2c
-½
-java:S6204y"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8íğÍÓª2J$056b9142-dc99-4f89-b53d-07b03722d771
-z
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8õğÍÓª2J$151cd092-5291-4187-bd53-e5ae770e4434
+java:S6204T"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8íğÍÓª2J$056b9142-dc99-4f89-b53d-07b03722d771
+m	java:S106d"+Replace this use of System.out by a logger.(…Çº8åğÍÓª2J$e010e263-c7e4-4027-9a67-46f82d91930c
+r	java:S106g"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8çğÍÓª2J$d109574a-5a07-4a05-9c68-4dec6e46af2c
+—
+java:S6204u"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8•‹ñ¼­2

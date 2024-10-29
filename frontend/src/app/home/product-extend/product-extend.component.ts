@@ -18,8 +18,9 @@ export class ProductExtendComponent implements OnInit {
   products: Product[] = [];
   totalItems: number = 0;
   page: number = 0;
-  size: number = 2;
+  size: number = 5;
   imgAvatars: { [key: string]: string } = {};
+  showResetButton: boolean = false; // Track the visibility of the reset button
 
   constructor(private productService: ProductService, private imgService: ImageService, private router: Router) { }
 
@@ -27,25 +28,46 @@ export class ProductExtendComponent implements OnInit {
     this.getAlll();
   }
 
-  loadProducts(): void {
-    this.productService.getProducts(this.page, this.size).subscribe(response => {
-      this.products = response.content;
-      this.totalItems = response.totalElements;
-    });
-  }
-
-  onPageChange(newPage: number): void {
-    this.page = newPage;
-    this.loadProducts();
+  loadMoreProducts() {
+    if (this.hasMoreItems()) {
+      this.page += 1;
+      this.getAlll();
+    } else {
+      // When maximum items are reached, show reset button
+      this.showResetButton = true;
+    }
   }
 
   getAlll() {
-    this.productService.findAllProductsWithoutPromotion().subscribe((data: any) => {
-      this.products = data.result;
+    this.productService.getAllByPage(this.page, this.size).subscribe((data: any) => {
+      const newProducts = data.result.content;
+      this.totalItems = data.result.totalElements;
+
+      if (newProducts.length > 0) {
+        this.products.push(...newProducts);
+      }
+
+      // Check if maximum products have been loaded
+      this.showResetButton = this.products.length >= this.totalItems;
+
       this.products.forEach((product) => {
-        this.getImageFromService(product.image, product.product_id)
-      })
-    })
+        this.getImageFromService(product.image, product.product_id);
+      });
+    });
+  }
+
+// Method to check if more items are available
+  hasMoreItems(): boolean {
+    return (this.page + 1) * this.size < this.totalItems;
+  }
+
+// Reset pagination to initial state
+  resetPagination() {
+    this.page = 0; // Reset to page 0
+    this.size = 5; // Reset to initial size
+    this.products = []; // Clear current products
+    this.showResetButton = false; // Hide reset button
+    this.getAlll(); // Fetch products again
   }
 
   private getImageFromService(imageName: string, product_id: string): void {

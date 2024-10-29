@@ -51,10 +51,12 @@ public class ProductController {
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
 
-    @GetMapping("/products")
-    public Page<Product> getProducts(
-            @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "2") int size) {
-        return productService.getProducts(page, size);
+    @GetMapping(value="/page")
+    public ApiResponse<Page<Product>> getAllByPage(@RequestParam int page, @RequestParam int size){
+        return ApiResponse.<Page<Product>>builder()
+                .code(200)
+                .result(productService.findAllByPage(page,size))
+                .build();
     }
 
     @GetMapping(value = "/v/{seotitle}")
@@ -72,37 +74,7 @@ public class ProductController {
                 .result(productService.findById(product_id))
                 .build();
     }
-/*
-    @GetMapping(value = "/product")
-    @ResponseBody
-    public ApiResponse<List<Product>> getProductByCategory(@RequestParam Category category) {
-        return ApiResponse.<List<Product>>builder()
-                .code(200)
-                .result(productService.findProductsByCategory(category))
-                .build();
-    }
- */
-/*
-    @GetMapping(value = "/category")
-    public ApiResponse<List<Product>> getProductsByCategory(@RequestParam Category category_id) {
-        return ApiResponse.<List<Product>>builder()
-                .code(201)
-                .result(productService.findProductsByCategory(category_id))
-                .build();
-    }
 
- */
-/*
-    @GetMapping(value = "/search_pr")
-    @ResponseBody
-    public ApiResponse<List<Product>> searchProducts(@RequestParam String name) {
-        return ApiResponse.<List<Product>>builder()
-                .code(200)
-                .result(productService.searchProduct(name))
-                .build();
-    }
-
- */
 
     @PostMapping
     public ApiResponse<Product> createProduct(@RequestBody Product product) {

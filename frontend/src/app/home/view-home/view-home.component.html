@@ -2,8 +2,10 @@
 
   <nav class="head">
     <div class="icon">
-      <img src="/assets/logo.png" alt="icon" style="width:30px;height:30px;cursor: pointer;" [routerLink]="['/']">
+      <img src="/assets/firefly-logo.png" alt="icon" [routerLink]="['/']">
+      <h1>Firefly Galaxy</h1>
     </div>
+
     <div class="search">
       <label for="search">
         <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
@@ -12,9 +14,10 @@
     </div>
 
     <div class="cart" [routerLink]="['/cart']">
-
-      <i class="fa-solid fa-cart-shopping"> Cart</i>
+      <i class="fa-solid fa-cart-shopping"></i>
+      <p>Cart</p>
     </div>
+
 
     <div class="profile">
       @if (checktokenkey) {

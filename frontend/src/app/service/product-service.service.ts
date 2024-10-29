@@ -49,17 +49,11 @@ export class ProductService {
     return this.http.delete(`${this.baseUrl}/${product_id}`);
   }
 
-  getProducts(page: number, size: number): Observable<any> {
+  getAllByPage(page:number, size:number): Observable<Product[]>{
     const params = new HttpParams()
-      .set('page', page.toString())
-      .set('size', size.toString());
-
-    return this.http.get<any>(`${this.baseUrl}/products`, {params});
+      .set('page', page)
+      .set('size', size);
+    return this.http.get<Product[]>(`${this.baseUrl}/page`,{params})
   }
 
-  getProductByCategory(category_id: number): Observable<Product[]> {
-    const params = new HttpParams()
-      .set('category_id', category_id.toString());
-    return this.http.get<Product[]>(`${this.baseUrl}/category`, {params})
-  }
 }

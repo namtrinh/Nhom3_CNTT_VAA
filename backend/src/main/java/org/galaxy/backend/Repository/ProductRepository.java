@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -17,12 +19,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     List<Product> findByNameContainingIgnoreCase(String name);
 
-    @Query(
-            value =
-                    "select * from product join category on category.category_id = product.category_id where product.category_id =: category_id",
-            nativeQuery = true)
-    List<Product> findByCategory(@Param("category_id") Category category_id);
-
     @Query(value = "select quantity from product where product.product_id =:id", nativeQuery = true)
     Integer findAvailableQuantityById(String id);
 
@@ -33,4 +29,7 @@ public interface ProductRepository extends JpaRepository<Product, String> {
 
     @Query("SELECT p FROM Product p WHERE p.promotion IS NULL")
     List<Product> findAllProductsWithoutPromotion();
+
+    @Query(value = "SELECT * from product ORDER BY time_created  DESC ",nativeQuery = true)
+    Page<Product> findAllByPage(Pageable pageable);
 }

@@ -1,12 +1,9 @@
 
-“	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃÝ8’žÂÉ«2J$31f956c0-aa12-4697-b1bc-3612a160c99f
-˜	java:S117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8”žÂÉ«2J$73140be1-dd74-4f31-a483-00822b8f19c5
-™	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ð˜ûÿÿÿÿ8–žÂÉ«2J$1e9e4efd-f9f0-4742-adb7-4b9d93c2cf95
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8—žÂÉ«2J$42a3bd73-b934-464b-ba31-2b182b8c399e
+“	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃÝ8î¥…½­2J$5e3ec4c2-0404-48fd-9e1d-1499629d4f89
+˜	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8ô¥…½­2J$85b3353d-bbb1-41c7-a3a8-f3b99b4dbeab
+˜	java:S117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ð˜ûÿÿÿÿ8õ¥…½­2J$72c345c8-ca86-4ec8-8756-07e1161f2932
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8ö¥…½­2J$90033d9b-3d74-4a3d-bd59-b7ccf94c314b
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¶žÂÉ«2J$8972a2fa-c995-4941-9d1a-b5c9288401a6
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Æ¦…½­2J$96c22ab6-e0df-4b7f-8f29-7a25eb885b20
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¶žÂÉ«2J$329b629e-34a5-496f-b770-49b2f923bebb
-}	java:S125N"<This block of commented-out lines of code should be removed.(ÈùÔ`8×žÂÉ«2J$4ae91c9b-5af5-48c3-976d-f06ecd81cadc
-~	java:S125W"<This block of commented-out lines of code should be removed.(ä“ÊÖ8£úÂÉ«2J$4fe5b334-8877-42dc-ad1d-eca1a16eb043
-~	java:S125b"<This block of commented-out lines of code should be removed.(ðõÐé8ÿÕÃÉ«2J$3a3d7563-082f-4b40-ad0d-323e718cd7f6
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8©©…½­2J$b419d574-0e2a-4241-865b-7592cd0ed94e

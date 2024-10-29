@@ -1,3 +1,4 @@
+
 .container {
   margin-top: 30px;
   background-color: rgb(241, 237, 237);
@@ -125,4 +126,27 @@
     grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn 768px */
   }
 }
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.load-more-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #DD0000;
+  width: 150px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #b30000;
+}
+
 

@@ -1,3 +1,4 @@
 
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹â¶İıÿÿÿÿ8¯ğÚä¨2J$aab8e872-c945-4759-bc40-d0aaf1947d1f
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38±ğÚä¨2J$a072db62-c9ec-46b4-9f56-425619c706e4
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38§Ëä¼­2J$12322663-fe3b-4a0e-85c6-f263582425f7
+
+java:S1128"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô8¾Ëä¼­2J$296768b8-a85a-499f-ab19-5f43238b82be

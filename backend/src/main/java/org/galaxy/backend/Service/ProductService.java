@@ -11,8 +11,6 @@ public interface ProductService {
 
     List<Product> findAllProductsWithoutPromotion();
 
-    Page<Product> getProducts(int pageNo, int pageSize);
-
     <S extends Product> S save(S entity);
 
     Product findById(String integer);
@@ -21,9 +19,7 @@ public interface ProductService {
 
     Product editProduct(String product_id, Product product);
 
-    List<Product> findProductsByCategory(Category category);
-
-    List<Product> searchProduct(String name);
-
     public Product getBySeotitle(String seotitle);
+
+    Page<Product> findAllByPage(int pageNo, int pageSize);
 }

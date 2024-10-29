@@ -53,20 +53,12 @@ public class ProductServiceImpl implements ProductService {
         return this.productRepository.save(product);
     }
 
-    public List<Product> findProductsByCategory(Category category) {
-        return productRepository.findProductByCategory(category);
-    }
-
-    public Page<Product> getProducts(int page, int size) {
-        Pageable pageable = PageRequest.of(page, size);
-        return productRepository.findAll(pageable);
-    }
-
-    public List<Product> searchProduct(String name) {
-        return productRepository.findByNameContainingIgnoreCase(name);
-    }
-
     public Product getBySeotitle(String seotitle) {
         return productRepository.getBySeotitle(seotitle);
+    }
+
+    public Page<Product> findAllByPage(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return productRepository.findAllByPage(pageable);
     }
 }
