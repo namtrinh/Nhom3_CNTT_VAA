@@ -2,19 +2,20 @@
   background-color: rgb(255, 255, 255);
   width: 80%;
   height: auto;
-  padding-top: 10px;
+  padding-top: 72px;
 
 }
 .head {
   display: flex;
   align-items: center;
   height: 60px;
-  position: relative;
+  position: fixed;
   background-color: #DD0000;
   width: 100%;
   box-shadow: 3px 3px 5px 0px #e37777;
   font-family: Tahoma, Verdana, sans-serif;
   padding: 0 1vw;
+  z-index:10;
 }
 
 .icon {
