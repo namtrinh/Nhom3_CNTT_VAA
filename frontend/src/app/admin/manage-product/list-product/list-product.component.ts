@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router, RouterLink, RouterOutlet} from '@angular/router';
 import {ProductService} from '../../../service/product-service.service';
 import {Product} from '../../../model/product.model';
@@ -24,9 +24,12 @@ export class ListProductComponent implements OnInit {
   imgAvatars: { [key: string]: string } = {};
   clicksale: boolean = false;
   product: any;
+  page: number = 0;
+  size: number = 20;
   promotion: Promotion = new Promotion();
   category: Category[] = []
   selectedCategoryId: string = '';
+  isLoading: boolean = false;
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -38,18 +41,24 @@ export class ListProductComponent implements OnInit {
     this.filterProducts()
   }
 
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    if ((window.scrollY) >= document.body.offsetHeight && !this.isLoading) {
+      this.page += 1;
+      this.filterProducts();
+    }
+  }
+
   filterProducts() {
-    this.productService.findAllProductsWithoutPromotion().subscribe((data: any) => {
-      const lowerSearchTerm = this.searchTerm.toLowerCase();
-      this.products = data.result.filter((product: Product) => {
-        const matchesCategory = !this.selectedCategoryId || product.category?.category_id === this.selectedCategoryId;
-        const matchesSearchTerm = !this.searchTerm || product.name.toLowerCase().includes(lowerSearchTerm);
-        return matchesCategory && matchesSearchTerm;
-      });
-      this.products.forEach((product) => {
+    this.isLoading = true;
+    this.productService.getAllByPage(this.page, this.size).subscribe((data: any) => {
+      const newProducts = data.result.content;
+      this.products.push(...newProducts);
+      newProducts.forEach((product: any) => {
         this.getImageFromService(product.image, product.product_id);
-      })
-    })
+      });
+      this.isLoading = false;
+    });
   }
 
   private getImageFromService(imageName: string, product_id: string): void {

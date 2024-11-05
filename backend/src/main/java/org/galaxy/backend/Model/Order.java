@@ -36,6 +36,5 @@ public class Order {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp time_created;
 
-
     private String orderDetail_id;
 }

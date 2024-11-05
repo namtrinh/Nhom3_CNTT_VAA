@@ -1,11 +1,13 @@
 package org.galaxy.backend.Model;
 
-import jakarta.persistence.*;
-import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
-
 import java.sql.Timestamp;
 import java.util.Set;
+
+import jakarta.persistence.*;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import lombok.*;
 
 @Entity
 @RequiredArgsConstructor
@@ -13,12 +15,13 @@ import java.util.Set;
 @Getter
 @Builder
 @Setter
-@Table( name ="statistic")
+@Table(name = "statistic")
 public class Statistic {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String statistic_id;
+
     private Integer month;
     private Integer year;
     private Integer sum_totalPrice;

@@ -29,11 +29,11 @@ public class CategoryController {
                 .build();
     }
 
-    @GetMapping(value = "/name/{seotitle}")
-    public ApiResponse<Category> getBySeotile(@PathVariable String seotitle) {
+    @GetMapping(value = "/name/{ct_seotitle}")
+    public ApiResponse<Category> getBySeotile(@PathVariable String ct_seotitle) {
         return ApiResponse.<Category>builder()
                 .code(200)
-                .result(categoryService.findBySeotitle(seotitle))
+                .result(categoryService.findBySeotitle(ct_seotitle))
                 .build();
     }
 

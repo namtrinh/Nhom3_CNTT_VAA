@@ -22,9 +22,9 @@ public class Category {
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String category_id;
 
-    private String name;
+    private String ct_name;
 
-    private String seotitle;
+    private String ct_seotitle;
 
     private Byte sort;
 

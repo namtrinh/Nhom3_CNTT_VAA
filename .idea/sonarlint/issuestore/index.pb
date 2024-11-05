@@ -423,3 +423,15 @@ u
 Efrontend/src/app/home/product-category/product-category.component.css,e\7\e7eb9cd36fcc9e9c3e73d8fe5eab8b1d0d250460
 v
 Ffrontend/src/app/home/product-category/product-category.component.html,d\6\d64df8c1782c05bfa47826cf59e732080800a27d
+u
+Ebackend/src/main/java/org/galaxy/backend/Service/ReadExelProduct.java,d\3\d3f33d184354f3a26ca4c1efc309d4a1d6434c48
+~
+Nbackend/src/main/java/org/galaxy/backend/Service/ReadExel/ReadExelProduct.java,c\a\ca452c932dc7a682f0b33115ffca583dcff2d21d
+w
+Gbackend/src/main/java/org/galaxy/backend/Service/PermissionService.java,2\a\2a436a285d474b39889f19ce7e09aac9f6eb7c27
+w
+Gbackend/src/main/java/org/galaxy/backend/Repository/RoleRepository.java,1\9\1976360088eb5e81e26dd4e368d5f0aa8d0ded34
+x
+Hbackend/src/main/java/org/galaxy/backend/Repository/Brandrepository.java,3\4\343ed7a1dad6746f76476ed579e388e1ebab6821
+‚
+Rbackend/src/main/java/org/galaxy/backend/Repository/InvalidateTokenRepository.java,2\0\207211ee1810fc984b5dce52481d4ab9edab90a9

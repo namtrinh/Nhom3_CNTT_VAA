@@ -1,6 +1,5 @@
 package org.galaxy.backend.Controller;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import org.galaxy.backend.Model.Order;
@@ -19,7 +18,7 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping(value = "/all")
-    public ApiResponse<List<Order>> findAll(){
+    public ApiResponse<List<Order>> findAll() {
         return ApiResponse.<List<Order>>builder()
                 .code(200)
                 .result(orderService.getAll())

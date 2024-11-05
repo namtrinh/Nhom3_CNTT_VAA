@@ -1,0 +1,17 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8…ª³Ü¯2J$8291fee6-37fe-4298-abb7-df892e50b092
+“
+java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(Şî¯…8‡ª³Ü¯2J$ae654d32-a078-4f32-b455-2af80c5b6345
+m
+java:S1444"*Make this "public static TYPE" field final(Şî¯…8Šª³Ü¯2J$09cbbe24-2a63-460d-96d9-ea263efdadb2
+	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(ò–Ş‹ÿÿÿÿÿ8Šª³Ü¯2J$c0485f77-8121-47f7-8d2b-6da81a3a0168
+’
+java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şî¯…8Œª³Ü¯2J$c4740a50-8c5a-45bf-b343-76f0e03ccc12
+•
+java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âè“ó8Œª³Ü¯2J$4bdd4a9a-8a30-4bf6-99e6-7aef19cf3c58
+“
+java:S3008"PRename this field "SHEET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ßÉ¡8Œª³Ü¯2J$9023b861-92a9-49c2-9dfc-f38cd91bdbd6
+|
+java:S1118":Add a private constructor to hide the implicit public one.(©şüT8ª³Ü¯2J$3668d4c7-3a28-4235-86ee-2606ff22b9e2
+^
+java:S1126"AReplace this if-then-else statement by a single return statement.(Úı÷°8»Î¹Ü¯2

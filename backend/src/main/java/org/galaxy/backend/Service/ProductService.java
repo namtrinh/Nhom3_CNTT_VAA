@@ -2,9 +2,9 @@ package org.galaxy.backend.Service;
 
 import java.util.List;
 
-import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.springframework.data.domain.Page;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface ProductService {
     List<Product> findAllProductsWithPromotion();
@@ -19,7 +19,11 @@ public interface ProductService {
 
     Product editProduct(String product_id, Product product);
 
-    public Product getBySeotitle(String seotitle);
+    Product getBySeotitle(String seotitle);
 
     Page<Product> findAllByPage(int pageNo, int pageSize);
+
+    void savePrEx(MultipartFile file);
+
+    List<Product> getByCategory(String category);
 }

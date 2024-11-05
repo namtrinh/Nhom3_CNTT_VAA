@@ -1,6 +1,5 @@
 package org.galaxy.backend.ServiceImpl;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import jakarta.transaction.Transactional;
@@ -26,7 +25,7 @@ public class InvoiceServiceImpl implements OrderService {
         return orderRepository.findByUser(user);
     }
 
-    public List<Order> getAll(){
+    public List<Order> getAll() {
         return this.orderRepository.findAll();
     }
 

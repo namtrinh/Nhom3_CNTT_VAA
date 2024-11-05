@@ -37,7 +37,7 @@
             <select class="form-control" id="categorySelect" name="category" [(ngModel)]="categoryId">
                 <option value="" disabled>-- Select Category --</option>
               @for (category of categorys; track categorys){
-                <option [value]="category.category_id">{{ category.name }}</option>
+                <option [value]="category.category_id">{{ category.ct_name }}</option>
               }
             </select>
         </div>

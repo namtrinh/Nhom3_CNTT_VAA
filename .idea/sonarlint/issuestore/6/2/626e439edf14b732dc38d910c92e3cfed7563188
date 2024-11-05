@@ -1,7 +1,8 @@
 
-“	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8Ö‚ú¼­2J$168d8adc-4d78-42a9-bc64-8e324e8cdcd5
-˜	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8Ö‚ú¼­2J$57f43109-2f3a-4d2f-a361-30fee5ac8135
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8×‚ú¼­2J$eb6a87ca-174f-4235-85a4-06885932bdcf
-	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8Ú‚ú¼­2J$ce0e1117-4320-4ced-ab41-a9ce3b103dbf
+“	java:S117*"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8›Õ–à¯2J$9744eda3-959b-4d8e-8214-bd22ff4aabda
+˜	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8›Õ–à¯2J$b27ca3b8-5952-48fc-8bad-e1a11fefec75
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¾šşİ¯2J$eec002f9-2479-4aeb-9a03-8eb22d1c1d44
+	java:S112%"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8œÕ–à¯2J$093573bf-bfed-49c5-9af0-28f181a9d6e8
+	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8œÕ–à¯2J$ef9db330-4b23-42bf-83df-72bf0e808ea4
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ş‚ú¼­2J$9305bdcf-a13c-4f15-9c06-b6f268b48304
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¡Õ–à¯2J$7b55f2c8-b495-4649-a7ae-008b90f399f8

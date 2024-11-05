@@ -1,12 +1,12 @@
 package org.galaxy.backend.Controller;
 
+import java.util.List;
+
 import org.galaxy.backend.Model.Statistic;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.Service.StatisticService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/statistic")
@@ -32,11 +32,10 @@ public class StatisticController {
     }
 
     @PostMapping
-    public ApiResponse<Statistic> Create(@RequestBody Statistic statistic){
+    public ApiResponse<Statistic> Create(@RequestBody Statistic statistic) {
         return ApiResponse.<Statistic>builder()
                 .code(200)
                 .result(statisticService.save(statistic))
                 .build();
     }
-
 }

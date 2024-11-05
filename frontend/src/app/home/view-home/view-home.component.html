@@ -58,8 +58,8 @@
       </button>
       @for (menu of category; track menu.category_id) {
 
-      <button [routerLink]="['category',menu.seotitle]" class="btn btn-light"><i
-          [class]="menu.icon"></i> {{menu.name}}</button>
+      <button [routerLink]="['category',menu.ct_seotitle]" class="btn btn-light"><i
+          [class]="menu.icon"></i> {{menu.ct_name}}</button>
       }
     </div>
 

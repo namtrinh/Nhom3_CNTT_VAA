@@ -11,10 +11,13 @@ import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.Repository.ProductRepository;
 import org.galaxy.backend.Service.ProductService;
+import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -31,8 +34,14 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @GetMapping
-    public ApiResponse<List<Product>> findAll() {
-        var result = productRepository.findAll();
+    public ApiResponse<Page<Product>> findAll(@RequestParam int page, @RequestParam int size) {
+        var result = productService.findAllByPage(page, size);
+        return ApiResponse.<Page<Product>>builder().code(200).result(result).build();
+    }
+
+    @GetMapping(value = "/getByCategory")
+    public ApiResponse<List<Product>> getByCategory(@RequestParam String category) {
+        var result = productService.getByCategory(category);
         result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
@@ -51,11 +60,11 @@ public class ProductController {
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
 
-    @GetMapping(value="/page")
-    public ApiResponse<Page<Product>> getAllByPage(@RequestParam int page, @RequestParam int size){
+    @GetMapping(value = "/page")
+    public ApiResponse<Page<Product>> getAllByPage(@RequestParam int page, @RequestParam int size) {
         return ApiResponse.<Page<Product>>builder()
                 .code(200)
-                .result(productService.findAllByPage(page,size))
+                .result(productService.findAllByPage(page, size))
                 .build();
     }
 
@@ -74,7 +83,6 @@ public class ProductController {
                 .result(productService.findById(product_id))
                 .build();
     }
-
 
     @PostMapping
     public ApiResponse<Product> createProduct(@RequestBody Product product) {
@@ -135,5 +143,22 @@ public class ProductController {
                     .code(500)
                     .build();
         }
+    }
+
+    @PostMapping("/excel/upload")
+    public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
+        String message = "";
+        if (ReadExelProduct.hasExcelFormat(file)) {
+            try {
+                productService.savePrEx(file);
+                message = "The Excel file is uploaded: " + file.getOriginalFilename();
+                return ResponseEntity.status(HttpStatus.OK).body(message);
+            } catch (Exception exp) {
+                message = "The Excel file is not upload: " + file.getOriginalFilename() + "!";
+                return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
+            }
+        }
+        message = "Please upload an excel file!";
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
     }
 }

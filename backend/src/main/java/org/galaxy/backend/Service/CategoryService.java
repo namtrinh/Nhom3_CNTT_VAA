@@ -25,8 +25,8 @@ public class CategoryService {
         return categoryRepository.findById(integer).orElseThrow(() -> new RuntimeException("Not found"));
     }
 
-    public Category findBySeotitle(String seotitle) {
-        return categoryRepository.getBySeotitle(seotitle);
+    public Category findBySeotitle(String ct_seotitle) {
+        return categoryRepository.getByCt_seotitle(ct_seotitle);
     }
 
     public void deleteById(String category_id) {

@@ -44,7 +44,7 @@
         <select class="form-control" id="categorySelect" [(ngModel)]="product.category.category_id" name="category">
           <option value="" disabled>-- Select category --</option>
           @for (categories of category; track category) {
-            <option [value]="categories.category_id">{{ categories.name }}</option>
+            <option [value]="categories.category_id">{{ categories.ct_name }}</option>
           }
         </select>
       </div>
