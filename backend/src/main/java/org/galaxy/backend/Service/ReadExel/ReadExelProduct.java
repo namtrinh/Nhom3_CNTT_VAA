@@ -11,6 +11,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -64,14 +65,11 @@ public class ReadExelProduct {
                         case 5:
                             product.setPrice((double) currentCell.getNumericCellValue());
                             break;
-
-                            /*     case 5:
-                            		Category category = new Category();
-                            		category.setCategory_id(currentCell.getStringCellValue());
-                            		product.setCategory(category);
-                            		break;
-
-                            */
+                        case 6:
+                            Category category = new Category();
+                            category.setCategory_id(currentCell.getStringCellValue());
+                            product.setCategory(category);
+                            break;
                         default:
                             break;
                     }

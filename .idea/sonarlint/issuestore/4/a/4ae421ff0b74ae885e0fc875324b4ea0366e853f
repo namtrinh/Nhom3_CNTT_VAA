@@ -1,8 +1,8 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8¯ÄË±ª2J$982ea97b-a450-43e9-a0f2-df96d1e388f0
-”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8âˆ‹´ª2J$00a68c4d-db6e-431d-8c57-35c568d0c2d1
-™	java:S1162"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ıœ¨´ª2J$57dc2eae-6607-47de-9846-68ed5466f169
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ŞÁ³2J$b5ca6c1f-4360-4e52-9bb0-68e2c04e2103
+”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8‹ØõÁ³2J$bd69475f-9ee5-496d-b165-1b66384f76a3
+™	java:S1162"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8‹ØõÁ³2J$f7266b8d-51b0-48d2-875e-2829f8369fd3
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8åˆ‹´ª2J$2f66ac86-7bea-4d2f-a0f3-20e73fa1eca9
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ØõÁ³2J$56739025-71b1-4d2e-be74-2788ac55ec53
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8çˆ‹´ª2J$20bae8e6-ff91-4d2b-8b16-286fefdf9ad2
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ØõÁ³2J$6ce342c2-fe6d-4fd4-910c-232028eda30d

@@ -27,11 +27,12 @@ export class EditProductComponent implements OnInit {
   id: any;
   product: Product = new Product();
   selectedFile: File | null = null;
-  imgAvatar!: string;
+
   category: Category[] = [];
   cate!: string;
   time!: string;
-  promotion: Promotion[] = []
+  promotion: Promotion[] = [];
+  imageUrl!:string;
 
   constructor(private active: ActivatedRoute,
               private router: Router,
@@ -51,27 +52,20 @@ export class EditProductComponent implements OnInit {
       if (!this.product.promotion) {
         this.product.promotion = {promotion_id: null};
       }
-      this.getImageFromService(this.product.image);
+     this.imageUrl = this.product.image;
+      console.log(this.imageUrl)
     });
   }
 
-  getImageFromService(imageName: string): void {
-    if (imageName !== null && imageName !== undefined) {
-      this.imgService.getImage(imageName).subscribe(data => {
-        const blob = new Blob([data], {type: 'image/*'});
-        this.imgAvatar = URL.createObjectURL(blob);
-      });
-    }
-  }
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] as File;
-    // đọc file và hiện
+    // Sử dụng FileReader để đọc và hiển thị hình ảnh
     const reader = new FileReader();
     reader.onload = (e: any) => {
-      this.imgAvatar = e.target.result;
+      this.imageUrl = e.target.result;  // Cập nhật imageUrl để hiển thị ảnh
     };
-    reader.readAsDataURL(this.selectedFile);
+    reader.readAsDataURL(this.selectedFile);  // Đọc file ảnh dưới dạng base64
   }
 
   private updateProduct() {
@@ -90,6 +84,8 @@ export class EditProductComponent implements OnInit {
     console.log(this.product.promotion.promotion_id)
     if (this.selectedFile) {
       formData.append('image', this.selectedFile);
+    }else {
+      formData.append('image',this.product.image)
     }
     this.productService.editById(this.id, formData).subscribe(
       (data: any) => {

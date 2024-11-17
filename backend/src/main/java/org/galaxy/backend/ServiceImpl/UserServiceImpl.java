@@ -18,6 +18,7 @@ import org.galaxy.backend.Repository.UserRepository;
 import org.galaxy.backend.Service.UserService;
 import org.galaxy.backend.Service.VerifyUser.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -36,8 +37,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleRepository roleRepository;
 
-    @Autowired
-    private EmailService emailService;
 
     public UsersResponse CreateUser(UsersRequest usersRequest) {
         if (userRepository.existsByEmail(usersRequest.getEmail())) {
@@ -76,6 +75,9 @@ public class UserServiceImpl implements UserService {
     }
 
     public void deleteById(String user_id) {
+        User user = userRepository.findById(user_id).orElseThrow(() -> new RuntimeException("User not found"));
+        user.setRoles(null);
+        userRepository.save(user);
         userRepository.deleteById(user_id);
     }
 
@@ -129,5 +131,12 @@ public class UserServiceImpl implements UserService {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         user.setPassword(encoder.encode(password));
         return usersMapper.toUsers(userRepository.save(user));
+    }
+
+    @Scheduled(fixedRate = 600000)
+    @Transactional
+    public void cleanupExpiredUsers() {
+        userRepository.deleteExpiredUsers();
+        System.out.println("Expired unactivated users cleaned up.");
     }
 }

@@ -17,7 +17,7 @@
       <div class="product-inf" [routerLink]="['/category',product.category?.ct_seotitle, product.seotitle]">
         <div class="product_img">
           @if (product.product_id) {
-            <img class="img-product" [src]="imgAvatars[product.product_id]">
+            <img class="img-product" [src]="product.image">
           }
         </div>
         <h3 class="product_name">

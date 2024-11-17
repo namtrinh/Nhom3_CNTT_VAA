@@ -423,8 +423,6 @@ u
 Efrontend/src/app/home/product-category/product-category.component.css,e\7\e7eb9cd36fcc9e9c3e73d8fe5eab8b1d0d250460
 v
 Ffrontend/src/app/home/product-category/product-category.component.html,d\6\d64df8c1782c05bfa47826cf59e732080800a27d
-u
-Ebackend/src/main/java/org/galaxy/backend/Service/ReadExelProduct.java,d\3\d3f33d184354f3a26ca4c1efc309d4a1d6434c48
 ~
 Nbackend/src/main/java/org/galaxy/backend/Service/ReadExel/ReadExelProduct.java,c\a\ca452c932dc7a682f0b33115ffca583dcff2d21d
 w
@@ -435,3 +433,25 @@ x
 Hbackend/src/main/java/org/galaxy/backend/Repository/Brandrepository.java,3\4\343ed7a1dad6746f76476ed579e388e1ebab6821
 ‚
 Rbackend/src/main/java/org/galaxy/backend/Repository/InvalidateTokenRepository.java,2\0\207211ee1810fc984b5dce52481d4ab9edab90a9
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+u
+Ebackend/src/main/java/org/galaxy/backend/Config/CustomJwtDecoder.java,5\7\57a9c8fd5dc71ee6d6f7257066e8f4edae9fd108
+{
+Kbackend/src/main/java/org/galaxy/backend/ModelDTO/response/ApiResponse.java,1\b\1b0b49b17371960640457e8033960a53646f8cbd
+F
+frontend/.editorconfig,e\4\e4f202a0cee8c47524490060ee739fa4aa3bd112
+q
+Abackend/src/main/java/org/galaxy/backend/Service/CartService.java,1\f\1f63544e45d31f8892017132ac195a03ce1eab4e
+p
+@frontend/src/app/home/search-product/search-product.component.ts,9\1\9186abe5b5e5f000f6e40d6d8bbb23f36569b463
+r
+Bfrontend/src/app/home/search-product/search-product.component.html,a\0\a027425104752d32bd2d10b3c08f2fd9b6028d99
+q
+Afrontend/src/app/home/search-product/search-product.component.css,a\0\a0dbb7addd74eef89e5d95c8bb7db4ef900f298e
+_
+/frontend/src/app/service/img-service.service.ts,7\f\7f3f6849de9cbdfae670d30c65d0537c01a4000f
+u
+Ebackend/src/main/java/org/galaxy/backend/Config/CloudinaryConfig.java,4\5\45d616c0da8303bffe06d7005ebf218b31546cc1
+w
+Gbackend/src/main/java/org/galaxy/backend/Service/CloudinaryService.java,a\1\a1de5230717605851a71091074a152e17d9b02ae

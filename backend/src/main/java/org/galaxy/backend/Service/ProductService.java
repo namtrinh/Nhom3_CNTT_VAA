@@ -15,7 +15,7 @@ public interface ProductService {
 
     Product findById(String integer);
 
-    void deleteById(String integer);
+    public void deleteById(String productId);
 
     Product editProduct(String product_id, Product product);
 
@@ -26,4 +26,6 @@ public interface ProductService {
     void savePrEx(MultipartFile file);
 
     List<Product> getByCategory(String category);
+
+    List<Product> searchProductsByName(String name);
 }

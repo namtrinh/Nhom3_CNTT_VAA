@@ -7,6 +7,7 @@ import java.util.Set;
 import org.galaxy.backend.Model.Permission.Roles;
 import org.galaxy.backend.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -26,4 +27,12 @@ public interface UserRepository extends JpaRepository<User, String> {
     List<User> findAllByRoles(Set<Roles> roles);
 
     User findUsersByEmail(String email);
+
+    @Modifying
+    @Query(value = "DELETE FROM users " +
+            "WHERE (activated = 'FALSE' OR activated IS NULL) " +
+            "AND CAST(time_created AS DATETIME) <= DATEADD(SECOND, -600000, GETDATE())",
+            nativeQuery = true)
+    void deleteExpiredUsers();
+
 }

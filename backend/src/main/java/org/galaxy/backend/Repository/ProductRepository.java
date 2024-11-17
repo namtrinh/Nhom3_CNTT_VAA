@@ -33,4 +33,11 @@ public interface ProductRepository extends JpaRepository<Product, String> {
                     "select * from product inner join category on category.category_id = product.category_category_id where product.category_category_id = :category",
             nativeQuery = true)
     List<Product> getByCategory(@Param("category") String category);
+
+    List<Product> findByNameContainingIgnoreCase(String name);
+
+    @Query("SELECT p FROM Product p WHERE " +
+            "(LOWER(p.name) LIKE LOWER(CONCAT('%', :name, '%')) OR " +
+            "LOWER(p.category.ct_name) LIKE LOWER(CONCAT('%', :name, '%')))")
+    List<Product> searchByNameOrCategory(String name);
 }

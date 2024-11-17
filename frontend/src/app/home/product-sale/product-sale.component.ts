@@ -24,9 +24,12 @@ export class ProductSaleComponent implements OnInit {
   imgLeft: string = '';
   imgRight: string = '';
   private intervalId: any;
+  imageUrl!:string;
+
   constructor(private router: Router,
     private productService: ProductService,
     private imgService: ImageService,
+
     private promotionService: PromotionService) { }
 
   ngOnInit(): void {
@@ -54,24 +57,9 @@ export class ProductSaleComponent implements OnInit {
     this.productService.findAllProductsWithPromotion().subscribe((data: any) => {
       this.products = data.result;
       this.products.forEach((product) => {
-        if (product.image && product.product_id) {
-          this.getImageFromService(product.image, product.product_id);
-        }
       });
     })
   }
 
-  private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName !== null && imageName !== undefined) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], { type: 'image/*' });
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        (error) => {
-          console.error(error);
-        });
-    } else { }
-  }
 
 }

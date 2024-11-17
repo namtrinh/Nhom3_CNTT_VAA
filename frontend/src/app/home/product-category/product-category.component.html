@@ -8,7 +8,7 @@
     @for (product of category.products; track product.product_id) {
       <div class="item"  [routerLink]="['/category',product.category?.ct_seotitle, product.seotitle]">
         <div class="item-img">
-          <img  [src]="imgAvatars[product.product_id]">
+          <img [src]="product.image">
         </div>
         <h3 class="product_name">
           {{product.name}}

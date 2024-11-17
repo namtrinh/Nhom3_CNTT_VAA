@@ -2,6 +2,12 @@
     <form #create_product="ngForm" (ngSubmit)="OnSubmit()" class="p-4 border rounded shadow">
         <h2 class="text-center mb-3">Create New Product</h2>
 
+      <div class="form-group text-center">
+        <img [src]="imgAvatar" alt="Avatar Preview" style="max-width: 200px; max-height: 200px;">
+        <input type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*"
+               style="width:50vh;display:flex;margin:0 auto;">
+      </div>
+
         <div class="form-group mb-3">
             <label for="name">Product Name</label>
             <input class="form-control" type="text" id="name" name="name" placeholder="Enter product name"
@@ -12,12 +18,6 @@
             <label for="seotitle">SEO Title</label>
             <input class="form-control" type="text" id="seotitle" name="seotitle" placeholder="Enter SEO title"
                 #seotitle="ngModel" [(ngModel)]="product.seotitle" required>
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="image">Image URL</label>
-            <input class="form-control" type="text" id="image" name="image" placeholder="Enter image URL"
-                #image="ngModel" [(ngModel)]="product.image" required>
         </div>
 
         <div class="form-group mb-3">
@@ -36,7 +36,7 @@
             <label for="categorySelect">Category</label>
             <select class="form-control" id="categorySelect" name="category" [(ngModel)]="categoryId">
                 <option value="" disabled>-- Select Category --</option>
-              @for (category of categorys; track categorys){
+              @for (category of categorys; track $index){
                 <option [value]="category.category_id">{{ category.ct_name }}</option>
               }
             </select>

@@ -25,6 +25,8 @@
     "jwt-decode": "^4.0.0",
     "ng2-charts": "^6.0.1",
     "ngx-pagination": "^6.0.3",
+    "node-module": "^2.0.0",
+    "node-modules": "^1.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

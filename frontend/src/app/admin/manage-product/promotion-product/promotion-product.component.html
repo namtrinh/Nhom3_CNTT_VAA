@@ -5,7 +5,7 @@
     <p></p>
     <select class="form-control" id="promotion" [(ngModel)]="selectedPromotionId" (change)="filterProducts()">
       <option value="" ngDefaultControl>-- All product --</option>
-      @for (promotions of promotion; track promotion) {
+      @for (promotions of promotion; track $index) {
         <option [value]="promotions.promotion_id">
           {{ promotions.pr_name }}
         </option>
@@ -29,15 +29,15 @@
     </tr>
     </thead>
     <tbody>
-      @for (product of products; track products) {
+      @for (product of products; track $index) {
         <tr>
           <td>{{product.product_id}}</td>
           <td>{{ product.name }}</td>
           <td>{{product.seotitle}}</td>
-          <td> @if (imgAvatars[product.product_id]) {
-            <img [src]="imgAvatars[product.product_id]"
+          <td>
+            <img [src]="product.image"
                  alt="{{ product.product_id }}" style="width:100px;height:100px">
-          }
+
           </td>
 
           <td>{{ product.price | number:'1.0-0' }}₫</td>

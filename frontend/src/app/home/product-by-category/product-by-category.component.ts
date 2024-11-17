@@ -22,6 +22,7 @@ export class ProductByCategoryComponent implements OnInit {
   category: Category = new Category()
   category_name !: string
   seotitle!: string | null;
+  imageUrl!:string;
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -41,33 +42,15 @@ export class ProductByCategoryComponent implements OnInit {
     if (seotitle === 'all') {
       this.productService.getAll().subscribe((data: any) => {
         this.products = data.result;
-        this.products.forEach((product) => {
-          this.getImageFromService(product.image, product.product_id);
-        });
+
       });
     } else {
       this.categoryService.getBySeoTitle(seotitle).subscribe((data: any) => {
         this.category = data.result;
         this.category_name = this.category.ct_name;
         this.products = this.category.products
-          this.products.forEach((product) => {
-          this.getImageFromService(product.image, product.product_id);
-        });
       });
     }
   }
 
-  private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], {type: 'image/*'});
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        (error) => {
-          console.error(error);
-        }
-      )
-    }
-  }
 }

@@ -2,11 +2,14 @@ package org.galaxy.backend.ServiceImpl;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
+import com.cloudinary.utils.ObjectUtils;
 import jakarta.persistence.EntityNotFoundException;
 
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Repository.ProductRepository;
+import org.galaxy.backend.Service.CloudinaryService;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +27,9 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private CloudinaryService cloudinaryService;
+
     public List<Product> findAllProductsWithPromotion() {
         return productRepository.findAllProductsWithPromotion();
     }
@@ -31,6 +37,7 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAllProductsWithoutPromotion() {
         return productRepository.findAllProductsWithoutPromotion();
     }
+
 
     public Product save(Product entity) {
         if (productRepository.existsByName(entity.getName())) {
@@ -43,11 +50,19 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
     }
 
+    @Transactional
     public void deleteById(String productId) {
-        if (!productRepository.existsById(productId)) {
-            throw new EntityNotFoundException("Product not found");
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new EntityNotFoundException("Product with ID " + productId + " not found"));
+
+        product.setCategory(null);
+        product.setPromotion(null);
+
+        if (product.getImage() != null && !product.getImage().isEmpty()) {
+            String publicId = product.getImage();
+            String deleteResult = cloudinaryService.deleteFile(publicId);
         }
-        productRepository.deleteById(productId);
+        productRepository.delete(product);
     }
 
     public Product editProduct(String product_id, Product product) {
@@ -55,7 +70,8 @@ public class ProductServiceImpl implements ProductService {
         return this.productRepository.save(product);
     }
 
-    public Product getBySeotitle(String seotitle) {
+    public Product getBySeotitle(String seotitle)
+    {
         return productRepository.getBySeotitle(seotitle);
     }
 
@@ -75,5 +91,9 @@ public class ProductServiceImpl implements ProductService {
 
     public List<Product> getByCategory(String category) {
         return productRepository.getByCategory(category);
+    }
+
+    public List<Product> searchProductsByName(String name) {
+        return productRepository.searchByNameOrCategory(name);
     }
 }

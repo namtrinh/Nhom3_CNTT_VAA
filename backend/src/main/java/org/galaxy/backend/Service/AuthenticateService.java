@@ -88,6 +88,9 @@ public class AuthenticateService {
         boolean authenticated = passwordEncoder.matches(authenticateRequest.getPassword(), users.getPassword());
         if (!authenticated) throw new AppException(ErrorCode.UNAUTHENTICATED);
 
+        if(users.getActivated() == false)
+            throw new AppException(ErrorCode.ACCOUNT_NOT_ACTIVATED);
+
         LocalDateTime now = LocalDateTime.now();
 
         if (users.getLastRequestTime() != null) {

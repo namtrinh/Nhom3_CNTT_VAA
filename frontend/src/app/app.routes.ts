@@ -26,14 +26,11 @@ import {PayFailComponent} from './payment/pay-fail/pay-fail.component';
 import {PaySuccessComponent} from './payment/pay-success/pay-success.component';
 import {MyInfComponent} from './home/detail-user/user-details.component';
 import {DetailProductComponent} from './home/detail-product/detail-product.component';
-
 import {ProductSaleComponent} from './home/product-sale/product-sale.component';
-
 import {AuthCodeComponent} from './auth/auth-code/auth-code.component';
 import {TestComponent} from './test/test.component';
 import {CartComponent} from './home/cart/cart.component';
 import {ProductByCategoryComponent} from './home/product-by-category/product-by-category.component';
-import {FooterComponent} from './home/footer/footer.component';
 import {AuthService} from './service/auth-service.service';
 import {_401Component} from './401/401.component';
 import {ProductExtendComponent} from './home/product-extend/product-extend.component';
@@ -47,6 +44,7 @@ import {RouteGuard} from "./route-guard.guard";
 import {Test1Component} from "./test/test1.component";
 import {ListOrderComponent} from "./admin/manage-invoice/list-order/list-order.component";
 import {OrderDetailComponent} from "./admin/manage-invoice/order-detail/order-detail.component";
+import {SearchProductComponent} from "./home/search-product/search-product.component";
 
 export const routes: Routes = [
 
@@ -73,6 +71,7 @@ export const routes: Routes = [
       {path: 'edit_my_inf/:user_id', component: EditMyInfComponent},
       {path: 'cart', component: CartComponent},
       {path: 'category/:seotitle', component: ProductByCategoryComponent},
+      {path: 'search/:name', component:SearchProductComponent},
     ]
   },
 

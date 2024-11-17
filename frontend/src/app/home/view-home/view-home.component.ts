@@ -9,6 +9,7 @@ import { ProductService } from '../../service/product-service.service';
 import { ProductByCategoryComponent } from "../product-by-category/product-by-category.component";
 import { FooterComponent } from "../footer/footer.component";
 import { ProductExtendComponent } from "../product-extend/product-extend.component";
+import {Product} from "../../model/product.model";
 
 @Component({
   selector: 'app-view-home',
@@ -20,6 +21,8 @@ import { ProductExtendComponent } from "../product-extend/product-extend.compone
 export class ViewHomeComponent implements OnInit {
   selectedCategory!: number;
   category_id: any;
+  name!:string;
+  products:Product[] = [];
 
   ngOnInit(): void {
     this.checktoken();
@@ -70,21 +73,23 @@ export class ViewHomeComponent implements OnInit {
     })
   }
 
-  showCategoryId(seotitle: string | null) {
+  search(){
 
-  /*  if (seotitle === null) {
-      setTimeout(() => {
-        this.showProduct = true;
-        window.location.reload();
-      }, 0);
-    } else {
-      setTimeout(() => {
-        this.showProduct = true;
-        window.location.reload();
-      },0);
+    if (this.name == null){
+      alert("Please input name !");
     }
+
+    this.productService.searchProduct(this.name).subscribe((data:any) => {
+      this.products = data.result;
+      console.log(this.products);
+        this.router.navigate(['/search',this.name])
+      setTimeout(() =>{
+        window.location.reload();
+      },0)
+    })
   }
 
-   */
-}
+  OnSubmit(){
+    this.search();
+  }
 }

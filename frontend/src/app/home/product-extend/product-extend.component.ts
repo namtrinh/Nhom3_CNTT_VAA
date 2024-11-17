@@ -21,6 +21,7 @@ export class ProductExtendComponent implements OnInit {
   size: number = 5;
   imgAvatars: { [key: string]: string } = {};
   showResetButton: boolean = false; // Track the visibility of the reset button
+  imageUrl!:string;
 
   constructor(private productService: ProductService, private imgService: ImageService, private router: Router) { }
 
@@ -46,13 +47,8 @@ export class ProductExtendComponent implements OnInit {
       if (newProducts.length > 0) {
         this.products.push(...newProducts);
       }
-
       // Check if maximum products have been loaded
       this.showResetButton = this.products.length >= this.totalItems;
-
-      this.products.forEach((product) => {
-        this.getImageFromService(product.image, product.product_id);
-      });
     });
   }
 
@@ -68,18 +64,5 @@ export class ProductExtendComponent implements OnInit {
     this.products = []; // Clear current products
     this.showResetButton = false; // Hide reset button
     this.getAlll(); // Fetch products again
-  }
-
-  private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName !== null && imageName !== undefined) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], { type: 'image/*' });
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        (error) => {
-          console.error(error);
-        });
-    } else { }
   }
 }

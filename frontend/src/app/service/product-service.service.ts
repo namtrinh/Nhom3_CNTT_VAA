@@ -24,11 +24,6 @@ export class ProductService {
 
   }
 
-  findAllProductsWithoutPromotion(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}/findAllProductsWithoutPromotion`)
-
-  }
-
   getById(product_id: number): Observable<Product> {
     return this.http.get<Product>(`${this.baseUrl}/${product_id}`);
   }
@@ -41,12 +36,12 @@ export class ProductService {
     return this.http.put(`${this.baseUrl}/${product_id}`, product);
   }
 
-  createProduct(product: Product): Observable<Object> {
+  createProduct(product:FormData): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, product);
   }
 
   deleteProduct(product_id: string): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${product_id}`);
+    return this.http.delete(`${this.baseUrl}/del/${product_id}`);
   }
 
   getAllByPage(page:number, size:number): Observable<Product[]>{
@@ -54,6 +49,12 @@ export class ProductService {
       .set('page', page)
       .set('size', size);
     return this.http.get<Product[]>(`${this.baseUrl}/page`,{params})
+  }
+
+  searchProduct(name:string):Observable<Product[]>{
+    const params = new HttpParams()
+      .set("name",name);
+    return this.http.get<Product[]>(`${this.baseUrl}/search`,{params})
   }
 
 }

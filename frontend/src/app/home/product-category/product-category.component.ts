@@ -20,6 +20,7 @@ export class ProductCategoryComponent implements OnInit{
   category:Category = new Category();
   products: Product[] = []
   imgAvatars: { [key: string]: string } = {};
+  imageUrl!:string;
     constructor(private categoryService: CategoryService,
                 private imgService: ImageService) {
     }
@@ -33,23 +34,9 @@ export class ProductCategoryComponent implements OnInit{
         this.categorys = data.result;
         this.categorys.forEach(data =>{
           this.products = data.products;
-          this.products.forEach(data =>{
-            this.getImageFromService(data.image, data.product_id);
-          })
         })
       })
   }
 
-  private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName !== null && imageName !== undefined) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], { type: 'image/*' });
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        (error) => {
-          console.error(error);
-        });
-    } else { }
-  }
+
 }

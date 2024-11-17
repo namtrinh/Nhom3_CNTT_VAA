@@ -3,7 +3,7 @@
 •	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8Òÿƒ«2J$a8f5d386-4d7c-4b8b-94b1-67ed346b1fd0
 œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8Òÿƒ«2J$0d09657e-1be8-4f95-b03e-fcdff8d4c453
 ™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8Òÿƒ«2J$bfcc4e37-f631-466e-a638-6022f75b8ff0
-›	java:S116("YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8Ò¨ê¨«2J$64674dbb-b530-449f-a85c-d30ef514f227
+›	java:S116'"YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8Ò¨ê¨«2J$64674dbb-b530-449f-a85c-d30ef514f227
 {
 java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8×ÿƒ«2J$946a92ea-374b-4d97-984c-c63c73099f1e
 s

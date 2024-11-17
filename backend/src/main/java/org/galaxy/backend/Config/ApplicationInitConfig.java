@@ -41,6 +41,7 @@ public class ApplicationInitConfig {
                         .email("cunnconn01@gmail.com")
                         .password(passwordEncoder.encode("12345678"))
                         .roles(roles)
+                        .activated(true)
                         .build();
 
                 userRepository.save(user);

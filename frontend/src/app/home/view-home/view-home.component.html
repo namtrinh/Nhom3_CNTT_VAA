@@ -7,10 +7,14 @@
     </div>
 
     <div class="search">
+      <form (ngSubmit)="OnSubmit()" >
       <label for="search">
-        <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
-        <input type="search" id="search" style="border:none;" placeholder="What do you need ?" style="outline:none">
+        <button type="submit" style="background: none; border: none; cursor: pointer;">
+          <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
+        </button>
+        <input type="search" id="search" name="name" [(ngModel)]="name" style="border:none;" placeholder="What do you need ?" style="outline:none">
       </label>
+      </form>
     </div>
 
     <div class="cart" [routerLink]="['/cart']">

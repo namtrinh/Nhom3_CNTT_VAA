@@ -4,7 +4,9 @@
     <input class="search-input" type="search" [(ngModel)]="searchTerm" placeholder="Tìm kiếm..."
            (ngModelChange)="filterProducts()"/>
 
-    <button class="btn btn-primary">Import</button>
+    <button class="btn btn-primary">
+      <input type="file" name="file" >
+      Import</button>
   </div>
 
   <div class="form-group">
@@ -12,7 +14,7 @@
     <p></p>
     <select class="form-control" id="category" [(ngModel)]="selectedCategoryId" (change)="filterProducts()">
       <option value=''>-- All product --</option>
-      @for (categories of category; track categories.category_id) {
+      @for (categories of category; track $index) {
         <option [value]="categories.category_id">
           {{ categories.ct_name }}
         </option>
@@ -35,15 +37,15 @@
     </tr>
     </thead>
     <tbody>
-      @for (product of products; track product.product_id) {
+      @for (product of products; track $index) {
         <tr>
           <td>{{ product.product_id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ product.seotitle }}</td>
-          <td> @if (imgAvatars[product.product_id]) {
-            <img [src]="imgAvatars[product.product_id]"
-                 alt="{{ product.product_id }}" style="width:100px;height:100px">
-          }
+          <td>
+            <img [src]="product.image"
+                 alt="{{ product.name }}" style="width:100px;height:100px">
+
           </td>
           <td>{{ product.quantity }}</td>
           <td>{{ product.price | number:'1.0-0' }} ₫</td>

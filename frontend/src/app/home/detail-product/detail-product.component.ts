@@ -30,6 +30,7 @@ export class DetailProductComponent implements OnInit {
   showPay: boolean = false;
   cart: Cart = new Cart();
   isVisible: boolean = false;
+  imageUrl!:string;
 
   constructor(
     private cartService: CartService,
@@ -50,20 +51,11 @@ export class DetailProductComponent implements OnInit {
     this.productService.getBySeoTitle(this.seo).subscribe((data: any) => {
       this.product = data.result;
       if (this.product && this.product.product_id) {
-        this.getImageFromService(this.product.image, this.product.product_id);
+        this.imageUrl = this.product.image;
       }
     });
   }
 
-  private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], {type: 'image/*'});
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        });
-    }
-  }
 
   addToCart() {
     const token = localStorage.getItem('auth_token') as string;

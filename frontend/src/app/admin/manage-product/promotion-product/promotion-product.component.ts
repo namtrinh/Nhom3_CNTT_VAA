@@ -20,7 +20,8 @@ export class PromotionProductComponent implements OnInit {
   selectedPromotionId: string = '';
   imgAvatars: { [key: string]: string } = {};
   products: Product[] = []
-  promotion: Promotion[] = []
+  promotion: Promotion[] = [];
+  imageUrl!:string;
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -36,27 +37,13 @@ export class PromotionProductComponent implements OnInit {
     this.productService.findAllProductsWithPromotion().subscribe((data: any) => {
       if (this.selectedPromotionId) {
         this.products = data.result.filter((product: Product) => product.promotion?.promotion_id === this.selectedPromotionId);
-        this.products.forEach((products) => {
-          this.getImageFromService(products.image, products.product_id);
-        })
       } else {
         this.products = data.result;
-        this.products.forEach((products) => {
-          this.getImageFromService(products.image, products.product_id);
-        })
       }
     })
   }
 
-  private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], {type: 'image/*'});
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        })
-    }
-  }
+
 
   getPromotion() {
     this.promotionService.getAll().subscribe((data: any) => {

@@ -2,6 +2,7 @@ package org.galaxy.backend.Controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.Repository.ProductRepository;
+import org.galaxy.backend.Service.CloudinaryService;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,9 @@ public class ProductController {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private CloudinaryService cloudinaryService;
 
     @GetMapping
     public ApiResponse<Page<Product>> findAll(@RequestParam int page, @RequestParam int size) {
@@ -84,13 +89,37 @@ public class ProductController {
                 .build();
     }
 
-    @PostMapping
-    public ApiResponse<Product> createProduct(@RequestBody Product product) {
+
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ApiResponse<Product> createProduct(
+            @RequestParam Map<String, String> params,
+            @RequestParam(value = "image", required = false) MultipartFile image)
+            throws IOException {
+
+        Product product = new Product();
+
+        String fileUrl = cloudinaryService.uploadFile(image);
+        product.setImage(fileUrl);
+
+        product.setName(params.get("name"));
+        product.setSeotitle(params.get("seotitle"));
+        product.setQuantity(Integer.parseInt(params.get("quantity")));
+        product.setPrice(Double.parseDouble(params.get("price")));
+        product.setDescription(params.get("description"));
+        product.setTime_created(Timestamp.valueOf(params.get("time_created")));
+
+        String categoryValue = params.get("category");
+        Category category = new Category();
+        category.setCategory_id(categoryValue);
+        product.setCategory(category);
+
+        product.setPromotion(null);
         return ApiResponse.<Product>builder()
                 .code(200)
                 .result(productService.save(product))
                 .build();
     }
+
 
     @PutMapping(value = "/{product_id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ApiResponse<Product> updateProduct(
@@ -100,11 +129,17 @@ public class ProductController {
             throws IOException {
 
         Product product = productService.findById(product_id);
-        if (image != null && !image.isEmpty()) {
+    /*    if (image != null && !image.isEmpty()) {
             String imagePath = "C:/My_Documents/KI_7/DACN/firefly-galaxy/" + uploadDir + image.getOriginalFilename();
             image.transferTo(new File(imagePath));
             product.setImage(image.getOriginalFilename());
         }
+       */
+        if (image != null && !image.isEmpty()) {
+            String fileUrl = cloudinaryService.uploadFile(image);
+            product.setImage(fileUrl);
+        }
+
         product.setName(params.get("name"));
         product.setSeotitle(params.get("seotitle"));
         product.setQuantity(Integer.parseInt(params.get("quantity")));
@@ -129,21 +164,15 @@ public class ProductController {
                 .build();
     }
 
-    @DeleteMapping(value = "/{product_id}")
+    @DeleteMapping(value = "/del/{product_id}")
     public ApiResponse<String> deleteProduct(@PathVariable String product_id) {
-        try {
             productService.deleteById(product_id);
             return ApiResponse.<String>builder()
                     .result("Product has been deleted")
                     .code(200)
                     .build();
-        } catch (Exception e) {
-            return ApiResponse.<String>builder()
-                    .result("Error deleting product: " + e.getMessage())
-                    .code(500)
-                    .build();
-        }
     }
+
 
     @PostMapping("/excel/upload")
     public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
@@ -161,4 +190,21 @@ public class ProductController {
         message = "Please upload an excel file!";
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
     }
+
+    @GetMapping(value = "/search")
+    public ApiResponse<List<Product>> searchProduct(@RequestParam String name) {
+        return ApiResponse.<List<Product>>builder()
+                .code(200)
+                .result(productService.searchProductsByName(name))
+                .build();
+    }
+
 }
+
+ /*      if (image != null && !image.isEmpty()) {
+            String imagePath = "C:/My_Documents/KI_7/DACN/firefly-galaxy/" + uploadDir + image.getOriginalFilename();
+            image.transferTo(new File(imagePath));
+            product.setImage(image.getOriginalFilename());
+        }
+
+   */

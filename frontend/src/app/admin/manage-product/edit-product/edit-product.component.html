@@ -3,7 +3,7 @@
   <form class="form" (ngSubmit)="OnSubmit()" enctype="multipart/form-data">
     <div>
       <div class="form-group text-center">
-        <img [src]="imgAvatar" alt="Avatar Preview" style="max-width: 200px; max-height: 200px;">
+        <img [src]="imageUrl" alt="Avatar Preview" style="max-width: 200px; max-height: 200px;">
         <input type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*"
                style="width:50vh;display:flex;margin:0 auto;">
       </div>
@@ -33,7 +33,7 @@
         <label for="promotion">Danh mục</label>
         <select class="form-control" id="promotion" [(ngModel)]="product.promotion.promotion_id" name="promotion">
           <option [ngValue]="null">-- Select promotion --</option>
-          @for (promotions of promotion; track promotion) {
+          @for (promotions of promotion; track $index) {
             <option [ngValue]="promotions.promotion_id">{{ promotions.pr_name }}</option>
           }
         </select>
@@ -43,7 +43,7 @@
         <label for="categorySelect">Danh mục</label>
         <select class="form-control" id="categorySelect" [(ngModel)]="product.category.category_id" name="category">
           <option value="" disabled>-- Select category --</option>
-          @for (categories of category; track category) {
+          @for (categories of category; track $index) {
             <option [value]="categories.category_id">{{ categories.ct_name }}</option>
           }
         </select>

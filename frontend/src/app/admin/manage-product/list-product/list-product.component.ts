@@ -30,6 +30,7 @@ export class ListProductComponent implements OnInit {
   category: Category[] = []
   selectedCategoryId: string = '';
   isLoading: boolean = false;
+  imageUrl:any;
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -53,15 +54,14 @@ export class ListProductComponent implements OnInit {
     this.isLoading = true;
     this.productService.getAllByPage(this.page, this.size).subscribe((data: any) => {
       const newProducts = data.result.content;
+      console.log(newProducts);
+      // Thêm các sản phẩm vào danh sách
       this.products.push(...newProducts);
-      newProducts.forEach((product: any) => {
-        this.getImageFromService(product.image, product.product_id);
-      });
       this.isLoading = false;
     });
   }
 
-  private getImageFromService(imageName: string, product_id: string): void {
+ /* private getImageFromService(imageName: string, product_id: string): void {
     if (imageName) {
       this.imgService.getImage(imageName).subscribe(
         (data: any) => {
@@ -71,12 +71,13 @@ export class ListProductComponent implements OnInit {
     }
   }
 
+  */
+
   deletePr(product_id: string) {
-    if (window.confirm("Are you sure want to delete this product ?")) {
-      this.productService.deleteProduct(product_id).subscribe(
-        (data: any) => {
-          this.filterProducts();
-        });
+    if (window.confirm("Are you sure you want to delete this product")) {
+      this.productService.deleteProduct(product_id).subscribe(() => (
+        window.location.reload()
+      ));
     }
   }
 
