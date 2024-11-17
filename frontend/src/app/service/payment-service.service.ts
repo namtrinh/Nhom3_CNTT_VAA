@@ -12,7 +12,7 @@ export class VNPayService {
 
     submitOrder(amount: number, orderInfo: string): Observable<any> {
         const params = new HttpParams()
-            .set('amount', amount.toString())
+            .set('amount', amount)
             .set('orderInfo', orderInfo);
 
         return this.http.post(`${this.apiUrl}/submitOrder`, null, { params });

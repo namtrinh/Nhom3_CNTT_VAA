@@ -80,9 +80,6 @@ export class CartComponent implements OnInit {
     })
   }
 
-
-
-
   increaseQuantity(carts: Cart) {
     if (carts.product_quantity < this.maxQuantity) {
       carts.product_quantity++;
@@ -125,7 +122,7 @@ export class CartComponent implements OnInit {
 
   updateTotalPrice(): void {
     this.totalPrice = this.selectedProducts.reduce((sum, selectedCart) => {
-      return sum + (selectedCart.product_quantity * selectedCart.product_price);
+      return sum + (selectedCart.product_quantity * selectedCart.product.price);
     }, 0);
 
     this.totalQuantityProduct = this.selectedProducts.reduce((sum, selectedCart) => {
