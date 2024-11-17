@@ -77,25 +77,10 @@ export class CartComponent implements OnInit {
   getAllByUserId() {
     this.cartService.getByUserId(this.user_Id).subscribe((data: any) => {
       this.cart = data.result;
-      this.cart.forEach((cart) => {
-        this.getImageFromService(cart.product.image, cart.cart_id)
-      })
     })
   }
 
-  private getImageFromService(imageName: any, product_id: string): void {
-    if (imageName) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], {type: 'image/*'});
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        },
-        error => {
-          console.log(error);
-        });
-    } else {
-    }
-  }
+
 
 
   increaseQuantity(carts: Cart) {

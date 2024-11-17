@@ -17,24 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @RequestMapping(value = "/api/images")
 public class ImageController {
-    @Value("${upload.dir}")
-    private String uploadDir;
 
-    @GetMapping(value = "/{imageName}")
-    public ResponseEntity<Resource> getImage(@PathVariable String imageName) {
-        try {
-            Path imagePath = Paths.get(uploadDir).resolve(imageName);
-            Resource resource = new UrlResource(imagePath.toUri());
-
-            if (resource.exists() || resource.isReadable()) {
-                return ResponseEntity.ok().body(resource);
-            } else {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-            }
-        } catch (MalformedURLException ex) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
-    }
 
     @Autowired
     private CloudinaryService cloudinaryService;

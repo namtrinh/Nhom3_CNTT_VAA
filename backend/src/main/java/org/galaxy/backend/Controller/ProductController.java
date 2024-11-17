@@ -29,9 +29,6 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @Value("${upload.dir}")
-    private String uploadDir;
-
     @Autowired
     private ProductRepository productRepository;
 

@@ -1,4 +1,19 @@
 
-”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“OJ$9315dcb1-dfe8-4f85-b7d0-ba1083e85532
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“OJ$f96c649b-8c60-4af4-b322-3b0110b9d417
 …
-java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8´Ğ·Ø³2J$80d668a0-3e2f-4873-b8cd-43e4d3c23c8a
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´Ğ·Ø³2J$468f62eb-64e8-4959-aec8-127f93ef891d
+~
+java:S1128";Remove this unused import 'java.net.MalformedURLException'.(ªËŞˆ8ÚÅóÚ³2J$d727f796-ddcf-441b-b700-4ec4a5360bf4
+r
+java:S1128"/Remove this unused import 'java.nio.file.Path'.(×²êÂ8ÚÅóÚ³2J$14ff3517-b2ee-4674-ab21-d5f7402cb22d
+s
+java:S1128"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8ÚÅóÚ³2J$c458588a-ac69-498f-b5bf-dccf318dcc97
+l
+java:S1128	"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8ßÆôÚ³2
+„
+java:S1128
+"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ8ÚÅóÚ³2J$c021b23d-ea8c-46df-bcc4-b9738fa1ee5a
+Œ
+java:S1128"DRemove this unused import 'org.springframework.core.io.UrlResource'.(ÿÙØ†ÿÿÿÿÿ8ÚÅóÚ³2J$9f80ed03-8245-489b-8eca-ddc479bb9b63
+ˆ
+java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8ÚÅóÚ³2J$49551fe7-1ce5-46f1-b3af-8a68f7b3d4d5

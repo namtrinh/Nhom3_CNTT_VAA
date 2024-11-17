@@ -26,7 +26,7 @@
 
         <div class="imgsp" >
             <a href="" target="_blank"[routerLink]="['/detail-product',carts.product.seotitle]">
-                <img [src]="imgAvatars[carts.cart_id]" loading="lazy">
+                <img [src]="carts.product.image" loading="lazy">
             </a>
             <div>
                 <button class="delete-btn" (click)="deleteCart(carts.cart_id)">Xóa</button>

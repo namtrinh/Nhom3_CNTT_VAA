@@ -32,9 +32,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Value("${upload.dir}")
-    private String uploadDir;
-
     @GetMapping(value = "/myinf")
     @ResponseStatus(value = HttpStatus.OK)
     public ApiResponse<UsersResponse> getInf() {
