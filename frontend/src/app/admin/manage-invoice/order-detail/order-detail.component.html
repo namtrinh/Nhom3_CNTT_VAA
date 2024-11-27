@@ -7,12 +7,13 @@
       <div class="row mb-3">
         <div class="order-inf col-md-6">
           <p><strong>Order ID:</strong> {{ order.order_id }}</p>
-          <p><strong>Email:</strong> {{ order.user.email }}</p>
-          <p><strong>Username:</strong> {{ order.user.username }}</p>
+          <p><strong>Phone number:</strong> {{ order.phoneNumber }}</p>
+          <p><strong>Email:</strong> {{ order.email }}</p>
+          <p><strong>Username:</strong> {{ order.username }}</p>
           <p><strong>Address:</strong> {{ order.address }}</p>
         </div>
         <div class="order-inf col-md-6">
-          <p ><strong>Time Created:</strong> {{ order.time_created }}</p>
+          <p><strong>Time Created:</strong> {{ order.time_created }}</p>
           <p><strong>Total Quantity:</strong> {{ orderDetail.total_amount }}</p>
         </div>
       </div>
@@ -48,7 +49,8 @@
       <br><br>
 
       <div class="order-total">
-        <p><strong>Total Price:</strong> <span style="color: red;font-weight: 550"> {{ orderDetail.total_price | number:'1.0-0' }}
+        <p><strong>Total Price:</strong> <span
+          style="color: red;font-weight: 550"> {{ orderDetail.total_price | number:'1.0-0' }}
           ₫</span></p>
       </div>
     </div>

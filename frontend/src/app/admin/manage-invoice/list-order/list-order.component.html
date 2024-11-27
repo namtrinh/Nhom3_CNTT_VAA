@@ -15,7 +15,7 @@
         <tr [routerLink]="['/admin/detail-order',orders.orderDetail_id]" (click)="sendData(orders)">
           <td> {{ orders.order_id}}</td>
           <td> {{ orders.payment_id }}</td>
-          <td>{{ orders.user.email }}</td>
+          <td>{{ orders.email }}</td>
           <td>{{ orders.user.address}}</td>
           <td> {{ orders.time_created }}</td>
 

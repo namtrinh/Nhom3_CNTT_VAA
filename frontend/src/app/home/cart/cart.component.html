@@ -15,8 +15,8 @@
             data-bs-toggle="modal"
             [attr.data-bs-target]="checkCount ? '#exampleModal' : null"
             (click)="paymentNow()">
-      <span *ngIf="countProduct">Payment ({{ countProduct }})</span>
-      <span *ngIf="!countProduct">Payment</span>
+      <span *ngIf="countProduct">Buy Now ({{ countProduct }})</span>
+      <span *ngIf="!countProduct">Buy Now</span>
     </button>
   </div>
 </div>
@@ -24,10 +24,12 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content shadow-lg rounded-4">
-      <div class="modal-header border-0">
-        <h5 class="modal-title text-primary" id="exampleModalLabel">Thông tin thanh toán</h5>
+      <div class="modal-header border-0 d-flex justify-content-center">
+        <h2 class="modal-title text-primary" id="exampleModalLabel">Thông tin thanh toán</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
+
       <div class="modal-body">
         <form #userInf="ngForm" (ngSubmit)="payment()">
 
@@ -112,7 +114,7 @@
 
           <div class="text-center">
             <button [disabled]="userInf.invalid" type="submit"
-                    class="btn btn-success btn-lg w-100 py-3 rounded-pill mt-4">
+                    class="btn btn-warning btn-lg w-100 py-3 rounded-pill mt-4">
               Thanh toán
             </button>
           </div>

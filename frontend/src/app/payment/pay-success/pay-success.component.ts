@@ -79,7 +79,7 @@ export class PaySuccessComponent implements OnInit {
 
     this.orderService.create(this.order).subscribe((data: any) => {
       console.log(data.result);
-        //sessionStorage.removeItem('myArray');
+        sessionStorage.removeItem('myArray');
     });
   }
 
