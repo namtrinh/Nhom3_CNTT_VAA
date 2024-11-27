@@ -27,18 +27,19 @@ public class ApplicationInitConfig {
     @Bean
     ApplicationRunner applicationRunner(UserRepository userRepository) {
         return args -> {
-            if (userRepository.findByEmail("cunnconn01@gmail.com").isEmpty()) {
+            if (userRepository.findByEmail("admin2@gmail.com").isEmpty()) {
+                Roles adminRole = roleRepository.findByName(PredefinedRole.ADMIN_ROLE)
+                        .orElseGet(() -> roleRepository.save(Roles.builder()
+                                .name(PredefinedRole.ADMIN_ROLE)
+                                .description("Admin role")
+                                .build()));
 
-                Roles adminRole = roleRepository.save(Roles.builder()
-                        .name(PredefinedRole.ADMIN_ROLE)
-                        .description("Admin role")
-                        .build());
 
                 var roles = new HashSet<Roles>();
                 roles.add(adminRole);
 
                 User user = User.builder()
-                        .email("cunnconn01@gmail.com")
+                        .email("admin2@gmail.com")
                         .password(passwordEncoder.encode("12345678"))
                         .roles(roles)
                         .activated(true)
@@ -47,6 +48,7 @@ public class ApplicationInitConfig {
                 userRepository.save(user);
                 log.warn("account admin has been created, please change it");
             }
+
         };
     }
 }

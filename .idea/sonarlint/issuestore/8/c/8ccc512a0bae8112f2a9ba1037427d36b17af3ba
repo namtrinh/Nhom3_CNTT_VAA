@@ -1,12 +1,12 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùñ»™şÿÿÿÿJ$f39355fd-1d73-4459-99b4-03b071894467
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùñ»™şÿÿÿÿ8ã¹§û¶2J$7aa9188a-24c3-4663-b9c4-1713ed9f0300
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ç¹§û¶2J$9b804d35-6849-4e96-a0e9-6f284714a0bf
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ç¹§û¶2J$5fcb41ee-3f5b-48b7-9e19-52c2ca61d99b
+›
+java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(Ú×‚8ç¹§û¶2J$bb879ee0-7b30-40aa-b651-8d98e5033341
+›
+java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(´µ³İ8ç¹§û¶2J$a57cf9f6-5fe7-41e6-9b8d-dca181117403
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$55f71bbe-dee8-4ea6-b327-d13b3b9b847b
-~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$6b0241b4-776d-4a25-836e-da262e41d7c2
-”
-java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(Ú×‚J$2af9faa6-4c27-4bba-b68c-d3a12251eb5a
-”
-java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(´µ³İJ$68acb7ed-7909-46e2-9913-89494423fc90
-w
-java:S6437*"6Revoke and change this password, as it is compromised.(Æ·ÎíûÿÿÿÿJ$a166d328-1015-446f-8322-f1b33887d605
+java:S6437+"6Revoke and change this password, as it is compromised.(Æ·Îíûÿÿÿÿ8ğ¹§û¶2J$22e713f8-8d90-4228-9ce6-0074b1a03a03
