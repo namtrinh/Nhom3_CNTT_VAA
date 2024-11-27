@@ -9,6 +9,7 @@ import {CommonModule} from '@angular/common';
 import {VNPayService} from "../../service/payment-service.service";
 import {Router, RouterLink} from "@angular/router";
 import {SharedDataService} from "../../service/shared-data.service";
+import {Order} from "../../model/order.model";
 
 @Component({
   selector: 'app-cart',
@@ -33,7 +34,7 @@ export class CartComponent implements OnInit {
   item: any;
   maxQuantity: number = 10;
   imgAvatars: { [key: string]: string } = {};
-  carts!: Cart;
+  OrderItem:Order = new Order();
   totalQuantityProduct!: number
   selectedProducts: any[] = [];
   countProduct!: number;
@@ -62,6 +63,12 @@ export class CartComponent implements OnInit {
           user: this.selectedProducts[0].user,
           totalPrice: this.totalPrice,
           totalQuantityProduct: this.totalQuantityProduct,
+          userInf: {
+            username: this.OrderItem.username,
+            phoneNumber: this.OrderItem.phoneNumber,
+            email: this.OrderItem.email,
+            address: this.OrderItem.address + this.ward + this.district  + this.city
+          },
           products: this.selectedProducts.map(cart => {
             return ({
               product: cart.product
@@ -129,4 +136,17 @@ export class CartComponent implements OnInit {
       return sum + selectedCart.product_quantity;
     }, 0);
   }
+  checkCount: boolean = false;
+  city: any;
+  district: any;
+  ward: any;
+  paymentNow(): void {
+    if (this.selectedProducts.length === 0) {
+      alert('Vui lòng chọn ít nhất một sản phẩm để thanh toán!');
+      this.checkCount = false;
+    } else {
+      this.checkCount = true;
+    }
+  }
+
 }

@@ -12,11 +12,12 @@ import {OrderService} from "../../service/order-service.service";
 import {OrderDetailService} from "../../service/orderDetail-service.service";
 import {SharedDataService} from "../../service/shared-data.service";
 import {User} from "../../model/user.model";
+import {CurrencyPipe, DecimalPipe} from "@angular/common";
 
 @Component({
   selector: 'app-pay-success',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CurrencyPipe, DecimalPipe],
   templateUrl: './pay-success.component.html',
   styleUrls: ['./pay-success.component.scss']
 })
@@ -34,7 +35,7 @@ export class PaySuccessComponent implements OnInit {
 
   product: Product[] = [];
   promotion: Promotion[] = [];
-
+  userInf: Order = new Order();
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
               private orderDetailService: OrderDetailService,
@@ -55,6 +56,8 @@ export class PaySuccessComponent implements OnInit {
       };
       this.user = this.selectedProduct.user;
       this.product = this.selectedProduct.products
+      this.userInf = this.selectedProduct.userInf;
+      console.log(this.userInf);
      // this.promotion = this.selectedProduct.promotions;
 
       this.createOrderDetail();
@@ -69,9 +72,14 @@ export class PaySuccessComponent implements OnInit {
     this.order.user = {
       user_id: this.user.user_id,
     };
+    this.order.username = this.userInf.username;
+    this.order.email = this.userInf.email;
+    this.order.phoneNumber = this.userInf.phoneNumber;
+    this.order.address = this.userInf.address;
+
     this.orderService.create(this.order).subscribe((data: any) => {
       console.log(data.result);
-        sessionStorage.removeItem('myArray');
+        //sessionStorage.removeItem('myArray');
     });
   }
 

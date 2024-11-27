@@ -1,75 +1,184 @@
 <h1 style="text-align: center;color:rgb(206, 44, 22);font-weight:900;padding-top:20px">Cart</h1>
 
-
-
-<form class="payment form p-4 border rounded bg-light shadow">
-  <div class="mb-4 d-flex justify-content-between align-items-center">
-    <h2 class="mb-0">Total Price: </h2>
-    @if (totalPrice){
-    <p class="h4 text-danger mb-0"> {{ totalPrice | number: '1.0-0' }}₫</p>
-    }
+<div class="fixed-bottom custom-bg shadow-lg py-2">
+  <div class="container d-flex justify-content-center align-items-center p-1 rounded">
+    <div class="d-flex justify-content-center align-items-center text-center">
+      <h2 class="mb-0 text-dark me-2">Total Price:</h2>
+      <div *ngIf="totalPrice" class="text-end">
+        <p class="h4 text-danger mb-0">{{ totalPrice | number: '1.0-0' }}₫</p>
+      </div>
+    </div>
   </div>
 
-  <div class="d-flex justify-content-center">
-    <button class="btn btn-info btn-lg" (click)="payment()">Payment @if (countProduct){({{countProduct}})}</button>
+  <div class="container d-flex justify-content-center align-items-center mt-1 p-1 rounded">
+    <button class="btn btn-primary btn-lg w-75 p-2 rounded-pill text-white"
+            data-bs-toggle="modal"
+            [attr.data-bs-target]="checkCount ? '#exampleModal' : null"
+            (click)="paymentNow()">
+      <span *ngIf="countProduct">Payment ({{ countProduct }})</span>
+      <span *ngIf="!countProduct">Payment</span>
+    </button>
   </div>
-</form>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content shadow-lg rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-primary" id="exampleModalLabel">Thông tin thanh toán</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #userInf="ngForm" (ngSubmit)="payment()">
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Họ và Tên</label>
+            <input [(ngModel)]="OrderItem.username" type="text" class="form-control form-control-lg" id="name" name="name" ngModel required
+                   placeholder="Nhập tên của bạn"
+                   [ngClass]="{'is-invalid': userInf.controls['name']?.invalid && userInf.controls['name']?.touched}">
+            <div class="invalid-feedback"
+                 *ngIf="userInf.controls['name']?.errors?.['required'] && (userInf.controls['name']?.touched || userInf.controls['name']?.dirty)">
+              Vui lòng nhập họ và tên.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Số điện thoại</label>
+            <input [(ngModel)]="OrderItem.phoneNumber" type="tel" class="form-control form-control-lg" id="phone" name="phone" ngModel required
+                   placeholder="Nhập số điện thoại"
+                   [ngClass]="{'is-invalid': userInf.controls['phone']?.invalid && userInf.controls['phone']?.touched}">
+            <div class="invalid-feedback"
+                 *ngIf="userInf.controls['phone']?.errors?.['required'] && (userInf.controls['phone']?.touched || userInf.controls['phone']?.dirty)">
+              Vui lòng nhập số điện thoại.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input [(ngModel)]="OrderItem.email" type="email" class="form-control form-control-lg" id="email" name="email" ngModel required
+                   placeholder="Nhập email của bạn"
+                   [ngClass]="{'is-invalid': userInf.controls['email']?.invalid && userInf.controls['email']?.touched}">
+            <div class="invalid-feedback"
+                 *ngIf="userInf.controls['email']?.errors?.['required'] && (userInf.controls['email']?.touched || userInf.controls['email']?.dirty)">
+              Vui lòng nhập email.
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="city" class="form-label">Thành phố</label>
+              <input [(ngModel)]="city" type="text" class="form-control form-control-lg" id="city" name="city" ngModel required
+                     placeholder="Nhập thành phố"
+                     [ngClass]="{'is-invalid': userInf.controls['city']?.invalid && userInf.controls['city']?.touched}">
+              <div class="invalid-feedback"
+                   *ngIf="userInf.controls['city']?.errors?.['required'] && (userInf.controls['city']?.touched || userInf.controls['city']?.dirty)">
+                Vui lòng nhập thành phố.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="district" class="form-label">Quận</label>
+              <input [(ngModel)]="district" type="text" class="form-control form-control-lg" id="district" name="district" ngModel required
+                     placeholder="Nhập quận"
+                     [ngClass]="{'is-invalid': userInf.controls['district']?.invalid && userInf.controls['district']?.touched}">
+              <div class="invalid-feedback"
+                   *ngIf="userInf.controls['district']?.errors?.['required'] && (userInf.controls['district']?.touched || userInf.controls['district']?.dirty)">
+                Vui lòng nhập quận.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="ward" class="form-label">Phường</label>
+              <input [(ngModel)]="ward" type="text" class="form-control form-control-lg" id="ward" name="ward" ngModel required
+                     placeholder="Nhập phường"
+                     [ngClass]="{'is-invalid': userInf.controls['ward']?.invalid && userInf.controls['ward']?.touched}">
+              <div class="invalid-feedback"
+                   *ngIf="userInf.controls['ward']?.errors?.['required'] && (userInf.controls['ward']?.touched || userInf.controls['ward']?.dirty)">
+                Vui lòng nhập phường.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address" class="form-label">Địa chỉ</label>
+            <textarea [(ngModel)]="OrderItem.address" class="form-control form-control-lg" id="address" name="address" ngModel required rows="3"
+                      placeholder="Nhập địa chỉ của bạn"
+                      [ngClass]="{'is-invalid': userInf.controls['address']?.invalid && userInf.controls['address']?.touched}"></textarea>
+            <div class="invalid-feedback"
+                 *ngIf="userInf.controls['address']?.errors?.['required'] && (userInf.controls['address']?.touched || userInf.controls['address']?.dirty)">
+              Vui lòng nhập địa chỉ.
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button [disabled]="userInf.invalid" type="submit"
+                    class="btn btn-success btn-lg w-100 py-3 rounded-pill mt-4">
+              Thanh toán
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 @for (carts of cart; track carts.cart_id) {
-<div class="container">
-    <li class="product-item" >
+  <div class="container">
+    <li class="product-item">
 
       <div class="checkbox-container">
         <input type="checkbox" (change)="toggleSelection(carts)" [(ngModel)]="carts.selected">
       </div>
 
-        <div class="imgsp" >
-            <a href="" target="_blank"[routerLink]="['/detail-product',carts.product.seotitle]">
-                <img [src]="carts.product.image" loading="lazy">
+      <div class="imgsp">
+        <a href="" target="_blank" [routerLink]="['/category/{{product.category}}/',carts.product.seotitle]">
+          <img [src]="carts.product.image" loading="lazy">
+        </a>
+        <div>
+          <button class="delete-btn" (click)="deleteCart(carts.cart_id)">Xóa</button>
+        </div>
+      </div>
+      <div class="infosp">
+        <div class="name-price">
+          <div class="name-container">
+            <a href="" class="product-item__name" [routerLink]="['/detail-product',carts.product.seotitle]"
+               loading="lazy">
+              {{ carts.product.name }}
             </a>
-            <div>
-                <button class="delete-btn" (click)="deleteCart(carts.cart_id)">Xóa</button>
-            </div>
+          </div>
+          <div class="price-area">
+            <span>{{ carts.product.price | number:'1.0-0' }} ₫</span>
+          </div>
         </div>
-        <div class="infosp">
-            <div class="name-price">
-                <div class="name-container" >
-                    <a href="" class="product-item__name" [routerLink]="['/detail-product',carts.product.seotitle]"  loading="lazy">
-                        {{carts.product.name}}
-                    </a>
-                </div>
-              <div class="price-area">
-                <span>{{carts.product.price | number:'1.0-0' }} ₫</span>
-              </div>
-            </div>
-            <div class="product-note">
-                <div class="product-note__btn">
-                    <span>Online giá rẻ quá</span>
-                    <span class="product-note__labelExpand">(Xem chi tiết)</span>
-                </div>
-                <div class="product-note__list">
-                    <ul>
-                        <li>Giá và khuyến mãi có thể kết thúc sớm</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="choosenumber">
-                <div class="buttons_added">
-                    <button class="minus is-form" type="button" value="-" (click)="decreaseQuantity(carts)">-</button>
-
-                    <!-- Trường nhập số lượng sản phẩm -->
-                    <input aria-label="quantity" [(ngModel)]="carts.product_quantity" class="input-qty"
-                        [max]="maxQuantity" [min]="1" type="number" readonly>
-
-                    <!-- Nút tăng số lượng -->
-                    <button class="plus is-form" type="button" value="+" (click)="increaseQuantity(carts)">+</button>
-
-                </div>
-            </div>
-
+        <div class="product-note">
+          <div class="product-note__btn">
+            <span>Online giá rẻ quá</span>
+            <span class="product-note__labelExpand">(Xem chi tiết)</span>
+          </div>
+          <div class="product-note__list">
+            <ul>
+              <li>Giá và khuyến mãi có thể kết thúc sớm</li>
+            </ul>
+          </div>
         </div>
+        <div class="choosenumber">
+          <div class="buttons_added">
+            <button class="minus is-form" type="button" value="-" (click)="decreaseQuantity(carts)">-</button>
+
+            <!-- Trường nhập số lượng sản phẩm -->
+            <input aria-label="quantity" [(ngModel)]="carts.product_quantity" class="input-qty"
+                   [max]="maxQuantity" [min]="1" type="number" readonly>
+
+            <!-- Nút tăng số lượng -->
+            <button class="plus is-form" type="button" value="+" (click)="increaseQuantity(carts)">+</button>
+
+          </div>
+        </div>
+
+      </div>
 
     </li>
-</div>
+  </div>
 }

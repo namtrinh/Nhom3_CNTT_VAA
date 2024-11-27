@@ -1,10 +1,10 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Ğÿƒ«2J$9150fb1b-8860-4bdd-b4d3-ef52278b8c6a
-•	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8Òÿƒ«2J$a8f5d386-4d7c-4b8b-94b1-67ed346b1fd0
-œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8Òÿƒ«2J$0d09657e-1be8-4f95-b03e-fcdff8d4c453
-™	java:S116%"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8Òÿƒ«2J$bfcc4e37-f631-466e-a638-6022f75b8ff0
-›	java:S116'"YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8Ò¨ê¨«2J$64674dbb-b530-449f-a85c-d30ef514f227
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Ğÿƒ«2J$a2e72597-0cbe-496e-8bc7-82279ace141c
+•	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8Òÿƒ«2J$d84d46d6-a587-4301-b072-7d1275c700c6
+œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8Òÿƒ«2J$7e8c8198-2b5e-4344-b855-b426f5566e91
+™	java:S116+"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8Òÿƒ«2J$63348963-e601-4a15-b127-74c73497df9d
+›	java:S116-"YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8Ò¨ê¨«2J$c4c1bfd5-64c3-4ac5-9926-b0107762f8ed
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8×ÿƒ«2J$946a92ea-374b-4d97-984c-c63c73099f1e
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8×ÿƒ«2J$b67c091b-a26a-49aa-873d-5e4839b9ba3a
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8×ÿƒ«2J$5c0c843a-e12e-4709-a663-80d28a0d6d25
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8×ÿƒ«2J$63a4bec4-775b-45a0-8520-12b35164fdd7

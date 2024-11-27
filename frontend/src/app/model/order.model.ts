@@ -9,4 +9,7 @@ export class Order {
   time_created!: string;
   orderDetail_id!:string;
   user!: Partial<User>;
+  username!:string;
+  email!:string;
+  phoneNumber!:string;
 }

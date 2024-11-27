@@ -31,6 +31,12 @@ public class Order {
     @ManyToOne(cascade = CascadeType.MERGE)
     private User user;
 
+    private String username;
+
+    private String phoneNumber;
+
+    private String email;
+
     private String address;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
