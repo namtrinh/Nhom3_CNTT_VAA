@@ -1,0 +1,8 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†’ßÿÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+\
+java:S1126"AReplace this if-then-else statement by a single return statement.(ªˆ“€ÿÿÿÿÿ
+
+java:S2178"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(ªˆ“€ÿÿÿÿÿ

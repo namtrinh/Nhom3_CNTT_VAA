@@ -34,10 +34,8 @@ export class DetailProductComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private imgService: ImageService,
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
-    private vnPayService: VNPayService,
   ) {
   }
 
@@ -55,7 +53,6 @@ export class DetailProductComponent implements OnInit {
       }
     });
   }
-
 
   addToCart() {
     const token = localStorage.getItem('auth_token') as string;
@@ -81,29 +78,6 @@ export class DetailProductComponent implements OnInit {
     });
   }
 
-  submitOrder() {
-    this.totalprice = this.product.price * this.quantity;
-    this.inf = this.product.name;
-    this.vnPayService.submitOrder(this.totalprice, this.inf).subscribe(data => {
-     window.location.href = data.vnpayUrl;
-      localStorage.setItem('productId', this.product.product_id);
-      console.log(localStorage.getItem('productId'));
-    }, (error: any) => {
-      console.log(error);
-    });
-  }
-
-  increaseQuantity() {
-    if (this.quantity <= this.product.quantity) {
-      this.quantity++;
-    }
-  }
-
-  decreaseQuantity() {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
-  }
 
   showToast() {
     this.isVisible = true;

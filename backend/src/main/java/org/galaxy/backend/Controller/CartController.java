@@ -23,7 +23,10 @@ public class CartController {
     public ApiResponse<List<Cart>> findAllByUserId(@RequestParam("user_id") String user_id) {
         List<Cart> cartList = cartService.findAllByUserId(user_id);
         cartList.sort((a, b) -> b.getTime_add().compareTo(a.getTime_add()));
-        return ApiResponse.<List<Cart>>builder().code(200).result(cartList).build();
+        return ApiResponse.<List<Cart>>builder()
+                .code(200)
+                .result(cartList)
+                .build();
     }
 
     @PostMapping

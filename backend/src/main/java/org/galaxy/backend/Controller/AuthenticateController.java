@@ -25,7 +25,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/login")
 @RequiredArgsConstructor
-public class AuthenticateController {
+public class  AuthenticateController {
     @Autowired
     private AuthenticateService authenticateService;
 

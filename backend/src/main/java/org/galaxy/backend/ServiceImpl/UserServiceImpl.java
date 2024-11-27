@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
             throw new AppException(ErrorCode.USERS_EXISTED);
         }
         if (hasSpecialCharacter(usersRequest.getPassword())) {
-            throw new AppException(ErrorCode.INVALID_PASSWORD); // Ném ngoại lệ nếu không có ký tự đặc biệt
+            throw new AppException(ErrorCode.INVALID_PASSWORD);
         }
         User user = usersMapper.toUsersDTO(usersRequest);
 

@@ -62,36 +62,10 @@
             </tbody>
           </table>
         </div>
-
-        <div class="offers">
-          <ng-container *ngIf="showQuantitySelection">
-            <div class="quantity-selection mt-4">
-              <div class="input-group">
-                <button class="btn btn-secondary" type="button" (click)="decreaseQuantity()">-</button>
-                <input aria-label="quantity" [(ngModel)]="quantity" class="form-control text-center"
-                       [min]="1" type="number" style="max-width: 70px;" readonly>
-                <button class="btn btn-secondary" type="button" (click)="increaseQuantity()">+</button>
-              </div>
-              <p class="total-price"
-                 style="font-size: 1.2rem; padding-top: 30px; font-weight: 700; color: rgb(255, 60, 42);">
-                Total price: {{ product.price * quantity | currency:'symbol':'' }} VND
-              </p>
-            </div>
-          </ng-container>
-        </div>
-
         <div class="d-grid gap-2 mt-3">
           <button type="button" class="btn btn-warning" (click)="addToCart()" id="liveToastBtn">
             Add To Cart
           </button>
-          <ng-container *ngIf="!showQuantitySelection; else confirmButton">
-            <button type="button" class="btn btn-danger" (click)="showQuantitySelection = true">
-              Buy Now
-            </button>
-          </ng-container>
-          <ng-template #confirmButton>
-            <button type="button" class="btn btn-primary" (click)="submitOrder()">Confirm</button>
-          </ng-template>
         </div>
       </div>
     </div>

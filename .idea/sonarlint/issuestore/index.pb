@@ -143,10 +143,6 @@ m
 Mbackend/src/main/java/org/galaxy/backend/Repository/PermissionRepository.java,c\f\cffc7547c4ee656013a6de3730b8e9ca0d407767
 l
 <backend/src/main/java/org/galaxy/backend/Model/Category.java,1\b\1b791c6f6f8e60646a8713186d2fef5dabf882c8
-s
-Cbackend/src/main/java/org/galaxy/backend/Model/GoodReceiveNote.java,7\c\7c8bb62f5c8daef4021ae28d0e58d8577d894290
-y
-Ibackend/src/main/java/org/galaxy/backend/Model/DetailGoodReceiveNote.java,d\2\d26cb9562ba8c02aff770e7bb6d932daa1530248
 }
 Mbackend/src/main/java/org/galaxy/backend/Controller/PermissionController.java,d\c\dc6982e5bc4878a31b7cf2878ed02f3aa0f4b789
 w
@@ -391,14 +387,6 @@ i
 9frontend/src/app/admin/dashboard/dashboard.component.html,c\7\c79551d6743751b6e1447e16ae33305fd0bba28e
 i
 9frontend/src/app/admin/dashboard/dashboard.component.scss,5\7\57f251ad2d44c77331e774328a89aad223c14118
-m
-=backend/src/main/java/org/galaxy/backend/Model/Statistic.java,4\7\478bfa7ce985a67ad45a72a9b2b13698171fc52e
-|
-Lbackend/src/main/java/org/galaxy/backend/Repository/StatisticRepository.java,d\5\d5a1dd6f7d0c4a50218dcc38fa265c4c8c95f5fc
-v
-Fbackend/src/main/java/org/galaxy/backend/Service/StatisticService.java,0\2\02706b9eade52e62cbefbbbf010c2c1345575fa7
-|
-Lbackend/src/main/java/org/galaxy/backend/Controller/StatisticController.java,4\e\4eb9db1e2869b3c010f5097560c5833db87633fe
 e
 5frontend/src/app/service/statistic-service.service.ts,c\c\cc13da537b35821fd15b5a7d16af2b75352186a3
 Y
@@ -455,3 +443,9 @@ u
 Ebackend/src/main/java/org/galaxy/backend/Config/CloudinaryConfig.java,4\5\45d616c0da8303bffe06d7005ebf218b31546cc1
 w
 Gbackend/src/main/java/org/galaxy/backend/Service/CloudinaryService.java,a\1\a1de5230717605851a71091074a152e17d9b02ae
+€
+Pbackend/src/main/java/org/galaxy/backend/Config/JwtAuthenticationEntryPoint.java,1\0\102d1ea0169df5a9ddd528ad22d95408269a04af
+‚
+Rbackend/src/main/java/org/galaxy/backend/Service/VerifyUser/VerifyUserService.java,1\d\1dc54f45b6ab626ef2d9ac1409281ebcd0bf6c15
+…
+Ubackend/src/main/java/org/galaxy/backend/Service/VerifyUser/VerifyCodeGeneration.java,1\c\1ce28ec552ad9cb5567dbeb47bdfc2ffb8f7c19f

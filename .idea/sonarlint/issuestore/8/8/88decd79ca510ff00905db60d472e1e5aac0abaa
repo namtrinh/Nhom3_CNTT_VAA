@@ -1,23 +1,23 @@
 
-r	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8¯òˆĞ³2
-r	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8¯òˆĞ³2
-r	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8¯òˆĞ³2
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯òˆĞ³2
-h	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8²òˆĞ³2
-q
-java:S1192J"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8²òˆĞ³2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2
-_
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2
-_
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2
+˜	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8¯òˆĞ³2J$562dcb8c-db02-43da-9867-3fe04ff4d40f
+˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8¯òˆĞ³2J$033f7c35-aabd-4e31-9591-07ac75d119c4
+˜	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8¯òˆĞ³2J$b8d5756c-94aa-4533-b4db-9ede1f2210a5
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯òˆĞ³2J$805fee66-49fe-432e-9a8c-e2545fa8cd98
+	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8²òˆĞ³2J$19f2f62c-afe4-423e-bbfb-52f71af0d5fb
 —
-java:S6204V"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¾òˆĞ³2
-G	java:S106f"+Replace this use of System.out by a logger.(…Çº8ÀòˆĞ³2
-L	java:S106i"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8ÁòˆĞ³2
+java:S1192J"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8²òˆĞ³2J$6ce11c3b-3781-4033-ad76-a123b07aa23a
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$f4777418-07db-4172-a085-29f2174f42d3
+…
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$70c2cc4f-1e15-4795-aeba-eb261c859663
+…
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$3f370994-acfc-453a-bb3c-a361a9927bc7
+½
+java:S6204V"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¾òˆĞ³2J$42e51f17-340e-4203-ba54-c2785ca70992
+m	java:S106f"+Replace this use of System.out by a logger.(…Çº8ÀòˆĞ³2J$198c5641-2c35-4e64-827e-f2e67f1d213c
+r	java:S106i"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8ÁòˆĞ³2J$cc1412b7-d07b-4597-a59b-0b82540c70a7
+½
+java:S6204w"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÂòˆĞ³2J$2116b450-6507-46b1-8dc2-52fd7d8d6c75
+m	java:S106Œ"+Replace this use of System.out by a logger.(ƒÒ	8ÅòˆĞ³2J$a778d8d4-6ac3-4f4c-b46d-9fa98479fa66
 —
-java:S6204w"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÂòˆĞ³2
-G	java:S106Œ"+Replace this use of System.out by a logger.(ƒÒ	8ÅòˆĞ³2
-q
-java:S1128"ORemove this unused import 'org.galaxy.backend.Service.VerifyUser.EmailService'.(”Øşßüÿÿÿÿ8ÅòˆĞ³2
+java:S1128"ORemove this unused import 'org.galaxy.backend.Service.VerifyUser.EmailService'.(”Øşßüÿÿÿÿ8ÅòˆĞ³2J$e45a5d18-502c-4a88-bcd8-abdbaf0940a0

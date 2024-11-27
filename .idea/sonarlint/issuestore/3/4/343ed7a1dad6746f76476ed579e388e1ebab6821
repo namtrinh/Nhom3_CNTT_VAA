@@ -1,2 +1,4 @@
 
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…3
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…3J$10e22aef-d9b0-4e21-bb53-950c2392bf0b
+œ
+java:S1128"TRemove this unused import 'org.springframework.data.jpa.repository.query.Procedure'.(ÿøÑåúÿÿÿÿ8¶Àþª´2J$5a9cf0cd-944b-480a-bbd1-def0864f6ca1

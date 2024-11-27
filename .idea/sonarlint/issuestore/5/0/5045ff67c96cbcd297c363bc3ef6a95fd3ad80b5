@@ -1,8 +1,8 @@
 
-“	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÕ™‚8¼¢æñª2J$b8a5841c-1f32-4563-9bff-40be752f9dda
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8Õåæñª2J$0c08ce3d-e288-4c8a-b994-d0002c58c086
-¢	java:S116"`Rename this field "TOKEN_EXPIRATION_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í§¢Ÿ8Í¢æñª2J$e609bb40-f041-4fc2-8c3c-a354c960460f
-™	java:S116"WRename this field "MAX_REQUESTS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ£„Ñ8Ð¢æñª2J$3f3bf101-6fa6-4e7f-858b-e615bbcce993
-Ÿ	java:S116"^Rename this field "REQUEST_WINDOW_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ­Ø#8Ñ¢æñª2J$8269dc38-c88a-4206-a37e-5d2b40bf6edd
+“	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÕ™‚8¼¢æñª2J$62501ee1-c685-4e05-ad0f-652f967e719a
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8Õåæñª2J$30e60442-bfb4-4cde-b374-46f1ba689db5
+¢	java:S116"`Rename this field "TOKEN_EXPIRATION_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í§¢Ÿ8Í¢æñª2J$167607d0-0817-4a06-83e9-f15e54832e34
+™	java:S116 "WRename this field "MAX_REQUESTS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ£„Ñ8Ð¢æñª2J$10f78c5c-2371-404f-ab21-8efc41ec2210
+Ÿ	java:S116!"^Rename this field "REQUEST_WINDOW_TIME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ­Ø#8Ñ¢æñª2J$b4e8d033-9c91-4d53-974a-c962c50e942e
 d
-java:S1170"!Make this final field static too.(Ÿ£„Ñ8Ò¢æñª2J$4b1b495a-f8ce-4ad6-9f67-00b02d8fd418
+java:S1170 "!Make this final field static too.(Ÿ£„Ñ8Ò¢æñª2J$1bb6a784-3627-4a9b-b04f-d837dcf185e1
