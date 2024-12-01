@@ -43,7 +43,4 @@ public class Product {
     @ManyToOne
     @JsonIgnoreProperties("product")
     private Promotion promotion;
-
-    @Column(name = "clazz_", insertable = false, updatable = false)
-    private String clazz;  // Cột phân biệt giữa các loại sản phẩm
 }

@@ -1,8 +1,2 @@
 
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38›§Ú˜¬2J$f210d244-0040-492e-9efb-86cd147c9843
-r
-java:S1128"*Remove this unused import 'java.sql.Time'.(Üå»‰şÿÿÿÿ8øçá˜¬2J$22712ae3-4610-4d5d-b4b2-1b79ad7c88a7
-q
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8‰¥™¬2J$d2e3ba6f-c405-4248-80f5-93e9e1fba4fc
-|
-java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8ùçá˜¬2J$f12673b3-c854-45a4-a7e2-2e148165963d
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38›§Ú˜¬2J$efd450d2-9276-4fde-884a-461b7c7cbc54

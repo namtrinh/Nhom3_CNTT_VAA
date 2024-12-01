@@ -1,19 +1,19 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡ÔÚÿÿÿÿÿ8İ¿Ó°2J$f6610c42-126c-4c19-a89d-d6ccfc257ba6
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡ÔÚÿÿÿÿÿ8ƒÃ‘–¸2J$dc2a8e6d-1bdc-4573-abff-2bb6b2d0ec67
 “
-java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(Şî¯…8ß¿Ó°2J$a45055a8-ef49-4ece-91ff-c47b41c6ed9f
+java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(Şî¯…8ƒÃ‘–¸2J$300e26b5-88c7-4266-8362-1b6282a8c8cf
 m
-java:S1444"*Make this "public static TYPE" field final(Şî¯…8ã¿Ó°2J$47d14806-79cb-4779-8f09-24ab7616f17d
-	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(ò–Ş‹ÿÿÿÿÿ8ã¿Ó°2J$13454748-8ae6-450d-b6f7-9edca4f72e71
+java:S1444"*Make this "public static TYPE" field final(Şî¯…8‡Ã‘–¸2J$1e7f667c-9f5b-49b5-9659-50ac1e690f19
+	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(ò–Ş‹ÿÿÿÿÿ8¥Ì––¸2J$7550ac7d-0458-44ef-8007-1a280ac656ae
 ’
-java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şî¯…8ç¿Ó°2J$0369be3d-a183-4ff8-8d7b-fc4ab03b791c
+java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şî¯…8ˆÃ‘–¸2J$ef4ac145-a4fc-493f-886a-dde9082dc18b
 š
-java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒĞ‹àùÿÿÿÿ8ç¿Ó°2J$2d27a035-ece2-432e-adc7-b5c3d6c8a092
+java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒĞ‹àùÿÿÿÿ8‰Ã‘–¸2J$5271525d-62b5-48b7-b7d4-107c55de992e
 ˜
-java:S3008"PRename this field "SHEET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šİú˜üÿÿÿÿ8ç¿Ó°2J$fdbc22e2-798a-46d9-9529-a973877dfdb2
+java:S3008"PRename this field "SHEET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šİú˜üÿÿÿÿ8‰Ã‘–¸2J$ee33942b-6433-4e2b-9748-aaa85320183b
 |
-java:S1118":Add a private constructor to hide the implicit public one.(©şüT8ğ¿Ó°2J$057c5f60-0eee-4070-a3b4-c0528781fdb4
+java:S1118":Add a private constructor to hide the implicit public one.(©şüT8¥Ì––¸2J$81708c42-09db-4ac5-b211-d1af8634af6f
 „
-java:S1126"AReplace this if-then-else statement by a single return statement.(Úı÷°8õ¿Ó°2J$fac9f3ad-d93d-4234-a771-088cd9cb9861
+java:S1126"AReplace this if-then-else statement by a single return statement.(Úı÷°8’Ã‘–¸2J$66c42f87-44c9-4219-99e0-1304e071287a
 l
-java:S1905B")Remove this unnecessary cast to "double".(¿şçÏ8»‘¿Ó°2J$c1a74bb8-08ee-438e-b75e-b526999388af
+java:S1905B")Remove this unnecessary cast to "double".(¿şçÏ8¥Ì––¸2J$9dddf887-ab01-47f3-8a3a-a4c560c0753a

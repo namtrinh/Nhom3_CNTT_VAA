@@ -19,6 +19,7 @@ public interface OrderRepository extends JpaRepository<Order, String> {
     @Query(value = "SELECT * FROM orders  ORDER BY time_created DESC", nativeQuery = true)
     Page<Order> findAllSortedByTime(Pageable pageable);
 
-    @Query(value = "select * from orders where orders.time_created between :startDate and :endDate", nativeQuery = true)
+    @Query(value = "select * from orders where orders.time_created between :startDate and :endDate " +
+            "AND orders.status = 'Completed'", nativeQuery = true)
     List<Order> findByTime_createdBetween(@Param("startDate") String startDate, @Param("endDate") String endDate);
 }

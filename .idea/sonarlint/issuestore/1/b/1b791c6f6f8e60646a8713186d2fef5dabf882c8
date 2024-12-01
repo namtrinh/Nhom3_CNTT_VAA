@@ -1,9 +1,9 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ù§×à¯2
-r	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8ü§×à¯2
-s	java:S116"RRename this field "ct_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´‘ðÍøÿÿÿÿ8ü§×à¯2
-r	java:S116"VRename this field "ct_seotitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÙ—‘8ü§×à¯2
-U
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8þ§×à¯2
-M
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8þ§×à¯2
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ù§×à¯2J$67457c92-b2ab-4d96-a9aa-63f149dbd43c
+˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8ü§×à¯2J$ba45808e-7fbd-4922-89c7-126ac0ca6dd2
+™	java:S116"RRename this field "ct_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´‘ðÍøÿÿÿÿ8ü§×à¯2J$7fda6c3b-e913-494c-825d-aa3e6b3d108e
+˜	java:S116"VRename this field "ct_seotitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÙ—‘8ü§×à¯2J$f0830b6f-5c61-44c6-b163-b74be2ca4fb0
+{
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8þ§×à¯2J$8cf5d1c4-35ea-473e-aef2-d104618e0ca1
+s
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8þ§×à¯2J$ae3c2862-8f30-4356-b5e2-3cec74b9b85d

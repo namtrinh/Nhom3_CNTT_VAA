@@ -75,7 +75,7 @@ export class PaySuccessComponent implements OnInit {
     this.order.email = this.userInf.email;
     this.order.phoneNumber = this.userInf.phoneNumber;
     this.order.address = this.userInf.address;
-    this.order.status = 'Success';
+    this.order.status = 'Completed';
 
     this.orderService.create(this.order).subscribe((data: any) => {
       console.log(data.result);

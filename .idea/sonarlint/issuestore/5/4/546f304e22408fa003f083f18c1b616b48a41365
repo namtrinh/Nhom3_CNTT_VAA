@@ -1,8 +1,0 @@
-
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æ¤ÞÇúÿÿÿÿJ$2facc8ef-2123-4c6e-8767-dcca44a28f70
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8«Š—½·2J$5b61eb73-7328-42d8-a8bd-fc80336b2166
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8«Š—½·2J$72acdaa7-5398-4db5-92ce-fc5e35b5dd29
-´
-java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(‚öå¹øÿÿÿÿ8›ò—½·2J$366bdc80-7f0f-4535-b888-2a7076e179f9

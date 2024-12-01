@@ -32,7 +32,7 @@ public class Category {
 
     private String poster;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     @JsonIgnoreProperties("category")
     private Set<Product> products;
 }

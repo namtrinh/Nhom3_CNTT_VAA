@@ -28,8 +28,10 @@ export class ListCategoryComponent implements OnInit {
   }
 
   delete(category_id: string) {
-    this.categoryService.deleteCategory(category_id).subscribe((data: any) => {
-      this.getAll();
-    })
+    if(window.confirm('Are you sure you want to delete this category?')) {
+      this.categoryService.deleteCategory(category_id).subscribe((data: any) => {
+        this.getAll();
+      })
+    }
   }
 }
