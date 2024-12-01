@@ -21,9 +21,11 @@ export class CreateProductComponent implements OnInit {
   checkproduct: any;
   product: Product = new Product();
   categorys: Category[] = [];
-  categoryId!: number;
+  categoryId : string = '';
   selectedFile: File | null = null;
   imgAvatar!: string;
+  default: string = '';
+
 
   constructor(
     public productService: ProductService,

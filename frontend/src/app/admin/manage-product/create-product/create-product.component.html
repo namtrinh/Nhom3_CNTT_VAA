@@ -1,51 +1,52 @@
 <div class="container">
-    <form #create_product="ngForm" (ngSubmit)="OnSubmit()" class="p-4 border rounded shadow">
-        <h2 class="text-center mb-3">Create New Product</h2>
+  <form #create_product="ngForm" (ngSubmit)="OnSubmit()" class="form border rounded shadow-lg">
+    <h2 class="text-center mb-4 text-primary">Create New Product</h2>
 
-      <div class="form-group text-center">
-        <img [src]="imgAvatar" alt="Avatar Preview" style="max-width: 200px; max-height: 200px;">
-        <input type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*"
-               style="width:50vh;display:flex;margin:0 auto;">
-      </div>
+    <div class="form-group text-center mb-4">
+      <img [src]="imgAvatar" alt="Avatar Preview" class="img-fluid rounded-circle"
+           style="max-width: 200px; max-height: 200px;">
+      <input type="file" class="form-control mt-3" (change)="onFileSelected($event)" accept="image/*"
+             style="width: 50%; margin: 0 auto; border-radius: 8px;">
+    </div>
 
-        <div class="form-group mb-3">
-            <label for="name">Product Name</label>
-            <input class="form-control" type="text" id="name" name="name" placeholder="Enter product name"
-                #name="ngModel" [(ngModel)]="product.name" required>
-        </div>
+    <div class="form-group">
+      <input class="form-control" type="text" id="name" name="name" placeholder="Enter product name"
+             #name="ngModel" [(ngModel)]="product.name" required>
+    </div>
 
-        <div class="form-group mb-3">
-            <label for="seotitle">SEO Title</label>
-            <input class="form-control" type="text" id="seotitle" name="seotitle" placeholder="Enter SEO title"
-                #seotitle="ngModel" [(ngModel)]="product.seotitle" required>
-        </div>
+    <div class="form-group">
+      <input class="form-control" type="text" id="seotitle" name="seotitle" placeholder="Enter SEO title"
+             #seotitle="ngModel" [(ngModel)]="product.seotitle" required>
+    </div>
 
-        <div class="form-group mb-3">
-            <label for="quantity">Quantity</label>
-            <input class="form-control" type="number" id="quantity" name="quantity" placeholder="Enter quantity"
-                #quantity="ngModel" [(ngModel)]="product.quantity" required>
-        </div>
+    <div class="form-group ">
+      <input class="form-control" type="number" id="quantity" name="quantity" placeholder="Enter quantity"
+             #quantity="ngModel" [(ngModel)]="product.quantity" required>
+    </div>
 
-        <div class="form-group mb-3">
-            <label for="price">Price</label>
-            <input class="form-control" type="number" id="price" name="price" placeholder="Enter price"
-                #price="ngModel" [(ngModel)]="product.price" required>
-        </div>
+    <!-- Price -->
+    <div class="form-group ">
+      <input class="form-control" type="number" id="price" name="price" placeholder="Enter price"
+             #price="ngModel" [(ngModel)]="product.price" required>
+    </div>
 
-        <div class="form-group mb-4">
-            <label for="categorySelect">Category</label>
-            <select class="form-control" id="categorySelect" name="category" [(ngModel)]="categoryId">
-                <option value="" disabled>-- Select Category --</option>
-              @for (category of categorys; track $index){
-                <option [value]="category.category_id">{{ category.ct_name }}</option>
-              }
-            </select>
-        </div>
+    <div class="form-group mb-4">
+      <select class="form-control" id="categorySelect" name="category" [(ngModel)]="categoryId">
+        <option Value='' disabled>-- Select Category --</option>
+        @for (category of categorys; track $index) {
+          <option [value]="category.category_id">{{ category.ct_name }}</option>
+        }
+      </select>
+    </div>
 
-        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-    </form>
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary btn-lg" style="border-radius: 50px; padding: 12px 30px;">
+        Submit
+      </button>
+    </div>
+  </form>
 
-  @if (checkproduct){
-    <p class="text-danger text-center mt-3">{{checkproduct}}</p>
+  @if (checkproduct) {
+    <p class="text-danger text-center mt-3">{{ checkproduct }}</p>
   }
 </div>

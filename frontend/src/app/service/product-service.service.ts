@@ -51,9 +51,10 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.baseUrl}/page`,{params})
   }
 
-  searchProduct(name:string):Observable<Product[]>{
+  searchProduct(name:string, category:string):Observable<Product[]>{
     const params = new HttpParams()
-      .set("name",name);
+      .set("name",name)
+      .set("category", category)
     return this.http.get<Product[]>(`${this.baseUrl}/search`,{params})
   }
 

@@ -1,8 +1,6 @@
 <!-- promotion-edit.component.html -->
 <div class="container mt-5">
   <form (ngSubmit)="onSubmit()" class="p-4 border rounded shadow" novalidate>
-    <h2 class="mb-4">Update Promotion Program</h2>
-
     <div class="mb-3">
       <label for="pr_name" class="form-label">Program Name:</label>
       <input type="text" id="pr_name" class="form-control" [(ngModel)]="promotion.pr_name" name="pr_name" required>

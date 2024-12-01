@@ -27,5 +27,5 @@ public interface ProductService {
 
     List<Product> getByCategory(String category);
 
-    List<Product> searchProductsByName(String name);
+    List<Product> searchProductsByName(String name, String category);
 }

@@ -93,7 +93,8 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.getByCategory(category);
     }
 
-    public List<Product> searchProductsByName(String name) {
-        return productRepository.searchByNameOrCategory(name);
+
+    public List<Product> searchProductsByName(String name, String category) {
+        return productRepository.searchByNameOrCategory(name, category);
     }
 }

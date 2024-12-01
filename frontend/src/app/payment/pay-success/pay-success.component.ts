@@ -29,17 +29,14 @@ export class PaySuccessComponent implements OnInit {
   order: Order = new Order();
   orderDetail: OrderDetail = new OrderDetail();
   user: User = new User();
-  totalQuantity!: number;
   selectedProduct: any
-  totalQuantityProduct!: number;
 
   product: Product[] = [];
   promotion: Promotion[] = [];
   userInf: Order = new Order();
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
-              private orderDetailService: OrderDetailService,
-              private sharedDataService: SharedDataService) {
+              private orderDetailService: OrderDetailService) {
   }
 
   ngOnInit(): void {
@@ -55,7 +52,9 @@ export class PaySuccessComponent implements OnInit {
         totalQuantityProduct: 0
       };
       this.user = this.selectedProduct.user;
-      this.product = this.selectedProduct.products
+      this.product = this.selectedProduct.products;
+      console.log(this.product);
+
       this.userInf = this.selectedProduct.userInf;
       console.log(this.userInf);
      // this.promotion = this.selectedProduct.promotions;
@@ -76,10 +75,11 @@ export class PaySuccessComponent implements OnInit {
     this.order.email = this.userInf.email;
     this.order.phoneNumber = this.userInf.phoneNumber;
     this.order.address = this.userInf.address;
+    this.order.status = 'Success';
 
     this.orderService.create(this.order).subscribe((data: any) => {
       console.log(data.result);
-        sessionStorage.removeItem('myArray');
+        sessionStorage.removeItem("myArray");
     });
   }
 
@@ -88,9 +88,10 @@ export class PaySuccessComponent implements OnInit {
     this.orderDetail.total_price = this.selectedProduct.totalPrice;
 
     this.orderDetail.products = this.product
+    console.log(this.orderDetail.products);
     const updatedProducts: Product[] = [];
     this.orderDetail.products?.forEach((selectedProduct: any) => {
-      if (selectedProduct.product && selectedProduct.product.product_id) {
+      if (selectedProduct.product) {
         const newProduct: Product = {
           category: new Category(),
           description: '',
@@ -102,7 +103,7 @@ export class PaySuccessComponent implements OnInit {
           selected: false,
           seotitle: '',
           time_created: '',
-          product_id: selectedProduct.product.product_id,
+          product_id: selectedProduct.product,
         };
         updatedProducts.push(newProduct);
       }

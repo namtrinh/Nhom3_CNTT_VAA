@@ -21,16 +21,18 @@ export class ListProductComponent implements OnInit {
 
   searchTerm: string = '';
   products: Product[] = [];
-  imgAvatars: { [key: string]: string } = {};
-  clicksale: boolean = false;
   product: any;
   page: number = 0;
   size: number = 20;
   promotion: Promotion = new Promotion();
   category: Category[] = []
-  selectedCategoryId: string = '';
   isLoading: boolean = false;
-  imageUrl:any;
+  imageUrl: any;
+  private categories: any;
+  categoryId:string = '';
+  message:string = '';
+  showMessage: boolean = false;
+
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -39,7 +41,17 @@ export class ListProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllCategory()
-    this.filterProducts()
+    this.filterProducts();
+  }
+
+  loadProducts(): void {
+    if (this.searchTerm == null) {
+      this.products = [];
+      this.filterProducts();
+    } else {
+      this.products = [];
+      this.searchProduct(this.searchTerm, this.categoryId);
+    }
   }
 
   @HostListener('window:scroll', [])
@@ -54,24 +66,11 @@ export class ListProductComponent implements OnInit {
     this.isLoading = true;
     this.productService.getAllByPage(this.page, this.size).subscribe((data: any) => {
       const newProducts = data.result.content;
-      console.log(newProducts);
       // Thêm các sản phẩm vào danh sách
       this.products.push(...newProducts);
       this.isLoading = false;
     });
   }
-
- /* private getImageFromService(imageName: string, product_id: string): void {
-    if (imageName) {
-      this.imgService.getImage(imageName).subscribe(
-        (data: any) => {
-          const blob = new Blob([data], {type: 'image/*'});
-          this.imgAvatars[product_id] = URL.createObjectURL(blob);
-        })
-    }
-  }
-
-  */
 
   deletePr(product_id: string) {
     if (window.confirm("Are you sure you want to delete this product")) {
@@ -86,4 +85,20 @@ export class ListProductComponent implements OnInit {
       this.category = data.result
     })
   }
+
+  searchProduct(searchTerm: string, categoryId: string): void {
+    this.isLoading = true;
+    this.productService.searchProduct(searchTerm, categoryId).subscribe((data: any) => {
+      this.products = data.result;
+      if (this.products == null || this.products.length == 0) {
+        this.showMessage = true;
+        this.message = 'Cannot find any products!'
+      }else{
+        this.showMessage = false;
+      }
+      console.log(this.products);
+      this.isLoading = false;
+    });
+  }
+
 }

@@ -1,23 +1,19 @@
 
-“	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8¬Ú³2J$f382e501-9773-4915-b86f-e51f362612be
-˜	java:S117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8¬Ú³2J$691da2e4-ca00-4c77-a779-ed83440f78d4
-™	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8¬Ú³2J$7f7a7894-b9c6-43b5-8c31-301fbfae7b5f
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8¬Ú³2J$0a744785-1f96-4c1f-b216-c5694c21a561
+“	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8¬Ú³2J$110416aa-b26f-4235-89b1-c9c04ef0c228
+˜	java:S117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8¬Ú³2J$1b69622f-441a-42a4-b23f-d09cb5dbff02
+™	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8¬Ú³2J$b47f3ad9-6f97-4069-a1f1-5e4c94e83458
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8¬Ú³2J$4bfdd167-d8cb-4cfd-80e5-6f4311633517
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8®¬Ú³2J$e6f03b2c-d6b7-4c63-8256-daedadded22e
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8®¬Ú³2J$aa97be62-075f-4683-9841-91bd1ffba2f4
 …
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8°¬Ú³2J$6f39d86c-960d-469f-944c-d8c1c68b1159
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8°¬Ú³2J$7a43df0c-e072-470d-8388-a9e1229079a8
 …
-java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8°¬Ú³2J$cb38b809-119f-4f51-99f1-9331c865ef7b
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8°¬Ú³2J$e1e55fd6-0527-434f-add5-847951ccd364
 ¯
-java:S1130^"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8ã¬Ú³2J$42b78f3c-bb0c-4cf8-ba09-755fde55887b
+java:S1130^"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8ã¬Ú³2J$39d4c86e-c03f-4f63-b6f8-321b1e5e6a98
 ¯
-java:S1130~"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8–±ßÚ³2J$9c4f9f4a-22ff-4a57-88ba-dc2b3fc0b525
-	java:S125"<This block of commented-out lines of code should be removed.(…² ö8å¬Ú³2J$d51c2728-b40a-4f1d-8bf6-8abfd7e914f8
+java:S1130~"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8–±ßÚ³2J$5f173a26-5023-4836-b32c-6ff90d1b92b9
+	java:S125"<This block of commented-out lines of code should be removed.(…² ö8å¬Ú³2J$e249b29e-bc70-43d7-8b28-b9c13cbf2d42
 j
-java:S1452¯"&Remove usage of generic wildcard type.(Á’Û¯8ë¬Ú³2J$2ee1fdfd-b81f-495a-9e98-4d6680c62261
-	java:S125É"<This block of commented-out lines of code should be removed.(…² ö8ï¬Ú³2J$28c7657a-e182-45d4-925f-058c43a9d91e
-l
-java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8œŸàÚ³2J$4e2ffffc-d45e-4cda-bc19-1976fc857e85
-l
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8¦ëõÚ³2
+java:S1452¯"&Remove usage of generic wildcard type.(Á’Û¯8ë¬Ú³2J$6774b082-34e2-4903-b825-d60e328ab467
+	java:S125È"<This block of commented-out lines of code should be removed.(…² ö8ï¬Ú³2J$912d6b4a-ed01-431d-81d0-1670d192b2dc

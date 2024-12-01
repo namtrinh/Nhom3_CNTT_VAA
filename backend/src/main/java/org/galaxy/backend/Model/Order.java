@@ -26,10 +26,10 @@ public class Order {
     private String payment_id;
     private String description;
 
-    private Boolean status;
-
     @ManyToOne(cascade = CascadeType.MERGE)
     private User user;
+
+    private String status;
 
     private String username;
 

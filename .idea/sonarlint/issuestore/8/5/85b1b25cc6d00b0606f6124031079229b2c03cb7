@@ -1,0 +1,36 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æ¤ŞÇúÿÿÿÿ8á“¢¾·2J$a64a914b-4096-416e-9726-c7ada90f3357
+™
+java:S1192¦"PDefine a constant instead of duplicating this literal "operatingSystem" 3 times.(ÓæÛıÿÿÿÿ8æ“¢¾·2J$f4224589-f5e7-43a7-a71b-75a0f74b6803
+”
+java:S1192¢"KDefine a constant instead of duplicating this literal "resolution" 3 times.(µš“ßùÿÿÿÿ8æ“¢¾·2J$2c53b49b-8841-4634-a84d-a5c1295ecec7
+’
+java:S1192v"ODefine a constant instead of duplicating this literal "connectionType" 3 times.(Ş„Š8æ“¢¾·2J$1de7b1ef-e25b-45e2-9f36-ddf3757d1b03
+
+java:S1192j"MDefine a constant instead of duplicating this literal "fastCharging" 3 times.(ÕÓÚ8æ“¢¾·2J$e9c0d1ce-c717-4e9d-81db-585d88721022
+”
+java:S1192¡"KDefine a constant instead of duplicating this literal "screenSize" 3 times.(ÜŸ²¸úÿÿÿÿ8æ“¢¾·2J$330401a8-f20f-43ea-be99-7c8d2b401bf8
+–
+java:S1192§"MDefine a constant instead of duplicating this literal "connectivity" 3 times.(“é¸Èøÿÿÿÿ8æ“¢¾·2J$3ee5da2f-e0d6-49cb-a037-d70f2327e671
+‘
+java:S1192m"IDefine a constant instead of duplicating this literal "warranty" 8 times.(Ëß€›ıÿÿÿÿ8æ“¢¾·2J$7aa52f48-e826-489c-acda-17e3bff67f63
+”
+java:S1192¥"PDefine a constant instead of duplicating this literal "batteryCapacity" 3 times.(óúí8æ“¢¾·2J$69b4b7a3-a290-40d9-ad7a-93f4dc2ecb15
+
+java:S1192l"FDefine a constant instead of duplicating this literal "brand" 8 times.(Åñîƒıÿÿÿÿ8æ“¢¾·2J$95f1b682-cd65-40f3-b340-d88d62297835
+
+java:S1192z"GDefine a constant instead of duplicating this literal "weight" 7 times.(†ªÀšüÿÿÿÿ8æ“¢¾·2J$0f9c7c01-cf14-45d8-8741-30ff09f94929
+
+java:S1192˜"JDefine a constant instead of duplicating this literal "processor" 3 times.(ã¬¤İ8æ“¢¾·2J$5beccf97-14ec-42d9-8b73-02864dd90062
+—
+java:S1192‹"NDefine a constant instead of duplicating this literal "buildMaterial" 3 times.(«ÔŞ½úÿÿÿÿ8æ“¢¾·2J$3568cfb6-5645-43ef-ba88-7e26f88e5370
+
+java:S1192"FDefine a constant instead of duplicating this literal "color" 6 times.(Úªç©şÿÿÿÿ8æ“¢¾·2J$3c4bd45a-04b3-4a96-b08a-a0e344f98e9a
+Œ
+java:S1192Ÿ"HDefine a constant instead of duplicating this literal "storage" 3 times.(ÏŸšÇ8æ“¢¾·2J$0a432d36-574a-4bfd-9592-0e4649aef706
+”
+java:S1192"KDefine a constant instead of duplicating this literal "dimensions" 4 times.(ª¬¹üÿÿÿÿ8ç“¢¾·2J$a137fe69-eed1-42ab-833e-d4c0ecc7f299
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8é“¢¾·2J$615e603a-6454-4267-82d2-620932d49f42
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ê“¢¾·2J$d21eaf32-3e92-4d99-b214-e02b5921ce76

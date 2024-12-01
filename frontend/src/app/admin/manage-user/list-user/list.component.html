@@ -1,74 +1,69 @@
 <div class="container">
 
-  <div class="search-container">
-    <input type="search" placeholder="Tìm kiếm..." [(ngModel)]="item_name" (ngModelChange)="getUserList()"
-           class="search-input">
-
-    <button class="btn btn-primary" (click)="clickSendmail()">Send Mail</button>
-
-    @if (clicksendmail) {
-      <button class="btn btn-primary" (click)="sendSelectedUsersEmail()">send</button>
-    }
+  <!-- Search and Send Mail Buttons -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="input-group w-50">
+      <input type="search"
+             placeholder="Tìm kiếm..."
+             [(ngModel)]="item_name"
+             (ngModelChange)="getUserList()"
+             class="form-control">
+    </div>
   </div>
 
-  <table class="table table-striped table-hover">
-    <thead>
-    <tr>
-      <th>ID</th>
-      <th>Email</th>
-      <th>Username</th>
-      <th>Address</th>
-      <th>Status</th>
-      <th>Edit</th>
-      <th>Delete</th>
-      <th>Detail</th>
-      @if (clicksendmail) {
-        <th>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="selectAll" (change)="checkUncheckAll($event)"
-                   style="font-size: 25px;">
-            Click All
-          </div>
-        </th>
-      }
-    </tr>
-    </thead>
-    <tbody>
-      @for (users of user; track users.user_id) {
-        <tr>
-          <td>{{ users.user_id}}</td>
-          <td> {{ users.email }}</td>
-          <td> {{ users.username }}</td>
-          <td> {{ users.address }}</td>
-          @if (users.activated) {
-            <td style="color:lawngreen;"><i class="fa-solid fa-circle"></i></td>
-          }@else{
-          <td style="color:red;"><i class="fa-solid fa-circle"></i></td>
-          }
-          <td>
-            <button class="btn btn-primary" [routerLink]="['/admin/edit-user',users.user_id]"><i
-              class="fa-regular fa-pen-to-square"></i></button>
-          </td>
-          <td>
-            <button class="btn btn-danger" (click)="deleteUser(users.user_id)"><i
-              class="fa-solid fa-trash"></i></button>
-          </td>
-          <td>
-            <button class="btn btn-info" [routerLink]="['/admin/user-details',users.user_id]">Details</button>
-          </td>
-          @if (clicksendmail) {
+  <!-- Users Table -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Address</th>
+        <th>Status</th>
+        <th>Detail</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for (user of user; track $index) {
+          <tr>
+            <td>{{ user.user_id }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.address }}</td>
             <td>
-              <div class="form-check form-switch">
-                <input class="form-check-input" (change)="h($event, users.user_id)" [checked]="users.selected"
-                       type="checkbox" id="flexSwitchCheckDefault" style="font-size: 22px;">
-              </div>
+            <span class="badge"
+                  [class.bg-success]="user.activated"
+                  [class.bg-danger]="!user.activated">
+              <i class="fa-solid fa-circle me-1"></i>
+              {{ user.activated ? 'Active' : 'Inactive' }}
+            </span>
             </td>
-          }
-        </tr>
-      }
-    </tbody>
+            <td>
+              <button class="btn btn-sm btn-info btn-sm"
+                      [routerLink]="['/admin/user-details', user.user_id]"><i class="fa-solid fa-circle-info"></i>
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-sm btn-primary"
+                      [routerLink]="['/admin/edit-user', user.user_id]">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-sm btn-danger "
+                      (click)="deleteUser(user.user_id)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
 
-  </table>
-
-
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>
+
+

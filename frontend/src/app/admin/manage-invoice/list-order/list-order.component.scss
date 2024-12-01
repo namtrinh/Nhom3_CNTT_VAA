@@ -5,3 +5,33 @@ tr{
 
   height: 45px;
 }
+.status-badge {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-pending {
+  background-color: #ffc107;
+  color: #343a40;
+}
+
+.status-completed {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-canceled {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status-pending:hover,
+.status-completed:hover,
+.status-canceled:hover {
+  filter: brightness(0.9);
+  transition: all 0.3s;
+}

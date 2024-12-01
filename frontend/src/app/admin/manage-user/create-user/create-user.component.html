@@ -1,47 +1,49 @@
 <div class="container mt-5">
-  <form #createForm="ngForm" (ngSubmit)="OnSubmit()" enctype="multipart/form-data" class="p-4 border rounded bg-light">
-    <h3 class="mb-4">Create User</h3>
+  <form #createForm="ngForm" (ngSubmit)="OnSubmit()" enctype="multipart/form-data"
+        class="p-4 border rounded shadow bg-white">
+    <h3 class="text-center text-primary mb-4">Create User</h3>
 
-    <div class="form-group mb-3">
-      <label>Email address</label>
-      <input type="email" class="form-control" name="email" minlength="4" #email="ngModel" required
-        placeholder="Enter email" [(ngModel)]="user.email">
-
-      @if (email.errors && (email.dirty || email.touched)) {
-      <div class="invalid-feedback d-block">
-        <div [hidden]="!email.errors?.['required']">Email is required</div>
-        <div [hidden]="!email.errors?.['minlength']">At least 4 characters</div>
+    <!-- Email Field -->
+    <div class="form-group mb-4">
+      <label for="email" class="form-label fw-bold">Email Address</label>
+      <input type="email" id="email" class="form-control" name="email" minlength="4" #email="ngModel" required
+             placeholder="Enter your email" [(ngModel)]="user.email">
+      <div *ngIf="email.errors && (email.dirty || email.touched)" class="invalid-feedback d-block">
+        <div *ngIf="email.errors?.['required']">Email is required.</div>
+        <div *ngIf="email.errors?.['minlength']">At least 4 characters required.</div>
       </div>
-      }
     </div>
 
-    <div class="form-group mb-3">
-      <label>Username</label>
-      <input type="text" class="form-control" name="username" minlength="8" required #username="ngModel"
-        placeholder="Enter username" [(ngModel)]="user.username">
-      @if (username.errors && (username.dirty || username.touched)) {
-      <div class="invalid-feedback d-block">
-        <div [hidden]="!username.errors?.['required']">Username is required</div>
-        <div [hidden]="!username.errors?.['minlength']">At least 8 characters</div>
+    <!-- Username Field -->
+    <div class="form-group mb-4">
+      <label for="username" class="form-label fw-bold">Username</label>
+      <input type="text" id="username" class="form-control" name="username" minlength="8" required #username="ngModel"
+             placeholder="Enter your username" [(ngModel)]="user.username">
+      <div *ngIf="username.errors && (username.dirty || username.touched)" class="invalid-feedback d-block">
+        <div *ngIf="username.errors?.['required']">Username is required.</div>
+        <div *ngIf="username.errors?.['minlength']">At least 8 characters required.</div>
       </div>
-      }
     </div>
 
-    <div class="form-group mb-3">
-      <label >Password</label>
-      <input type="password" class="form-control" name="password" required #password="ngModel"
-        placeholder="Enter password" minlength="8" [(ngModel)]="user.password">
-      @if (password.errors && (password.dirty || password.touched)) {
-      <div class="invalid-feedback d-block">
-        <div [hidden]="!password.errors?.['required']">Password is required</div>
-        <div [hidden]="!password.errors?.['minlength']">At least 8 characters</div>
+    <!-- Password Field -->
+    <div class="form-group mb-4">
+      <label for="password" class="form-label fw-bold">Password</label>
+      <input type="password" id="password" class="form-control" name="password" required #password="ngModel"
+             placeholder="Enter your password" minlength="8" [(ngModel)]="user.password">
+      <div *ngIf="password.errors && (password.dirty || password.touched)" class="invalid-feedback d-block">
+        <div *ngIf="password.errors?.['required']">Password is required.</div>
+        <div *ngIf="password.errors?.['minlength']">At least 8 characters required.</div>
       </div>
-      }
     </div>
 
-    <button type="submit" [disabled]="!createForm.valid" class="btn btn-primary w-100">Submit</button>
-    @if (createForm.valid) {
-    <p class="text-success mt-3">Form is valid</p>
-    }
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="!createForm.valid" class="btn btn-primary w-100 py-2">
+      Submit
+    </button>
+
+    <!-- Form Valid Message -->
+    <div *ngIf="createForm.valid" class="alert alert-success text-center mt-3">
+      Form is valid! Ready to submit.
+    </div>
   </form>
 </div>

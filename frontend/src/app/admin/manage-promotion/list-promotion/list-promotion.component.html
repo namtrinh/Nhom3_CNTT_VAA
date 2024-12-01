@@ -1,6 +1,6 @@
-<div class="container">
-  <table class="table table-striped table  table-hover">
-    <thead>
+<div class="container mt-5">
+  <table mat-table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
     <tr>
       <th>ID</th>
       <th>Name</th>
@@ -14,18 +14,20 @@
     <tbody>
       @for (promotion of promotions; track promotion.promotion_id) {
         <tr>
-          <td> {{promotion.promotion_id}}</td>
+          <td>{{ promotion.promotion_id }}</td>
           <td>{{ promotion.pr_name }}</td>
           <td>{{ promotion.discount }}</td>
           <td>{{ promotion.time_started }}</td>
           <td>{{ promotion.time_end }}</td>
           <td>
-            <button class="btn btn-primary" [routerLink]="['/admin/update-promotion',promotion.promotion_id]"><i
-              class="fa-regular fa-pen-to-square"></i></button>
+            <button class="btn btn-primary btn-sm" [routerLink]="['/admin/update-promotion', promotion.promotion_id]">
+              <i class="fa-regular fa-pen-to-square"></i> Update
+            </button>
           </td>
           <td>
-            <button class="btn btn-danger" (click)="deleteById(promotion.promotion_id)"><i
-              class="fa-solid fa-trash"></i></button>
+            <button class="btn btn-danger btn-sm" (click)="deleteById(promotion.promotion_id)">
+              <i class="fa-solid fa-trash"></i> Delete
+            </button>
           </td>
         </tr>
       }

@@ -1,18 +1,14 @@
 
-“	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8²Š®Ï³2J$00fe62cd-b151-4167-bfc6-d826bf676455
-˜	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8²Š®Ï³2J$ca35f276-e220-4b79-9242-04b364fd750d
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8³Š®Ï³2J$5b49b741-0afa-443d-b741-14b449fad208
-	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8´Š®Ï³2J$45179354-05e1-4c6c-b41b-405bce6af4ef
-	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8¨ªÙ³2J$0954373a-a2fc-4e3f-a0ef-b833691b0ccd
+“	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8²Š®Ï³2J$bb66a7e2-9a01-485c-9a13-b669edfc34cb
+˜	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8²Š®Ï³2J$77ea95d9-cb8c-4118-80bd-d0a32e47c086
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8³Š®Ï³2J$cfb3fc6a-3755-4129-a051-843cef8cfe14
+	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8´Š®Ï³2J$20c01beb-6431-4b8c-8feb-ae7dcea634fd
+	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8¨ªÙ³2J$28d33a46-d909-449f-81cf-124637878957
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¶Š®Ï³2J$277fd4e9-bfab-4897-846c-5d50111618a1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¶Š®Ï³2J$db130ad7-ea8c-459d-af0a-673403a3d2ad
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ıˆ±Ù³2J$0aee67e9-bc6a-4a5e-a40b-1bdfb2a70aa7
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ıˆ±Ù³2J$022d6041-b079-4fcf-b534-5bd51fc01cd0
 ƒ
-java:S1854?"@Remove this useless assignment to local variable "deleteResult".(ğÖê8ÒÆØÙ³2J$b194bd9b-0a98-493e-a4e4-80f49b6c44a2
+java:S1854?"@Remove this useless assignment to local variable "deleteResult".(ğÖê8ÒÆØÙ³2J$bfd57b1b-4001-4be8-add2-0bc1a08f5ef4
 t
-java:S1481?"1Remove this unused "deleteResult" local variable.(ğÖê8ÔÆØÙ³2J$dedfc655-c079-4bbd-8cb0-2c65e3d53d2a
-r
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8Ã£»Ù³2J$adbdf2e2-304c-4b68-853d-b3e9a381c846
-…
-java:S1128"=Remove this unused import 'com.cloudinary.utils.ObjectUtils'.(§…Ÿøÿÿÿÿ8Ã£»Ù³2J$88a14141-72d0-44ca-a4ca-6ac9097f134d
+java:S1481?"1Remove this unused "deleteResult" local variable.(ğÖê8ÔÆØÙ³2J$cfa04375-ad19-4486-bfdc-73a5a6166643

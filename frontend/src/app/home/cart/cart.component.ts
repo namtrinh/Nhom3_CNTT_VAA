@@ -33,7 +33,6 @@ export class CartComponent implements OnInit {
   totalPrice!: number;
   item: any;
   maxQuantity: number = 10;
-  imgAvatars: { [key: string]: string } = {};
   OrderItem:Order = new Order();
   totalQuantityProduct!: number
   selectedProducts: any[] = [];
@@ -71,7 +70,8 @@ export class CartComponent implements OnInit {
           },
           products: this.selectedProducts.map(cart => {
             return ({
-              product: cart.product
+              product: cart.product.product_id,
+              quantity: cart.product_quantity
             });
           }),
         }
@@ -105,7 +105,6 @@ export class CartComponent implements OnInit {
 
   deleteCart(cart_id: string) {
     if (window.confirm("Are you sure you want to delete this cart")) {
-      console.log(cart_id)
       this.cartService.delete(cart_id).subscribe(() => this.getAllByUserId());
     }
   }

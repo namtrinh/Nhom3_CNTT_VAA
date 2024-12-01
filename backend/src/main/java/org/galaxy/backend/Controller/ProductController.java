@@ -189,13 +189,12 @@ public class ProductController {
     }
 
     @GetMapping(value = "/search")
-    public ApiResponse<List<Product>> searchProduct(@RequestParam String name) {
+    public ApiResponse<List<Product>> searchProduct(@RequestParam String name,@RequestParam String category) {
         return ApiResponse.<List<Product>>builder()
                 .code(200)
-                .result(productService.searchProductsByName(name))
+                .result(productService.searchProductsByName(name,category))
                 .build();
     }
-
 }
 
  /*      if (image != null && !image.isEmpty()) {

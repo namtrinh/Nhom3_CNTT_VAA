@@ -1,5 +1,11 @@
 .container{
 
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
+}
+
+
+table th, table td {
+  text-align: center;
+  vertical-align: middle;
 }

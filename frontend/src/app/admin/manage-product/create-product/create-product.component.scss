@@ -1,32 +1,41 @@
-.container{
-    max-width: 60vw;
-}
 
 .container {
-    background-color: #f9f9f9; /* Màu nền nhạt */
-    border-radius: 10px; /* Bo góc */
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-h2 {
-    color: #007bff; /* Màu tiêu đề */
+}
+.form {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-control {
-    border-radius: 5px; /* Bo góc cho ô nhập */
-    border: 1px solid #ced4da; /* Đường viền */
-    transition: border-color 0.3s; /* Hiệu ứng chuyển màu đường viền */
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom:20px;
 }
 
-.form-control:focus {
-    border-color: #007bff; /* Màu đường viền khi ô nhập được chọn */
-    box-shadow: 0 0 5px rgba(0, 123, 255, .5); /* Hiệu ứng bóng */
+.form-label {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
 }
 
 .btn-primary {
-    background-color: #007bff; /* Màu nền nút */
-    border: none; /* Bỏ đường viền */
-}
-
-.btn-primary:hover {
-    background-color: #0056b3; /* Màu nền nút khi di chuột qua */
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }

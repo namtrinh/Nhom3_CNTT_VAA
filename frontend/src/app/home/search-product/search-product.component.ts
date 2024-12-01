@@ -21,6 +21,7 @@ export class SearchProductComponent implements OnInit {
   name!: string;
   imgAvatars: { [key: string]: string } = {};
   imageUrl!:string;
+  category:string = ''
 
   constructor(private productService: ProductService,
               private activatedRouter: ActivatedRoute,
@@ -33,7 +34,7 @@ export class SearchProductComponent implements OnInit {
   }
 
   search(name: string) {
-    this.productService.searchProduct(this.name.toLowerCase().trim()).subscribe((data: any) => {
+    this.productService.searchProduct(this.name.toLowerCase().trim(), this.category).subscribe((data: any) => {
       this.products = data.result;
     })
   }

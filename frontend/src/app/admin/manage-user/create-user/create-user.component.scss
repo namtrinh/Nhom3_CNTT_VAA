@@ -1,16 +1,15 @@
-.invalid-feedback {
-    font-size: 0.875em;
-    color: #dc3545;
-  }
-  
-  .form-group label {
-    font-weight: bold;
-  }
-  
-  .container {
-    max-width: 600px;
-  }
-  
-.container{
-    width: 600px;
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #f8f9fa;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

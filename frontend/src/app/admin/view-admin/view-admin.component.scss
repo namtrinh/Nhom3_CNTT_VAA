@@ -6,8 +6,8 @@
   left: 0;
   height: 100%;
   max-width: 400px;
-  background-color: #fce7cf;
-  font-weight: 550;
+  background-color: #ccccd3;
+  font-weight: 600;
   padding-top: 56px;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -20,7 +20,7 @@
 
 
 .sidebar ul.navbar-nav a.nav-link {
-  color: #655f5f;
+  color: #605f5c;
 }
 
 .sidebar ul.navbar-nav a.nav-link:hover {
@@ -34,7 +34,7 @@
 }
 
 .navbar {
-  background-color: #f39340;
+  background-color: #17508a;
   box-shadow: 0 2px 10px rgba(154, 34, 34, 0.1); /* Thêm bóng đổ cho navbar */
   padding: 10px 20px;
   position: fixed;
@@ -46,7 +46,7 @@
 .navbar-brand {
   font-weight: bold;
   font-size: 1.7rem;
-  color: #343a40; /* Màu chữ cho navbar brand */
+  color: #ffffff; /* Màu chữ cho navbar brand */
 }
 
 .logout {

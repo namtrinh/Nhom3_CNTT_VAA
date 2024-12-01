@@ -5,11 +5,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { Order } from '../../../model/order.model';
 import {RouterLink} from "@angular/router";
 import {SharedDataService} from "../../../service/shared-data.service";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-list-invoice',
   standalone: true,
-  imports: [NgxPaginationModule, RouterLink],
+  imports: [NgxPaginationModule, RouterLink, NgClass],
   templateUrl: './list-order.component.html',
   styleUrl: './list-order.component.scss'
 })

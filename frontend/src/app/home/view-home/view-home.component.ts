@@ -33,6 +33,8 @@ export class ViewHomeComponent implements OnInit {
   checktokenkey: boolean = true;
   inf: any;
   showProduct: boolean = false;
+  categoryId:string = ''
+
   showProductSale: boolean = false;
   constructor(private router: Router, private userService: UserService, private productService: ProductService,
     private auth: AuthService, private categoryService: CategoryService) { }
@@ -72,14 +74,13 @@ export class ViewHomeComponent implements OnInit {
       this.category = data.result;
     })
   }
-
   search(){
 
     if (this.name == null){
       alert("Please input name !");
     }
 
-    this.productService.searchProduct(this.name).subscribe((data:any) => {
+    this.productService.searchProduct(this.name, this.categoryId).subscribe((data:any) => {
       this.products = data.result;
       console.log(this.products);
         this.router.navigate(['/search',this.name])

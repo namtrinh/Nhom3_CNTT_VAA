@@ -12,4 +12,5 @@ export class Order {
   username!:string;
   email!:string;
   phoneNumber!:string;
+  status!:string;
 }

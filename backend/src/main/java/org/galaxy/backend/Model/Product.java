@@ -16,8 +16,10 @@ import lombok.*;
 @Setter
 @Builder
 @AllArgsConstructor
+@RequiredArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "product")
-@NoArgsConstructor
+
 public class Product {
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -39,9 +41,9 @@ public class Product {
     private Category category;
 
     @ManyToOne
-    private Brand brand;
-
-    @ManyToOne
     @JsonIgnoreProperties("product")
     private Promotion promotion;
+
+    @Column(name = "clazz_", insertable = false, updatable = false)
+    private String clazz;  // Cột phân biệt giữa các loại sản phẩm
 }

@@ -30,7 +30,7 @@
           </tr>
           </thead>
           <tbody>
-            @for (product of orderDetail.products; track orderDetail.products) {
+            @for (product of orderDetail.products; track $index) {
               <tr [routerLink]="['/detail-product',product?.seotitle]">
                 <td>{{ product?.name }}</td>
                 <td>{{ product?.quantity }}</td>
