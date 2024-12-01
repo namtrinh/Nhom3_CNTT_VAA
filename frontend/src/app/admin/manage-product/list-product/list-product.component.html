@@ -6,7 +6,7 @@
     <!-- Tìm kiếm -->
     <div class="search col-md-4 mb-1">
       <input class="form-control" type="search" [(ngModel)]="searchTerm" placeholder="Tìm kiếm..."
-      (input)="loadProducts()">
+      (ngModelChange)="loadProducts()">
     </div>
 
     <!-- Import -->
@@ -78,5 +78,4 @@
   <div *ngIf="showMessage" class="message-box">
     <h2>{{ message }}</h2>
   </div>
-
 </div>

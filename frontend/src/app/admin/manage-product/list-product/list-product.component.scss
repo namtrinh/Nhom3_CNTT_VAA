@@ -1,4 +1,4 @@
-/* Cải thiện giao diện bảng */
+
 table {
   font-size: 17px;
   background-color: #fff;
@@ -15,7 +15,6 @@ table img {
   object-fit: cover;
 }
 
-/* Cải thiện nút Import */
 button input[type="file"] {
   position: absolute;
   width: 100%;
@@ -23,13 +22,11 @@ button input[type="file"] {
   opacity: 0;
 }
 
-/* Cải thiện input tìm kiếm */
 .search-input {
   width: 85%;
   margin-right: 10px;
 }
 
-/* Cải thiện phần header của table */
 .table-dark th {
   background-color: #343a40;
   color: white;
@@ -45,10 +42,9 @@ button input[type="file"] {
   border-radius: 10px;
 }
 
-/* Thiết kế thông báo đẹp mắt */
 .message-box {
-  background-color: #f8d7da; /* Màu nền đỏ nhạt */
-  color: #721c24; /* Màu chữ đỏ đậm */
+  background-color: #f8d7da;
+  color: #721c24;
   padding: 20px;
   border-radius: 5px;
   border: 1px solid #f5c6cb;
@@ -56,8 +52,6 @@ button input[type="file"] {
   text-align: center;
   font-size: 18px;
   min-width: 100%;
-
-
 }
 
 
