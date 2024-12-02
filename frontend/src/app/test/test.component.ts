@@ -7,7 +7,8 @@ import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/m
   templateUrl: './test.component.html',
   standalone: true,
   imports: [
-  ]
+  ],
+  styleUrls: ['./test.component.scss']
 })
 export class TestComponent {
 }

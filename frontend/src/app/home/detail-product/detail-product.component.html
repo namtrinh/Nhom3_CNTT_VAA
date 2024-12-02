@@ -1,82 +1,90 @@
-<div class="container p-3 my-3">
+<div class="container mt-4">
   <div class="product-header text-center">
     <p class="tagline">Experience the future of smartphones today!</p>
   </div>
 
-  <div class="product-content d-flex flex-column flex-md-row justify-content-between align-items-start">
-    <!-- Product Image on the left -->
-    <div class="product-img-container mx-3 mb-3 mb-md-0">
+  <div class="d-flex flex-column justify-content-center align-items-center text-center">
+    <!-- Product Image -->
+    <div class="product-img-container mb-4">
       <img [src]="imageUrl" alt="iPhone 15 Plus" class="product-img img-fluid"
-           style="max-width: 250px; max-height:250px;">
-      <h2 class="product-title" style="font-size: 1.5rem; font-weight: 600;">{{ product.name }}</h2>
-      <p class="product-price" style="font-size: 1.2rem;"><strong>Price:</strong> {{ product.price | number:'1.0-0' }}₫
+           style="max-width: 250px; max-height: 250px;">
+    </div>
+
+    <!-- Product Details -->
+    <h2 class="product-title" style="font-size: 1.5rem; font-weight: 600;">{{ product.name }}</h2>
+
+    <ng-container *ngIf="!product.promotion">
+      <p class="product-price" style="font-size: 1.2rem;">
+        <strong>Price:</strong> {{ product.price | number:'1.0-0' }}₫
       </p>
+    </ng-container>
 
-      <ng-container *ngIf="product.price && product.promotion && product.promotion.discount !== undefined">
-        <p class="discount" style="font-size: 1.2rem; font-weight: 600; color: red;">
-          <strong>Sale:</strong> {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}
-          ₫
-        </p>
-      </ng-container>
+    <ng-container *ngIf="product.price && product.promotion && product.promotion.discount !== undefined">
+      <p class="product-price"
+         style="font-size: 1.2rem;text-decoration: line-through;text-decoration-thickness: 1px; text-decoration-color: red; ">
+        <strong>Price:</strong> {{ product.price | number:'1.0-0' }}₫
+      </p>
+      <p class="discount" style="font-size: 1.2rem; font-weight: 600; color: red;">
+        <strong>Sale:</strong> {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}
+        ₫
+      </p>
+    </ng-container>
 
-      <p><strong>Special Offers:</strong></p>
-      <ul>
-        <li>0% Installment for 6 months</li>
-        <li>Old exchange, new buy: Save up to 2,000,000 VND</li>
-        <li>Official 12-month warranty</li>
-      </ul>
-      @if (product.stockStatus == "Out_of_Stock") {
-        <h1 class="message-box" style="color: #DD0000">The product is currently out of stock.</h1>
-      }
-    </div>
+    <!-- Stock Status -->
+    <ng-container *ngIf="product.stockStatus === 'Out_of_Stock'">
+      <h1 class="message-box" style="color: #DD0000;">The product is currently out of stock.</h1>
+    </ng-container>
 
-    <!-- Product Info on the right -->
-    <div class="product-info-container flex-grow-1">
-      <div class="info">
-        <div class="specs mt-3" style="font-size: 1rem;">
-          <p><strong>Key Specifications:</strong></p>
-          <table class="table table-bordered table-striped">
-            <tbody>
-            <tr>
-              <td><strong>Screen</strong>: 6.7-inch Super Retina XDR</td>
-            </tr>
-            <tr>
-              <td><strong>Camera</strong>: 48MP Main, 12MP Front</td>
-            </tr>
-            <tr>
-              <td><strong>Chip</strong>: A16 Bionic</td>
-            </tr>
-            <tr>
-              <td><strong>Storage</strong>: 512GB</td>
-            </tr>
-            <tr>
-              <td><strong>5G</strong>: Connectivity</td>
-            </tr>
-            <tr>
-              <td><strong>Security</strong>: Face ID</td>
-            </tr>
-            <tr>
-              <td><strong>Charging</strong>: Wireless</td>
-            </tr>
-            <tr>
-              <td><strong>Water-resistant</strong>: Yes</td>
-            </tr>
-            <tr>
-              <td><strong>Battery</strong>: 20 hours video playback</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        @if (product.stockStatus == 'In_Stock') {
-          <div class="d-grid gap-2 mt-3">
-            <button type="button" class="btn btn-warning" (click)="addToCart()" id="liveToastBtn">
-              Add To Cart
-            </button>
-          </div>
-        }
-      </div>
-    </div>
   </div>
+  <div style="min-width: 700px;">
+    <h2 class="">Thông Tin Sản Phẩm</h2>
+    <table class="table table-bordered">
+      <tbody>
+      <tr>
+        <th>Chức năng:</th>
+        <td>Sạc</td>
+      </tr>
+      <tr>
+        <th>Đầu vào:</th>
+        <td>USB Type-A</td>
+      </tr>
+      <tr>
+        <th>Đầu ra:</th>
+        <td>Lightning - 5V - 2.4A (Max 12W)</td>
+      </tr>
+      <tr>
+        <th>Độ dài dây:</th>
+        <td>1 m</td>
+      </tr>
+      <tr>
+        <th>Công suất tối đa:</th>
+        <td>12 W</td>
+      </tr>
+      <tr>
+        <th>Sản xuất tại:</th>
+        <td>Trung Quốc</td>
+      </tr>
+      <tr>
+        <th>Thương hiệu:</th>
+        <td>Thế Giới Di Động</td>
+      </tr>
+      <tr>
+        <th>Hãng:</th>
+        <td>Hydrus. <a href="#">Xem thông tin hãng</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  @if (product.stockStatus == 'In_Stock') {
+    <div class="d-grid gap-2 mt-3">
+      <button type="button" class="btn btn-warning" (click)="addToCart()" id="liveToastBtn">
+        Add To Cart
+      </button>
+    </div>
+  }
+
+  <app-review-product></app-review-product>
 
   <div class="product-note text-center mt-4">
     <p><strong>Note:</strong> Prices and promotions are subject to change without prior notice. For more details,

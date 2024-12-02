@@ -11,11 +11,12 @@ import {Cart} from '../../model/cart.model';
 import {format} from 'date-fns';
 import {jwtDecode} from 'jwt-decode';
 import {SharedDataService} from "../../service/shared-data.service";
+import {ReviewProductComponent} from "../review-product/review-product.component";
 
 @Component({
   selector: 'app-detail-product',
   standalone: true,
-  imports: [RouterLink, FormsModule, CommonModule],
+  imports: [RouterLink, FormsModule, CommonModule, ReviewProductComponent],
   templateUrl: './detail-product.component.html',
   styleUrls: ['./detail-product.component.scss']
 })

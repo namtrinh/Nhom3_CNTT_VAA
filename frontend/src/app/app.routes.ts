@@ -64,7 +64,6 @@ export const routes: Routes = [
   {
     path: '', component: ViewHomeComponent, children: [
       {path: '', component: ProductSaleComponent},
-
       {path: 'b', component: ProductExtendComponent},
       {path: 'category/:seotitle/:seotitle', component: DetailProductComponent},
       {path: 'myinf/:user_id', component: MyInfComponent},
