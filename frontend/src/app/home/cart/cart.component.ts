@@ -10,6 +10,7 @@ import {VNPayService} from "../../service/payment-service.service";
 import {Router, RouterLink} from "@angular/router";
 import {SharedDataService} from "../../service/shared-data.service";
 import {Order} from "../../model/order.model";
+import {ProductService} from "../../service/product-service.service";
 
 @Component({
   selector: 'app-cart',
@@ -21,10 +22,9 @@ import {Order} from "../../model/order.model";
 export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService,
-              private imgService: ImageService,
               private paymentService: VNPayService,
               private sharedDataService: SharedDataService,
-              private router: Router) {
+              private productService: ProductService) {
   }
 
   cart: Cart[] = [];
@@ -33,11 +33,12 @@ export class CartComponent implements OnInit {
   totalPrice!: number;
   item: any;
   maxQuantity: number = 10;
-  OrderItem:Order = new Order();
+  OrderItem: Order = new Order();
   totalQuantityProduct!: number
   selectedProducts: any[] = [];
   countProduct!: number;
-  priceSale!:number | undefined
+  productCheck: Product = new Product();
+  checkQuantityPr: boolean = false;
 
   ngOnInit(): void {
     const token = localStorage.getItem('auth_token');
@@ -48,14 +49,13 @@ export class CartComponent implements OnInit {
     this.getAllByUserId();
   }
 
-
   payment() {
     if (this.selectedProducts.length === 0) {
       alert('Vui lòng chọn ít nhất một sản phẩm để thanh toán!');
       return;
     }
-    console.log(this.totalPrice)
-    this.paymentService.submitOrder(this.totalPrice, 'Sản phẩm đã chọn').subscribe((data: any) => {
+
+    this.paymentService.submitOrder(this.totalPrice, 'Order include product had been selected').subscribe((data: any) => {
       const urlPayment = data.vnpayUrl;
       window.location.href = urlPayment;
       sessionStorage.setItem('myArray', JSON.stringify({
@@ -66,7 +66,7 @@ export class CartComponent implements OnInit {
             username: this.OrderItem.username,
             phoneNumber: this.OrderItem.phoneNumber,
             email: this.OrderItem.email,
-            address: this.OrderItem.address + this.ward + this.district  + this.city
+            address: this.OrderItem.address + this.ward + this.district + this.city
           },
           products: this.selectedProducts.map(cart => {
             return ({
@@ -76,10 +76,10 @@ export class CartComponent implements OnInit {
           }),
         }
       ));
-      console.log(sessionStorage.getItem('myArray'))
     });
-  }
 
+
+  }
 
   getAllByUserId() {
     this.cartService.getByUserId(this.user_Id).subscribe((data: any) => {
@@ -118,6 +118,7 @@ export class CartComponent implements OnInit {
   toggleSelection(cart: any): void {
     if (cart.selected) {
       this.selectedProducts.push(cart);
+      console.log(this.selectedProducts)
     } else {
       this.selectedProducts = this.selectedProducts.filter(item => item.cart_id !== cart.cart_id);
     }
@@ -135,17 +136,27 @@ export class CartComponent implements OnInit {
       return sum + selectedCart.product_quantity;
     }, 0);
   }
+
   checkCount: boolean = false;
   city: any;
   district: any;
   ward: any;
+
   paymentNow(): void {
     if (this.selectedProducts.length === 0) {
       alert('Vui lòng chọn ít nhất một sản phẩm để thanh toán!');
       this.checkCount = false;
     } else {
       this.checkCount = true;
+      this.selectedProducts.forEach((item: any) => {
+        this.productService.getById(item.product.product_id).subscribe((data: any) => {
+          this.productCheck = data.result;
+          if (item.product_quantity > this.productCheck.quantity) {
+            this.checkCount = false;
+            alert(`Product with name: ${item.product.name} is not enought stock to implement this transaction !`);
+          }
+        })
+      })
     }
   }
-
 }

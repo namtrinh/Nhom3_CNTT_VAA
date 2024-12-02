@@ -1,0 +1,14 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8÷ú«³¸2J$dcc44f43-f840-4385-a8aa-79d4c7a3c612
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ûú«³¸2J$5f21ccb8-99df-42e0-9ebc-032fa84da172
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ûú«³¸2J$83fdfa25-08fb-4489-8709-b0e71a582265
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8üú«³¸2J$32d6eaf1-6eae-47f3-95aa-f5cd40b561b9
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8üú«³¸2J$8ddf5fff-be40-4f20-83e4-4181f68fa3af
+ˆ
+java:S1854J"ERemove this useless assignment to local variable "outOfStockMessage".(›•“à8û«³¸2J$fef5e929-6061-4925-87be-5f4ce4c7097a
+y
+java:S1481J"6Remove this unused "outOfStockMessage" local variable.(›•“à8…û«³¸2J$81fabe94-4144-4406-996e-1c650b9f9ebf

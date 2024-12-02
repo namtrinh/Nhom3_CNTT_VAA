@@ -28,4 +28,6 @@ public interface ProductService {
     List<Product> getByCategory(String category);
 
     List<Product> searchProductsByName(String name, String category);
+
+    Product UpdateStatus(String product_id, Product product);
 }

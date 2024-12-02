@@ -21,4 +21,9 @@ public interface CartRepository extends JpaRepository<Cart, String> {
     public boolean existsCartByProductAndUser(Product product, User user);
 
     public Cart findCartByProductAndUser(Product product, User user);
+
+    @Query(value = "SELECT * FROM cart WHERE cart.product_product_id = :product " +
+            "AND cart.user_user_id = :user", nativeQuery = true)
+    public Cart findByProductAndUser(@Param("product") String product, @Param("user") String user);
+
 }

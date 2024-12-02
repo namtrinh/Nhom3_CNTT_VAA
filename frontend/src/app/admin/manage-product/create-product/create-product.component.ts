@@ -25,6 +25,7 @@ export class CreateProductComponent implements OnInit {
   selectedFile: File | null = null;
   imgAvatar!: string;
   default: string = '';
+  stockStatus:string = '';
 
 
   constructor(
@@ -70,6 +71,7 @@ export class CreateProductComponent implements OnInit {
     formData.append('description', this.product.description);
     const formattedTime = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
     formData.append('time_created', formattedTime);
+    formData.append('stockStatus', this.stockStatus);
     console.log(this.categoryId)
     formData.append('category', this.categoryId.toString());
     if (!this.categoryId) {

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
@@ -105,6 +106,10 @@ public class ProductController {
         product.setDescription(params.get("description"));
         product.setTime_created(Timestamp.valueOf(params.get("time_created")));
 
+        if (params.get("stockStatus").equals("In_Stock")){
+            product.setStockStatus(Product.StockStatusPr.In_Stock);
+        }
+
         String categoryValue = params.get("category");
         Category category = new Category();
         category.setCategory_id(categoryValue);
@@ -126,12 +131,6 @@ public class ProductController {
             throws IOException {
 
         Product product = productService.findById(product_id);
-    /*    if (image != null && !image.isEmpty()) {
-            String imagePath = "C:/My_Documents/KI_7/DACN/firefly-galaxy/" + uploadDir + image.getOriginalFilename();
-            image.transferTo(new File(imagePath));
-            product.setImage(image.getOriginalFilename());
-        }
-       */
         if (image != null && !image.isEmpty()) {
             String fileUrl = cloudinaryService.uploadFile(image);
             product.setImage(fileUrl);
@@ -146,6 +145,11 @@ public class ProductController {
         Category category = new Category();
         category.setCategory_id(categoryValue);
         product.setCategory(category);
+        if (params.get("stockStatus").equals("In_Stock")){
+            product.setStockStatus(Product.StockStatusPr.In_Stock);
+        }else{
+            product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
+        }
 
         if (params.get("promotion") != null) {
             String promotionValue = params.get("promotion");

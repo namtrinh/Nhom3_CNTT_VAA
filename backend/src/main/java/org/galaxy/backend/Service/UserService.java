@@ -27,5 +27,4 @@ public interface UserService {
 
     UsersResponse updatePassByEmail(String email, String password);
 
-    public void cleanupExpiredUsers();
 }

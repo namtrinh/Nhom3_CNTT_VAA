@@ -8,9 +8,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Responsive adjustments */
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .product-content {
     flex-direction: column;
@@ -24,13 +21,9 @@
     text-align: left; /* Giữ nguyên các phần tử bên trong không bị căn giữa */
   }
 
-
-
   .product-img-container {
     text-align: left; /* Giữ nguyên các phần tử bên trong không bị căn giữa */
   }
-
-
 }
 
 /* Nút xác nhận */
@@ -54,3 +47,16 @@
 .offers {
   float: right;
 }
+
+.message-box {
+  background-color: #f8d7da;
+  color: #e36c76;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  min-width: 100%;
+}
+

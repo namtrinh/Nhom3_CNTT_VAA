@@ -35,3 +35,8 @@ tr{
   filter: brightness(0.9);
   transition: all 0.3s;
 }
+
+table th, table td {
+  text-align: center;
+  vertical-align: middle;
+}

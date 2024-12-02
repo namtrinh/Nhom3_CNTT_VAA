@@ -13,6 +13,6 @@ export class Product {
   category!: Partial<Category>;
   selected: boolean = false;
   promotion:Partial<Promotion> = new Promotion();
-
+  stockStatus!:string;
 }
 

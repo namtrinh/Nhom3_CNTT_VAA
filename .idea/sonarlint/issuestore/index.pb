@@ -475,3 +475,11 @@ i
 9frontend/src/app/payment/pay-fail/pay-fail.component.html,3\3\33d94ba1d876b1dbb2181118f871957a98464da4
 i
 9frontend/src/app/payment/pay-fail/pay-fail.component.scss,8\4\84cc4928f180cb7264c8159995f9b85420ae1635
+x
+Hbackend/src/main/java/org/galaxy/backend/Service/RunRealTimeService.java,4\7\476f1ff72280369b2317f0c3f1bdac4a1241b914
+q
+Abackend/src/main/java/org/galaxy/backend/Model/StockStatusPr.java,8\5\856902a941977ff8978f7119107f282beab2c144
+z
+Jbackend/src/main/java/org/galaxy/backend/ServiceImpl/OrderServiceImpl.java,7\6\765a688c3a117ac7044166eccc98a356d3ad75aa
+m
+=frontend/src/app/home/detail-user/user-details.component.html,7\c\7c5693b3c9fabecc7f1cf8bb4cc028c656b0e7be

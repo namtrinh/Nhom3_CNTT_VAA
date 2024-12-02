@@ -97,4 +97,9 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> searchProductsByName(String name, String category) {
         return productRepository.searchByNameOrCategory(name, category);
     }
+
+    public Product UpdateStatus(String product_id, Product product){
+        product.setProduct_id(product_id);
+        return productRepository.save(product);
+    }
 }

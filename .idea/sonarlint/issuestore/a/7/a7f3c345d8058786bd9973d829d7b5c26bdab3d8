@@ -1,3 +1,5 @@
 
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‚© øÿÿÿÿ8²¿òÎ³2J$65ea5fa8-ae01-4f43-9903-743a7d71594c
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8©ÆžÃ³2J$9f61c5d3-6c81-4a52-8663-fb640af03d46
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‚© øÿÿÿÿ8²¿òÎ³2J$d2c0b6a8-d322-4a61-bd50-4bc16dd03669
+˜	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šºõ°ýÿÿÿÿ8ñ‡·²¸2J$31025f2d-8b6c-4da2-b3d7-e05f02d39dc8
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8©ÆžÃ³2J$ef0acc69-3360-434d-a1f5-3ad58f5dbf91
+•	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šºõ°ýÿÿÿÿ8Žÿµ²¸2J$995243b8-5fb6-4e0e-9d32-b58d23d66b33

@@ -33,6 +33,9 @@ public class Product {
     private Double price;
     private String description;
 
+    @Enumerated(EnumType.STRING)
+    private StockStatusPr stockStatus;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp time_created;
 
@@ -43,4 +46,8 @@ public class Product {
     @ManyToOne
     @JsonIgnoreProperties("product")
     private Promotion promotion;
+
+    public enum StockStatusPr{
+            In_Stock, Out_of_Stock
+    }
 }

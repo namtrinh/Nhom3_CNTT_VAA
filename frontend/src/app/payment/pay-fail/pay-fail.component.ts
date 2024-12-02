@@ -39,6 +39,8 @@ export class PayFailComponent implements OnInit {
               private orderService: OrderService,
               private orderDetailService: OrderDetailService) {
   }
+  // Thanh toán thất bại
+  // vẫn tạo hóa đơn với trạng thái là canceled
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -77,7 +79,6 @@ export class PayFailComponent implements OnInit {
     this.order.phoneNumber = this.userInf.phoneNumber;
     this.order.address = this.userInf.address;
     this.order.status = 'Canceled';
-
     this.orderService.create(this.order).subscribe((data: any) => {
       console.log(data.result);
       sessionStorage.removeItem("myArray");
@@ -104,6 +105,7 @@ export class PayFailComponent implements OnInit {
           selected: false,
           seotitle: '',
           time_created: '',
+          stockStatus:'',
           product_id: selectedProduct.product,
         };
         updatedProducts.push(newProduct);

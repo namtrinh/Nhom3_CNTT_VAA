@@ -132,11 +132,4 @@ public class UserServiceImpl implements UserService {
         user.setPassword(encoder.encode(password));
         return usersMapper.toUsers(userRepository.save(user));
     }
-
-    @Scheduled(fixedRate = 600000)
-    @Transactional
-    public void cleanupExpiredUsers() {
-        userRepository.deleteExpiredUsers();
-        System.out.println("Expired unactivated users cleaned up.");
-    }
 }

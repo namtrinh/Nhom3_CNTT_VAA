@@ -1,10 +1,41 @@
-.form-control {
-  border: rgb(212, 209, 209) solid 2px;
-  width: 800px;
-}
-.form{
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+.form {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.form-control {
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom:20px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}

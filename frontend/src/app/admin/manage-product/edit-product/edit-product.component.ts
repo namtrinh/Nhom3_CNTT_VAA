@@ -33,6 +33,7 @@ export class EditProductComponent implements OnInit {
   time!: string;
   promotion: Promotion[] = [];
   imageUrl!:string;
+  stockStatus:string ='';
 
   constructor(private active: ActivatedRoute,
               private router: Router,
@@ -75,6 +76,7 @@ export class EditProductComponent implements OnInit {
     formData.append('quantity', this.product.quantity.toString());
     formData.append('price', this.product.price.toString());
     formData.append('description', this.product.description);
+    formData.append('stockStatus', this.stockStatus);
     if (this.product.category?.category_id) {
       formData.append('category', this.product.category.category_id.toString());
     }

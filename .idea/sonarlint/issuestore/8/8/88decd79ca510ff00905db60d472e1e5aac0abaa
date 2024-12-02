@@ -1,23 +1,20 @@
 
-˜	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8¯òˆĞ³2J$4a445c41-b85b-4284-80e4-7201c429f8ef
-˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8¯òˆĞ³2J$a4677b6a-73a4-4605-b9fa-4a3b53d21eb8
-˜	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8¯òˆĞ³2J$fb8d3bdb-d0ff-40ed-bfd6-4b0b08d8b49b
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯òˆĞ³2J$e5fb8a4a-85c2-42a3-a6bf-35ed081dec8f
-	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8²òˆĞ³2J$d7179dd5-d4c5-457e-8f78-2b5746fd1e14
+˜	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8¯òˆĞ³2J$d478a6d5-9ebf-4166-8cd2-2f4ca22b633f
+˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8¯òˆĞ³2J$349daf97-9f93-4c28-b855-51754444b669
+˜	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8¯òˆĞ³2J$f1fd1c31-ad76-449a-9c6b-6ef1470f686c
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯òˆĞ³2J$395c62d1-5cc5-4fb0-891d-7c7dbe476424
+	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8²òˆĞ³2J$48fc57aa-b93c-4294-9e6e-74393ff36e0c
 —
-java:S1192J"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8²òˆĞ³2J$c060ecf3-7d3f-4822-9af2-5e554eaf4eb8
+java:S1192J"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8²òˆĞ³2J$3ef5f64b-9da9-4a82-aa88-c0d407f90436
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$fce8b0b9-4333-4360-98ad-e438cec781e7
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$f6ae719d-fb9e-4cdb-a646-16aaa08cc801
 …
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$e853a917-c544-4025-8654-a73f540eb157
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$e6bc6525-ccf2-4c5a-9d50-f69a55f7cc04
 …
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$a428c0f9-08be-4736-84c4-d66e4fcb1cab
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$9814818a-0368-4df2-9083-e89450ed50fc
 ½
-java:S6204V"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¾òˆĞ³2J$f320c964-7cd4-4333-8b6f-918c514399fb
-m	java:S106f"+Replace this use of System.out by a logger.(…Çº8ÀòˆĞ³2J$5a5b4436-b243-4e4a-9222-06badf464e74
-r	java:S106i"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8ÁòˆĞ³2J$93527767-66be-47dd-9823-2cbbae9ad2b6
+java:S6204V"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¾òˆĞ³2J$6ed20d3a-8aab-4d87-8bdd-0eacabfd4de8
+m	java:S106f"+Replace this use of System.out by a logger.(…Çº8ÀòˆĞ³2J$1b762824-3a7d-4be8-bc6c-ad334bdbb1c8
+r	java:S106i"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8ÁòˆĞ³2J$13b1f1ee-b24b-42a9-abd1-7a395aef7256
 ½
-java:S6204w"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÂòˆĞ³2J$947a0e3a-dde5-4053-a283-c2e7234ca051
-m	java:S106Œ"+Replace this use of System.out by a logger.(ƒÒ	8ÅòˆĞ³2J$83146179-02e7-44dc-95d6-888d38389920
-—
-java:S1128"ORemove this unused import 'org.galaxy.backend.Service.VerifyUser.EmailService'.(”Øşßüÿÿÿÿ8ÅòˆĞ³2J$d8f1b7d1-0eab-402b-b5e3-27e94bd033b8
+java:S6204w"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÂòˆĞ³2J$69d560d9-cc5b-499b-a192-43e3d293c752

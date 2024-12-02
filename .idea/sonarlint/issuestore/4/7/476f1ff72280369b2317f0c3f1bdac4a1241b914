@@ -1,0 +1,9 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ãÙğ±¸2J$9c332e98-8f64-401a-a2c9-4dcdb719b96b
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8éÙğ±¸2J$402fbaa0-c04c-49b3-a894-b1160064d9b3
+Š
+java:S6813"BRemove this field injection and use constructor injection instead.(îÅŠ¶øÿÿÿÿ8éÙğ±¸2J$1f8e13c7-8b39-4beb-bcbb-ce867198be83
+l	java:S106"+Replace this use of System.out by a logger.(ƒÒ	8òÙğ±¸2J$9fdd6898-1a90-4e40-acf6-c73c310e864e
+…
+java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8ò¢ı±¸2J$f8940f3f-fba3-42ef-b9d9-f1819a9b8cca

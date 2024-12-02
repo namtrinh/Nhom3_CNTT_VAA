@@ -9,11 +9,13 @@
       <img [src]="imageUrl" alt="iPhone 15 Plus" class="product-img img-fluid"
            style="max-width: 250px; max-height:250px;">
       <h2 class="product-title" style="font-size: 1.5rem; font-weight: 600;">{{ product.name }}</h2>
-      <p class="product-price" style="font-size: 1.2rem;"><strong>Price:</strong> {{ product.price | number:'1.0-0' }}₫</p>
+      <p class="product-price" style="font-size: 1.2rem;"><strong>Price:</strong> {{ product.price | number:'1.0-0' }}₫
+      </p>
 
       <ng-container *ngIf="product.price && product.promotion && product.promotion.discount !== undefined">
         <p class="discount" style="font-size: 1.2rem; font-weight: 600; color: red;">
-          <strong>Sale:</strong> {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
+          <strong>Sale:</strong> {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}
+          ₫
         </p>
       </ng-container>
 
@@ -23,6 +25,9 @@
         <li>Old exchange, new buy: Save up to 2,000,000 VND</li>
         <li>Official 12-month warranty</li>
       </ul>
+      @if (product.stockStatus == "Out_of_Stock") {
+        <h1 class="message-box" style="color: #DD0000">The product is currently out of stock.</h1>
+      }
     </div>
 
     <!-- Product Info on the right -->
@@ -62,11 +67,13 @@
             </tbody>
           </table>
         </div>
-        <div class="d-grid gap-2 mt-3">
-          <button type="button" class="btn btn-warning" (click)="addToCart()" id="liveToastBtn">
-            Add To Cart
-          </button>
-        </div>
+        @if (product.stockStatus == 'In_Stock') {
+          <div class="d-grid gap-2 mt-3">
+            <button type="button" class="btn btn-warning" (click)="addToCart()" id="liveToastBtn">
+              Add To Cart
+            </button>
+          </div>
+        }
       </div>
     </div>
   </div>
