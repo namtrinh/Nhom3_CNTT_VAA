@@ -1,125 +1,140 @@
 <div class="product">
-  <h3 class="product-name">Tên sản phẩm</h3>
-
-  <!-- Phần đánh giá trung bình -->
+  <h3 class="product-name">{{ product.name }}</h3>
   <div class="user-rating">
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span>
-    <span class="user-rating-value">(3/5)</span>
+    <span class="fa fa-star" [class.checked]="averageRating >= 1"></span>
+    <span class="fa fa-star" [class.checked]="averageRating >= 2"></span>
+    <span class="fa fa-star" [class.checked]="averageRating >= 3"></span>
+    <span class="fa fa-star" [class.checked]="averageRating >= 4"></span>
+    <span class="fa fa-star" [class.checked]="averageRating >= 5"></span>
+    <span class="user-rating-value">({{ averageRating.toFixed(2) }}/5)</span>
   </div>
-
-  <!-- Phần bình luận -->
   <div class="comments-section">
-    <h4>Bình luận</h4>
-
-    <!-- Comment 1 -->
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">Nguyễn Văn A</span>
-        <span class="comment-date">2 giờ trước</span>
-      </div>
-      <div class="comment-body">
-        <div class="user-rating">
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <span class="user-rating-value">(3/5)</span>
+    <h4>Comment</h4>
+    @for (reviews of reviews; track $index) {
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">{{ reviews.customerName }}</span>
+          <span class="comment-date">2 giờ trước</span>
         </div>
-        <p>Sản phẩm rất tốt, mình sẽ mua tiếp!</p>
+        <div class="comment-body">
+          <div class="user-rating">
+            <span class="fa fa-star" [class.checked]="reviews.rating >= 1"></span>
+            <span class="fa fa-star" [class.checked]="reviews.rating >= 2"></span>
+            <span class="fa fa-star" [class.checked]="reviews.rating >= 3"></span>
+            <span class="fa fa-star" [class.checked]="reviews.rating >= 4"></span>
+            <span class="fa fa-star" [class.checked]="reviews.rating >= 5"></span>
+            <span class="user-rating-value">({{ reviews.rating }}/5)</span>
+          </div>
+          <p>{{ reviews.comment }}</p>
+        </div>
       </div>
-    </div>
-
+    }
+  </div>
+  <br>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li [class.disable]="page === 0" class="page-item"><a class="page-link" (click)="decrease()">Previous</a></li>
+        @if ((pageCurrent - 1) >= 0) {
+          <li class="page-item"><a class="page-link" (click)="nochange(pageCurrent - 1)">{{ pageCurrent - 1 }}</a></li>
+        }
+        <li class="page-item"><a class="page-link" (click)="nochange(pageCurrent)">{{ pageCurrent }}</a></li>
+        @if (pageCurrent + 1 < pageMax) {
+          <li class="page-item"><a class="page-link" (click)="nochange(pageCurrent + 1)">{{ pageCurrent + 1 }}</a></li>
+        }
+        <li class="page-item"><a class="page-link" (click)="increase()">Next</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Review product
+    </button>
   </div>
 
-  <br>
-
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Review product
-</button>
-
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="rating-form">
-            <h2 class="text-center">Review Product</h2>
-            <form>
-              <div class="mb-4">
-                <label class="form-label">Product name</label>
-                <input type="text" class="form-control" placeholder="Product name"
-                       readonly>
-              </div>
-
-              <div class="container d-flex justify-content-center align-items-center">
-                <form action="">
-                  <input class="star star-5" id="star-5" type="radio" name="star"/>
-                  <label class="star star-5" for="star-5"></label>
-                  <input class="star star-4" id="star-4" type="radio" name="star"/>
-                  <label class="star star-4" for="star-4"></label>
-                  <input class="star star-3" id="star-3" type="radio" name="star"/>
-                  <label class="star star-3" for="star-3"></label>
-                  <input class="star star-2" id="star-2" type="radio" name="star"/>
-                  <label class="star star-2" for="star-2"></label>
-                  <input class="star star-1" id="star-1" type="radio" name="star"/>
-                  <label class="star star-1" for="star-1"></label>
-                </form>
-              </div>
-
-              <br>
-              <div>
-                <label class="form-label">Cảm nhận của bạn</label>
-                <textarea class="form-control" rows="4" placeholder="Mời bạn chia sẻ thêm cảm nhận..."></textarea>
-                <small class="form-text text-muted">Tối đa 500 ký tự</small>
-              </div>
-              <br>
-              <div class="mb-4">
-                <label class="form-label">Gửi ảnh thực tế (tối đa 3 ảnh)</label>
-                <input type="file" class="form-control" accept="image/*" multiple>
-                <div class="upload-preview mt-3"></div>
-              </div>
-
-              <div class="mb-4 form-check">
-                <input type="checkbox" class="form-check-input" id="agreeCheck">
-                <label class="form-check-label" for="agreeCheck">Tôi sẽ giới thiệu sản phẩm cho bạn bè, người
-                  thân</label>
-              </div>
-
-              <div class="row g-2">
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Họ tên (bắt buộc)" required>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="rating-form">
+              <h2 class="text-center">Review Product</h2>
+              <form #reviewForm="ngForm" (ngSubmit)="save()">
+                <!-- Hình ảnh sản phẩm -->
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="product-img-container mb-1">
+                    <img [src]="product.image" alt="iPhone 15 Plus" class="product-img img-fluid"
+                         style="max-width: 150px; max-height: 150px;">
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Số điện thoại (bắt buộc)" required>
+                <div class="d-flex justify-content-center align-items-center">
+                  <label class="form-label text-center">{{ product.name }}</label>
                 </div>
-              </div>
+                <div class="container d-flex justify-content-center align-items-center">
+                  <div class="rating-group">
+                    <input [(ngModel)]="review.rating" name="rating" value="5" class="star star-5" id="star-5"
+                           type="radio" required/>
+                    <label class="star star-5" for="star-5"></label>
 
-              <div class="mt-4 form-check">
-                <input type="checkbox" class="form-check-input" id="policyCheck" required>
-                <label class="form-check-label" for="policyCheck">Tôi đồng ý với <a href="#" target="_blank">Chính sách
-                  xử lý dữ
-                  liệu cá nhân</a></label>
-              </div>
+                    <input [(ngModel)]="review.rating" name="rating" value="4" class="star star-4" id="star-4"
+                           type="radio" required/>
+                    <label class="star star-4" for="star-4"></label>
 
-              <button type="submit" class="btn btn-primary w-100 mt-4">Gửi đánh giá</button>
-            </form>
+                    <input [(ngModel)]="review.rating" name="rating" value="3" class="star star-3" id="star-3"
+                           type="radio" required/>
+                    <label class="star star-3" for="star-3"></label>
+
+                    <input [(ngModel)]="review.rating" name="rating" value="2" class="star star-2" id="star-2"
+                           type="radio" required/>
+                    <label class="star star-2" for="star-2"></label>
+
+                    <input [(ngModel)]="review.rating" name="rating" value="1" class="star star-1" id="star-1"
+                           type="radio" required/>
+                    <label class="star star-1" for="star-1"></label>
+                  </div>
+                  <div *ngIf="reviewForm.submitted && !review.rating" class="text-danger">
+                    Bạn cần chọn ít nhất 1 sao.
+                  </div>
+                </div>
+                <br>
+                <div>
+                  <label class="form-label">Cảm nhận của bạn</label>
+                  <textarea class="form-control" [(ngModel)]="review.comment" name="comment" rows="3"
+                            placeholder="Mời bạn chia sẻ thêm cảm nhận..." required></textarea>
+                  <small class="form-text text-muted">Tối đa 500 ký tự</small>
+                </div>
+                <br>
+                <div class="mb-2 form-check">
+                  <input [(ngModel)]="review.sharedWith" type="checkbox" name="sharedWith" class="form-check-input"
+                         id="sharedWith"/>
+                  <label class="form-check-label" for="sharedWith">Tôi sẽ giới thiệu sản phẩm cho bạn bè, người
+                    thân</label>
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="customerName" [(ngModel)]="review.customerName"
+                           placeholder="Họ tên (bắt buộc)" required/>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="review.phoneNumber"
+                           placeholder="Số điện thoại (bắt buộc)" required/>
+                  </div>
+                </div>
+                <div class="mt-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="policyCheck" name="policyCheck" required/>
+                  <label class="form-check-label" for="policyCheck">Tôi đồng ý với <a href="#" target="_blank">Chính
+                    sách xử lý dữ liệu cá nhân</a></label>
+                </div>
+                <button type="button" class="btn btn-secondary w-100 mt-2" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary w-100 mt-1" [disabled]="reviewForm.invalid"
+                        data-bs-dismiss="modal">Gửi đánh giá
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
       </div>
     </div>
   </div>

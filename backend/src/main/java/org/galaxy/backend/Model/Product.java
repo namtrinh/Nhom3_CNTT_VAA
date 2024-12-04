@@ -1,6 +1,7 @@
 package org.galaxy.backend.Model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.*;
 
@@ -10,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.*;
+import org.springframework.cglib.core.Local;
 
 @Entity
 @Getter
@@ -22,8 +24,8 @@ import lombok.*;
 
 public class Product {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.UUID)
+
     private String product_id;
 
     private String name;
@@ -36,8 +38,8 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private StockStatusPr stockStatus;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    private Timestamp time_created;
+
+    private LocalDateTime time_created = LocalDateTime.now();
 
     @ManyToOne
     @JsonIgnoreProperties("products")

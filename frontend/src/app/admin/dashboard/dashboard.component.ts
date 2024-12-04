@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BaseChartDirective } from 'ng2-charts';
-import { StatisticService } from '../../service/statistic-service.service';
 import { OrderService } from '../../service/order-service.service';
 import { Order } from '../../model/order.model';
 import { OrderDetailService } from '../../service/orderDetail-service.service';

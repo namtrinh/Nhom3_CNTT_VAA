@@ -22,8 +22,7 @@ import lombok.Setter;
 @Table(name = "promotion")
 public class Promotion {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String promotion_id;
 
     private String pr_name;

@@ -8,7 +8,6 @@ import {ImageService} from '../../service/img-service.service';
 import {CommonModule} from '@angular/common';
 import {VNPayService} from "../../service/payment-service.service";
 import {Router, RouterLink} from "@angular/router";
-import {SharedDataService} from "../../service/shared-data.service";
 import {Order} from "../../model/order.model";
 import {ProductService} from "../../service/product-service.service";
 
@@ -23,7 +22,7 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService,
               private paymentService: VNPayService,
-              private sharedDataService: SharedDataService,
+
               private productService: ProductService) {
   }
 

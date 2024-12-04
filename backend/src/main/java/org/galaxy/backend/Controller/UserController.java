@@ -60,17 +60,6 @@ public class UserController {
         return ApiResponse.<List<UsersResponse>>builder().result(result).build();
     }
 
-    @GetMapping(value = "random_user")
-    public User randomUser() {
-        List<User> users = userRepository.findAllUser();
-        if (users.isEmpty()) {
-            return null; // Hoặc xử lý lỗi nếu danh sách rỗng
-        }
-        Random random = new Random();
-        int randomIndex = random.nextInt(users.size());
-        return users.get(randomIndex);
-    }
-
     @GetMapping(value = "/{user_id}")
     //   @PreAuthorize("hasRole('ADMIN')")
     @ResponseStatus(value = HttpStatus.OK)

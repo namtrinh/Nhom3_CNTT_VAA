@@ -10,7 +10,6 @@ import {CartService} from '../../service/cart-service.service';
 import {Cart} from '../../model/cart.model';
 import {format} from 'date-fns';
 import {jwtDecode} from 'jwt-decode';
-import {SharedDataService} from "../../service/shared-data.service";
 import {ReviewProductComponent} from "../review-product/review-product.component";
 
 @Component({
@@ -49,6 +48,7 @@ export class DetailProductComponent implements OnInit {
     this.seo = this.Activeroute.snapshot.params['seotitle'];
     this.productService.getBySeoTitle(this.seo).subscribe((data: any) => {
       this.product = data.result;
+       console.log(this.product.product_id)
       if (this.product && this.product.product_id) {
         this.imageUrl = this.product.image;
       }

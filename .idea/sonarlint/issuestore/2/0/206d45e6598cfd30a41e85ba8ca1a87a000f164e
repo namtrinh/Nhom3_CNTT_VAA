@@ -1,10 +1,8 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ž ËÏª2J$941d0c93-06aa-45ce-9aae-8f3ac5892ad9
-ž	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8¡ ËÏª2J$9588b3a4-91ab-49e7-a46e-f2f927b80ced
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ýÿÿÿÿ8¡ ËÏª2J$fd06eaf6-d656-4ed9-a435-a88e788a9afa
-ž	java:S116#"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8¡ ËÏª2J$6b59932a-b296-43ac-ac02-11836fdcb736
-•	java:S116%"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8¢ ËÏª2J$b776e051-7af2-46d5-a1a2-07414a743b97
-{
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8¦ ËÏª2J$1abb1f38-699d-4c83-84f1-2f344aa31c9f
-s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8¦ ËÏª2J$6b505f82-8270-488b-84ff-b09207a457be
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ž ËÏª2J$291b60f8-4001-4956-bc50-c30769cac95c
+ž	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8Ó¨Öß¸2J$ff0e53a1-1ae8-4ba8-879e-909959335d28
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ýÿÿÿÿ8Õ¨Öß¸2J$875bdce0-05bc-4d44-987f-fce56579d10d
+ž	java:S116""WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8Õ¨Öß¸2J$2241b6e4-c80b-4f76-ba3a-dbeaad9ceace
+•	java:S116$"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8Ö¨Öß¸2J$29a5e6a3-95f2-4e67-aeb6-ef7b4802fe56
+Š
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒÝŸÉ8ÄÊñß¸2J$b2bee0d0-8a1f-49d0-a35a-40dac7678e5e

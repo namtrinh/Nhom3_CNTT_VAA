@@ -19,8 +19,7 @@ import lombok.*;
 @AllArgsConstructor
 public class Cart {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String cart_id;
 
     private float product_price;

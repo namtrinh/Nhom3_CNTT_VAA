@@ -4,8 +4,8 @@ import {  OrderService } from '../../../service/order-service.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Order } from '../../../model/order.model';
 import {RouterLink} from "@angular/router";
-import {SharedDataService} from "../../../service/shared-data.service";
 import {NgClass} from "@angular/common";
+import {SharedDataService} from "../../../service/shared-data.service";
 
 @Component({
   selector: 'app-list-invoice',

@@ -3,6 +3,7 @@ package org.galaxy.backend.Controller;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class ProductController {
         product.setQuantity(Integer.parseInt(params.get("quantity")));
         product.setPrice(Double.parseDouble(params.get("price")));
         product.setDescription(params.get("description"));
-        product.setTime_created(Timestamp.valueOf(params.get("time_created")));
+        product.setTime_created(LocalDateTime.now());
 
         if (params.get("stockStatus").equals("In_Stock")){
             product.setStockStatus(Product.StockStatusPr.In_Stock);

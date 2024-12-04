@@ -9,7 +9,7 @@ export class SharedDataService {
   private dataset: any;
 
   setData(data: any) {
-   sessionStorage.setItem('datasets', JSON.stringify(data));
+    sessionStorage.setItem('datasets', JSON.stringify(data));
   }
 
   getData() {

@@ -19,8 +19,7 @@ import lombok.*;
 @NoArgsConstructor
 public class Order {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String order_id;
 
     private String payment_id;

@@ -1,8 +1,7 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ŞÁ³2J$85bcaaae-3bd6-49fb-af44-94dc253f1820
-”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8‹ØõÁ³2J$c2b873d1-b50a-4627-82d7-bbf371164553
-™	java:S1162"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8‹ØõÁ³2J$831d1bb0-a51a-45a8-8671-2b8b58cc64b9
-{
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ØõÁ³2J$332492a6-ec7c-4446-b9f2-428fe14572b4
-s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ØõÁ³2J$3cb07560-285c-43d7-93a0-866f456b4639
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ñÑà¸2J$fa7fc44b-9b8a-428d-9977-12afe26bfdc6
+”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8ñÑà¸2J$9b0c47bc-aecf-49ef-ac34-07c319d7d9d7
+™	java:S1161"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÍÜéà¸2J$14de3601-655c-455b-a1d3-03f378633746
+Š
+java:S1128
+"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8šñÑà¸2J$63b42b54-a07b-4500-a503-d1577a630a6d

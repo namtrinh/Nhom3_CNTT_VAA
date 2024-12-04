@@ -18,8 +18,7 @@ import lombok.*;
 @Table(name = "category")
 public class Category {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String category_id;
 
     private String ct_name;

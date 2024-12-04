@@ -1,10 +1,15 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8êë±¸2J$26e5771a-17f7-455d-ac50-facb7da4dabb
-œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8‘êë±¸2J$95935d8c-0f51-48e8-b22d-af1dc97a20df
-™	java:S116("WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8‘êë±¸2J$6ee2bfd7-dc51-4b23-906e-6af3c8732795
-{
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8”êë±¸2J$d73d2037-4be3-49ba-a78b-46d5bf212b4c
-s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8”êë±¸2J$39ff61e1-1c57-42f7-b284-ce46bb4e191f
-¡	java:S1153"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8•êë±¸2J$857c2b46-2784-4fca-bc5d-c92d810837d7
-¡	java:S1153"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8•êë±¸2J$88d43886-a64d-4995-8606-589360785d28
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8êë±¸2J$575a9ecc-18f3-42a4-b4ab-7085fb01253c
+œ	java:S116"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8é±Æà¸2J$2276e450-a2c8-4648-b082-618034db2ed2
+	java:S116*"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ç¨åøÿÿÿÿ8ë±Æà¸2J$8ec52139-a09b-48e9-9f0c-9f1604705cb1
+¡	java:S1155"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8ñ±Æà¸2J$08f51e9c-31e2-4c1d-8a1c-cb0fb9918fa8
+¡	java:S1155"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8ñ±Æà¸2J$0edccdab-234f-49e7-8bda-c5b02b4b0e7c
+q
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ÅÉÓà¸2J$945a08f0-79df-4123-8871-7ad86795c01f
+Š
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8ô±Æà¸2J$36faa29b-f393-42f5-8e9a-ca68e834075a
+
+java:S1128
+"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonFormat'.(ıÙè‹øÿÿÿÿ8ÅÉÓà¸2J$8f233005-aa8e-41b7-9a19-940fe26ac564
+„
+java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû8ÅÉÓà¸2J$1729b9a9-656a-47cb-80e5-ae5825256a01
