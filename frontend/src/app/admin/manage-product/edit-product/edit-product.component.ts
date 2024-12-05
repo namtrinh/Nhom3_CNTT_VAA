@@ -76,7 +76,7 @@ export class EditProductComponent implements OnInit {
     formData.append('quantity', this.product.quantity.toString());
     formData.append('price', this.product.price.toString());
     formData.append('description', this.product.description);
-    formData.append('stockStatus', this.stockStatus);
+    formData.append('stock_stastus', this.product.stockStatus);
     if (this.product.category?.category_id) {
       formData.append('category', this.product.category.category_id.toString());
     }
@@ -89,6 +89,7 @@ export class EditProductComponent implements OnInit {
     }else {
       formData.append('image',this.product.image)
     }
+
     this.productService.editById(this.id, formData).subscribe(
       (data: any) => {
         this.location.back();

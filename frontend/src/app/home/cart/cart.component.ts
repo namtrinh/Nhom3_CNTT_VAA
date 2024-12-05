@@ -56,6 +56,8 @@ export class CartComponent implements OnInit {
 
     this.paymentService.submitOrder(this.totalPrice, 'Order include product had been selected').subscribe((data: any) => {
       const urlPayment = data.vnpayUrl;
+
+      console.log(this.totalPrice)
       window.location.href = urlPayment;
       sessionStorage.setItem('myArray', JSON.stringify({
           user: this.selectedProducts[0].user,
