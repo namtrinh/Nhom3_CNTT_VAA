@@ -84,7 +84,7 @@ export class PaySuccessComponent implements OnInit {
     this.order.status = 'Completed';
 
     this.orderService.create(this.order).subscribe((data: any) => {
-      sessionStorage.removeItem("myArray");
+     sessionStorage.removeItem("myArray");
     });
   }
 
@@ -108,7 +108,7 @@ export class PaySuccessComponent implements OnInit {
           selected: false,
           seotitle: '',
           time_created: '',
-          stockStatus:'',
+          stockStatus:'In_Stock',
           product_id: selectedProduct.product,
         };
         updatedProducts.push(newProduct);
@@ -138,9 +138,11 @@ export class PaySuccessComponent implements OnInit {
         formData.append('price', this.updateProduct.price.toString());
         formData.append('description', this.updateProduct.description);
         formData.append('category', this.updateProduct.category.category_id.toString());
-        formData.append('promotion', this.updateProduct.promotion.promotion_id)
+      //  formData.append('promotion', this.updateProduct.promotion.promotion_id)
         formData.append('image', this.updateProduct.image)
+        formData.append('stockStatus', 'In_Stock')
         this.productService.editById(item.product, formData).subscribe((data: any) => {
+          console.log("update pr:",data);
         })
       })
     })

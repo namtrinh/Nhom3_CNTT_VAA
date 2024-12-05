@@ -19,7 +19,7 @@
   <div class="container" style="padding:20px;">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/admin/dashboard']"><i class="fas fa-tachometer-alt"></i>
+        <a class="nav-link" [routerLink]="['/admin/dashboard']"><i class="fa-solid fa-chart-line"></i>
           Dashboard</a>
       </li>
 
@@ -31,7 +31,7 @@
 
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#sibaruser">
-          <i class="fas fa-th-list"></i> User
+          <i class="fa-solid fa-list"></i> User
           <i class="fa-solid fa-chevron-down" style="float: right;"></i>
           <span class="caret"></span>
         </a>
@@ -53,7 +53,7 @@
 
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#sibarproduct">
-          <i class="fa-solid fa-table-list"></i> Product
+          <i class="fa-solid fa-store"></i> Product
           <i class="fa-solid fa-chevron-down" style="float: right;"></i>
         </a>
         <div class="collapse" id="sibarproduct">
@@ -74,9 +74,13 @@
         </div>
       </li>
 
+      <li class="nav-item" style="cursor: pointer">
+        <a class="nav-link" [routerLink]="['/admin/review']"> <i class="fa-regular fa-star"></i>Review</a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#sibarpromotion">
-          <i class="fa-solid fa-table-list"></i> Promotion
+          <i class="fa-regular fa-calendar-days"></i> Promotion
           <i class="fa-solid fa-chevron-down" style="float: right;"></i>
         </a>
         <div class="collapse" id="sibarpromotion">
@@ -113,9 +117,9 @@
       </li>
 
       @if (check_role) {
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/admin/role']"> <i class="fas fa-th-list"></i> Role</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin/role']"> <i class="fas fa-th-list"></i> Role</a>
+        </li>
         <!--
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/admin/list-permission']"> <i class="fas fa-th-list"></i>

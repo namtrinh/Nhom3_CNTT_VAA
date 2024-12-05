@@ -45,7 +45,6 @@ export class ListProductComponent implements OnInit {
   }
 
   loadProducts(): void {
-
     if (!this.searchTerm && !this.categoryId) {
       this.products = [];
       this.page = 0;

@@ -1,10 +1,4 @@
-.container{
-    font-size: 17px;
-}
-tr{
 
-  height: 45px;
-}
 .status-badge {
   font-size: 1rem;
   padding: 0.5em 1em;
@@ -12,6 +6,11 @@ tr{
   text-transform: uppercase;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-pending {
+  background-color: #ffc107;
+  color: #343a40;
 }
 
 .status-completed {
@@ -24,14 +23,20 @@ tr{
   color: white;
 }
 
-.status-pending:hover,
-.status-completed:hover,
-.status-canceled:hover {
-  filter: brightness(0.9);
-  transition: all 0.3s;
-}
-
 table th, table td {
   text-align: center;
   vertical-align: middle;
+}
+
+
+.message-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  min-width: 100%;
 }

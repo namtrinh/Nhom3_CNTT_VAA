@@ -3,7 +3,7 @@ import {ReviewService} from "../../service/review-service.service";
 import {Review} from "../../model/review.model";
 import {ProductService} from "../../service/product-service.service";
 import {Product} from "../../model/product.model";
-import {DecimalPipe} from "@angular/common";
+import {DecimalPipe, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 
 @Component({
@@ -12,7 +12,8 @@ import {FormsModule} from "@angular/forms";
   standalone: true,
   imports: [
     DecimalPipe,
-    FormsModule
+    FormsModule,
+    NgIf
   ],
   styleUrls: ['./review-product.component.css']
 })
@@ -26,6 +27,7 @@ export class ReviewProductComponent implements OnChanges {
   pageCurrent: number = 0;
   pageMax!: number;
   averageRating:number = 0;
+  isVisible: boolean = false;
 
   constructor(private reviewService: ReviewService,
               private productService: ProductService) {
@@ -61,8 +63,16 @@ export class ReviewProductComponent implements OnChanges {
       product_id: this.productId
     }
     this.reviewService.save(this.review).subscribe((data:any) =>{
-      alert("Send review successfully !")
+      this.showToast();
+      this.getAllByProduct();
     })
+  }
+
+  showToast() {
+    this.isVisible = true;
+    setTimeout(() => {
+      this.isVisible = false;
+    }, 5000);
   }
 
   calculateAverageRating(): void {

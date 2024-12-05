@@ -45,6 +45,7 @@ import {Test1Component} from "./test/test1.component";
 import {ListOrderComponent} from "./admin/manage-invoice/list-order/list-order.component";
 import {OrderDetailComponent} from "./admin/manage-invoice/order-detail/order-detail.component";
 import {SearchProductComponent} from "./home/search-product/search-product.component";
+import {ListReviewComponent} from "./admin/manage-review/list-review/list-review.component";
 
 export const routes: Routes = [
 
@@ -90,6 +91,9 @@ export const routes: Routes = [
       {path: 'promotion-product', component: PromotionProductComponent, canActivate: [AuthService], data: {role: 1}},
       {path: 'create-product', component: CreateProductComponent, canActivate: [AuthService], data: {role: 1}},
       {path: 'edit-product/:product_id', component: EditProductComponent, canActivate: [AuthService], data: {role: 1}},
+
+      //Review
+      {path: 'review', component: ListReviewComponent, canActivate: [AuthService], data: {role: 1}},
 
       //Promotion
       {path: 'promotion', component: ListPromotionComponent, canActivate: [AuthService], data: {role: 1}},
