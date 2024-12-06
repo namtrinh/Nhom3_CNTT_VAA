@@ -28,11 +28,9 @@ export class ListProductComponent implements OnInit {
   category: Category[] = []
   isLoading: boolean = false;
   imageUrl: any;
-  private categories: any;
   categoryId:string = '';
   message:string = '';
   showMessage: boolean = false;
-
 
   constructor(private productService: ProductService,
               private imgService: ImageService,
@@ -41,14 +39,14 @@ export class ListProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllCategory()
-    this.filterProducts();
+    this.getAllProduct();
   }
 
   loadProducts(): void {
     if (!this.searchTerm && !this.categoryId) {
       this.products = [];
       this.page = 0;
-      this.filterProducts();
+      this.getAllProduct();
     } else {
       this.products = [];
       this.searchProduct(this.searchTerm, this.categoryId);
@@ -57,13 +55,16 @@ export class ListProductComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    if ((window.scrollY) >= document.body.offsetHeight && !this.isLoading) {
-      this.page += 1;
-      this.filterProducts();
+    const { scrollTop, scrollHeight } = document.documentElement;
+    const windowHeight = window.innerHeight;
+    if (scrollTop + windowHeight >= scrollHeight - 100 && !this.isLoading) {
+      this.isLoading = true;
+      this.page++;
+      this.getAllProduct();
     }
   }
 
-  filterProducts() {
+  getAllProduct() {
     this.isLoading = true;
     this.productService.getAllByPage(this.page, this.size).subscribe((data: any) => {
       const newProducts = data.result.content;

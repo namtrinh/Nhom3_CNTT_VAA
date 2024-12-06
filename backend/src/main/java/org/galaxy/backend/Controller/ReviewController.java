@@ -24,8 +24,8 @@ public class ReviewController {
     private Reviewrepository reviewrepository;
 
     @GetMapping
-    public ApiResponse<Page<Review>> getAll(@RequestParam int page,
-                                            @RequestParam int size){
+    public ApiResponse<Page<Review>> getAll(@RequestParam(defaultValue = "0") int page,
+                                            @RequestParam(defaultValue = "20") int size){
         return ApiResponse.<Page<Review>>builder()
                 .code(200)
                 .result(reviewService.findAll(page, size))
@@ -33,9 +33,9 @@ public class ReviewController {
     }
 
     @GetMapping(value = "/{product}")
-    public ApiResponse<Page<Review>> getAll(@PathVariable String product,
+    public ApiResponse<Page<Review>> getAllByProduct(@PathVariable String product,
                                             @RequestParam(defaultValue = "0") int page,
-                                            @RequestParam(defaultValue = "1") int size){
+                                            @RequestParam(defaultValue = "3") int size){
         return  ApiResponse.<Page<Review>>builder()
                 .code(200)
                 .result(reviewService.getReviewsForProduct(product, page, size))
