@@ -1,11 +1,13 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ÿ£§€¹2J$b88e4514-e6b3-4dea-83ae-fa0ca7125322
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ñÉ¹¼¹2J$401c0ff0-e095-4559-a993-34c0854c3988
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¤§€¹2J$4918971e-3fac-4e15-9895-e4a8b90360cd
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8üÉ¹¼¹2J$547767f5-7169-4984-8e59-b20c204b845d
+…
+java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8ŒÊ¹¼¹2J$79744ecb-bb19-4344-9ced-fd6d19909774
 ‰
 java:S1128
-"ARemove this unused import 'org.springframework.data.domain.Sort'.(ëÿ€ëøÿÿÿÿ8ªÌĞ‚¹2J$864172d6-44fb-4bc2-ba0f-eff38c1d323d
+"ARemove this unused import 'org.springframework.data.domain.Sort'.(ëÿ€ëøÿÿÿÿ8Ê¹¼¹2J$9b321d36-880c-4235-82ea-f0d03a5bedb7
 s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ªÌĞ‚¹2J$f679b1a8-4112-4eb9-a539-eab573bea2f3
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ê¹¼¹2J$1950744f-a173-4032-9ac4-65a05996d389
 w
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ªÌĞ‚¹2J$465653cc-e665-469a-8e6b-819d54df7822
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8Ê¹¼¹2J$e6f53883-b876-40bc-bd8f-ed2b6564a3dd

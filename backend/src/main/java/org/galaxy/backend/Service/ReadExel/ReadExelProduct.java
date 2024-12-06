@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class ReadExelProduct {
     public static String TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     static String[] HEADERs = {"Product ID", "Name", "SEO Title", "Image", "Quantity", "Price"};
-    static String SHEET = "products";
+    static String SHEET = "abc";
 
     public static boolean hasExcelFormat(MultipartFile file) {
         if (!TYPE.equals(file.getContentType())) {
@@ -71,6 +71,7 @@ public class ReadExelProduct {
                             product.setCategory(category);
                             break;
                         default:
+
                             break;
                     }
                     cellIdx++;

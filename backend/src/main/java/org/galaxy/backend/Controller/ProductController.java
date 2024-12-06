@@ -146,7 +146,8 @@ public class ProductController {
         Category category = new Category();
         category.setCategory_id(categoryValue);
         product.setCategory(category);
-        if (params.get("stockStatus").equals("In_Stock")){
+
+        if (params.get("stock_stastus").equals("In_Stock")){
             product.setStockStatus(Product.StockStatusPr.In_Stock);
         }else{
             product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
@@ -185,6 +186,7 @@ public class ProductController {
                 message = "The Excel file is uploaded: " + file.getOriginalFilename();
                 return ResponseEntity.status(HttpStatus.OK).body(message);
             } catch (Exception exp) {
+                System.out.println(exp);
                 message = "The Excel file is not upload: " + file.getOriginalFilename() + "!";
                 return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
             }
@@ -199,6 +201,13 @@ public class ProductController {
                 .code(200)
                 .result(productService.searchProductsByName(name,category))
                 .build();
+    }
+
+
+
+    @PostMapping(value = "/test")
+    public Product Test(@RequestBody Product product){
+        return productRepository.save(product);
     }
 }
 

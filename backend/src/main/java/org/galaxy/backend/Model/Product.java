@@ -21,11 +21,9 @@ import org.springframework.cglib.core.Local;
 @RequiredArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "product")
-
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-
     private String product_id;
 
     private String name;
@@ -52,4 +50,8 @@ public class Product {
     public enum StockStatusPr{
             In_Stock, Out_of_Stock
     }
+
+    private String clazz_;
+
+
 }

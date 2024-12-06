@@ -19,7 +19,8 @@ import lombok.*;
 @NoArgsConstructor
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String order_id;
 
     private String payment_id;
@@ -28,7 +29,8 @@ public class Order {
     @ManyToOne(cascade = CascadeType.MERGE)
     private User user;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private StatusPayment status;
 
     private String username;
 
@@ -42,4 +44,8 @@ public class Order {
     private Timestamp time_created;
 
     private String orderDetail_id;
+
+    enum StatusPayment{
+        Cancelled, Completed
+    }
 }

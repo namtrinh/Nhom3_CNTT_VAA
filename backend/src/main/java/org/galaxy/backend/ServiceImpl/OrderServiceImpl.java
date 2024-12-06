@@ -47,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order save(Order entity) {
-        List<String> outOfStockProducts = new ArrayList<>();
+
         OrderDetail orderDetail = orderDetailService.findById(entity.getOrderDetail_id());
 
         for(Product product : orderDetail.getProducts()) {
@@ -55,24 +55,14 @@ public class OrderServiceImpl implements OrderService {
             User user = entity.getUser();
             Cart cart = cartRepository.findByProductAndUser(productExisting.getProduct_id(), user.getUser_id());
 
-            if (productExisting != null) {
-                // Kiểm tra nếu sản phẩm hết hàng (số lượng <= 0)
-                int a = productExisting.getQuantity() - cart.getProduct_quantity();
-                if (a <= 0) {
-                    // Cập nhật trạng thái sản phẩm là hết hàng
-                    productExisting.setStockStatus(Product.StockStatusPr.Out_of_Stock);
-                    productService.UpdateStatus(productExisting.getProduct_id(), productExisting);
-
-                    // Thêm sản phẩm vào danh sách hết hàng để báo cho người dùng
-                    outOfStockProducts.add(productExisting.getName());
-                }
+            int a = productExisting.getQuantity() - cart.getProduct_quantity();
+            if (a <= 0) {
+                productExisting.setStockStatus(Product.StockStatusPr.Out_of_Stock);
+                productService.UpdateStatus(productExisting.getProduct_id(), productExisting);
+            }else{
+                productExisting.setStockStatus(Product.StockStatusPr.In_Stock);
+                productService.UpdateStatus(productExisting.getProduct_id(), productExisting);
             }
-        }
-
-        // Nếu có sản phẩm hết hàng, trả về thông báo lỗi
-        if (!outOfStockProducts.isEmpty()) {
-            String outOfStockMessage = "The following products are out of stock: " + String.join(", ", outOfStockProducts);
-
         }
         return orderRepository.save(entity);
     }

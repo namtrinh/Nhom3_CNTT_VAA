@@ -1,7 +1,7 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ù§×à¯2J$dbe093ab-2d3c-47a1-9267-35e8fa434986
-˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8ü§×à¯2J$efb44d85-b9fe-41dd-acc0-c67bd14d8224
-™	java:S116"RRename this field "ct_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´‘ðÍøÿÿÿÿ8ü§×à¯2J$5790f931-c199-4568-b3bd-62f0a4b719a7
-˜	java:S116"VRename this field "ct_seotitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÙ—‘8ü§×à¯2J$0bb6ed4b-7945-44a8-8eb5-70e36df38b2e
-d
-java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒÝŸÉ8À„ñß¸2
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ù§×à¯2J$de972a84-5c0d-4a6a-a00a-9acbc09984da
+˜	java:S116"VRename this field "category_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„´¼š8ü§×à¯2J$936a65db-5b90-45d8-b8a5-7ed4a137a13d
+™	java:S116"RRename this field "ct_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´‘ðÍøÿÿÿÿ8ü§×à¯2J$ab9b1cd5-079f-4aab-b3df-1a2ed086c707
+˜	java:S116"VRename this field "ct_seotitle" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÙ—‘8ü§×à¯2J$0b3db621-8b22-4f35-910c-6cb5f9e6df1c
+Š
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒÝŸÉ8À„ñß¸2J$5c694a27-8eaa-4b1c-b7cd-e2d7e01580da

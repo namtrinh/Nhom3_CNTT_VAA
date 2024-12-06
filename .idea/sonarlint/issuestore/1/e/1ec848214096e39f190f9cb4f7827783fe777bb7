@@ -1,6 +1,8 @@
 
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38ãÁ¢ı¸2J$b28f4a69-1eb6-485b-869b-2e3adf8012a5
-\
-java:S1128":Remove this unused import 'org.galaxy.backend.Model.User'.(óı³œÿÿÿÿÿ8ŠÇ™ÿ¸2
-s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÔÀı¸2J$d355d333-72fc-4b24-bc4c-fda26549ab69
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‰¤…38…ù¡½¹2J$510f82ba-514a-444d-b844-fd13d3d967a8
+z
+java:S6126"2Replace this String concatenation with Text block.(—ÍØúÿÿÿÿ8‹ù¡½¹2J$55608f53-ea93-4402-aff2-c3563273c912
+…
+java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8‹ù¡½¹2J$89f45f11-03e5-4270-83eb-37749447b91c
+‚
+java:S1128":Remove this unused import 'org.galaxy.backend.Model.User'.(óı³œÿÿÿÿÿ8‹ù¡½¹2J$18bf8f7d-4b22-45f8-b615-58695540001b

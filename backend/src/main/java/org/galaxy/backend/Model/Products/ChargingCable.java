@@ -1,21 +1,16 @@
 package org.galaxy.backend.Model.Products;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import org.galaxy.backend.Model.Product;
 
-@Entity
+
 @Getter
 @Setter
+
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Table(name="ChargingCable")
-public class ChargingCable  extends Product {
+public class ChargingCable{
 
     private String connectorType; // Loại đầu kết nối (ví dụ: "USB-A to USB-C", "Lightning", "Micro-USB")
 
@@ -34,7 +29,7 @@ public class ChargingCable  extends Product {
 
     private Boolean fastCharging; // Hỗ trợ sạc nhanh không (true/false)
 
-
+    @Column(name = "compatible_devices")
     private String compatibleDevices; // Thiết bị tương thích (ví dụ: "iPhone, Samsung, Huawei")
 
 

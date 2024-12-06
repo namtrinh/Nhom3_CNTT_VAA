@@ -3,6 +3,7 @@ package org.galaxy.backend.Controller;
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Model.Review;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
+import org.galaxy.backend.Repository.Reviewrepository;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +21,19 @@ public class ReviewController {
     private ReviewService reviewService;
 
     @Autowired
-    private ProductService productService;
+    private Reviewrepository reviewrepository;
+
+    @GetMapping
+    public ApiResponse<Page<Review>> getAll(@RequestParam int page,
+                                            @RequestParam int size){
+        return ApiResponse.<Page<Review>>builder()
+                .code(200)
+                .result(reviewService.findAll(page, size))
+                .build();
+    }
 
     @GetMapping(value = "/{product}")
-    public ApiResponse<Page<Review>> getAll(@PathVariable Product product,
+    public ApiResponse<Page<Review>> getAll(@PathVariable String product,
                                             @RequestParam(defaultValue = "0") int page,
                                             @RequestParam(defaultValue = "1") int size){
         return  ApiResponse.<Page<Review>>builder()
@@ -38,6 +48,28 @@ public class ReviewController {
                 .code(200)
                 .result(reviewService.save(review))
                 .build();
+    }
+
+    @PutMapping(value = "/{reviewId}")
+    public ApiResponse<Review> update(@PathVariable String reviewId){
+        return ApiResponse.<Review>builder()
+                .code(200)
+                .result(reviewService.updateById(reviewId))
+                .build();
+    }
+
+    @GetMapping(value = "filter")
+    public ApiResponse<List<Review>> filter(@RequestParam String name,
+                                            @RequestParam int rating){
+        return ApiResponse.<List<Review>>builder()
+                .code(200)
+                .result(reviewrepository.getAllByProduct(name, rating))
+                .build();
+    }
+
+    @DeleteMapping(value="/{reviewId}")
+    public void delete(@PathVariable String reviewId){
+        reviewService.deleteById(reviewId);
     }
 
 

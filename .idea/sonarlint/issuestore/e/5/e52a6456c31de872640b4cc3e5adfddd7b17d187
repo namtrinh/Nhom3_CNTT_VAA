@@ -2,3 +2,14 @@
 œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8¦Øž³¸2J$a303ac1e-bd75-4895-9ab8-5399048b6d8e
 …
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¨Øž³¸2J$8d375ffc-4540-4e57-a7c3-b964ec013f09
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¥Ò±‰¹2
+e
+java:S1128"HRemove this unused import 'java.util.concurrent.atomic.AtomicReference'.(×‡µó8¥Ò±‰¹2
+\
+java:S1128":Remove this unused import 'org.galaxy.backend.Model.Cart'.(×þ‡¿ûÿÿÿÿ8¥Ò±‰¹2
+_
+java:S1128
+"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8¥Ò±‰¹2
+k
+java:S1128"IRemove this unused import 'org.galaxy.backend.Repository.CartRepository'.(²ìû²þÿÿÿÿ8¦Ò±‰¹2

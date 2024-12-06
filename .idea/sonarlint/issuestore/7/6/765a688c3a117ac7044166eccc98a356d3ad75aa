@@ -1,14 +1,12 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8÷ú«³¸2J$dcc44f43-f840-4385-a8aa-79d4c7a3c612
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8Ïø´‰¹2J$dbacf470-0279-4651-8eb5-f70b4c769d05
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ûú«³¸2J$5f21ccb8-99df-42e0-9ebc-032fa84da172
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Õø´‰¹2J$bb8fbbd2-036f-4709-a400-f8ab3deb66aa
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ûú«³¸2J$83fdfa25-08fb-4489-8709-b0e71a582265
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Õø´‰¹2J$2150cd28-4fb0-47b8-ae4d-5f95b753dbc8
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8üú«³¸2J$32d6eaf1-6eae-47f3-95aa-f5cd40b561b9
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Õø´‰¹2J$7fcaea09-bec3-46a6-b1d9-5c57d08f9294
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8üú«³¸2J$8ddf5fff-be40-4f20-83e4-4181f68fa3af
-ˆ
-java:S1854J"ERemove this useless assignment to local variable "outOfStockMessage".(›•“à8û«³¸2J$fef5e929-6061-4925-87be-5f4ce4c7097a
-y
-java:S1481J"6Remove this unused "outOfStockMessage" local variable.(›•“à8…û«³¸2J$81fabe94-4144-4406-996e-1c650b9f9ebf
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Õø´‰¹2J$28ade668-2bec-4d66-89fb-afe6d60ef320
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ƒšš¿¹2J$61724064-7359-4e80-8ef3-77174bffa0c7

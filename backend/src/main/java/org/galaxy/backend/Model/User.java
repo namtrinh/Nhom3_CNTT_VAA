@@ -55,4 +55,6 @@ public class User {
             joinColumns = @JoinColumn(name = "users_user_id"),
             inverseJoinColumns = @JoinColumn(name = "roles_name"))
     private Set<Roles> roles;
+
+    private String statusAccount;
 }

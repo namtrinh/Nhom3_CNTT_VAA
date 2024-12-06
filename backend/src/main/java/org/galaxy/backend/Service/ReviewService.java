@@ -32,10 +32,29 @@ public class ReviewService {
         reviewrepository.deleteById(string);
     }
 
-    public Page<Review> getReviewsForProduct(Product product, int page, int size) {
+    public Page<Review> getReviewsForProduct(String product, int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         return reviewrepository.findAllByProduct(product, pageable);
     }
+
+    public Review updateById(String reviewId) {
+        Review existingReview = reviewrepository.findById(reviewId)
+                .orElseThrow(() -> new RuntimeException("Not found"));
+        if (existingReview.getStatusCmt() == Review.StatusCmt.APPROVED) {
+            existingReview.setStatusCmt(Review.StatusCmt.PENDING);
+        } else {
+            existingReview.setStatusCmt(Review.StatusCmt.APPROVED);
+        }
+        return reviewrepository.save(existingReview);
+    }
+
+
+    public Page<Review> findAll(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return reviewrepository.findAll(pageable);
+    }
+
+
 
 
 }

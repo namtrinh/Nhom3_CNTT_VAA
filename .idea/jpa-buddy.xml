@@ -3,5 +3,7 @@
   <component name="JpaBuddyIdeaProjectConfig">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="0ed7f78d-f5ab-436c-8ca2-1a721472f078__sql-galaxy_dbo" />
+    <option name="reLastEntityCreationPackage" value="backend/src/main/java/org/galaxy/backend" />
   </component>
 </project>

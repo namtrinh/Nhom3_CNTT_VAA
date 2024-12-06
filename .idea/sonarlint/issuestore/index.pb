@@ -383,8 +383,6 @@ i
 9frontend/src/app/admin/dashboard/dashboard.component.html,c\7\c79551d6743751b6e1447e16ae33305fd0bba28e
 i
 9frontend/src/app/admin/dashboard/dashboard.component.scss,5\7\57f251ad2d44c77331e774328a89aad223c14118
-e
-5frontend/src/app/service/statistic-service.service.ts,c\c\cc13da537b35821fd15b5a7d16af2b75352186a3
 Y
 )frontend/src/app/model/statistic.model.ts,d\b\dba727e73a9d411dce8e388f36f68d4ba9ee7c7b
 r
@@ -507,3 +505,15 @@ f
 6frontend/src/app/service/permission-service.service.ts,d\2\d267330845f00b2a3d4055627fa55443751842ec
 q
 Abackend/src/main/java/org/galaxy/backend/Service/RoleService.java,e\7\e7c988ef63539f4c448b65ba0016ffd46c49b7a1
+@
+backend/mvnw.cmd,1\5\150f7f46befb4ca181444afaddf1ccde5c197593
+<
+backend/mvnw,0\5\0582f144b6c5a6e046754dca8e592c24d682d181
+]
+-backend/.mvn/wrapper/maven-wrapper.properties,1\e\1ec5b4dea545cecae20419f88d6b658117480b18
+z
+Jfrontend/src/app/admin/manage-review/list-review/list-review.component.css,6\c\6cac8367b4dfb4087e79f3a0b8a6ce444290563e
+{
+Kfrontend/src/app/admin/manage-review/list-review/list-review.component.html,e\0\e04b6c2489d37b5d7540f438fc459735ba898ad3
+y
+Ifrontend/src/app/admin/manage-review/list-review/list-review.component.ts,1\d\1df72011bfdba2afa020e44cf77e323a07255b5a

@@ -1,8 +1,8 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊJ$63d51fe2-17c2-42ad-80e3-895f011fcff9
-’	java:S116"RRename this field "cart_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌˆöÒúÿÿÿÿJ$6e3f3158-f64b-46d8-bf5e-797ed8ed6708
-˜	java:S116"XRename this field "product_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ÊŠüÿÿÿÿJ$a93b41fc-783c-41f0-9f51-c5606b160d76
-›	java:S116"[Rename this field "product_quantity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÆÙšùÿÿÿÿJ$f993c86e-a48c-49a0-9afc-35b3015a3b59
-	java:S116 "SRename this field "time_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²óåPJ$1ea508ce-40fe-4295-a6a0-7490dde11a57
-d
-java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8ëÌğß¸2
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊJ$56944554-1d5d-4d2c-aaf0-8c9abc241b39
+’	java:S116"RRename this field "cart_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌˆöÒúÿÿÿÿJ$b6b3a04e-6794-410a-83ab-f2817b12707f
+˜	java:S116"XRename this field "product_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ÊŠüÿÿÿÿJ$284253b9-bbed-40f2-90d2-d15815d8a737
+›	java:S116"[Rename this field "product_quantity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÆÙšùÿÿÿÿJ$9db66c34-764c-4c14-a422-0f2c91f1193b
+	java:S116 "SRename this field "time_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²óåPJ$e5f29987-fffe-4fc3-b111-564c6f19ac75
+Š
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8ëÌğß¸2J$1b257463-02d7-4b14-a8b1-62a6be17f6df

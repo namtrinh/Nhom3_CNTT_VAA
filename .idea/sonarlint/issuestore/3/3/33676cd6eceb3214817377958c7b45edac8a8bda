@@ -1,21 +1,21 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æ¤ŞÇúÿÿÿÿJ$44908649-8db0-4727-915d-3307d6676414
-~	java:S125"<This block of commented-out lines of code should be removed.(³’é…8ğ÷·Œ¸2J$148234f2-f4f5-4722-a50b-167989d21395
-†
-java:S1128">Remove this unused import 'org.galaxy.backend.Model.Category'.(˜©áéúÿÿÿÿ8ğ÷·Œ¸2J$0125256d-e26e-4614-b35b-b8db75eb56ef
-
-java:S1128"LRemove this unused import 'org.galaxy.backend.Model.Products.ChargingCable'.(ö¦ğÿ8ò÷·Œ¸2J$9e2af2e7-42a4-44d9-95e1-758b004103e8
-
-java:S1128"MRemove this unused import 'org.galaxy.backend.ModelDTO.response.ApiResponse'.(¡¶äå8ø÷·Œ¸2J$a1595c5d-06f3-4082-ae12-c3d983f9457d
-‘
-java:S1128"IRemove this unused import 'org.galaxy.backend.Service.CloudinaryService'.(°Ûä™øÿÿÿÿ8ø÷·Œ¸2J$11418076-a91e-418b-940d-2716c88ffcc5
-ˆ
-java:S1128"FRemove this unused import 'org.galaxy.backend.Service.ProductService'.(ÄÁô+8ù÷·Œ¸2J$674dd55b-6851-41a9-82b0-2615797e0f7a
-›
-java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8û÷·Œ¸2J$2fb80c1f-cde3-490c-a645-5d53aa003cca
-”
-java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœÿÿÿÿÿ8û÷·Œ¸2J$ca4ce279-1a16-4e02-81a9-1c390a2d7f1a
-x
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8û÷·Œ¸2J$730d3456-5a93-4360-b491-0e6e2a41aa2c
-r
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8û÷·Œ¸2J$4bcf7946-4c4a-4e58-bf5c-65b67edbd144
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æ¤ŞÇúÿÿÿÿJ$59f8856b-21ab-470d-9429-f77f2742127d
+~	java:S125"<This block of commented-out lines of code should be removed.(³’é…8ğ÷·Œ¸2J$38b01ce3-118c-4e85-88ca-5f955bbddc6f
+`
+java:S1128">Remove this unused import 'org.galaxy.backend.Model.Category'.(˜©áéúÿÿÿÿ8¯Ô÷˜¹2
+i
+java:S1128"LRemove this unused import 'org.galaxy.backend.Model.Products.ChargingCable'.(ö¦ğÿ8¯Ô÷˜¹2
+j
+java:S1128"MRemove this unused import 'org.galaxy.backend.ModelDTO.response.ApiResponse'.(¡¶äå8°Ô÷˜¹2
+k
+java:S1128"IRemove this unused import 'org.galaxy.backend.Service.CloudinaryService'.(°Ûä™øÿÿÿÿ8±Ô÷˜¹2
+b
+java:S1128"FRemove this unused import 'org.galaxy.backend.Service.ProductService'.(ÄÁô+8±Ô÷˜¹2
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8±Ô÷˜¹2
+n
+java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœÿÿÿÿÿ8±Ô÷˜¹2
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8²Ô÷˜¹2
+L
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8²Ô÷˜¹2
