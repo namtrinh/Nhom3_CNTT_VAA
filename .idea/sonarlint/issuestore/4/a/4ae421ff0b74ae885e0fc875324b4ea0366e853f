@@ -1,7 +1,7 @@
 
-ú	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ìœı 8çÒ—‡∏2J$3478b623-80b7-4408-99e8-232443f8006e
-î	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñû°‹8êÒ—‡∏2J$0a68ce96-90e7-478f-8bd7-3d96f6671f3e
-ô	java:S1161"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùìü8Õ‹È‡∏2J$c68c6b5c-7761-4871-b1c2-d936d1a0c8a8
+ú	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ìœı 8çÒ—‡∏2J$aaeb02da-e0d0-4f0c-87ed-ab69e0256bbc
+î	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñû°‹8êÒ—‡∏2J$f1681f44-4e93-4b47-a083-a566e73fac24
+ô	java:S1161"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùìü8Õ‹È‡∏2J$1c8d172b-4588-474c-a8f7-be1d3070c6db
 ä
 java:S1128
-"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(É›ü…8öÒ—‡∏2J$f2dd6ffb-8729-4a18-b3f6-61519c906ccf
+"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(É›ü…8öÒ—‡∏2J$85a7ad18-a843-4bcc-832a-da8043196ec6

@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
   subject: string = 'FireFLy';
   text: string = 'hong co 1';
 
-  constructor(private userService: UserService, private emailService: EmailService) {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit(): void {
@@ -44,39 +44,5 @@ export class ListComponent implements OnInit {
     if (window.confirm("Are you sure want to delete this user ?")) {
       this.userService.deleteUser(user_id).subscribe(() => this.getUserList());
     }
-  }
-
-  clickSendmail() {
-    this.clicksendmail = true;
-  }
-
-  checkUncheckAll(evt: any) {
-    this.user.forEach(user => user.selected = evt.target.checked);
-  }
-
-  h(evt: any, userId: string) {
-    const isChecked = evt.target.checked;
-    const user1 = this.user.find(u => u.user_id === userId);
-
-    if (user1) {
-      user1.selected = isChecked;
-      console.log(user1);
-    }
-  }
-
-
-  sendSelectedUsersEmail() {
-    const selectedUsers = this.user.filter(user => user.selected);
-
-    if (selectedUsers.length === 0) {
-      console.log('No users selected.');
-      return;
-    }
-
-    const emailAddresses = selectedUsers.map(user => user.email);
-    this.emailService.sendmail(emailAddresses, this.subject, this.text).subscribe(
-      response => console.log('Emails sent successfully:', response),
-      error => console.error('Error sending emails:', error)
-    );
   }
 }

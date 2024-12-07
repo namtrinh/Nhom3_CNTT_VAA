@@ -1,17 +1,13 @@
 package org.galaxy.backend.Model;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
-
+import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import jakarta.persistence.*;
-
-import org.hibernate.annotations.GenericGenerator;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+import org.galaxy.backend.Model.Products.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.*;
-import org.springframework.cglib.core.Local;
 
 @Entity
 @Getter
@@ -20,6 +16,20 @@ import org.springframework.cglib.core.Local;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
+/*
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = ChargingCable.class, name = "ChargingCable"),
+        @JsonSubTypes.Type(value = HeadPhone.class, name = "HeadPhone"),
+        @JsonSubTypes.Type(value = KeyBoard.class, name = "KeyBoard"),
+        @JsonSubTypes.Type(value = LapTop.class, name = "LapTop"),
+        @JsonSubTypes.Type(value = Mouse.class, name = "Mouse"),
+        @JsonSubTypes.Type(value = Powerbank.class, name = "Powerbank"),
+        @JsonSubTypes.Type(value = SmartPhone.class, name = "SmartPhone"),
+        @JsonSubTypes.Type(value = Tablet.class, name = "Tablet"),
+})
+
+ */
 @Table(name = "product")
 public class Product {
     @Id
@@ -36,7 +46,7 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private StockStatusPr stockStatus;
 
-
+    @Column(name = "time_created")  // nếu tên cột trong DB khác
     private LocalDateTime time_created = LocalDateTime.now();
 
     @ManyToOne
@@ -50,8 +60,4 @@ public class Product {
     public enum StockStatusPr{
             In_Stock, Out_of_Stock
     }
-
-    private String clazz_;
-
-
 }

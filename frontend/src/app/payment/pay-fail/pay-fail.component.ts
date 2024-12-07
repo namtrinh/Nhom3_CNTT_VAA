@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { VNPayService } from '../../service/payment-service.service';
+import {Component, OnInit} from '@angular/core';
+import {VNPayService} from '../../service/payment-service.service';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Order} from "../../model/order.model";
 import {OrderDetail} from "../../model/order_detail.model";
@@ -35,10 +35,12 @@ export class PayFailComponent implements OnInit {
   product: Product[] = [];
   promotion: Promotion[] = [];
   userInf: Order = new Order();
+
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
               private orderDetailService: OrderDetailService) {
   }
+
   // Thanh toán thất bại
   // vẫn tạo hóa đơn với trạng thái là canceled
 
@@ -51,7 +53,7 @@ export class PayFailComponent implements OnInit {
 
       const storedArray = sessionStorage.getItem('myArray');
       this.selectedProduct = storedArray ? JSON.parse(storedArray) : {
-        products: [], user: {}, promotions:[], totalPrice: 0,
+        products: [], user: {}, promotions: [], totalPrice: 0,
         totalQuantityProduct: 0
       };
       this.user = this.selectedProduct.user;
@@ -78,7 +80,7 @@ export class PayFailComponent implements OnInit {
     this.order.email = this.userInf.email;
     this.order.phoneNumber = this.userInf.phoneNumber;
     this.order.address = this.userInf.address;
-    this.order.status = 'Canceled';
+    this.order.status = 'Cancelled';
     this.orderService.create(this.order).subscribe((data: any) => {
       console.log(data.result);
       sessionStorage.removeItem("myArray");
@@ -105,14 +107,13 @@ export class PayFailComponent implements OnInit {
           selected: false,
           seotitle: '',
           time_created: '',
-          stockStatus:'',
+          stockStatus: 'In_Stock',
           product_id: selectedProduct.product,
         };
         updatedProducts.push(newProduct);
       }
     });
     this.orderDetail.products = updatedProducts;
-
     this.orderDetailService.create(this.orderDetail).subscribe((data: any) => {
       const detail_id = data.result.order_detail_id;
       this.createOrder(detail_id);

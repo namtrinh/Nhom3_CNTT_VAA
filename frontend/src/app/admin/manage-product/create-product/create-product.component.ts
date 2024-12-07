@@ -9,6 +9,14 @@ import {CategoryService} from '../../../service/categoy-service.service';
 import {Category} from '../../../model/category.model';
 import {Promotion} from '../../../model/promotion.model';
 import {Location} from "@angular/common";
+import {SmartPhone} from "../../../model/product/smartphone.model";
+import {LapTop} from "../../../model/product/laptop.model";
+import {HeadPhone} from "../../../model/product/headphone.model";
+import {ChargingCable} from "../../../model/product/chargingcable.model";
+import {Mouse} from "../../../model/product/mouse.model";
+import {KeyBoard} from "../../../model/product/keyboard.model";
+import {Tablet} from "../../../model/product/tablet.model";
+import {Powerbank} from "../../../model/product/powerbank.model";
 
 @Component({
   selector: 'app-create-product',
@@ -21,12 +29,12 @@ export class CreateProductComponent implements OnInit {
   checkproduct: any;
   product: Product = new Product();
   categorys: Category[] = [];
-  categoryId : string = '';
+  categoryId: string = '';
   selectedFile: File | null = null;
   imgAvatar!: string;
   default: string = '';
-  stockStatus:string = '';
-
+  stockStatus: string = '';
+  products: Product[] = [];
 
   constructor(
     public productService: ProductService,

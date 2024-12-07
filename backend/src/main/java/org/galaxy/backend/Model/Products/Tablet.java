@@ -11,7 +11,7 @@ import org.galaxy.backend.Model.Product;
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Tablet  {
+public class Tablet{
 
 
     private String brand; // Thương hiệu (ví dụ: "Apple", "Samsung", "Lenovo")

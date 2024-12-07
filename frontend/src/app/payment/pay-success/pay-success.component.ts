@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-
 import {Order} from '../../model/order.model';
 import {FormsModule} from '@angular/forms';
 import {Product} from '../../model/product.model';
@@ -14,6 +13,7 @@ import {SharedDataService} from "../../service/shared-data.service";
 import {User} from "../../model/user.model";
 import {CurrencyPipe, DecimalPipe} from "@angular/common";
 import {ProductService} from "../../service/product-service.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-pay-success',
@@ -40,7 +40,8 @@ export class PaySuccessComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
               private orderDetailService: OrderDetailService,
-              private productService: ProductService) {
+              private productService: ProductService,
+              private http: HttpClient) {
   }
 
   ngOnInit(): void {
@@ -50,7 +51,6 @@ export class PaySuccessComponent implements OnInit {
       this.paymentTime = params['paymentTime'] || null;
       this.transactionId = params['transactionId'] || null;
 
-      // lấy thông tin thanh toán lấy từ giỏ hàng
       const storedArray = sessionStorage.getItem('myArray');
       this.selectedProduct = storedArray ? JSON.parse(storedArray) : {
         products: [], user: {}, promotions: [], totalPrice: 0,
@@ -58,17 +58,12 @@ export class PaySuccessComponent implements OnInit {
       };
       this.user = this.selectedProduct.user;
       this.product = this.selectedProduct.products;
-      console.log(this.product);
-
       this.userInf = this.selectedProduct.userInf;
-      console.log(this.userInf);
       // this.promotion = this.selectedProduct.promotions;
-
       this.createOrderDetail();
     });
   }
 
-  // từ chi tiết hóa đơn khởi tạo hóa đơn
   createOrder(detail_id: string) {
     this.order.payment_id = this.transactionId;
     this.order.time_created = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
@@ -84,7 +79,8 @@ export class PaySuccessComponent implements OnInit {
     this.order.status = 'Completed';
 
     this.orderService.create(this.order).subscribe((data: any) => {
-     sessionStorage.removeItem("myArray");
+      this.sendEmail();
+      sessionStorage.removeItem("myArray");
     });
   }
 
@@ -108,7 +104,7 @@ export class PaySuccessComponent implements OnInit {
           selected: false,
           seotitle: '',
           time_created: '',
-          stockStatus:'In_Stock',
+          stockStatus: 'In_Stock',
           product_id: selectedProduct.product,
         };
         updatedProducts.push(newProduct);
@@ -122,7 +118,6 @@ export class PaySuccessComponent implements OnInit {
     });
   }
 
-  //Cập nhật số lượng sau khi thanh toán
   updateQuantityProduct() {
     this.product.forEach((item: any) => {
       this.productService.getById(item.product).subscribe((data: any) => {
@@ -138,13 +133,26 @@ export class PaySuccessComponent implements OnInit {
         formData.append('price', this.updateProduct.price.toString());
         formData.append('description', this.updateProduct.description);
         formData.append('category', this.updateProduct.category.category_id.toString());
-      //  formData.append('promotion', this.updateProduct.promotion.promotion_id)
+        //  formData.append('promotion', this.updateProduct.promotion.promotion_id)
         formData.append('image', this.updateProduct.image)
-        formData.append('stockStatus', 'In_Stock')
+        formData.append('stock_stastus', "In_Stock")
         this.productService.editById(item.product, formData).subscribe((data: any) => {
-          console.log("update pr:",data);
         })
       })
     })
   }
+
+  sendEmail() {
+    const emailData = {
+      email: this.userInf.email,
+      orderInf: this.orderInf,
+      totalPrice: this.selectedProduct.totalPrice,
+      paymentTime: new Date().toLocaleString(),
+      transactionId: this.transactionId,
+    };
+    this.http.post('http://localhost:8888/identity/email/send', emailData).subscribe(
+      (response) => {
+      });
+  }
+
 }

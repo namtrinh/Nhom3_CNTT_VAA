@@ -1,6 +1,6 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒÃ°Œ8™¨¦¹2J$4e07aeef-47b5-46c2-a1df-a73106102fb8
-x
-java:S1128"0Remove this unused import 'jakarta.persistence'.(Î«Ô§úÿÿÿÿ8Æù—š¹2J$5744d4c4-a6a2-4a2d-9ae8-bd37d5ff808e
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒÃ°Œ8™¨¦¹2J$efe9b353-3869-4c9c-95b6-670965446cd2
+R
+java:S1128"0Remove this unused import 'jakarta.persistence'.(Î«Ô§úÿÿÿÿ8ñØŒÿ¹2
 …
-java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8‡Ò™¹2J$d27105cd-ed42-4316-bc64-fd3bd95b7f29
+java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8´µŒÿ¹2J$b1d589c7-b478-4774-a2a9-4a26b422cf9b

@@ -11,7 +11,8 @@ import org.galaxy.backend.Model.Product;
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class HeadPhone  {
+
+public class HeadPhone {
 
 
     private String type; // Loại tai nghe (ví dụ: "Over-ear", "In-ear", "On-ear")

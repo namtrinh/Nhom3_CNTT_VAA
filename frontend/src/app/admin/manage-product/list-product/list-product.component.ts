@@ -23,7 +23,7 @@ export class ListProductComponent implements OnInit {
   products: Product[] = [];
   product: any;
   page: number = 0;
-  size: number = 20;
+  size: number = 10;
   promotion: Promotion = new Promotion();
   category: Category[] = []
   isLoading: boolean = false;
@@ -70,6 +70,7 @@ export class ListProductComponent implements OnInit {
       const newProducts = data.result.content;
       // Thêm các sản phẩm vào danh sách
       this.products.push(...newProducts);
+
       this.isLoading = false;
     });
   }

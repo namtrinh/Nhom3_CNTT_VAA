@@ -53,8 +53,4 @@ public class ReviewService {
         Pageable pageable = PageRequest.of(page, size);
         return reviewrepository.findAll(pageable);
     }
-
-
-
-
 }

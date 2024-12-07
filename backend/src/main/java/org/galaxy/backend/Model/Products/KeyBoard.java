@@ -8,10 +8,10 @@ import lombok.Setter;
 import org.galaxy.backend.Model.Product;
 
 @Getter
-
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
+
 public class KeyBoard {
 
 

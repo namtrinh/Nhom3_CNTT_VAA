@@ -77,7 +77,7 @@ public class ProductServiceImpl implements ProductService {
 
     public Page<Product> findAllByPage(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return productRepository.findAllByPage(pageable);
+        return productRepository.findAll(pageable);
     }
 
     public void savePrEx(MultipartFile file) {

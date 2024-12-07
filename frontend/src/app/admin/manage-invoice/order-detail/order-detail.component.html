@@ -24,7 +24,6 @@
           <thead class="thead-dark">
           <tr>
             <th>Product Name</th>
-            <th>Quantity</th>
             <th>Price</th>
             <th>Category</th>
           </tr>
@@ -33,7 +32,6 @@
             @for (product of orderDetail.products; track $index) {
               <tr [routerLink]="['/detail-product',product?.seotitle]">
                 <td>{{ product?.name }}</td>
-                <td>{{ product?.quantity }}</td>
                 @if (product?.price && product?.promotion?.discount !== undefined) {
                   <td>
                     {{ ((product?.price || 0) - ((product?.price || 0) * (product?.promotion?.discount || 0) / 100)) | number: '1.0-0' }}

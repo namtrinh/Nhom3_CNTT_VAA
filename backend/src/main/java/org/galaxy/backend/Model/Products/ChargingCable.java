@@ -5,12 +5,13 @@ import lombok.*;
 import org.galaxy.backend.Model.Product;
 
 
+
 @Getter
 @Setter
-
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class ChargingCable{
+
+public class ChargingCable {
 
     private String connectorType; // Loại đầu kết nối (ví dụ: "USB-A to USB-C", "Lightning", "Micro-USB")
 
@@ -29,7 +30,7 @@ public class ChargingCable{
 
     private Boolean fastCharging; // Hỗ trợ sạc nhanh không (true/false)
 
-    @Column(name = "compatible_devices")
+    @Column(nullable = true)
     private String compatibleDevices; // Thiết bị tương thích (ví dụ: "iPhone, Samsung, Huawei")
 
 

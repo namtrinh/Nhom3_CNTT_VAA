@@ -25,9 +25,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     @Query("SELECT p FROM Product p WHERE p.promotion IS NULL")
     List<Product> findAllProductsWithoutPromotion();
 
-    @Query(value = "SELECT * from product ORDER BY time_created  DESC ", nativeQuery = true)
-    Page<Product> findAllByPage(Pageable pageable);
-
     @Query(
             value =
                     "select * from product inner join category " +

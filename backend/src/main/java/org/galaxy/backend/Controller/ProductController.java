@@ -209,6 +209,11 @@ public class ProductController {
     public Product Test(@RequestBody Product product){
         return productRepository.save(product);
     }
+
+    @GetMapping(value = "/test")
+    public List<Product> findAll(){
+        return productRepository.findAll();
+    }
 }
 
  /*      if (image != null && !image.isEmpty()) {

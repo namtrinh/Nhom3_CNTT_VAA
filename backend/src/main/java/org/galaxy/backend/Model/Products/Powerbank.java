@@ -9,11 +9,10 @@ import org.galaxy.backend.Model.Product;
 
 
 @Getter
-
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Powerbank  {
+public class Powerbank{
 
 
     private String brand; // Thương hiệu (ví dụ: "Anker", "Xiaomi", "Samsung")

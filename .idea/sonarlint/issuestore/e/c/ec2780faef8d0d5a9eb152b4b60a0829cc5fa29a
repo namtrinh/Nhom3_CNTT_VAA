@@ -1,4 +1,10 @@
 
-X
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
-n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8¦™€º2J$8275f6b8-cdb7-427e-9659-76868bfad4ed
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©™€º2J$c5ce0d65-7bd9-4f30-9bf7-cc9b02e4c424
+z
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8¹Ì—€º2J$8848917d-db4e-481c-a618-f8ec75ffc1bf
+s
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ºÌ—€º2J$069969e6-2a32-447b-a708-f1cd581831bb
+„
+java:S1128"<Remove this unused import 'jakarta.mail.MessagingException'.(´öáùıÿÿÿÿ8»Ì—€º2J$25171647-b247-488e-bb66-406d43842626
