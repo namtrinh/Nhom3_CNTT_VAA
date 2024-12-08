@@ -57,13 +57,6 @@ public class ProductController {
         return ApiResponse.<List<Product>>builder().code(200).result(result).build();
     }
 
-    @GetMapping(value = "/findAllProductsWithoutPromotion")
-    public ApiResponse<List<Product>> findAllProductsWithoutPromotion() {
-        var result = productService.findAllProductsWithoutPromotion();
-        result.sort((a, b) -> b.getTime_created().compareTo(a.getTime_created()));
-        return ApiResponse.<List<Product>>builder().code(200).result(result).build();
-    }
-
     @GetMapping(value = "/page")
     public ApiResponse<Page<Product>> getAllByPage(@RequestParam int page, @RequestParam int size) {
         return ApiResponse.<Page<Product>>builder()

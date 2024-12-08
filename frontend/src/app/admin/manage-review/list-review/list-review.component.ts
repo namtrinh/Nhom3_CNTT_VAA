@@ -66,12 +66,13 @@ export class ListReviewComponent implements OnInit {
     });
   }
 
-  delete(reviewId: string) {
-    if (window.confirm("Are you sure you want to delete")) {
-      this.reviewService.deleteById(reviewId).subscribe((data: any) => {
-        this.getAll();
-      })
-    }
+  delete(reviewId: string): void {
+    this.reviewService.deleteById(reviewId).subscribe(() => {
+      const index = this.reviews.findIndex(review => review.reviewId === reviewId);
+      if (index !== -1) {
+        this.reviews.splice(index, 1);
+      }
+    });
   }
 
   search(searchTerm: string, rating: number): void {

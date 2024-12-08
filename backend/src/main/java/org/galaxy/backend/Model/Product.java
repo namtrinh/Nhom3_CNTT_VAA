@@ -15,8 +15,8 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Inheritance(strategy = InheritanceType.JOINED)
-/*
+/* @Inheritance(strategy = InheritanceType.JOINED)
+
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = ChargingCable.class, name = "ChargingCable"),
@@ -45,6 +45,8 @@ public class Product {
 
     @Enumerated(EnumType.STRING)
     private StockStatusPr stockStatus;
+
+    private Double totalRating;
 
     @Column(name = "time_created")  // nếu tên cột trong DB khác
     private LocalDateTime time_created = LocalDateTime.now();

@@ -27,9 +27,7 @@ export class EditProductComponent implements OnInit {
   id: any;
   product: Product = new Product();
   selectedFile: File | null = null;
-
   category: Category[] = [];
-  cate!: string;
   time!: string;
   promotion: Promotion[] = [];
   imageUrl!:string;
@@ -48,25 +46,22 @@ export class EditProductComponent implements OnInit {
     this.productService.getById(this.id).subscribe((data: any) => {
       this.product = data.result;
       if (!this.product.category) {
-        this.product.category = {category_id: 1};
+        this.product.category = {category_id: null};
       }
       if (!this.product.promotion) {
         this.product.promotion = {promotion_id: null};
       }
      this.imageUrl = this.product.image;
-      console.log(this.imageUrl)
     });
   }
 
-
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] as File;
-    // Sử dụng FileReader để đọc và hiển thị hình ảnh
     const reader = new FileReader();
     reader.onload = (e: any) => {
-      this.imageUrl = e.target.result;  // Cập nhật imageUrl để hiển thị ảnh
+      this.imageUrl = e.target.result;
     };
-    reader.readAsDataURL(this.selectedFile);  // Đọc file ảnh dưới dạng base64
+    reader.readAsDataURL(this.selectedFile);
   }
 
   private updateProduct() {
@@ -78,7 +73,7 @@ export class EditProductComponent implements OnInit {
     formData.append('description', this.product.description);
     formData.append('stock_stastus', this.product.stockStatus);
     if (this.product.category?.category_id) {
-      formData.append('category', this.product.category.category_id.toString());
+      formData.append('category', this.product.category.category_id);
     }
     if (this.product.promotion?.promotion_id) {
       formData.append('promotion', this.product.promotion.promotion_id)

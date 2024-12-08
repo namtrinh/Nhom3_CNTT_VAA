@@ -68,9 +68,7 @@ export class ListProductComponent implements OnInit {
     this.isLoading = true;
     this.productService.getAllByPage(this.page, this.size).subscribe((data: any) => {
       const newProducts = data.result.content;
-      // Thêm các sản phẩm vào danh sách
       this.products.push(...newProducts);
-
       this.isLoading = false;
     });
   }

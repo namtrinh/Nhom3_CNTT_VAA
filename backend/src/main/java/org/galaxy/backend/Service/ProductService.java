@@ -9,8 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 public interface ProductService {
     List<Product> findAllProductsWithPromotion();
 
-    List<Product> findAllProductsWithoutPromotion();
-
     <S extends Product> S save(S entity);
 
     Product findById(String integer);

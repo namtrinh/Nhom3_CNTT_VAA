@@ -15,7 +15,6 @@ export class EditCategoryComponent implements OnInit {
   ngOnInit(): void {
    this.getById();
   }
-
   id!:string;
   category:Category = new Category();
   constructor(private router: Router, private categoryService: CategoryService,private routeractive:ActivatedRoute){}

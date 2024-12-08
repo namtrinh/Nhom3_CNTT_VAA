@@ -30,4 +30,6 @@ public interface Reviewrepository extends JpaRepository<Review, String> {
     @Query(value = "SELECT * FROM review ORDER BY review_date DESC", nativeQuery = true)
     Page<Review> findAllReview(Pageable pageable);
 
+    @Query(value = "SELECT * from review where review.product_product_id = :productId AND review.status_cmt = 'APPROVED'",nativeQuery = true)
+    List<Review> getAllByProductId(String productId);
 }

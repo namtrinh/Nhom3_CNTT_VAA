@@ -6,7 +6,7 @@
         <input type="file" class="form-control" (change)="onFileSelected($event)" accept="image/*"
                style="width:50vh;display:flex;margin:0 auto;">
       </div>
-<br>
+      <br>
       <div class="form-group">
         <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name">
       </div>
@@ -43,8 +43,8 @@
       </div>
 
       <div class="form-group">
-        <select class="form-control" id="categorySelect" [(ngModel)]="product.category.category_id" name="category">
-          <option value="" disabled>-- Select category --</option>
+        <select class="form-control" id="category" [(ngModel)]="product.category.category_id" name="category">
+          <option value="null" disabled>-- Select category --</option>
           @for (categories of category; track $index) {
             <option [value]="categories.category_id">{{ categories.ct_name }}</option>
           }

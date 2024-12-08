@@ -108,6 +108,7 @@ export class PayFailComponent implements OnInit {
           seotitle: '',
           time_created: '',
           stockStatus: 'In_Stock',
+          totalRating:0,
           product_id: selectedProduct.product,
         };
         updatedProducts.push(newProduct);

@@ -1,6 +1,8 @@
 package org.galaxy.backend.ServiceImpl;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -8,7 +10,10 @@ import com.cloudinary.utils.ObjectUtils;
 import jakarta.persistence.EntityNotFoundException;
 
 import org.galaxy.backend.Model.Product;
+import org.galaxy.backend.Model.Review;
 import org.galaxy.backend.Repository.ProductRepository;
+import org.galaxy.backend.Repository.Reviewrepository;
+import org.galaxy.backend.Repository.UserRepository;
 import org.galaxy.backend.Service.CloudinaryService;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
@@ -30,14 +35,12 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private CloudinaryService cloudinaryService;
 
+    @Autowired
+    private Reviewrepository reviewrepository;
+
     public List<Product> findAllProductsWithPromotion() {
         return productRepository.findAllProductsWithPromotion();
     }
-
-    public List<Product> findAllProductsWithoutPromotion() {
-        return productRepository.findAllProductsWithoutPromotion();
-    }
-
 
     public Product save(Product entity) {
         if (productRepository.existsByName(entity.getName())) {
@@ -70,8 +73,7 @@ public class ProductServiceImpl implements ProductService {
         return this.productRepository.save(product);
     }
 
-    public Product getBySeotitle(String seotitle)
-    {
+    public Product getBySeotitle(String seotitle) {
         return productRepository.getBySeotitle(seotitle);
     }
 
@@ -98,7 +100,7 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.searchByNameOrCategory(name, category);
     }
 
-    public Product UpdateStatus(String product_id, Product product){
+    public Product UpdateStatus(String product_id, Product product) {
         product.setProduct_id(product_id);
         return productRepository.save(product);
     }

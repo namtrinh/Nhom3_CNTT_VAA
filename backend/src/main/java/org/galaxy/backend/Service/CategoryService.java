@@ -34,7 +34,14 @@ public class CategoryService {
     }
 
     public Category editCategory(String integer, Category category) {
-        category.setCategory_id(integer);
-        return categoryRepository.save(category);
+        Category existingCategory = categoryRepository.findById(integer)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+        existingCategory.setCt_name(category.getCt_name());
+        existingCategory.setCt_seotitle(category.getCt_seotitle());
+        existingCategory.setSort(category.getSort());
+        existingCategory.setIcon(category.getIcon());
+        existingCategory.setPoster(category.getPoster());
+
+        return categoryRepository.save(existingCategory);
     }
 }

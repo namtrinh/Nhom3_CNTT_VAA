@@ -5,6 +5,8 @@ import {ProductService} from "../../service/product-service.service";
 import {Product} from "../../model/product.model";
 import {DecimalPipe, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
+import {formatDistanceToNow} from "date-fns";
+import {enUS, vi} from "date-fns/locale";
 
 @Component({
   selector: 'app-review-product',
@@ -42,16 +44,24 @@ export class ReviewProductComponent implements OnChanges {
 
   getAllByProduct(): void {
     console.log("ID:" + this.productId);
-    this.reviewService.getAllProduct(this.productId, this.page, this.size).subscribe(
-      (data: any) => {
-        // Lưu reviews và các thông tin phân trang
+    this.reviewService.getAllProduct(this.productId, this.page, this.size).subscribe((data: any) => {
         this.reviews = data.result.content;
+        this.reviews = data.result.content.map((reviews: Review) => {
+          const formattedDate = formatDistanceToNow(new Date(reviews.reviewDate), {
+            addSuffix: true,
+            locale: enUS,
+          });
+          return {
+            ...reviews,
+            reviewDate: formattedDate,
+          };
+        });
         this.pageCurrent = data.result.pageable.pageNumber;
         this.pageMax = data.result.totalPages;
-        this.calculateAverageRating();
       }
     );
   }
+
 
   save() {
     this.review.product = {
@@ -70,18 +80,10 @@ export class ReviewProductComponent implements OnChanges {
     }, 5000);
   }
 
-  calculateAverageRating(): void {
-    if (this.reviews && this.reviews.length > 0) {
-      const totalStars = this.reviews.reduce((sum, review) => sum + review.rating, 0);
-      this.averageRating = totalStars / this.reviews.length;
-    } else {
-      this.averageRating = 0;
-    }
-  }
-
   getProductById() {
     this.productService.getById(this.productId).subscribe((data: any) => {
       this.product = data.result;
+      this.averageRating = this.product.totalRating;
     })
   }
 

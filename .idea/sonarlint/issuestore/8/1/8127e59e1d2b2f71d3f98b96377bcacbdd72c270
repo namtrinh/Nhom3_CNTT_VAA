@@ -1,4 +1,10 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8î¸­º2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ş¸­º2
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8…×Ü°º2J$5d9f4aaf-27d4-4b3a-90bf-8cb580647c1f
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ˆ×Ü°º2J$ce6206a5-a5de-4eac-9b03-812625bd86cb
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‰×Ü°º2J$2c0a26d3-4465-4830-b485-6bdcca85f95c
+‰
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Sort'.(ëÿ€ëøÿÿÿÿ8ÒÊİ°º2J$4dab9a87-9122-4efc-9d4a-e11005398ffa
+w
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ÒÊİ°º2J$5f339ccb-edaa-434c-b3e1-4482676464ce

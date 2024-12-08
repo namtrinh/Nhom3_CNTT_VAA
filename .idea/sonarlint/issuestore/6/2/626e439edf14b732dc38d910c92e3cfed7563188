@@ -1,19 +1,29 @@
 
-“	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8¨“•Ü¹2J$da478a31-c78d-44c3-8d4a-1efa506914f4
-˜	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8©“•Ü¹2J$e8d866d1-369f-4fe7-ad07-d75ac589097d
-“	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8©“•Ü¹2J$6510e0ae-05d7-472e-8af7-1ec3b81302bd
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8©“•Ü¹2J$c73b504f-ebb6-409d-a303-427586cb6402
-	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8«“•Ü¹2J$cf4d8b28-9c2f-4e0e-a7e7-6354eaf9a1cb
-	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8«“•Ü¹2J$5a67bb9b-580e-43b3-9528-88724c557457
+“	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8¨øõ¯º2J$449d271d-991e-42b5-9f0a-d82be68ed5cd
+˜	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8©øõ¯º2J$f136e60d-1e58-4b79-8a26-09abdf7ae80c
+“	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8©øõ¯º2J$26c8cda3-a517-4446-aa38-9d2ebeb28190
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8©øõ¯º2J$78442d3d-95f0-4e3a-b43c-682db2c999e7
+	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8­øõ¯º2J$421464f2-1a33-46c8-bdc1-4b3652b41c8d
+	java:S112Z"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8­øõ¯º2J$2342ea30-4dca-450c-a489-a68c67262b97
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¯“•Ü¹2J$da09dc0f-211e-4bd4-a77d-9d545b34533e
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8¯øõ¯º2J$49971ee3-f326-4fa1-af6a-8e5a5f668e49
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¯“•Ü¹2J$36fc4e24-f3d3-4e8a-9bb9-b09658dd40b0
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8¯øõ¯º2J$ce19daeb-3cf1-4f5c-ba90-dbbeceb42089
+…
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8¯øõ¯º2J$1e9409a7-f063-4a0b-9e5f-935259824da2
 ƒ
-java:S1854?"@Remove this useless assignment to local variable "deleteResult".(ğÖê8¹“•Ü¹2J$76eb1827-240b-4f8b-aff6-bdb9ba891236
+java:S1854B"@Remove this useless assignment to local variable "deleteResult".(ğÖê8¿øõ¯º2J$fea3c7bb-f319-40aa-9248-679580359a86
 t
-java:S1481?"1Remove this unused "deleteResult" local variable.(ğÖê8Æ“•Ü¹2J$1dbf4132-4b69-4ff7-b7a5-d4086cc5bcaa
+java:S1481B"1Remove this unused "deleteResult" local variable.(ğÖê8Áøõ¯º2J$297d6a22-9159-4702-958d-bba34d2eb766
+w
+java:S1128"4Remove this unused import 'java.text.DecimalFormat'.(¤°Ó˜8Åùµ°º2J$69d12b32-78f4-4211-b95d-37b0dede7485
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Çøõ¯º2J$305b5e02-4c40-414a-8c41-004061214bc1
 r
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8Ç“•Ü¹2J$82be1815-c321-478c-b1c7-bbb979343cd2
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8Èøõ¯º2J$5b073046-5d0c-4e5f-913a-cbf247c4d303
 …
-java:S1128"=Remove this unused import 'com.cloudinary.utils.ObjectUtils'.(§…Ÿøÿÿÿÿ8Ç“•Ü¹2J$4d0935f0-7474-4bb2-b7fa-885a9d6826e3
+java:S1128	"=Remove this unused import 'com.cloudinary.utils.ObjectUtils'.(§…Ÿøÿÿÿÿ8Éøõ¯º2J$2285a814-3e1b-41db-a504-f04a91295ba1
+„
+java:S1128"<Remove this unused import 'org.galaxy.backend.Model.Review'.(ù³“Ñûÿÿÿÿ8Æùµ°º2J$82bc37e8-8629-4368-98c6-90282728706a
+‘
+java:S1128"IRemove this unused import 'org.galaxy.backend.Repository.UserRepository'.(¯½ëµûÿÿÿÿ8è¹œ°º2J$67c6ad19-6436-416f-8e1b-ca73f54af24a

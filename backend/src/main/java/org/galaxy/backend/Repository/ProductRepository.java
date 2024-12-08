@@ -22,12 +22,9 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     @Query("SELECT p FROM Product p WHERE p.promotion IS NOT NULL")
     List<Product> findAllProductsWithPromotion();
 
-    @Query("SELECT p FROM Product p WHERE p.promotion IS NULL")
-    List<Product> findAllProductsWithoutPromotion();
-
     @Query(value = "select * from product inner join category " +
             "on category.category_id = product.category_category_id " +
-            "where product.category_category_id = :category ORDER BY time_created DESC" ,
+            "where product.category_category_id = :category ORDER BY time_created DESC",
             nativeQuery = true)
     List<Product> getByCategory(@Param("category") String category);
 

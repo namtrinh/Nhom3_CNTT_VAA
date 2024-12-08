@@ -1,5 +1,5 @@
 <div class="product">
-  <h3 class="product-name">{{ product.name }}</h3>
+  <h2 class="product-name">{{ product.name }}</h2>
   <div class="user-rating">
     <span class="fa fa-star" [class.checked]="averageRating >= 1"></span>
     <span class="fa fa-star" [class.checked]="averageRating >= 2"></span>
@@ -14,7 +14,7 @@
       <div class="comment">
         <div class="comment-header">
           <span class="comment-author">{{ reviews.customerName }}</span>
-          <span class="comment-date">2 giờ trước</span>
+          <span class="comment-date">{{ reviews.reviewDate }}</span>
         </div>
         <div class="comment-body">
           <div class="user-rating">

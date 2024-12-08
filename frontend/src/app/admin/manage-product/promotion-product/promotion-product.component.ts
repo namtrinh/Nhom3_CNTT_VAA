@@ -43,13 +43,10 @@ export class PromotionProductComponent implements OnInit {
     })
   }
 
-
-
   getPromotion() {
     this.promotionService.getAll().subscribe((data: any) => {
       this.promotion = data.result;
     })
   }
-
 }
 

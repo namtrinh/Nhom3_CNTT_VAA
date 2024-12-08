@@ -29,7 +29,14 @@ public class PromotionService {
     }
 
     public Promotion updateById(String promotion_id, Promotion promotion) {
-        promotion.setPromotion_id(promotion_id);
+        Promotion existPromotion = promotionRepository.findById(promotion_id)
+                .orElseThrow(() -> new RuntimeException("Could not find promotion"));
+        existPromotion.setPromotion_id(promotion.getPromotion_id());
+        existPromotion.setSort(promotion.getSort());
+        existPromotion.setDiscount(promotion.getDiscount());
+        existPromotion.setPr_name(promotion.getPr_name());
+        existPromotion.setTime_end(promotion.getTime_end());
+        existPromotion.setTime_started(promotion.getTime_started());
         return promotionRepository.save(promotion);
     }
 }
