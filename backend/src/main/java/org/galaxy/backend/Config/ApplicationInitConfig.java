@@ -1,5 +1,7 @@
 package org.galaxy.backend.Config;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 
 import org.galaxy.backend.Model.Permission.PredefinedRole;
@@ -27,22 +29,22 @@ public class ApplicationInitConfig {
     @Bean
     ApplicationRunner applicationRunner(UserRepository userRepository) {
         return args -> {
-            if (userRepository.findByEmail("admin2@gmail.com").isEmpty()) {
+            if (userRepository.findByEmail("admin@admin.com").isEmpty()) {
                 Roles adminRole = roleRepository.findByName(PredefinedRole.ADMIN_ROLE)
                         .orElseGet(() -> roleRepository.save(Roles.builder()
                                 .name(PredefinedRole.ADMIN_ROLE)
                                 .description("Admin role")
                                 .build()));
 
-
                 var roles = new HashSet<Roles>();
                 roles.add(adminRole);
 
                 User user = User.builder()
-                        .email("admin2@gmail.com")
+                        .email("admin@admin.com")
                         .password(passwordEncoder.encode("12345678"))
                         .roles(roles)
                         .activated(true)
+                        .time_created(Timestamp.valueOf(LocalDateTime.now()))
                         .build();
 
                 userRepository.save(user);

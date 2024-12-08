@@ -12,7 +12,7 @@
     </thead>
 
     <tbody>
-      @for ( users of users; track user) {
+      @for ( users of users; track users.user_id) {
       <tr>
         <td> {{users.email}}</td>
         <td> {{users.username}}</td>

@@ -1,15 +1,15 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8€“ÿ¹2J$aeacedec-8486-495f-bdff-95c35c9fa810
-œ	java:S116%"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8‚“ÿ¹2J$bbb4fab1-2eb3-4215-be33-6e015caf54db
-	java:S1164"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ç¨åøÿÿÿÿ8‚“ÿ¹2J$14c5f824-7bff-4820-8afb-0437cb6f5b35
-~	java:S125"<This block of commented-out lines of code should be removed.(¼‘Ô»8„“ÿ¹2J$55712a8d-cb51-4968-a5c5-dcd013cb3640
-¡	java:S115?"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8‡“ÿ¹2J$b7f2eae6-9bca-4d40-adc3-3034d95a2bb2
-¡	java:S115?"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8‡“ÿ¹2J$4890f9e9-cec8-4093-bc54-fda9d3dd4781
-r
-java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8Á¦¢ÿ¹2J$18fe1fda-94b3-4a0e-ac5b-c7848ed40c23
-’
-java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonSubTypes'.( ™ÎÄûÿÿÿÿ8‰“ÿ¹2J$6ae984ce-b56c-4c04-b026-aa34899f89df
-’
-java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonTypeInfo'.(Ç†ó¹üÿÿÿÿ8‰“ÿ¹2J$fae753e4-183b-465f-8736-0db31ce2263e
-†
-java:S1128">Remove this unused import 'org.galaxy.backend.Model.Products'.(°ë²Ïÿÿÿÿÿ8‰“ÿ¹2J$cf561e27-841a-47be-9a53-8207f95d7b42
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8€“ÿ¹2J$5922132c-1b88-4d4b-a75d-511d2de41215
+œ	java:S116%"URename this field "product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÅÛÏøÿÿÿÿ8‚“ÿ¹2J$8d755a29-f086-49ff-b8e1-439f3ba1f3c6
+	java:S1164"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ç¨åøÿÿÿÿ8‚“ÿ¹2J$3399aeb7-8b72-4e6c-b813-6d977e7ecdf4
+~	java:S125"<This block of commented-out lines of code should be removed.(¼‘Ô»8„“ÿ¹2J$7d48f251-48ed-40de-8467-153721eb01b0
+¡	java:S115?"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8‡“ÿ¹2J$3fdc7804-e51f-4b68-b21d-794a67b606a6
+¡	java:S115?"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ú±İúøÿÿÿÿ8‡“ÿ¹2J$aceb949c-760d-43b8-87da-8dc926714fc2
+L
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8Òà“¹º2
+l
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonSubTypes'.( ™ÎÄûÿÿÿÿ8Ôà“¹º2
+l
+java:S1128"JRemove this unused import 'com.fasterxml.jackson.annotation.JsonTypeInfo'.(Ç†ó¹üÿÿÿÿ8Ôà“¹º2
+`
+java:S1128">Remove this unused import 'org.galaxy.backend.Model.Products'.(°ë²Ïÿÿÿÿÿ8Ôà“¹º2

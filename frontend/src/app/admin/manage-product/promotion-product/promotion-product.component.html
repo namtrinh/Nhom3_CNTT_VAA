@@ -44,7 +44,7 @@
             {{ (product.price - (product.price * product.promotion.discount / 100)) | number:'1.0-0' }} ₫
           </td>
           <td>
-            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/admin/role/get-user-byrole:', product.name]">
+            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="">
               <i
                 class="fa-regular fa-pen-to-square"></i> Detail
             </button>

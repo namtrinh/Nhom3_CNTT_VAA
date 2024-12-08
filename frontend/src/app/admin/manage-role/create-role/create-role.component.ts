@@ -22,10 +22,13 @@ export class CreateRoleComponent {
     this.roleService.createroles(this.role).subscribe((data:any)=>{
       console.log(this.role);
       this.router.navigate(['/admin/role']);
+      setTimeout(() =>{
+        window.location.reload()
+      }, 0)
     })
   }
   OnSubmit(){
-  
+
     this.createRole();
   }
 }

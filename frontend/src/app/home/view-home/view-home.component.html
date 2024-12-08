@@ -1,11 +1,9 @@
 <div class="full">
-
   <nav class="head">
     <div class="icon" [routerLink]="['/']">
       <img src="/assets/firefly-logo.png" alt="icon">
       <h1>Firefly Galaxy</h1>
     </div>
-
     <div class="search">
       <form (ngSubmit)="OnSubmit()">
         <label for="search">
@@ -17,16 +15,14 @@
         </label>
       </form>
     </div>
-
     <div class="cart" [routerLink]="['/cart']">
       <i class="fa-solid fa-cart-shopping"></i>
       <p>Cart</p>
     </div>
-
     <div class="order-history" (click)="navigateToOrder()">
-      <i class="fa-solid fa-truck-fast"></i><p>MyOrder</p>
+      <i class="fa-solid fa-truck-fast"></i>
+      <p>MyOrder</p>
     </div>
-
     <div class="profile">
       @if (checktokenkey) {
         <div>
@@ -59,24 +55,17 @@
   </nav>
 
   <div class="container">
-
     <div style="padding-top: 0;">
       <img style="width: 100%; min-height: 25px;" src="/assets/topzone.webp" alt="Top Zone Image">
     </div>
 
-
     <div class="menu">
-      <button class="btn btn-light" [routerLink]="['category/all']">
-        <i class="fa-solid fa-list-ul"></i> All
-      </button>
       @for (menu of category; track menu.category_id) {
-
         <button [routerLink]="['category',menu.ct_seotitle]" class="btn btn-light"><i
           [class]="menu.icon"></i> {{ menu.ct_name }}
         </button>
       }
     </div>
-
     @if (showProduct) {
       <app-product-by-category></app-product-by-category>>
     }

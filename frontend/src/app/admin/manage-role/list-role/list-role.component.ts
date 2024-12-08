@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { RolesService } from '../../../service/role-service.service';
 import { Roles } from '../../../model/roles.model';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @Component({
   selector: 'app-list-role',
   standalone:true,
-  imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink, RouterOutlet, FormsModule, ReactiveFormsModule],
   templateUrl: './list-role.component.html',
   styleUrl: './list-role.component.scss'
 })

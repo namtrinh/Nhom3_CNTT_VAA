@@ -1,6 +1,6 @@
 
-“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý²Â˜8ÜŒÏà¯2J$18ca0d4f-fb69-484c-a27e-b37e4b7963ab
-“	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÀšÆ8‰¾»Öª2J$1dee363b-c763-440e-a20d-3f78a8a2166e
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8Š¾»Öª2J$f1ed3aa5-3ad8-45e3-b8ad-d93f0902f5e8
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý²Â˜8ÜŒÏà¯2J$b45871a3-be2f-45f6-be58-d1e08a5734a1
+“	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÀšÆ8‰¾»Öª2J$3346d700-74f7-421e-9db4-b06d4fd8d922
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8Š¾»Öª2J$23da4656-b94c-4f6f-89f4-89a1c9f59747
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8‹¾»Öª2J$ad1c99a4-1a11-458c-9a9f-7d92856437ad
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8‹¾»Öª2J$052d871e-ec44-4f83-b11f-d19f0ff23284

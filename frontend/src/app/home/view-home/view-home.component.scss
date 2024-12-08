@@ -171,15 +171,12 @@
 }
 
 .menu button {
-  flex: 1; /* Mỗi button chiếm hết không gian có sẵn */
-  margin-right: 2px; /* Để tạo khoảng cách giữa các button */
-  border-radius: 0%;
-  border-radius: 5px;
+  flex: 1;
   background-color: #DD0000;
   border: none;
   color: #ffffff;
   font-weight: 550;
-  font-size: 19px;
+  font-size: 14px;
 }
 
 .menu button:last-child {

@@ -27,7 +27,6 @@ public class ReviewService {
 
     @Transactional
     public Review save(Review entity) {
-        this.updateTotalRating();
         entity.setStatusCmt(Review.StatusCmt.PENDING);
         return reviewrepository.save(entity);
     }

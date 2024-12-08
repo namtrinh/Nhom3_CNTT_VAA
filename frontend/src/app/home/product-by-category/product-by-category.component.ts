@@ -39,18 +39,11 @@ export class ProductByCategoryComponent implements OnInit {
   }
 
   getProductFromCategory(seotitle: string) {
-    if (seotitle === 'all') {
-      this.productService.getAll().subscribe((data: any) => {
-        this.products = data.result;
-
-      });
-    } else {
       this.categoryService.getBySeoTitle(seotitle).subscribe((data: any) => {
         this.category = data.result;
         this.category_name = this.category.ct_name;
         this.products = this.category.products
       });
-    }
   }
 
     protected readonly Product = Product;

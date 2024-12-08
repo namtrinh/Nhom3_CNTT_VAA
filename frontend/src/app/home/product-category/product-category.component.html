@@ -18,8 +18,9 @@
           </strong>
           <div class="vote-txt">
             <i class="iconnewglobal-vote"></i>
-            <b>{{product.totalRating}}</b>
-            (3)
+            @if (product.totalRating !== 0){
+              <b>{{ product.totalRating }} <i class="fa-solid fa-star" style="color: #efd520;"></i></b>
+            }
           </div>
         </div>
       }

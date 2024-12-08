@@ -1,55 +1,58 @@
 <div class="container">
 
-    <hr style="width:100%;height:1vh;background-color:rgb(134, 130, 130)">
+  <hr style="width:100%;height:1vh;background-color:rgb(134, 130, 130)">
   <table mat-table class="table table-striped table-bordered table-hover">
     <thead class="table-dark">
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>List user of role</th>
-                <th>List permission of role</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (role of roles; track role.name) {
-            <tr>
-                <td>{{role.name}}</td>
-                <td>{{role.description}}</td>
-                <td>
-                    <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo" [routerLink]="['/admin/role/get-user-byrole:',role.name]">Detail
-                    </button>
-                </td>
-                <td></td>
-                <td>
-                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="@mdo" [routerLink]="['/admin/role/edit-role',role.name]">Edit
-                    </button>
-                </td>
-                <td> <button class="btn btn-danger btn-sm" (click)="deleterole(role.name)">Delete</button></td>
-            </tr>
-            }
-        </tbody>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>List user of role</th>
+      <th>List permission of role</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (role of roles; track role.name) {
+        <tr>
+          <td>{{ role.name }}</td>
+          <td>{{ role.description }}</td>
+          <td>
+            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo" [routerLink]="['/admin/role/get-user-byrole:',role.name]">Detail
+            </button>
+          </td>
+          <td></td>
+          <td>
+            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@mdo" [routerLink]="['/admin/role/edit-role',role.name]">Edit
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleterole(role.name)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
 
-        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@mdo" [routerLink]="['/admin/role/create-role']">Add role </button>
-    </table>
+    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@mdo" [routerLink]="['/admin/role/create-role']">Add role
+    </button>
+  </table>
 
-    <div style="background-color:rgba(0, 0, 0, 0.5);" class="modal fade" id="exampleModal"
-        aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-        <div class="modal-dialog modal-x1" style="max-width:40vw;max-height:100vw;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close"
-                        [routerLink]="['/admin/role']"></button>
-                </div>
-                <div class="modal-body">
-                    <router-outlet></router-outlet>
-                </div>
-            </div>
+  <div style="background-color:rgba(0, 0, 0, 0.5);" class="modal fade" id="exampleModal"
+       aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-x1" style="max-width:40vw;max-height:100vw;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal"
+          ></button>
         </div>
+        <div class="modal-body">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
+  </div>
 
 </div>

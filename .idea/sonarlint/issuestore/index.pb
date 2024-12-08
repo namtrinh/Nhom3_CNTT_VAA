@@ -541,3 +541,11 @@ n
 >frontend/src/app/home/order-history/order-history.component.ts,2\5\255703750eb14bab39201e249210d4d84916bb8a
 o
 ?frontend/src/app/home/order-history/order-history.component.css,1\c\1c81cf9ee44717784a141ab61926c92d722c847c
+w
+Gfrontend/src/app/admin/manage-role/create-role/create-role.component.ts,a\6\a6d187db0044fe6380592c81b8ea966f8596ca34
+s
+Cfrontend/src/app/admin/manage-role/list-role/list-role.component.ts,1\c\1c56419f9bfbe0ad542a45a8e558600f112e342b
+y
+Ifrontend/src/app/admin/manage-role/create-role/create-role.component.html,7\9\79be0cb5b9a339fc8c331148725b9942a3383f08
+ƒ
+Sfrontend/src/app/admin/manage-role/list-user-byrole/list-user-byrole.component.html,3\7\373cd47a32b75a4b285ab0a32989c563a5c1c826

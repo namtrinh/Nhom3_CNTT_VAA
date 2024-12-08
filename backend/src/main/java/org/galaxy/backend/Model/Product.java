@@ -46,7 +46,7 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private StockStatusPr stockStatus;
 
-    private Double totalRating;
+    private Double totalRating = 0.0;
 
     @Column(name = "time_created")  // nếu tên cột trong DB khác
     private LocalDateTime time_created = LocalDateTime.now();

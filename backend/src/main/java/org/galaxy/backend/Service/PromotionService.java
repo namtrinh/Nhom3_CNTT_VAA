@@ -37,6 +37,7 @@ public class PromotionService {
         existPromotion.setPr_name(promotion.getPr_name());
         existPromotion.setTime_end(promotion.getTime_end());
         existPromotion.setTime_started(promotion.getTime_started());
+
         return promotionRepository.save(promotion);
     }
 }
