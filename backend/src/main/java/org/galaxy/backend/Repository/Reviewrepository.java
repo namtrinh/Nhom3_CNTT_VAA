@@ -15,15 +15,19 @@ import java.util.List;
 @Repository
 public interface Reviewrepository extends JpaRepository<Review, String> {
 
-    @Query(value = "SELECT * FROM review WHERE review.product_product_id = :productId and review.status_cmt = 'APPROVED'",nativeQuery = true)
+    @Query(value = "SELECT * FROM review WHERE review.product_product_id = :productId and review.status_cmt = 'APPROVED'" +
+            " ORDER BY review_date DESC", nativeQuery = true)
     Page<Review> findAllByProduct(@Param("productId") String product, Pageable pageable);
 
     @Query(value = "SELECT * from review\n" +
             "inner join product\n" +
             "on product.product_id = review.product_product_id\n" +
             "WHERE (:name IS NULL OR :name = '' OR LOWER(product.name) LIKE LOWER(CONCAT('%', :name, '%'))) " +
-            "AND (:rating IS NULL OR :rating = 0 OR review.rating = :rating)"
+            "AND (:rating IS NULL OR :rating = 0 OR review.rating = :rating) ORDER BY review_date DESC"
             , nativeQuery = true)
     List<Review> getAllByProduct(String name, int rating);
+
+    @Query(value = "SELECT * FROM review ORDER BY review_date DESC", nativeQuery = true)
+    Page<Review> findAllReview(Pageable pageable);
 
 }

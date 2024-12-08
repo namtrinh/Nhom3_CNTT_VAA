@@ -25,17 +25,15 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     @Query("SELECT p FROM Product p WHERE p.promotion IS NULL")
     List<Product> findAllProductsWithoutPromotion();
 
-    @Query(
-            value =
-                    "select * from product inner join category " +
-                            "on category.category_id = product.category_category_id " +
-                            "where product.category_category_id = :category",
+    @Query(value = "select * from product inner join category " +
+            "on category.category_id = product.category_category_id " +
+            "where product.category_category_id = :category ORDER BY time_created DESC" ,
             nativeQuery = true)
     List<Product> getByCategory(@Param("category") String category);
 
     @Query(value = "SELECT * FROM product " +
             "WHERE (:name IS NULL OR :name = '' OR LOWER(name) LIKE LOWER(CONCAT('%', :name, '%'))) " +
-           "AND (:category IS NULL OR :category = '' OR category_category_id = :category)", nativeQuery = true)
+            "AND (:category IS NULL OR :category = '' OR category_category_id = :category) ORDER BY time_created DESC", nativeQuery = true)
     List<Product> searchByNameOrCategory(
             @Param("name") String name,
             @Param("category") String category);

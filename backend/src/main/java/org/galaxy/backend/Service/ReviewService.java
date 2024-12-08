@@ -51,6 +51,6 @@ public class ReviewService {
 
     public Page<Review> findAll(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return reviewrepository.findAll(pageable);
+        return reviewrepository.findAllReview(pageable);
     }
 }
