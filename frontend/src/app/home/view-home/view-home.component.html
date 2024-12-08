@@ -2,18 +2,19 @@
 
   <nav class="head">
     <div class="icon" [routerLink]="['/']">
-      <img src="/assets/firefly-logo.png" alt="icon" >
+      <img src="/assets/firefly-logo.png" alt="icon">
       <h1>Firefly Galaxy</h1>
     </div>
 
     <div class="search">
-      <form (ngSubmit)="OnSubmit()" >
-      <label for="search">
-        <button type="submit" style="background: none; border: none; cursor: pointer;">
-          <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
-        </button>
-        <input type="search" id="search" name="name" [(ngModel)]="name" style="border:none;" placeholder="What do you need ?" style="outline:none">
-      </label>
+      <form (ngSubmit)="OnSubmit()">
+        <label for="search">
+          <button type="submit" style="background: none; border: none; cursor: pointer;">
+            <i class="fa-solid fa-magnifying-glass" style="font-size:20px;"></i>
+          </button>
+          <input type="search" id="search" name="name" [(ngModel)]="name" style="border:none;"
+                 placeholder="What do you need ?" style="outline:none">
+        </label>
       </form>
     </div>
 
@@ -22,29 +23,37 @@
       <p>Cart</p>
     </div>
 
+    <div class="order-history" (click)="navigateToOrder()">
+      <i class="fa-solid fa-truck-fast"></i><p>MyOrder</p>
+    </div>
 
     <div class="profile">
       @if (checktokenkey) {
-      <div>
-        @if (inf) {
-        <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-          <i class="fa-regular fa-user"></i>
-          <p>{{inf.username}}</p>
-        </button>
-        }
-        <ul class="dropdown-menu">
+        <div>
           @if (inf) {
-          <li><button class="dropdown-item" [routerLink]="['/myinf',inf.user_id]">My information</button>
-          </li>
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+              <i class="fa-regular fa-user"></i>
+              <p>{{ inf.username }}</p>
+            </button>
           }
-          <li><button class="dropdown-item " (click)="logout()">Logout</button></li>
-          <li><button class="dropdown-item" [routerLink]="['/admin']">Go to Admin</button></li>
-        </ul>
-      </div>
-      }@else {
-      <div>
-        <i class="fa-regular fa-user" [routerLink]="['/login']" style="cursor: pointer;font-weight: 900;">Login</i>
-      </div>
+          <ul class="dropdown-menu">
+            @if (inf) {
+              <li>
+                <button class="dropdown-item" [routerLink]="['/myinf',inf.user_id]">My information</button>
+              </li>
+            }
+            <li>
+              <button class="dropdown-item " (click)="logout()">Logout</button>
+            </li>
+            <li>
+              <button class="dropdown-item" [routerLink]="['/admin']">Go to Admin</button>
+            </li>
+          </ul>
+        </div>
+      } @else {
+        <div>
+          <i class="fa-regular fa-user" [routerLink]="['/login']" style="cursor: pointer;font-weight: 900;">Login</i>
+        </div>
       }
     </div>
   </nav>
@@ -62,16 +71,17 @@
       </button>
       @for (menu of category; track menu.category_id) {
 
-      <button [routerLink]="['category',menu.ct_seotitle]" class="btn btn-light"><i
-          [class]="menu.icon"></i> {{menu.ct_name}}</button>
+        <button [routerLink]="['category',menu.ct_seotitle]" class="btn btn-light"><i
+          [class]="menu.icon"></i> {{ menu.ct_name }}
+        </button>
       }
     </div>
 
     @if (showProduct) {
-    <app-product-by-category></app-product-by-category>>
+      <app-product-by-category></app-product-by-category>>
     }
-    @if(!showProduct) {
-    <router-outlet></router-outlet>
+    @if (!showProduct) {
+      <router-outlet></router-outlet>
 
     }
   </div>

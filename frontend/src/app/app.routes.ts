@@ -46,6 +46,7 @@ import {ListOrderComponent} from "./admin/manage-invoice/list-order/list-order.c
 import {OrderDetailComponent} from "./admin/manage-invoice/order-detail/order-detail.component";
 import {SearchProductComponent} from "./home/search-product/search-product.component";
 import {ListReviewComponent} from "./admin/manage-review/list-review/list-review.component";
+import {OrderHistoryComponent} from "./home/order-history/order-history.component";
 
 export const routes: Routes = [
 
@@ -60,18 +61,19 @@ export const routes: Routes = [
   {path: 'forgot-password', component: RequiredResetPasComponent, canActivate: [RouteGuard]},
   {path: 'reset-password', component: ResetPassComponent},
 
+
   //View Client
   {path: '', redirectTo: '', pathMatch: 'full'},
   {
     path: '', component: ViewHomeComponent, children: [
       {path: '', component: ProductSaleComponent},
-      {path: 'b', component: ProductExtendComponent},
       {path: 'category/:seotitle/:seotitle', component: DetailProductComponent},
       {path: 'myinf/:user_id', component: MyInfComponent},
       {path: 'edit_my_inf/:user_id', component: EditMyInfComponent},
       {path: 'cart', component: CartComponent},
       {path: 'category/:seotitle', component: ProductByCategoryComponent},
       {path: 'search/:name', component:SearchProductComponent},
+      {path: 'my_order/:user_id', component: OrderHistoryComponent},
     ]
   },
 

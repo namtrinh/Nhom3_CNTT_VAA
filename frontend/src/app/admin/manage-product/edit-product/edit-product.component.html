@@ -35,9 +35,9 @@
 
       <div class="form-group">
         <select class="form-control" id="promotion" [(ngModel)]="product.promotion.promotion_id" name="promotion">
-          <option [ngValue]="null">-- Select promotion --</option>
+          <option value="null">-- Select promotion --</option>
           @for (promotions of promotion; track $index) {
-            <option [ngValue]="promotions.promotion_id">{{ promotions.pr_name }}</option>
+            <option [value]="promotions.promotion_id">{{ promotions.pr_name }}</option>
           }
         </select>
       </div>

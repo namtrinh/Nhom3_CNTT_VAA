@@ -11,31 +11,31 @@ import {Cart} from '../../model/cart.model';
 import {format} from 'date-fns';
 import {jwtDecode} from 'jwt-decode';
 import {ReviewProductComponent} from "../review-product/review-product.component";
+import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from "@angular/material/card";
+import {CategoryService} from "../../service/categoy-service.service";
 
 @Component({
   selector: 'app-detail-product',
   standalone: true,
-  imports: [RouterLink, FormsModule, CommonModule, ReviewProductComponent],
+  imports: [RouterLink, FormsModule, CommonModule, ReviewProductComponent, MatCard, MatCardHeader, MatCardContent, MatCardActions],
   templateUrl: './detail-product.component.html',
   styleUrls: ['./detail-product.component.scss']
 })
 export class DetailProductComponent implements OnInit {
   quantity: number = 1;
   inf!: string;
-  totalprice!: number;
   seo!: string;
   product: Product = new Product();
-  showQuantitySelection = false;
-  imgAvatars: { [key: string]: string } = {};
-  showPay: boolean = false;
   cart: Cart = new Cart();
   isVisible: boolean = false;
   imageUrl!:string;
+  products:Product[] = [];
 
   constructor(
     private cartService: CartService,
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
+    private categoryService:CategoryService
   ) {
   }
 
@@ -48,6 +48,7 @@ export class DetailProductComponent implements OnInit {
     this.seo = this.Activeroute.snapshot.params['seotitle'];
     this.productService.getBySeoTitle(this.seo).subscribe((data: any) => {
       this.product = data.result;
+      this.getByCategory()
        console.log(this.product.product_id)
       if (this.product && this.product.product_id) {
         this.imageUrl = this.product.image;
@@ -55,7 +56,7 @@ export class DetailProductComponent implements OnInit {
     });
   }
 
-  addToCart() {
+  addToCart(productId:string) {
     const token = localStorage.getItem('auth_token') as string;
     const decodedToken = jwtDecode(token) as any;
     const user_Id = decodedToken.userId;
@@ -67,7 +68,7 @@ export class DetailProductComponent implements OnInit {
     }
     this.cart.product_quantity = this.quantity;
     this.cart.product = {
-      product_id: this.product.product_id
+      product_id: productId
     };
     this.cart.user = {
       user_id: user_Id
@@ -79,6 +80,13 @@ export class DetailProductComponent implements OnInit {
     });
   }
 
+  getByCategory(){
+    if (this.product.category.ct_seotitle) {
+      this.categoryService.getBySeoTitle(this.product.category.ct_seotitle).subscribe((data: any) => {
+        this.products = data.result.products;
+      })
+    }
+  }
 
   showToast() {
     this.isVisible = true;

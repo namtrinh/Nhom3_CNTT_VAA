@@ -26,7 +26,7 @@ export class ReviewProductComponent implements OnChanges {
   size: number = 3;
   pageCurrent: number = 0;
   pageMax!: number;
-  averageRating:number = 0;
+  averageRating: number = 0;
   isVisible: boolean = false;
 
   constructor(private reviewService: ReviewService,
@@ -35,7 +35,6 @@ export class ReviewProductComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['productId'] && !changes['productId'].firstChange) {
-      console.log(this.productId)
       this.getProductById()
       this.getAllByProduct();
     }
@@ -49,20 +48,16 @@ export class ReviewProductComponent implements OnChanges {
         this.reviews = data.result.content;
         this.pageCurrent = data.result.pageable.pageNumber;
         this.pageMax = data.result.totalPages;
-
-        // Tính trung bình số sao
         this.calculateAverageRating();
-
-        console.log('Page Max:', this.pageMax);
       }
     );
   }
 
-  save(){
+  save() {
     this.review.product = {
       product_id: this.productId
     }
-    this.reviewService.save(this.review).subscribe((data:any) =>{
+    this.reviewService.save(this.review).subscribe((data: any) => {
       this.showToast();
       this.getAllByProduct();
     })
@@ -78,13 +73,11 @@ export class ReviewProductComponent implements OnChanges {
   calculateAverageRating(): void {
     if (this.reviews && this.reviews.length > 0) {
       const totalStars = this.reviews.reduce((sum, review) => sum + review.rating, 0);
-
       this.averageRating = totalStars / this.reviews.length;
     } else {
       this.averageRating = 0;
     }
   }
-
 
   getProductById() {
     this.productService.getById(this.productId).subscribe((data: any) => {
@@ -95,7 +88,6 @@ export class ReviewProductComponent implements OnChanges {
   decrease() {
     if (this.page >= 0) {
       this.page--;
-      console.log(this.page)
       this.size = 3;
       this.getAllByProduct()
     }
@@ -104,7 +96,6 @@ export class ReviewProductComponent implements OnChanges {
   increase() {
     if (this.page < this.pageMax - 1) {
       this.page++;
-      console.log(this.page);
       this.size = 3;
       this.getAllByProduct()
     }

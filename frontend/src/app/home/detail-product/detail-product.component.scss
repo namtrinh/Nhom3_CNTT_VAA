@@ -1,6 +1,5 @@
 
 .container {
-  width:60%;
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff;
@@ -8,6 +7,7 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 @media (max-width: 768px) {
   .product-content {
     flex-direction: column;
@@ -17,12 +17,12 @@
   .product-info-container {
     margin: 0 auto;
     width: 100%;
-    max-width: 500px; /* Điều chỉnh theo độ rộng mong muốn */
-    text-align: left; /* Giữ nguyên các phần tử bên trong không bị căn giữa */
+    max-width: 500px;
+    text-align: left;
   }
 
   .product-img-container {
-    text-align: left; /* Giữ nguyên các phần tử bên trong không bị căn giữa */
+    text-align: left;
   }
 }
 
@@ -59,4 +59,70 @@
   font-size: 18px;
   min-width: 100%;
 }
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-card mat-card-header {
+  flex-shrink: 0;
+}
+
+.product-card mat-card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  min-height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+mat-card-actions {
+  margin-top: auto;
+}
+
+.product-price,
+.discount {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.product-card h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+.product-container {
+  max-height: 150vh;
+  overflow-y: scroll;
+}
+
+.product-card {
+  flex: 1 1 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #DD0000;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efcaca;
+  border-radius: 10px;
+}
+
+
 

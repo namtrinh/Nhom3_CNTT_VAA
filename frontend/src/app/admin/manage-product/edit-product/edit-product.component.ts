@@ -80,7 +80,7 @@ export class EditProductComponent implements OnInit {
     if (this.product.category?.category_id) {
       formData.append('category', this.product.category.category_id.toString());
     }
-    if (this.product.promotion.promotion_id) {
+    if (this.product.promotion?.promotion_id) {
       formData.append('promotion', this.product.promotion.promotion_id)
     }
     console.log(this.product.promotion.promotion_id)

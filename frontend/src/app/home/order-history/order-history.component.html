@@ -1,0 +1,66 @@
+<div class="container">
+  <h1 class="text-center mb-4 fw-bold text-gradient">Order History</h1>
+
+  @for (order of orders; track $index) {
+    <div class="order-card mb-5 p-4 shadow-lg rounded-3 bg-white mt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h4 class="fw-bold mb-1">Transaction ID: {{ order.order_id }}</h4>
+          <p class="text-muted mt-3">
+            <i class="bi bi-person"></i> Username: <span class="fw-semibold">{{ order.username }}</span>
+          </p>
+          <p class="text-muted mt 2">
+            <i class="bi bi-calendar"></i> Payment Date: {{ order.time_created | date: 'dd/MM/yyyy HH:mm' }}
+          </p>
+        </div>
+        <span class="badge fs-6"
+              [class.bg-success]="order.status === 'Completed'"
+              [class.bg-danger]="order.status === 'Cancelled'">
+          {{ order.status }}
+        </span>
+      </div>
+      <hr>
+      <button class="btn btn-light w-100" (click)="getOrderDetail(order.orderDetail_id)">
+        <i class="bi bi-info-circle"></i> View Details
+      </button>
+    </div>
+
+    @if (selectedOrderDetailId === order.orderDetail_id && orderDetail) {
+      <ng-container>
+        <div class="order-detail mt-2 p-5 shadow-lg rounded-3 bg-light">
+          <h2 class="mb-4">Order Details</h2>
+
+          <h4 class="mt-3">Products</h4>
+          <ul class="list-group mb-4">
+            @for (product of orderDetail.products; track $index) {
+              @if (product) {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span>{{ product.name }}</span>
+                  <span class="badge bg-primary" style="font-size: 15px;">{{ product.price | currency: 'VND' }}</span>
+                </li>
+              }
+            }
+          </ul>
+
+          <h4>Promotions</h4>
+          <ul class="list-group mb-4">
+            @for (promo of orderDetail.promotions; track $index) {
+              @if (promo) {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span>{{ promo.pr_name }}</span>
+                  <span class="badge bg-info">{{ promo.discount }}%</span>
+                </li>
+              }
+            }
+          </ul>
+
+          <div class="summary-box p-4 rounded-3 bg-gradient border shadow-lg">
+            <p class="mb-1 text-black"><strong>Total Amount:</strong> {{ orderDetail.total_amount }}</p>
+            <p class="mb-0 text-black"><strong>Total Price:</strong> {{ orderDetail.total_price | currency: 'VND' }}</p>
+          </div>
+
+        </div>
+      </ng-container>
+    }
+  }
+</div>

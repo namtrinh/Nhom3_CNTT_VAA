@@ -1,28 +1,28 @@
-@for (category of categorys;track $index){
-<div class="container">
-  <h1 class="title">{{category.ct_name}}</h1>
-  @if (category.poster){
-  <img class="poster" src="/assets/poster/{{category.poster}}.png">
-  }
-  <div class="listproduct listproduct-block">
-    @for (product of category.products; track product.product_id) {
-      <div class="item"  [routerLink]="['/category',product.category?.ct_seotitle, product.seotitle]">
-        <div class="item-img">
-          <img [src]="product.image">
-        </div>
-        <h3 class="product_name">
-          {{product.name}}
-        </h3>
-
-        <strong class="price">{{product.price | number:'1.0-0' }}₫ </strong>
-
-        <div class="vote-txt">
-          <i class="iconnewglobal-vote"></i>
-          <b>4.3</b>
-          (3)
-        </div>
-      </div>
+@for (category of categorys; track $index) {
+  <div class="container">
+    <h1 class="title">{{ category.ct_name }}</h1>
+    @if (category.poster) {
+      <img class="poster" src="/assets/poster/{{category.poster}}.png">
     }
+    <div class="listproduct listproduct-block">
+      @for (product of category.products; track product.product_id) {
+        <div class="item" [routerLink]="['/category',product.category?.ct_seotitle, product.seotitle]">
+          <div class="item-img">
+            <img [src]="product.image">
+          </div>
+          <h3 class="product_name mb-3">
+            {{ product.name }}
+          </h3>
+          <strong class="price mt-3">
+            {{ product.price | number:'1.0-0' }}₫
+          </strong>
+          <div class="vote-txt">
+            <i class="iconnewglobal-vote"></i>
+            <b>4.3</b>
+            (3)
+          </div>
+        </div>
+      }
+    </div>
   </div>
-</div>
 }

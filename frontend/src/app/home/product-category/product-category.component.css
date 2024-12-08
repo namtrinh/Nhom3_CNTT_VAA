@@ -85,12 +85,14 @@
   margin: 10px 0;
   text-align: center;
   font-weight: bold;
+  padding-top:20px;
 }
 
 .vote-txt {
-  font-size: 14px;
+  font-size: 17px;
   color: #666;
   text-align: center;
+  padding-top:50px;
 }
 
 .lb-tragop {

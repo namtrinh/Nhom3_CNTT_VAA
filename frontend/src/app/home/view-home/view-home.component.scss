@@ -6,8 +6,13 @@
   width: 80%;
   height: auto;
   padding-top: 72px;
-
 }
+.btn-order{
+  background-color: #DD0000;
+  font-size: 20px;
+  color:white;
+}
+
 .head {
   display: flex;
   align-items: center;
@@ -88,6 +93,20 @@
   align-items: center;
   font-size: 20px;
   color: white;
+}
+
+.order-history {
+  font-size: 20px;
+  color: #ffffff;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.order-history i,p{
+  margin: 0;
+  color: #ffffff;
 }
 
 .profile .btn.btn-primary.dropdown-toggle {
@@ -191,6 +210,10 @@
   }
 
   .profile button p {
+    display: none;
+  }
+
+  .order-history p{
     display: none;
   }
 

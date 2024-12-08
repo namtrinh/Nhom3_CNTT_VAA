@@ -93,4 +93,9 @@ export class ViewHomeComponent implements OnInit {
   OnSubmit(){
     this.search();
   }
+
+  navigateToOrder(){
+    const userId = localStorage.getItem('user_Id')
+    this.router.navigate(['/my_order',userId])
+  }
 }

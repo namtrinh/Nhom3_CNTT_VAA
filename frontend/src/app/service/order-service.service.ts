@@ -17,6 +17,10 @@ export class OrderService {
     return this.http.get<Order[]>(`${this.pathUrl}/all`)
   }
 
+  findAllByUser(user:string):Observable<Order[]>{
+    return this.http.get<Order[]>(`${this.pathUrl}/my-order/${user}`)
+  }
+
   getAll(page: number, size: number): Observable<any> {
     const params = new HttpParams()
       .set('page', page.toString())

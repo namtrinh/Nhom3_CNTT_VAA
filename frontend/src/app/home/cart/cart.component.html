@@ -135,9 +135,7 @@
       </div>
 
       <div class="imgsp">
-        <a href="" target="_blank" [routerLink]="['/category/{{product.category}}/',carts.product.seotitle]">
-          <img [src]="carts.product.image" loading="lazy">
-        </a>
+          <img   [routerLink]="['/category/{{product.category}}/',carts.product.seotitle]" [src]="carts.product.image">
         <div>
           <button class="delete-btn" (click)="deleteCart(carts.cart_id)">Xóa</button>
         </div>
@@ -145,7 +143,7 @@
       <div class="infosp">
         <div class="name-price">
           <div class="name-container">
-            <a href="" class="product-item__name" [routerLink]="['/detail-product',carts.product.seotitle]"
+            <a href="" class="product-item__name" [routerLink]="['/category/{{product.category}}/',carts.product.seotitle]"
                loading="lazy">
               {{ carts.product.name }}
             </a>
@@ -168,19 +166,12 @@
         <div class="choosenumber">
           <div class="buttons_added">
             <button class="minus is-form" type="button" value="-" (click)="decreaseQuantity(carts)">-</button>
-
-            <!-- Trường nhập số lượng sản phẩm -->
             <input aria-label="quantity" [(ngModel)]="carts.product_quantity" class="input-qty"
                    [max]="maxQuantity" [min]="1" type="number" readonly>
-
-            <!-- Nút tăng số lượng -->
             <button class="plus is-form" type="button" value="+" (click)="increaseQuantity(carts)">+</button>
-
           </div>
         </div>
-
       </div>
-
     </li>
   </div>
 }
