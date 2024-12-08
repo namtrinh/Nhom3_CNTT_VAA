@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from '../../service/product-service.service';
-import {ActivatedRoute, RouterLink} from '@angular/router';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {Product} from '../../model/product.model';
 import {FormsModule} from '@angular/forms';
 import {VNPayService} from '../../service/payment-service.service';
@@ -35,7 +35,8 @@ export class DetailProductComponent implements OnInit {
     private cartService: CartService,
     private productService: ProductService,
     private Activeroute: ActivatedRoute,
-    private categoryService:CategoryService
+    private categoryService:CategoryService,
+    private router:Router,
   ) {
   }
 
@@ -94,5 +95,14 @@ export class DetailProductComponent implements OnInit {
       this.isVisible = false;
     }, 3000);
   }
+
+    protected readonly location = location;
+  gotoOrderProduct() {
+      setTimeout(() => {
+        window.location.reload();
+      }, 0);
+
+  }
+
 }
 

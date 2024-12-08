@@ -146,6 +146,12 @@ public class ProductController {
             product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
         }
 
+        if (params.get("quantity").equals("0")){
+            product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
+        }else{
+            product.setStockStatus(Product.StockStatusPr.In_Stock);
+        }
+
         if (params.get("promotion") != null) {
             String promotionValue = params.get("promotion");
             Promotion promotion = new Promotion();
@@ -194,18 +200,6 @@ public class ProductController {
                 .code(200)
                 .result(productService.searchProductsByName(name,category))
                 .build();
-    }
-
-
-
-    @PostMapping(value = "/test")
-    public Product Test(@RequestBody Product product){
-        return productRepository.save(product);
-    }
-
-    @GetMapping(value = "/test")
-    public List<Product> findAll(){
-        return productRepository.findAll();
     }
 }
 

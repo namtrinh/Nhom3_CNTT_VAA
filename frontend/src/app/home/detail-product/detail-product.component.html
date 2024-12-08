@@ -88,7 +88,8 @@
     <div class="col-12 col-md-4">
       <div class="row product-container">
         <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">
-          <mat-card class="product-card h-100">
+          <mat-card class="product-card h-100" (click)="gotoOrderProduct()"
+                    [routerLink]="['/category/{{product.category}}/',product.seotitle]">
             <mat-card-header>
               <h5 class="card-title">{{ product.name }}</h5>
             </mat-card-header>
