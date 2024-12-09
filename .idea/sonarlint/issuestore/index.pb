@@ -103,8 +103,6 @@ f
 6frontend/src/app/home/view-home/view-home.component.ts,7\7\779d79cfe5effa4b2336d881a8d74275ea4e1a45
 z
 Jbackend/src/main/java/org/galaxy/backend/Service/ResetPasswordService.java,5\0\5045ff67c96cbcd297c363bc3ef6a95fd3ad80b5
-s
-Cbackend/src/main/java/org/galaxy/backend/Service/EmailService1.java,e\3\e3e2639e79c71be8ef53d2433ae1bb9142ade5d6
 }
 Mbackend/src/main/java/org/galaxy/backend/Service/VerifyUser/EmailService.java,6\d\6d61a9baa3176320a987ea19e88cdc08389bb546
 w
@@ -347,14 +345,6 @@ r
 Bfrontend/src/app/home/detail-product/detail-product.component.scss,0\e\0e26e795d45b85e3d6367f0e835af2e387214824
 _
 /frontend/src/app/service/shared-data.service.ts,8\9\89cefe2db4ab8d77e999ad69f1984e377f3aa4aa
-X
-(frontend/src/app/test/test1.component.ts,4\0\40137da48a47ddafdffc5dca77691eaa0944b634
-W
-'frontend/src/app/test/test.component.ts,3\4\348264eb45451de6f0419d64632da0440fe92f7e
-Y
-)frontend/src/app/test/test.component.html,5\b\5b46716098b893b29e13a81ff5839789381fa84f
-Z
-*frontend/src/app/test/test1.component.html,e\c\ec8f4148ff15c872d0c4a33d9a4252cfcacdc88f
 ‡
 Wfrontend/src/app/admin/manage-permission/list-permission/list-permission.component.html,0\8\08567b3c2cd241b76e6fe57a8550e0fef7c01773
 ‡
@@ -377,8 +367,6 @@ z
 Jfrontend/src/app/admin/manage-invoice/list-order/list-order.component.html,d\d\ddbc8a10fdbad9e02dedfad47ad09520ed252866
 }
 Mfrontend/src/app/admin/manage-invoice/order-detail/order-detail.component.css,9\c\9ca2ffa33247263e739428b7a166ebae07c4dae0
-Y
-)frontend/src/app/test/test.component.scss,f\a\fab96a57bea6a936770f3554970a19f4ed8597f6
 i
 9frontend/src/app/admin/dashboard/dashboard.component.html,c\7\c79551d6743751b6e1447e16ae33305fd0bba28e
 i
@@ -455,8 +443,6 @@ r
 Bbackend/src/main/java/org/galaxy/backend/Model/Products/Mouse.java,2\f\2f6f83037dd1ecce1abe15e35b6d5bfb16039579
 u
 Ebackend/src/main/java/org/galaxy/backend/Model/Products/KeyBoard.java,7\8\787c2e4a777e89125a41ef5b72a088e304e64797
-‰
-Ybackend/src/main/java/org/galaxy/backend/Controller/Products/ChargingCableController.java,3\3\33676cd6eceb3214817377958c7b45edac8a8bda
 y
 Ifrontend/src/app/admin/manage-user/create-user/create-user.component.scss,a\8\a8c41c1cca271b94f5f5633599e34e20d6749a07
 ‚
