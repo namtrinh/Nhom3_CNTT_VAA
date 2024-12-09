@@ -4,10 +4,11 @@ import { User } from '../../../model/user.model';
 import { OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router, RouterLink } from '@angular/router';
 import { RolesService } from '../../../service/role-service.service';
+import {DatePipe} from "@angular/common";
 @Component({
   selector: 'app-user-details',
   standalone:true,
-  imports:[RouterLink,],
+  imports: [RouterLink, DatePipe,],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.scss'
 })

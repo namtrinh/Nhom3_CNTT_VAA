@@ -88,12 +88,13 @@
     <div class="col-12 col-md-4">
       <div class="row product-container">
         <div class="col-12 col-md-6 mb-4" *ngFor="let product of products">
-          <mat-card class="product-card h-100" (click)="gotoOrderProduct()"
-                    [routerLink]="['/category/{{product.category}}/',product.seotitle]">
+          <mat-card class="product-card h-100">
             <mat-card-header>
               <h5 class="card-title">{{ product.name }}</h5>
             </mat-card-header>
-            <img mat-card-image [src]="product.image" alt="{{ product.name }}" class="product-image"/>
+            <img mat-card-image [routerLink]="['/category/{{product.category}}/',product.seotitle]"
+                 (click)="gotoOrderProduct()"
+                 [src]="product.image" alt="{{ product.name }}" class="product-image"/>
             <mat-card-content class="flex-grow-1">
               <ng-container *ngIf="!product.promotion">
                 <p class="product-price" style="font-size: 1.2rem;font-weight: 600; color:#DD0000">

@@ -4,13 +4,13 @@ import {UserService} from '../../../service/user-service.service';
 import {User} from '../../../model/user.model';
 import {RolesService} from '../../../service/role-service.service';
 import {Roles} from '../../../model/roles.model';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-edit-user',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './edit-user.component.html',
   styleUrl: './edit-user.component.scss'
 })
@@ -18,10 +18,8 @@ export class EditUserComponent implements OnInit {
 
   id!: string;
   user: User = new User();
-  users: User[] = [];
   imgAvatar!: string;
   role: Roles[] = [];
-  selectedFile: File | null = null;
   list_role:any;
   select_role: boolean = false;
 
@@ -42,27 +40,8 @@ export class EditUserComponent implements OnInit {
     this.userService.getById(this.id).subscribe((data: any) => {
       this.user = data.result;
       this.list_role = this.user.roles;
-      this.getImageFromService(this.user.avatar);
+
     });
-  }
-
-  getImageFromService(imageName: string): void {
-    if (imageName !== null && imageName !== undefined) {
-      this.userService.getImage(imageName).subscribe(data => {
-        const blob = new Blob([data], {type: 'image/*'});
-        this.imgAvatar = URL.createObjectURL(blob);
-      });
-    }
-  }
-
-  onFileSelected(event: any): void {
-    this.selectedFile = event.target.files[0] as File;
-    // đọc file và hiện
-    const reader = new FileReader();
-    reader.onload = (e: any) => {
-      this.imgAvatar = e.target.result;
-    };
-    reader.readAsDataURL(this.selectedFile);
   }
 
   selectRole() {

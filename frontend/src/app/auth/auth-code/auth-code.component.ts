@@ -51,8 +51,10 @@ export class AuthCodeComponent implements OnInit, OnDestroy {
       next: data => {
         const token_key = localStorage.getItem("auth_token");
         if (token_key) {
-          const decodedToken: any = jwtDecode(token_key);
+          const decodedToken = jwtDecode(token_key) as any;
           const userRole = decodedToken.scope;
+          localStorage.setItem("userId", decodedToken.userId);
+
           console.log('Đăng nhập thành công');
           if (userRole === "ROLE_ADMIN" || userRole === "ROLE_MANAGER") {
             this.router.navigate(['/admin/dashboard']);

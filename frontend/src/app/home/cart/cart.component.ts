@@ -22,7 +22,6 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService,
               private paymentService: VNPayService,
-
               private productService: ProductService) {
   }
 

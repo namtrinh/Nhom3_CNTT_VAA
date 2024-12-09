@@ -7,6 +7,7 @@ import {DecimalPipe, NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {formatDistanceToNow} from "date-fns";
 import {enUS, vi} from "date-fns/locale";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-review-product',
@@ -30,9 +31,11 @@ export class ReviewProductComponent implements OnChanges {
   pageMax!: number;
   averageRating: number = 0;
   isVisible: boolean = false;
+  userId:any;
 
   constructor(private reviewService: ReviewService,
-              private productService: ProductService) {
+              private productService: ProductService,
+              private router:Router) {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -64,13 +67,18 @@ export class ReviewProductComponent implements OnChanges {
 
 
   save() {
-    this.review.product = {
-      product_id: this.productId
+    this.userId = localStorage.getItem("userId")
+    if(this.userId) {
+      this.review.product = {
+        product_id: this.productId
+      }
+      this.reviewService.save(this.review).subscribe((data: any) => {
+        this.showToast();
+        this.getAllByProduct();
+      })
+    }else{
+      this.router.navigate(['/login'])
     }
-    this.reviewService.save(this.review).subscribe((data: any) => {
-      this.showToast();
-      this.getAllByProduct();
-    })
   }
 
   showToast() {

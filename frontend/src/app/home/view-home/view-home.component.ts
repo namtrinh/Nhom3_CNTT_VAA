@@ -50,6 +50,7 @@ export class ViewHomeComponent implements OnInit {
       const token = localStorage.getItem("auth_token");
       this.auth.logout(token).subscribe((data: any) => {
         localStorage.removeItem('auth_token');
+        localStorage.removeItem('userId');
         this.router.navigate(['/']).then(() => {
           setTimeout(() => {
             window.location.reload();

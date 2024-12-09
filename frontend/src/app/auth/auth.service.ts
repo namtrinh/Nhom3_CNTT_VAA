@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs';
 import { throwError } from 'rxjs';
 import { Router } from '@angular/router';
+import {jwtDecode} from "jwt-decode";
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +33,7 @@ export class AuthService {
       .pipe(
         tap(response => {
           const newToken = response.result.token;
-          localStorage.setItem(this.tokenKey, newToken);
+          localStorage.setItem(this.tokenKey, newToken.userId);
           console.log(`Status: `, response.code, `, Token refreshed successfully !`);
         }),
         catchError(error => {

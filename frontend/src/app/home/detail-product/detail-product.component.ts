@@ -30,6 +30,7 @@ export class DetailProductComponent implements OnInit {
   isVisible: boolean = false;
   imageUrl!:string;
   products:Product[] = [];
+  userId:any;
 
   constructor(
     private cartService: CartService,
@@ -43,6 +44,7 @@ export class DetailProductComponent implements OnInit {
   ngOnInit(): void {
     window.scrollTo(0, 0);
     this.getBySeotitle();
+    this.userId = localStorage.getItem('userId');
   }
 
   getBySeotitle() {
@@ -58,27 +60,31 @@ export class DetailProductComponent implements OnInit {
   }
 
   addToCart(productId:string) {
-    const token = localStorage.getItem('auth_token') as string;
-    const decodedToken = jwtDecode(token) as any;
-    const user_Id = decodedToken.userId;
-    this.cart.time_add = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
-    if (this.product.promotion && this.product.promotion.discount) {
-      this.cart.product_price = this.product.price - (this.product.price * this.product.promotion.discount / 100);
+    if(this.userId) {
+      const token = localStorage.getItem('auth_token') as string;
+      const decodedToken = jwtDecode(token) as any;
+      const user_Id = decodedToken.userId;
+      this.cart.time_add = format(new Date(), 'yyyy-MM-dd HH:mm:ss');
+      if (this.product.promotion && this.product.promotion.discount) {
+        this.cart.product_price = this.product.price - (this.product.price * this.product.promotion.discount / 100);
+      } else {
+        this.cart.product_price = this.product.price;
+      }
+      this.cart.product_quantity = this.quantity;
+      this.cart.product = {
+        product_id: productId
+      };
+      this.cart.user = {
+        user_id: user_Id
+      };
+      this.cartService.addToCart(this.cart).subscribe((data: any) => {
+        this.showToast();
+      }, (error: any) => {
+        console.error('Error adding to cart:', error);
+      });
     }else{
-      this.cart.product_price = this.product.price;
+      this.router.navigate(['/login'])
     }
-    this.cart.product_quantity = this.quantity;
-    this.cart.product = {
-      product_id: productId
-    };
-    this.cart.user = {
-      user_id: user_Id
-    };
-    this.cartService.addToCart(this.cart).subscribe((data: any) => {
-      this.showToast();
-    }, (error: any) => {
-      console.error('Error adding to cart:', error);
-    });
   }
 
   getByCategory(){

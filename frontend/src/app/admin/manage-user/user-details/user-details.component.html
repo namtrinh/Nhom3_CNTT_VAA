@@ -1,27 +1,65 @@
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card border-0 shadow">
-        <img class="card-img-top rounded-circle mx-auto d-block mt-3" [src]="imgAvatar" alt="Avatar"
-          style="width: 150px; height: 150px;">
-        <div class="card-body">
-          <h5 class="card-title text-center">{{ user.username }}</h5>
-          <div class="card-text">
-            <p><strong>Email:</strong> {{ user.email }}</p>
-
-          </div>
-          <button class="btn btn-primary" [routerLink]="['/admin/edit-user',user.user_id]">Edit</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-8 mb-4">
-      <div class="card border-0 shadow">
-        <div class="card-body">
-          <div class="card-text">
-            <p><strong>Role:</strong> {{user.roles}}</p>
-          </div>
-        </div>
-      </div>
+<div class="container">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">User Information</h5>
+      <table class="table table-striped mt-3">
+        <tbody>
+        <tr>
+          <th scope="row">User ID</th>
+          <td>{{ user?.user_id }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Username</th>
+          <td>{{ user?.username }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td>{{ user?.email }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Address</th>
+          <td>{{ user?.address }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Activated</th>
+          <td>
+              <span [class]="user?.activated ? 'text-success' : 'text-danger'">
+                {{ user?.activated ? 'Yes' : 'No' }}
+              </span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Verification Code</th>
+          <td>{{ user?.verificationCode }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Verification Code Expiry</th>
+          <td>{{ user?.verificationCodeExpiry | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Request Count</th>
+          <td>{{ user?.requestCount }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Last Request Time</th>
+          <td>{{ user?.lastRequestTime | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Created At</th>
+          <td>{{ user?.time_created | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Roles</th>
+          <td>
+            <ul>
+              @for (role of user.roles; track $index) {
+                <li>{{role.name}}</li>
+              }
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
