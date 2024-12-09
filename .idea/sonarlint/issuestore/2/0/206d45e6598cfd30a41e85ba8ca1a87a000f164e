@@ -1,8 +1,8 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8 ËÏª2J$d4d17760-dff3-46b7-a870-faf505921bfa
-	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8Ó¨Öß¸2J$9aabc07f-79f2-40ae-984c-bf70046407ee
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8Õ¨Öß¸2J$89e915b5-a673-4cce-a469-8d8dfa8e8dc5
-	java:S116""WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8Õ¨Öß¸2J$9d70655e-c2bf-4f8b-a979-b935d152dd05
-•	java:S116$"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8Ö¨Öß¸2J$b55cce26-b592-4e25-8953-8fb1a7d11f3d
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$4f2963d1-d19a-4ee6-a7a1-c6af61679d86
+	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$47a0630d-395e-44c5-9540-b047abb3cbf4
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$13c4659d-1858-4d05-a712-876e58f30089
+	java:S116""WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8üÂÏÑº2J$283731b2-d5df-41f3-861d-d096723d99a8
+•	java:S116$"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8üÂÏÑº2J$5277891d-ef75-4e80-b41d-1b39583243d6
 Š
-java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8ÄÊñß¸2J$494a46c6-af12-490d-8a5f-827aafc09b84
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$3327108a-c5cd-41e5-b5b8-b2bc8c0f18d3

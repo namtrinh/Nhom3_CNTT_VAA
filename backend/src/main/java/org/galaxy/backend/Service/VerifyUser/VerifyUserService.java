@@ -14,10 +14,8 @@ public class VerifyUserService {
     public boolean verifyCode(String email, String code) {
         User user = userRepository.findUsersByEmail(email);
         if (user != null & user.getVerificationCode().equals(code)) {
-            // Verification successful
             return true;
         }
-        // Verification failed
         return false;
     }
 }

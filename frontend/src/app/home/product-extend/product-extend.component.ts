@@ -20,7 +20,7 @@ export class ProductExtendComponent implements OnInit {
   page: number = 0;
   size: number = 5;
   imgAvatars: { [key: string]: string } = {};
-  showResetButton: boolean = false; // Track the visibility of the reset button
+  showResetButton: boolean = false;
   imageUrl!:string;
 
   constructor(private productService: ProductService, private imgService: ImageService, private router: Router) { }
@@ -34,7 +34,6 @@ export class ProductExtendComponent implements OnInit {
       this.page += 1;
       this.getAlll();
     } else {
-      // When maximum items are reached, show reset button
       this.showResetButton = true;
     }
   }
@@ -52,17 +51,15 @@ export class ProductExtendComponent implements OnInit {
     });
   }
 
-// Method to check if more items are available
   hasMoreItems(): boolean {
     return (this.page + 1) * this.size < this.totalItems;
   }
 
-// Reset pagination to initial state
   resetPagination() {
-    this.page = 0; // Reset to page 0
-    this.size = 5; // Reset to initial size
-    this.products = []; // Clear current products
-    this.showResetButton = false; // Hide reset button
-    this.getAlll(); // Fetch products again
+    this.page = 0;
+    this.size = 5;
+    this.products = [];
+    this.showResetButton = false;
+    this.getAlll();
   }
 }

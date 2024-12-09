@@ -1,0 +1,9 @@
+
+ttypescript:S1128"&Remove this unused import of 'OnInit'.(‹ÙÊ˜ùÿÿÿÿ8¶²ºĞº2J$79a9d5a8-28f7-4b32-b4e2-4c07c45d4bd7
+¿typescript:S3863"q'C:\My_Documents\KI_7\DACN\firefly-galaxy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(Õ·ÿìùÿÿÿÿ8¶²ºĞº2J$61349ddb-1178-43c3-9dd8-81daf390830f
+ºtypescript:S3863"q'C:\My_Documents\KI_7\DACN\firefly-galaxy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(ƒ“˜Õ8¶²ºĞº2J$adf644f8-99fc-4c34-b0d0-01aff89630fc
+ºtypescript:S3863"q'C:\My_Documents\KI_7\DACN\firefly-galaxy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(¨í«ê8·²ºĞº2J$3e25f05e-8733-423c-a957-9b487f82e2e1
+typescript:S1854"3Remove this useless assignment to variable "token".(°éËËøÿÿÿÿ8·²ºĞº2J$0493ff85-b840-4880-ab94-a4b513719168
+œtypescript:S1874("NThe signature '(error: any): Observable<never>' of 'throwError' is deprecated.(»¤ĞŠúÿÿÿÿ8·²ºĞº2J$8b866baa-a235-4568-86f1-b443a4f42f0d
+typescript:S18541"1Remove this useless assignment to variable "res".(À’˜Ìøÿÿÿÿ8·²ºĞº2J$96395ebc-d8d8-46eb-a81b-65deb9d981b8
+typescript:S1854@"3Remove this useless assignment to variable "token".(°éËËøÿÿÿÿ8·²ºĞº2J$333a6cd1-fa43-4d11-9666-f674b4de10a9

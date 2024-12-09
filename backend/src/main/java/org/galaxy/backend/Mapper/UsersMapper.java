@@ -12,6 +12,5 @@ public interface UsersMapper {
     @Mapping(target = "roles", ignore = true)
     User toUsersDTO(UsersRequest usersRequest);
 
-    //   @Mapping(target = "activated", source = "activated")
     UsersResponse toUsers(User user);
 }

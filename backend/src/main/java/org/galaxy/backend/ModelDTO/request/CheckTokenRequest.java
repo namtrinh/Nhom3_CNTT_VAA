@@ -9,6 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class CheckTokenRequest {
-    // send authenticate token
+
     private String token;
 }

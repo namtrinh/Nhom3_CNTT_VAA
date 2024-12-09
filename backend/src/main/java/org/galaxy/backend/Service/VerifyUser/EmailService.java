@@ -17,10 +17,10 @@ public class EmailService {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setFrom("Firefly Galaxy <cunnconn01@gmail.com>");
         simpleMailMessage.setTo(to);
-        simpleMailMessage.setSubject(subject); // Thiết lập tiêu đề email
-        simpleMailMessage.setText(verificationCode); // Thiết lập nội dung email
+        simpleMailMessage.setSubject(subject);
+        simpleMailMessage.setText(verificationCode);
 
-        javaMailSender.send(simpleMailMessage); // Gửi email
+        javaMailSender.send(simpleMailMessage);
     }
 
     public void sendHtmlMail(String to, String subject, String htmlContent) {
@@ -29,7 +29,7 @@ public class EmailService {
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setTo(to);
             helper.setSubject(subject);
-            helper.setText(htmlContent, true); // `true` để hỗ trợ HTML
+            helper.setText(htmlContent, true);
             javaMailSender.send(message);
         } catch (MessagingException e) {
             throw new RuntimeException("Failed to send email", e);

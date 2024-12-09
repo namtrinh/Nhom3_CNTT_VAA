@@ -1,20 +1,24 @@
 
-˜	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8¯òˆĞ³2J$d478a6d5-9ebf-4166-8cd2-2f4ca22b633f
-˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8¯òˆĞ³2J$349daf97-9f93-4c28-b855-51754444b669
-˜	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8¯òˆĞ³2J$f1fd1c31-ad76-449a-9c6b-6ef1470f686c
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯òˆĞ³2J$395c62d1-5cc5-4fb0-891d-7c7dbe476424
-	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8²òˆĞ³2J$48fc57aa-b93c-4294-9e6e-74393ff36e0c
+˜	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8¯òˆĞ³2J$2fda7b3d-8823-4182-9573-9649db32c946
+˜	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8¯òˆĞ³2J$5a03c383-71ec-4fda-b941-618dac6fd5b0
+˜	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8¯òˆĞ³2J$022cdc8f-a707-4d9f-9cab-3244b10405f1
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯òˆĞ³2J$0ef1a700-56ec-4c25-b19c-c5a2d2562110
+	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8²òˆĞ³2J$476a56c5-dedc-4131-a703-049fe51126e3
 —
-java:S1192J"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8²òˆĞ³2J$3ef5f64b-9da9-4a82-aa88-c0d407f90436
+java:S1192J"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8²òˆĞ³2J$ed36aa39-9507-4ae8-97d7-b8ebc4545439
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$f6ae719d-fb9e-4cdb-a646-16aaa08cc801
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$e2fe20a9-2d9f-45e1-a6d5-6c0af699f656
 …
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$e6bc6525-ccf2-4c5a-9d50-f69a55f7cc04
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$cc75da88-c16d-4aac-b6be-694b708a62b8
 …
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$9814818a-0368-4df2-9083-e89450ed50fc
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8´òˆĞ³2J$6fe88eac-9c83-404d-97c3-9dc5c5920d66
 ½
-java:S6204V"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¾òˆĞ³2J$6ed20d3a-8aab-4d87-8bdd-0eacabfd4de8
-m	java:S106f"+Replace this use of System.out by a logger.(…Çº8ÀòˆĞ³2J$1b762824-3a7d-4be8-bc6c-ad334bdbb1c8
-r	java:S106i"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8ÁòˆĞ³2J$13b1f1ee-b24b-42a9-abd1-7a395aef7256
+java:S6204V"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8¾òˆĞ³2J$ecdbb7b4-a52a-45fd-afde-dea760b8ff5b
+m	java:S106f"+Replace this use of System.out by a logger.(…Çº8ÀòˆĞ³2J$c21fec28-816b-4687-9a3f-2b06a73abbc9
+r	java:S106i"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8ÁòˆĞ³2J$f8ac4b00-f0a1-4d1d-b60c-ce2daac41775
 ½
-java:S6204w"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÂòˆĞ³2J$69d560d9-cc5b-499b-a192-43e3d293c752
+java:S6204w"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÂòˆĞ³2J$d7800f17-2232-4661-b191-420cb03b14ae
+—
+java:S1128"ORemove this unused import 'org.galaxy.backend.Service.VerifyUser.EmailService'.(”Øşßüÿÿÿÿ8ÉóŸĞº2J$d44f193b-7617-4158-9c6f-67fbb333155c
+˜
+java:S1128"PRemove this unused import 'org.springframework.scheduling.annotation.Scheduled'.(‚¡®Üûÿÿÿÿ8ÉóŸĞº2J$79450449-0651-4a1e-8de6-bc716b23b481

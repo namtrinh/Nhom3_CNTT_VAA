@@ -23,12 +23,10 @@ public class ResetPasswordService {
     }
     // Map lưu email, reset_key và thời gian hết hạn
     private final ConcurrentHashMap<String, ResetKeyInfo> cache = new ConcurrentHashMap<>();
-    // Thời gian sống của mã reset password (60 giây)
     private final long TOKEN_EXPIRATION_TIME = TimeUnit.SECONDS.toMillis(60);
 
     // Map lưu số lần yêu cầu reset cho mỗi email và thời gian yêu cầu
     private final ConcurrentHashMap<String, List<Long>> requestTimestamps = new ConcurrentHashMap<>();
-    // Giới hạn số lần reset (5 lần trong 10 phút)
     private final int MAX_REQUESTS = 5;
     private final long REQUEST_WINDOW_TIME = TimeUnit.MINUTES.toMillis(10);
 

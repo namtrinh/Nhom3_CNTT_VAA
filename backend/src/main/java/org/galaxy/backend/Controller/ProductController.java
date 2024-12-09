@@ -158,7 +158,7 @@ public class ProductController {
             promotion.setPromotion_id(promotionValue);
             product.setPromotion(promotion);
         } else {
-            product.setPromotion(null); // Nếu không có chương trình khuyến mãi, có thể đặt về null
+            product.setPromotion(null);
         }
         return ApiResponse.<Product>builder()
                 .code(200)

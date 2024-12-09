@@ -13,6 +13,4 @@ public class DiscountCode {
 
     @ManyToOne
     private Promotion promotion;
-
-    // Getters and Setters
 }

@@ -16,7 +16,7 @@ import {provideCharts, withDefaultRegisterables} from "ng2-charts";
     AppComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent] // Nếu có
+  bootstrap: [AppComponent]
   , imports: [BrowserModule,
               AppRouting,
 

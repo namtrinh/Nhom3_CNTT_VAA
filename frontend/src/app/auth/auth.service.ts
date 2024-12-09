@@ -67,20 +67,12 @@ export class AuthService {
       );
   }
 
-
-
   getToken(): string | null {
     // Lấy token từ localStorage
     return localStorage.getItem(this.tokenKey);
   }
 
-  isLoggedIn(): boolean {
-    // Kiểm tra xem token có tồn tại hay không để biết người dùng đã đăng nhập
-    return !!this.getToken();
-  }
-
   removeToken() {
-    // Xóa token khỏi localStorage khi người dùng đăng xuất
     localStorage.removeItem(this.tokenKey);
   }
 

@@ -15,13 +15,8 @@ export class ProductService {
 
   private baseUrl = "http://localhost:8888/identity/product"
 
-  getAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}`)
-  }
-
   findAllProductsWithPromotion(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}/findAllProductsWithPromotion`)
-
   }
 
   getById(product_id: string): Observable<Product> {

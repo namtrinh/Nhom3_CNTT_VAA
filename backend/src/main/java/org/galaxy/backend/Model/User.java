@@ -41,9 +41,9 @@ public class User {
 
     private LocalDateTime verificationCodeExpiry;
 
-    private int requestCount; // Số lần yêu cầu
+    private int requestCount;
 
-    private LocalDateTime lastRequestTime; // Thời gian yêu cầu gần nhất
+    private LocalDateTime lastRequestTime;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Timestamp time_created;

@@ -1,13 +1,7 @@
 .overflow-container {
-  overflow-x: auto; /* Cho phép cuộn ngang */
-  padding: 10px; /* Thêm khoảng đệm nếu cần */
-  border: 1px solid #ddd; /* Viền bao quanh container */
-}
-
-.chart {
-  /* Có thể đặt chiều rộng cụ thể hoặc để cho biểu đồ tự động điều chỉnh */
-  /* width: 1500px; */
-
+  overflow-x: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 
 baseChart{

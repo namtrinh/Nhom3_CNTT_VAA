@@ -48,7 +48,7 @@ public class Product {
 
     private Double totalRating = 0.0;
 
-    @Column(name = "time_created")  // nếu tên cột trong DB khác
+    @Column(name = "time_created")
     private LocalDateTime time_created = LocalDateTime.now();
 
     @ManyToOne

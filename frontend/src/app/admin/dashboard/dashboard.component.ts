@@ -38,7 +38,7 @@ export class DashboardComponent {
 
       this.orderService.getByTime(this.startDate, this.endDate).subscribe((data: any) => {
         this.ordersByTime = data.result;
-        this.updateChartData(); // Cập nhật dữ liệu biểu đồ sau khi có đơn hàng
+        this.updateChartData();
       });
     } else {
       console.log('Vui lòng chọn ngày và giờ bắt đầu và kết thúc');

@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AppComponent} from './app.component';
 import {CreateUserComponent} from './admin/manage-user/create-user/create-user.component';
 import {ListComponent} from './admin/manage-user/list-user/list.component';
 import {UserDetailsComponent} from './admin/manage-user/user-details/user-details.component';
@@ -28,12 +27,10 @@ import {MyInfComponent} from './home/detail-user/user-details.component';
 import {DetailProductComponent} from './home/detail-product/detail-product.component';
 import {ProductSaleComponent} from './home/product-sale/product-sale.component';
 import {AuthCodeComponent} from './auth/auth-code/auth-code.component';
-import {TestComponent} from './test/test.component';
 import {CartComponent} from './home/cart/cart.component';
 import {ProductByCategoryComponent} from './home/product-by-category/product-by-category.component';
 import {AuthService} from './service/auth-service.service';
 import {_401Component} from './401/401.component';
-import {ProductExtendComponent} from './home/product-extend/product-extend.component';
 import {RequiredResetPasComponent} from "./auth/required-reset-pass/required-reset-pas.component";
 import {ResetPassComponent} from "./auth/reset-pass/reset-pass.component";
 import {PromotionProductComponent} from './admin/manage-product/promotion-product/promotion-product.component';
@@ -41,7 +38,6 @@ import {ListPromotionComponent} from "./admin/manage-promotion/list-promotion/li
 import {CreatePromotionComponent} from "./admin/manage-promotion/create-promotion/create-promotion.component";
 import {UpdatePromotionComponent} from "./admin/manage-promotion/update-promotion/update-promotion.component";
 import {RouteGuard} from "./route-guard.guard";
-import {Test1Component} from "./test/test1.component";
 import {ListOrderComponent} from "./admin/manage-invoice/list-order/list-order.component";
 import {OrderDetailComponent} from "./admin/manage-invoice/order-detail/order-detail.component";
 import {SearchProductComponent} from "./home/search-product/search-product.component";
@@ -49,10 +45,6 @@ import {ListReviewComponent} from "./admin/manage-review/list-review/list-review
 import {OrderHistoryComponent} from "./home/order-history/order-history.component";
 
 export const routes: Routes = [
-
-  //Test View
-  {path: 'a', component: TestComponent},
-  {path: 'b', component: Test1Component},
 
   //Auth
   {path: 'login', component: LoginComponent},
@@ -132,8 +124,6 @@ export const routes: Routes = [
 
       //Permission
       {path: 'list-permission', component: ListPermissionComponent},
-
-
     ]
   },
 
@@ -143,7 +133,6 @@ export const routes: Routes = [
 
   //Forbiden
   {path: '???', component: _401Component}
-
 ]
 
 @NgModule({
@@ -151,9 +140,5 @@ export const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRouting {
-}
-
-function get(): import("@angular/router").Route {
-  throw new Error('Function not implemented.');
 }
 

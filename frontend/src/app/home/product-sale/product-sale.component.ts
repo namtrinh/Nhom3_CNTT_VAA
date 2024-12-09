@@ -42,13 +42,11 @@ export class ProductSaleComponent implements OnInit {
     const images_right = ['/assets/douple-2.png', '/assets/douple-1.png'];
     let index = 0;
 
-    // Chuyển đổi hình ảnh mỗi 2 giây
     this.intervalId = setInterval(() => {
       this.imgLeft = images_left[index];
       this.imgRight = images_right[index];
 
-      // Cập nhật chỉ số cho lần lặp tiếp theo
-      index = (index + 1) % images_left.length; // Quay lại từ đầu khi đến cuối mảng
+      index = (index + 1) % images_left.length;
     }, 2000);
   }
 

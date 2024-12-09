@@ -140,9 +140,9 @@
 }
 
 .checkbox-container input[type="checkbox"] {
-  transform: scale(1.5); /* Tăng kích thước checkbox lên 1.5 lần */
-  margin-right: 10px; /* Thêm khoảng cách bên phải để đẹp hơn */
-  cursor: pointer; /* Thay đổi con trỏ khi hover */
+  transform: scale(1.5);
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .payment {
@@ -157,12 +157,12 @@
   outline-offset: 10px;
 }
 .custom-bg {
-  background-color: #e1e1e1; /* Màu nền tùy chỉnh */
-  height: 120px;              /* Chỉnh chiều cao */
-  width: 100%;               /* Chỉnh chiều rộng */
-  padding-left: 20px;        /* Padding trái */
-  padding-right: 20px;       /* Padding phải */
-  padding-top: 10px;         /* Padding trên */
-  padding-bottom: 10px;      /* Padding dưới */
+  background-color: #e1e1e1;
+  height: 120px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 

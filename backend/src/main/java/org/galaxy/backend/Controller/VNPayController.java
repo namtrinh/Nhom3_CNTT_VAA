@@ -40,22 +40,18 @@ public class VNPayController {
 
     @GetMapping("/vnpay-payment")
     public ResponseEntity<Void> handlePaymentReturn(HttpServletRequest request) throws UnsupportedEncodingException {
-        // Xử lý trả lại từ VNPay
-        int paymentStatus = vnPayService.orderReturn(request);
 
-        // Lấy các thông tin từ request
+        int paymentStatus = vnPayService.orderReturn(request);
         String orderInfo = request.getParameter("vnp_OrderInfo");
         String paymentTime = request.getParameter("vnp_PayDate");
         String transactionId = request.getParameter("vnp_TransactionNo");
         String totalPrice = request.getParameter("vnp_Amount");
 
-        // Mã hóa các tham số để tránh lỗi khi có ký tự đặc biệt
         String encodedOrderInfo = URLEncoder.encode(orderInfo, StandardCharsets.UTF_8.toString());
         String encodedPaymentTime = URLEncoder.encode(paymentTime, StandardCharsets.UTF_8.toString());
         String encodedTransactionId = URLEncoder.encode(transactionId, StandardCharsets.UTF_8.toString());
         String encodedTotalPrice = URLEncoder.encode(totalPrice, StandardCharsets.UTF_8.toString());
 
-        // Tạo URL để redirect và truyền dữ liệu qua query parameters
         String redirectUrl = paymentStatus == 1
                 ? String.format(
                         "http://localhost:4200/payment-success?orderId=%s&totalPrice=%s&paymentTime=%s&transactionId=%s",
@@ -64,7 +60,6 @@ public class VNPayController {
                         "http://localhost:4200/payment-fail?orderId=%s&totalPrice=%s&paymentTime=%s&transactionId=%s",
                         encodedOrderInfo, encodedTotalPrice, encodedPaymentTime, encodedTransactionId);
 
-        // Chuyển hướng
         return ResponseEntity.status(HttpStatus.FOUND)
                 .header("Location", redirectUrl)
                 .build();

@@ -1,16 +1,16 @@
 
-˜	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¼üíùÿÿÿÿ8ÁÿÏ¿³2J$70713326-23bd-4e70-a200-5109562aa434
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ÄÿÏ¿³2J$02b9eb30-dd69-4ec0-b837-0792353ec31c
-Ž	java:S112Ì"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8éÿÏ¿³2J$15a490c6-318e-41ce-bcb9-89c3c587ad43
-—	java:S1168"URename this field "SIGNER_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëü§™8éÿÏ¿³2J$0754921a-0ca8-46d0-b652-31066100fede
-›	java:S116<"YRename this field "VALID_DURATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆçï˜8êÿÏ¿³2J$b310fd42-0f7d-4d7c-84f5-5b3d74a84385
-¡	java:S116@"_Rename this field "REFRESHABLE_DURATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÐ²8êÿÏ¿³2J$7dd7646c-c2b5-4679-81c8-66b500c9c8e1
+˜	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¼üíùÿÿÿÿ8ÁÿÏ¿³2J$ecd50549-d449-4c7b-90cd-977f89dd3a9a
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ÄÿÏ¿³2J$f475fa55-328b-4008-a636-4636cf4f5695
+Ž	java:S112É"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8éÿÏ¿³2J$5ac1c1ae-2617-4705-8c64-8336b024bd50
+—	java:S1168"URename this field "SIGNER_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëü§™8éÿÏ¿³2J$749e9dda-1906-4cfb-a8cd-db327015a9f6
+›	java:S116<"YRename this field "VALID_DURATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆçï˜8êÿÏ¿³2J$7bf3cd75-9679-4299-98a8-76ba051aaf44
+¡	java:S116@"_Rename this field "REFRESHABLE_DURATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÐ²8êÿÏ¿³2J$a916761f-7d3b-4e52-88bf-f13c45e26a6b
 …
-java:S68130"BRemove this field injection and use constructor injection instead.(êæÄÞ8êÿÏ¿³2J$772f2fcd-0298-450c-9367-55168666b45b
+java:S68130"BRemove this field injection and use constructor injection instead.(êæÄÞ8êÿÏ¿³2J$f8fa25a6-202d-4c1f-be3e-31f73677c5f1
 …
-java:S68133"BRemove this field injection and use constructor injection instead.(êæÄÞ8ëÿÏ¿³2J$c3cd4120-aa6f-4b24-84d7-ca039cdc0859
+java:S68133"BRemove this field injection and use constructor injection instead.(êæÄÞ8ëÿÏ¿³2J$6498d0aa-44f8-4942-9112-74aa56fc3098
 …
-java:S6813B"BRemove this field injection and use constructor injection instead.(êæÄÞ8ëÿÏ¿³2J$9ea5f2bc-fea2-4fd0-a559-95de6e9495e4
+java:S6813B"BRemove this field injection and use constructor injection instead.(êæÄÞ8ëÿÏ¿³2J$68fdd7b1-4c7b-42d3-bd72-6dfdfe89d803
 …
-java:S6813E"BRemove this field injection and use constructor injection instead.(êæÄÞ8ëÿÏ¿³2J$d4c784ab-cb0c-4b89-a497-c10eae821e33
-	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÎƒ{8€€Ð¿³2J$d277e6d1-537b-4ab1-ac51-8d55aa3889d3
+java:S6813E"BRemove this field injection and use constructor injection instead.(êæÄÞ8ëÿÏ¿³2J$d319e24b-cb00-4f0b-a71d-bd8f0c99d2ae
+	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÎƒ{8€€Ð¿³2J$0591d1a3-ac31-4774-bad2-ad1966653ee8

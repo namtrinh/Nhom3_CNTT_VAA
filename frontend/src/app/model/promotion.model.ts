@@ -7,4 +7,5 @@ export class Promotion {
     time_started!: string;
     time_end!: string;
     sort!:number;
+    product:Product[] = [];
 }

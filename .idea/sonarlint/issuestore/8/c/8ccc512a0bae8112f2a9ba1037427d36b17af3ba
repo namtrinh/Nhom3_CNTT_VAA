@@ -5,8 +5,8 @@ java:S6813"BRemove this field injection and use constructor injection instead.
 …
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ìßÓ¸º2J$efaa3837-3d40-406c-b5f2-860a05c62127
 ›
-java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(´µ³İ8îßÓ¸º2J$2ae5a87e-2d7f-467e-9c8b-d66b764623f5
-›
 java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(Ú×‚8îßÓ¸º2J$69719cce-d6b2-4420-be5d-0df8f2f42609
+›
+java:S3305"XInject this field value directly into "applicationRunner", the only method that uses it.(´µ³İ8îßÓ¸º2J$2ae5a87e-2d7f-467e-9c8b-d66b764623f5
 ~
 java:S6437,"6Revoke and change this password, as it is compromised.(Æ·Îíûÿÿÿÿ8€àÓ¸º2J$ed794df9-f4d5-4623-b50f-b27de40098e6

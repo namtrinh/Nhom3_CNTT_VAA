@@ -30,7 +30,7 @@ export class CategoryService {
     return this.http.post(`${this.baseUrl}`, category)
   }
 
-  editCategory(category_id: string, category: Category): Observable<Object> {
+    editCategory(category_id: string, category: Omit<Category, "products">): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${category_id}`, category)
   }
 

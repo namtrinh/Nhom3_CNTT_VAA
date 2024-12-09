@@ -78,8 +78,6 @@ export class CartComponent implements OnInit {
         }
       ));
     });
-
-
   }
 
   getAllByUserId() {

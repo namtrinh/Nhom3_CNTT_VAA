@@ -21,25 +21,31 @@ export class UpdatePromotionComponent implements OnInit {
   ngOnInit(): void {
     this.getById()
   }
-  id!:string
+
+  id!: string
   promotion: Promotion = new Promotion()
 
   getById() {
-    this.id = this.activerouter.snapshot.params['promotion_id']
-    this.promotionService.getById(this.id).subscribe((data:any)=>{
-      this.promotion = data.result;
-      this.promotion.time_started = new Date(this.promotion.time_started).toISOString().slice(0, 16); // YYYY-MM-DDTHH:mm
-      this.promotion.time_end = new Date(this.promotion.time_end).toISOString().slice(0, 16); // YYYY-MM-DDTHH:mm
-    })
+    this.id = this.activerouter.snapshot.params['promotion_id'];
+    this.promotionService.getById(this.id).subscribe(
+      (response: any) => {
+        this.promotion = response.result;
+        this.promotion.time_started = new Date(this.promotion.time_started).toISOString().slice(0, 16); // ISO format
+        this.promotion.time_end = new Date(this.promotion.time_end).toISOString().slice(0, 16); // ISO format
+      }
+    );
   }
+
 
   updatePromotion() {
-
-
-    this.promotionService.updateById(this.id, this.promotion).subscribe(data => {
-      this.router.navigate(['/admin/promotion']);
-    })
+    const {product, ...promotionWithoutProduct} = this.promotion;
+    this.promotionService.updateById(this.id, promotionWithoutProduct).subscribe(
+      (data: any) => {
+        this.router.navigate(['/admin/promotion']);
+      },
+    );
   }
+
 
   onSubmit() {
     this.updatePromotion()

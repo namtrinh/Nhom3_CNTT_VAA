@@ -29,7 +29,7 @@ export class PromotionService{
        return this.http.delete(`${this.promotionUrl}/${promotion_id}`)
     }
 
-    updateById(id:string, promotion:Promotion):Observable<Object>{
-        return this.http.put(`${this.promotionUrl}/${id}`,promotion)
+  updateById(id: string, promotion: Omit<Promotion, "product">):Observable<Object>{
+        return this.http.put(`${this.promotionUrl}/${id}`, promotion)
     }
 }

@@ -24,9 +24,7 @@ export class ProductByCategoryComponent implements OnInit {
   seotitle!: string | null;
   imageUrl!:string;
 
-  constructor(private productService: ProductService,
-              private imgService: ImageService,
-              private active: ActivatedRoute,
+  constructor(private active: ActivatedRoute,
               private categoryService: CategoryService) {
   }
 

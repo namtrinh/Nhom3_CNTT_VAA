@@ -1,5 +1,4 @@
 <div class="container">
-  <!-- Filter by Promotion Section -->
   <div class="form-group col-md-4 ">
     <select class="form-select" id="promotion" [(ngModel)]="selectedPromotionId" (change)="filterProducts()">
       <option value="" ngDefaultControl>-- All products --</option>
@@ -61,31 +60,3 @@
   </table>
 </div>
 
-<style>
-  .table td, .table th {
-    vertical-align: middle; /* Căn giữa theo chiều dọc */
-  }
-
-  .table td img {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
-  }
-
-  .form-group select {
-    text-align: center; /* Căn giữa lựa chọn trong dropdown */
-  }
-
-  .btn {
-    position: relative;
-  }
-
-  .btn input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-</style>

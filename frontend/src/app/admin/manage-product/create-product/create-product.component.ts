@@ -45,7 +45,6 @@ export class CreateProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Gọi phương thức để lấy danh sách danh mục
     this.getCategory();
   }
 

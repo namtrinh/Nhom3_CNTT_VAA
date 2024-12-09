@@ -59,14 +59,14 @@ public class UserServiceImpl implements UserService {
     private boolean hasSpecialCharacter(String password) {
         String specialCharacters = "!#$%^&*()_+-=[]{};':\"\\\\|,.<>?/";
         if (password != null) {
-            // Duyệt qua từng ký tự trong mật khẩu
+
             for (char c : password.toCharArray()) {
                 if (specialCharacters.indexOf(c) >= 0) {
-                    return true; // Có ký tự đặc biệt
+                    return true;
                 }
             }
         }
-        return false; // Không có ký tự đặc biệt
+        return false;
     }
 
     public UsersResponse getUser(String user_id) {

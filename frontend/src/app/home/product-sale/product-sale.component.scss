@@ -4,16 +4,16 @@
   overflow: hidden;
 }
 .pr-sale-poster {
-  width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
-  height: auto; /* Chiều cao tự động điều chỉnh */
-  position: relative; /* Để quản lý vị trí hình ảnh bên trong */
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 
 .pr-sale-poster img {
-  width: 100%; /* Chiếm toàn bộ chiều rộng của khối chứa */
-  height: 100%; /* Chiếm toàn bộ chiều cao của khối chứa */
-  object-fit: cover; /* Đảm bảo hình ảnh không bị bóp méo và lấp đầy không gian */
-  animation: zoom 1.5s infinite; /* Giữ lại animation nếu cần */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 1.5s infinite;
 }
 
 
@@ -32,7 +32,7 @@
 .product {
   padding: 15px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cột trên màn hình lớn */
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
   padding-top: 15px;
   background-color: rgb(241, 237, 237);

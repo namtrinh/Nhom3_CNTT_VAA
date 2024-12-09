@@ -24,9 +24,11 @@
     <div class="product-list card">
       <h2>Products in Your Order</h2>
       <ul>
-        <li *ngFor="let item of product">
+        @for(item of product; track $index){
+        <li>
           <strong>{{ item.name }}</strong> - Quantity: {{ item.quantity }}
         </li>
+        }
       </ul>
     </div>
   </div>

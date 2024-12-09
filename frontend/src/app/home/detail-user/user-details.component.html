@@ -2,12 +2,12 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card border-0 shadow">
-          <img class="card-img-top rounded-circle mx-auto d-block mt-3" [src]="imgAvatar" alt="Avatar" style="width: 150px; height: 150px;">
+          <img class="card-img-top rounded-circle mx-auto d-block mt-3" alt="Avatar" style="width: 150px; height: 150px;">
           <div class="card-body">
             <h5 class="card-title text-center">{{ user.username }}</h5>
             <div class="card-text">
               <p><strong>Email:</strong> {{ user.email }}</p>
-            
+
             </div>
             <button class="btn btn-primary" [routerLink]="['/edit_my_inf',user.user_id]">Edit</button>
           </div>
@@ -17,7 +17,7 @@
         <div class="card border-0 shadow">
           <div class="card-body">
             <div class="card-text">
-          
+
               <p><strong>Role:</strong> {{user.roles}}</p>
             </div>
           </div>
@@ -25,4 +25,3 @@
       </div>
     </div>
   </div>
-  

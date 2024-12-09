@@ -87,9 +87,7 @@ public class AuthenticateService {
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
         boolean authenticated = passwordEncoder.matches(authenticateRequest.getPassword(), users.getPassword());
         if (!authenticated) throw new AppException(ErrorCode.UNAUTHENTICATED);
-
         LocalDateTime now = LocalDateTime.now();
-
         if (users.getLastRequestTime() != null) {
             if (now.isBefore(users.getLastRequestTime().plusMinutes(10))) {
                 if (users.getRequestCount() >= 5) {
@@ -184,7 +182,6 @@ public class AuthenticateService {
     }
 
     private String generateToken(User user) {
-
         JWSHeader header = new JWSHeader(JWSAlgorithm.HS512);
         JWTClaimsSet jwtClaimsSet = new JWTClaimsSet.Builder()
                 .subject(user.getEmail())

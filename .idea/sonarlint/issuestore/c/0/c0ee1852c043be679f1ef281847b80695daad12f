@@ -1,4 +1,4 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄÇÆ¤øÿÿÿÿJ$958eba2d-811a-49db-a06f-1fca248c99f4
-	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡ÜJ$cc749b73-76b2-489b-af13-65a32471f2ab
-s	java:S116#"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8÷•éà¸2
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄÇÆ¤øÿÿÿÿJ$27194a77-ef1c-428b-b102-7c78cf044b4e
+	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡ÜJ$2ee19203-7ade-4101-bd56-b123e98a3016
+™	java:S116#"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8÷•éà¸2J$4e5b3f8a-40fb-44d6-9e0e-6303940e3a1f

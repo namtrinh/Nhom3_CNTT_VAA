@@ -14,7 +14,7 @@
 }
 
 .sidebar::-webkit-scrollbar {
-  display: none; /* Ẩn thanh cuộn cho Chrome, Safari và Edge */
+  display: none;
 }
 
 
@@ -28,14 +28,14 @@
 }
 
 .content-wrapper {
-  padding-left: 250px; /* Đặt padding cho chiều rộng sidebar */
+  padding-left: 250px;
   padding-top: 20px;
-  min-height: calc(100vh - 56px); /* Đảm bảo content-wrapper không nhỏ hơn chiều cao viewport trừ đi chiều cao navbar */
+  min-height: calc(100vh - 56px);
 }
 
 .navbar {
   background-color: #17508a;
-  box-shadow: 0 2px 10px rgba(154, 34, 34, 0.1); /* Thêm bóng đổ cho navbar */
+  box-shadow: 0 2px 10px rgba(154, 34, 34, 0.1);
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -46,7 +46,7 @@
 .navbar-brand {
   font-weight: bold;
   font-size: 1.7rem;
-  color: #ffffff; /* Màu chữ cho navbar brand */
+  color: #ffffff;
 }
 
 .logout {

@@ -22,12 +22,11 @@
 
 .listproduct {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Hiển thị 5 cột trên màn hình lớn */
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   padding: 10px;
 }
 
-/* Cài đặt chung cho các phần tử */
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +39,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
-  width: 100%; /* Đảm bảo kích thước phù hợp cho khoảng cách gap */
+  width: 100%;
   min-height: 370px;
   text-align: center;
 }
@@ -63,7 +62,7 @@
   transition: all 0.3s ease;
   max-width: 100%;
   max-height: 100%;
-  width: 170px; /* Giới hạn chiều rộng */
+  width: 170px;
 }
 
 .item:hover .item-img img {
@@ -105,7 +104,6 @@
   border-radius: 4px;
 }
 
-/* Các phần không cần thiết, có thể ẩn */
 .item-bottom,
 .item-ss {
   display: none;
@@ -113,7 +111,7 @@
 
 @media only screen and (max-width: 1450px) {
   .listproduct {
-    grid-template-columns: repeat(4, 1fr); /* 4 cột trên màn hình nhỏ hơn 1200px */
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .poster{
@@ -124,7 +122,7 @@
 
 @media only screen and (max-width: 1150px) {
   .listproduct {
-    grid-template-columns: repeat(3, 1fr); /* 3 cột trên màn hình nhỏ hơn 992px */
+    grid-template-columns: repeat(3, 1fr);
   }
   .poster{
     max-width: 60%;
@@ -134,7 +132,7 @@
 
 @media only screen and (max-width: 800px) {
   .listproduct {
-    grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn 768px */
+    grid-template-columns: repeat(2, 1fr);
   }
   .poster{
     max-width: 40%;

@@ -1,10 +1,10 @@
 
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8¦™€º2J$8275f6b8-cdb7-427e-9659-76868bfad4ed
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8¦™€º2J$e170f778-2748-4a75-badf-29dd8711a543
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©™€º2J$c5ce0d65-7bd9-4f30-9bf7-cc9b02e4c424
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©™€º2J$44413724-cae9-4e65-ad85-c6f342d75265
 z
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8¹Ì—€º2J$8848917d-db4e-481c-a618-f8ec75ffc1bf
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8¹Ì—€º2J$f487c2da-86bf-4071-981a-d14a12d9786f
 s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ºÌ—€º2J$069969e6-2a32-447b-a708-f1cd581831bb
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ºÌ—€º2J$43a6f97b-b4ab-4558-a818-ecfe5f22805c
 „
-java:S1128"<Remove this unused import 'jakarta.mail.MessagingException'.(´öáùıÿÿÿÿ8»Ì—€º2J$25171647-b247-488e-bb66-406d43842626
+java:S1128"<Remove this unused import 'jakarta.mail.MessagingException'.(´öáùıÿÿÿÿ8»Ì—€º2J$2912dfc9-049c-433a-8e82-0e8abc317dad

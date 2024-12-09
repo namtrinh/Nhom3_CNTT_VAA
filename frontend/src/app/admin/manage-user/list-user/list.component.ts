@@ -17,7 +17,6 @@ export class ListComponent implements OnInit {
   user: User[] = [];
   page: number = 1;
   item_name: string = '';
-  clicksendmail: boolean = false;
   subject: string = 'FireFLy';
   text: string = 'hong co 1';
 

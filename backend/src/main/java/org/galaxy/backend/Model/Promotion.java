@@ -35,7 +35,8 @@ public class Promotion {
 
     private Timestamp time_end;
 
-    @OneToMany(mappedBy = "promotion", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+   @OneToMany(mappedBy = "promotion", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JsonIgnoreProperties("promotion")
     private Set<Product> product;
+
 }

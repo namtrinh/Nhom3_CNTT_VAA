@@ -51,8 +51,6 @@ public class SecurityConfig {
                 .permitAll()
                 .anyRequest()
                 .authenticated());
-        // registry authentication provider to support jwt token
-
         httpSecurity.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwtConfigurer -> jwtConfigurer
                         .decoder(customJwtDecoder)
                         .jwtAuthenticationConverter(jwtAuthenticationConverter()))

@@ -26,7 +26,6 @@ public class EmailController {
         String paymentTime = (String) requestData.get("paymentTime");
         String transactionId = (String) requestData.get("transactionId");
 
-        // Tạo nội dung email HTML
         String emailContent = String.format(
                 "<div style=\"font-family: Arial, sans-serif; line-height: 1.6; max-width: 700px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\">" +
                         "<h1 style=\"color: #28a745; text-align: center;\">Thanh toán thành công!</h1>" +
