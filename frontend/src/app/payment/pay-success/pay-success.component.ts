@@ -14,6 +14,8 @@ import {User} from "../../model/user.model";
 import {CurrencyPipe, DecimalPipe} from "@angular/common";
 import {ProductService} from "../../service/product-service.service";
 import {HttpClient} from "@angular/common/http";
+import {OrderDetailProduct} from "../../model/order_detail_product.model";
+import {OrderDetailProductService} from "../../service/orderDetailProduct-service.service";
 
 @Component({
   selector: 'app-pay-success',
@@ -36,12 +38,14 @@ export class PaySuccessComponent implements OnInit {
   product: Product[] = [];
   promotion: Promotion[] = [];
   userInf: Order = new Order();
+  orderDetailProduct: OrderDetailProduct = new OrderDetailProduct();
 
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
               private orderDetailService: OrderDetailService,
               private productService: ProductService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private orderDetailProductService: OrderDetailProductService) {
   }
 
   ngOnInit(): void {
@@ -58,6 +62,7 @@ export class PaySuccessComponent implements OnInit {
       };
       this.user = this.selectedProduct.user;
       this.product = this.selectedProduct.products;
+      console.log("day nef", this.product)
       this.userInf = this.selectedProduct.userInf;
       // this.promotion = this.selectedProduct.promotions;
       this.createOrderDetail();
@@ -80,7 +85,7 @@ export class PaySuccessComponent implements OnInit {
 
     this.orderService.create(this.order).subscribe((data: any) => {
       this.sendEmail();
-      sessionStorage.removeItem("myArray");
+      // sessionStorage.removeItem("myArray");
     });
   }
 
@@ -114,11 +119,14 @@ export class PaySuccessComponent implements OnInit {
     this.orderDetail.products = updatedProducts;
     this.updateQuantityProduct();
     this.orderDetailService.create(this.orderDetail).subscribe((data: any) => {
+      console.log(data.result);
       const detail_id = data.result.order_detail_id;
       this.createOrder(detail_id);
+      this.updateQuantityDiscount(detail_id)
     });
   }
 
+  //Cập nhật số lượng sản phẩm
   updateQuantityProduct() {
     this.product.forEach((item: any) => {
       this.productService.getById(item.product).subscribe((data: any) => {
@@ -155,5 +163,22 @@ export class PaySuccessComponent implements OnInit {
       (response) => {
       });
   }
+
+  // cập nhật giá hiện tại và số lượng từng sản phẩm
+  updateQuantityDiscount(orderDetailId: string) {
+    console.log("here", this.product);
+    this.product.forEach((item: any) => {
+        this.productService.getById(item.product).subscribe((data: any) => {
+          this.orderDetailProduct.discount = item.discount;
+          this.orderDetailProduct.price = data.result.price * (1 - (item.discount / 100));
+          this.orderDetailProduct.quantity = item.quantity;
+          this.orderDetailProductService.getById(orderDetailId, item.product, this.orderDetailProduct).subscribe((data: any) => {
+            console.log(data);
+          })
+        })
+      }
+    )
+  }
+
 
 }

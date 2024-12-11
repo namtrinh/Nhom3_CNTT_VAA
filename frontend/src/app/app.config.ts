@@ -9,17 +9,19 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {Chart} from "chart.js";
 import {provideCharts, withDefaultRegisterables} from "ng2-charts";
+import {NgxPrintModule} from "ngx-print";
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
   , imports: [BrowserModule,
               AppRouting,
-
+    NgxPrintModule
     ],
   providers: [
     provideCharts(withDefaultRegisterables()),

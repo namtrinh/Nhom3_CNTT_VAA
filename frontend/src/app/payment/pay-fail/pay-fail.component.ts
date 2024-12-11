@@ -11,6 +11,9 @@ import {OrderDetailService} from "../../service/orderDetail-service.service";
 import {format} from "date-fns";
 import {Category} from "../../model/category.model";
 import {CurrencyPipe} from "@angular/common";
+import {OrderDetailProduct} from "../../model/order_detail_product.model";
+import {OrderDetailProductService} from "../../service/orderDetailProduct-service.service";
+import {ProductService} from "../../service/product-service.service";
 
 @Component({
   selector: 'app-pay-fail',
@@ -31,6 +34,7 @@ export class PayFailComponent implements OnInit {
   orderDetail: OrderDetail = new OrderDetail();
   user: User = new User();
   selectedProduct: any
+  orderDetailProduct: OrderDetailProduct = new OrderDetailProduct();
 
   product: Product[] = [];
   promotion: Promotion[] = [];
@@ -38,7 +42,9 @@ export class PayFailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private orderService: OrderService,
-              private orderDetailService: OrderDetailService) {
+              private orderDetailService: OrderDetailService,
+              private orderDetailProductService: OrderDetailProductService,
+              private productService: ProductService) {
   }
 
   // Thanh toán thất bại
@@ -118,7 +124,24 @@ export class PayFailComponent implements OnInit {
     this.orderDetailService.create(this.orderDetail).subscribe((data: any) => {
       const detail_id = data.result.order_detail_id;
       this.createOrder(detail_id);
+      this.updateQuantityDiscount(detail_id);
     });
   }
+
+  updateQuantityDiscount(orderDetailId: string) {
+    console.log("here", this.product);
+    this.product.forEach((item: any) => {
+        this.productService.getById(item.product).subscribe((data: any) => {
+          this.orderDetailProduct.discount = item.discount;
+          this.orderDetailProduct.price = data.result.price * (1 - (item.discount / 100));
+          this.orderDetailProduct.quantity = item.quantity;
+          this.orderDetailProductService.getById(orderDetailId, item.product, this.orderDetailProduct).subscribe((data: any) => {
+            console.log(data);
+          })
+        })
+      }
+    )
+  }
+
 
 }

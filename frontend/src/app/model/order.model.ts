@@ -1,5 +1,6 @@
 import { OrderDetail} from "./order_detail.model";
 import {User} from "./user.model";
+import {OrderDetailProduct} from "./order_detail_product.model";
 
 export class Order {
   order_id!: string;
@@ -13,4 +14,5 @@ export class Order {
   email!:string;
   phoneNumber!:string;
   status!:string;
+  orderDetailProduct!:Partial<OrderDetailProduct>
 }

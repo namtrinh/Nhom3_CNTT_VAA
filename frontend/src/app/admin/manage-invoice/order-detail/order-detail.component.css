@@ -4,3 +4,6 @@
 .order-total{
   font-size: 20px;
 }
+.container{
+  max-width: 60%;
+}

@@ -43,6 +43,7 @@ import {OrderDetailComponent} from "./admin/manage-invoice/order-detail/order-de
 import {SearchProductComponent} from "./home/search-product/search-product.component";
 import {ListReviewComponent} from "./admin/manage-review/list-review/list-review.component";
 import {OrderHistoryComponent} from "./home/order-history/order-history.component";
+import {TestComponent} from "./test/test.component";
 
 export const routes: Routes = [
 
@@ -66,6 +67,7 @@ export const routes: Routes = [
       {path: 'category/:seotitle', component: ProductByCategoryComponent},
       {path: 'search/:name', component:SearchProductComponent},
       {path: 'my_order/:user_id', component: OrderHistoryComponent},
+      {path: 'test', component: TestComponent},
     ]
   },
 

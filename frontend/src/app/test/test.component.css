@@ -1,0 +1,46 @@
+@media print {
+  /* Thay đổi kích thước giấy */
+  @page {
+    size: 80mm 150mm; /* Kích thước giấy tùy chỉnh (80mm x 150mm) */
+    margin: 5mm; /* Giảm lề của trang */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .invoice {
+    width: 100%;
+    font-size: 10px; /* Giảm kích thước chữ */
+  }
+
+  .invoice-header h1 {
+    font-size: 14px; /* Giảm kích thước tiêu đề */
+  }
+
+  .invoice-header h4 {
+    font-size: 10px; /* Giảm kích thước phụ */
+  }
+
+  .invoice-body {
+    font-size: 9px; /* Kích thước chữ cho nội dung */
+  }
+
+  .invoice-body table {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 8px; /* Kích thước chữ trong bảng */
+  }
+
+  .invoice-footer {
+    font-size: 8px; /* Kích thước chữ phần footer */
+    text-align: center;
+  }
+
+  .invoice-body td,
+  .invoice-body th {
+    padding: 2px 5px; /* Giảm padding trong bảng */
+  }
+}

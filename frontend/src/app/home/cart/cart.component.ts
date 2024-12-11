@@ -71,7 +71,8 @@ export class CartComponent implements OnInit {
           products: this.selectedProducts.map(cart => {
             return ({
               product: cart.product.product_id,
-              quantity: cart.product_quantity
+              quantity: cart.product_quantity,
+              discount:cart.product.promotion?.discount ?? 0
             });
           }),
         }
@@ -82,6 +83,7 @@ export class CartComponent implements OnInit {
   getAllByUserId() {
     this.cartService.getByUserId(this.user_Id).subscribe((data: any) => {
       this.cart = data.result;
+      console.log(this.cart)
     })
   }
 
@@ -126,14 +128,19 @@ export class CartComponent implements OnInit {
 
 
   updateTotalPrice(): void {
+    // Tính tổng giá tiền
     this.totalPrice = this.selectedProducts.reduce((sum, selectedCart) => {
-      return sum + (selectedCart.product_quantity * selectedCart.product.price);
+      const promotionDiscount = selectedCart.product.promotion?.discount ?? 0; // Lấy giá trị discount hoặc 0
+      const discountedPrice = selectedCart.product.price * (1 - promotionDiscount / 100);
+      return sum + selectedCart.product_quantity * discountedPrice;
     }, 0);
 
+    // Tính tổng số lượng sản phẩm
     this.totalQuantityProduct = this.selectedProducts.reduce((sum, selectedCart) => {
       return sum + selectedCart.product_quantity;
     }, 0);
   }
+
 
   checkCount: boolean = false;
   city: any;

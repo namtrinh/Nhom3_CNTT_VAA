@@ -148,9 +148,19 @@
               {{ carts.product.name }}
             </a>
           </div>
-          <div class="price-area">
-            <span>{{ carts.product.price | number:'1.0-0' }} ₫</span>
-          </div>
+
+          @if (carts.product.price && carts.product.promotion && carts.product.promotion.discount !== undefined){
+
+            <div class="price-area">
+              <span>{{ carts.product.price * (1 - carts.product.promotion.discount/100) | number:'1.0-0' }} ₫</span>
+            </div>
+          } @else {
+            <div class="price-area">
+              <span>{{ (carts.product.price) | number:'1.0-0' }} ₫</span>
+            </div>
+          }
+
+
         </div>
         <div class="product-note">
           <div class="product-note__btn">

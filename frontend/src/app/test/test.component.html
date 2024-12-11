@@ -1,7 +1,8 @@
+
 <div id="invoice" class="container invoice mt-4">
   <div class="invoice-header">
     <h1>Invoice</h1>
-    <h4 class="text-muted">Date: {{ order.time_created }}</h4>
+    <h4 class="text-muted">NO: 554775/R1 | Date: 01/01/2015</h4>
     <div>
       <strong>Acme Corporation</strong><br>
       Software Development<br>
@@ -14,15 +15,15 @@
     <div>
       <h3>Customer Details</h3>
       <p>
-        <strong>Name:</strong>{{ order.username }}<br>
-        <strong>Address:</strong>{{ order.address }}<br>
-        <strong>Phone:</strong>{{ order.phoneNumber }}<br>
-        <strong>Email:</strong> {{ order.email }}
+        <strong>Name:</strong> Microsoft Corporation<br>
+        <strong>Industry:</strong> Software Development<br>
+        <strong>Address:</strong> One Microsoft Way, Redmond, WA<br>
+        <strong>Phone:</strong> (425) 882-8080<br>
+        <strong>Email:</strong> contact.com
       </p>
     </div>
 
     <h3>Services / Products</h3>
-
     <table class="table table-bordered">
       <thead>
       <tr>
@@ -32,16 +33,20 @@
         <th>Total</th>
       </tr>
       </thead>
-      @for (product of orderDetailProduct; track $index) {
-        <tbody>
-        <tr>
-          <td>{{ product.products_product_id.name }}</td>
-          <td>{{ product.price | number:'1.0-0' }}</td>
-          <td>{{ product.quantity }}</td>
-          <td>{{ product.price * product.quantity | number:'1.0-0' }}</td>
-        </tr>
-        </tbody>
-      }
+      <tbody>
+      <tr>
+        <td>Lorem Ipsum Dolor</td>
+        <td>$1,000.00</td>
+        <td>18</td>
+        <td>$18,000.00</td>
+      </tr>
+      <tr>
+        <td>Sit Amet Dolor</td>
+        <td>$120.00</td>
+        <td>2</td>
+        <td>$240.00</td>
+      </tr>
+      </tbody>
     </table>
 
     <div>
@@ -49,15 +54,19 @@
       <table class="table table-bordered">
         <tr>
           <td><strong>Sub Total</strong></td>
-          <td>{{ totalPrice | number:'1.0-0' }} ₫</td>
+          <td>$18,240.00</td>
         </tr>
         <tr>
           <td><strong>Discount</strong></td>
-          <td>-{{ totalPriceSale| number:'1.0-0' }} ₫</td>
+          <td>-$1,800.00</td>
+        </tr>
+        <tr>
+          <td><strong>Tax</strong></td>
+          <td>$3,312.00</td>
         </tr>
         <tr>
           <td><strong>Final Total</strong></td>
-          <td>{{ orderDetail.total_price | number:'1.0-0' }} ₫</td>
+          <td>$19,752.00</td>
         </tr>
       </table>
     </div>
