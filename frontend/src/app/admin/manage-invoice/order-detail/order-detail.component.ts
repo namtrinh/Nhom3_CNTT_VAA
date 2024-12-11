@@ -50,7 +50,7 @@ export class OrderDetailComponent implements OnInit{
          console.log(this.orderDetailProduct)
         this.orderDetailProduct.forEach(data => {
         if (data.products_product_id.price !== undefined) {
-          this.totalPrice += data.products_product_id.price;
+          this.totalPrice += data.products_product_id.price * data.quantity;
           this.totalPriceSale += data.products_product_id.price * (data.discount / 100);
           console.log(this.totalPrice)
         }
