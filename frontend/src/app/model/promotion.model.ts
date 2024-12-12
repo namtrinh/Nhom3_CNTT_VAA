@@ -8,4 +8,5 @@ export class Promotion {
     time_end!: string;
     sort!:number;
     product:Product[] = [];
+    isActive!: boolean;
 }

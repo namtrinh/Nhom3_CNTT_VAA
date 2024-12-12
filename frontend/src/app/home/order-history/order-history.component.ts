@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule, CurrencyPipe, DatePipe, DecimalPipe} from "@angular/common";
 import {OrderService} from "../../service/order-service.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Order} from "../../model/order.model";
 import {OrderDetailService} from "../../service/orderDetail-service.service";
 import {OrderDetail} from "../../model/order_detail.model";
@@ -24,6 +24,7 @@ import {OrderDetailProduct} from "../../model/order_detail_product.model";
     CurrencyPipe,
     DatePipe,
     DecimalPipe,
+    RouterLink,
 
   ],
   templateUrl: './order-history.component.html',

@@ -25,10 +25,10 @@
         </h3>
 
         <strong class="product-price">
-          <p style=" text-decoration: line-through;">{{ product.price | number:'1.0-0' }}₫</p>
+          <p style=" text-decoration: line-through; font-size: 17px;">{{ product.price | number:'1.0-0' }}₫</p>
 
           @if (product.price && product.promotion && product.promotion.discount !== undefined) {
-            <p style="color:red">
+            <p style="color:red; font-size: 20px;">
               {{ product.price - (product.price * product.promotion.discount / 100) | number:'1.0-0' }}₫
             </p>
           }
@@ -42,11 +42,17 @@
         <div class="img-sale">
           <img src="/assets/sale.png" class="blink" style="width:50px;">
         </div>
+
+        <div class="vote-txt">
+          <i class="iconnewglobal-vote"></i>
+          @if (product.totalRating !== 0) {
+            <b>{{ product.totalRating }} <i class="fa-solid fa-star" style="color: #efd520;"></i></b>
+          }
+        </div>
       </div>
     }
-
   </div>
 </div>
-  <app-product-extend></app-product-extend>
+<app-product-extend></app-product-extend>
 <app-product-category></app-product-category>
 

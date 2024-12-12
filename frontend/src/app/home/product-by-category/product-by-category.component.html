@@ -4,7 +4,7 @@
   <div class="listproduct listproduct-block">
     @for (product of products; track product.product_id) {
       <div class="item"
-           [routerLink]="[product.seotitle]">
+           [routerLink]="['/category',category.ct_seotitle, product.seotitle]">
         <div class="item-img">
           <img [src]=" product.image">
         </div>

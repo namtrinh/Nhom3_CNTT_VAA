@@ -44,7 +44,7 @@
             </thead>
             @for (product of orderDetailProduct; track $index) {
               <tbody>
-              <tr>
+              <tr [routerLink]="['/category',product.products_product_id.category?.ct_seotitle, product.products_product_id.seotitle]">
                 <td><img style="max-width: 100px;" [src]="product.products_product_id.image"></td>
                 <td>{{ product.products_product_id.name }}</td>
                 <td>{{ product.price | number:'1.0-0' }} ₫</td>

@@ -3,6 +3,7 @@ package org.galaxy.backend.Repository;
 import java.util.List;
 
 import org.galaxy.backend.Model.Product;
+import org.galaxy.backend.Model.Promotion;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -35,5 +36,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
             @Param("name") String name,
             @Param("category") String category);
 
+    List<Product> findByPromotion(Promotion promotion);
 
 }

@@ -1,9 +1,13 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ãÙğ±¸2J$9c332e98-8f64-401a-a2c9-4dcdb719b96b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ô¡òĞ»2J$2c5b0308-e7f5-4395-a5c6-0a9d2a2a5641
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8éÙğ±¸2J$402fbaa0-c04c-49b3-a894-b1160064d9b3
-Š
-java:S6813"BRemove this field injection and use constructor injection instead.(îÅŠ¶øÿÿÿÿ8éÙğ±¸2J$1f8e13c7-8b39-4beb-bcbb-ce867198be83
-l	java:S106"+Replace this use of System.out by a logger.(ƒÒ	8òÙğ±¸2J$9fdd6898-1a90-4e40-acf6-c73c310e864e
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷¡òĞ»2J$5bef260d-fe35-4658-8681-71f336047942
 …
-java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8ò¢ı±¸2J$f8940f3f-fba3-42ef-b9d9-f1819a9b8cca
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷¡òĞ»2J$0e04553e-f8ce-417b-8daf-2a8f6a5821fe
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ø¡òĞ»2J$06e53b2c-a4f1-4096-bede-48b56e7316c9
+l	java:S106!"+Replace this use of System.out by a logger.(ƒÒ	8ş¡òĞ»2J$cdbb0361-83f0-4ab2-a915-08227106f304
+l	java:S1064"+Replace this use of System.out by a logger.(»™­8¢¢òĞ»2J$422c192c-c446-44f6-872c-fb070e24ba7d
+r	java:S1066"+Replace this use of System.out by a logger.(óÊ£Ğûÿÿÿÿ8¢¢òĞ»2J$eb842242-f917-4fe7-9a3a-915345ed7b41
+w
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ÎôĞ»2J$8c01d838-31f0-450c-ae60-176a26900bbb

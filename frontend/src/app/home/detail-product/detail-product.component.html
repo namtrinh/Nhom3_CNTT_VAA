@@ -92,11 +92,12 @@
             <mat-card-header>
               <h5 class="card-title">{{ product.name }}</h5>
             </mat-card-header>
-            <img mat-card-image [routerLink]="['/category/{{product.category}}/',product.seotitle]"
-                 (click)="gotoOrderProduct()"
+            <img mat-card-image [routerLink]="['/category',product.category?.ct_seotitle, product.seotitle]"
+                 (click)="gotoOrderProduct()" style="max-width: 150px; max-height: 150px; min-width: 120px; min-height: 120px;"
                  [src]="product.image" alt="{{ product.name }}" class="product-image"/>
             <mat-card-content class="flex-grow-1">
               <ng-container *ngIf="!product.promotion">
+                <p> </p>
                 <p class="product-price" style="font-size: 1.2rem;font-weight: 600; color:#DD0000">
                   {{ product.price | number:'1.0-0' }}₫
                 </p>

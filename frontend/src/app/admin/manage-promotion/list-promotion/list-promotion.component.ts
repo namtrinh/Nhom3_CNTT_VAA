@@ -2,12 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {PromotionService} from "../../../service/promotion-service.service";
 import {Promotion} from "../../../model/promotion.model";
 import {RouterLink} from "@angular/router";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-list-promotion',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    DatePipe
   ],
   templateUrl: './list-promotion.component.html',
   styleUrl: './list-promotion.component.css'

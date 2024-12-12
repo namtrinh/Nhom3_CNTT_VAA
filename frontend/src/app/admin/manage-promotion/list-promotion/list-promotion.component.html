@@ -7,6 +7,7 @@
       <th>Discount %</th>
       <th>Time Start</th>
       <th>Time End</th>
+      <th>Status</th>
       <th>Update</th>
       <th>Delete</th>
     </tr>
@@ -17,8 +18,16 @@
           <td>{{ promotion.promotion_id }}</td>
           <td>{{ promotion.pr_name }}</td>
           <td>{{ promotion.discount }}</td>
-          <td>{{ promotion.time_started }}</td>
-          <td>{{ promotion.time_end }}</td>
+          <td>{{ promotion.time_started | date:'yy-MM-dd HH:mm a' }}</td>
+          <td>{{ promotion.time_end | date:'yy-MM-dd HH:mm a' }}</td>
+          <td>
+  <span class="badge fs-6 px-3 py-2"
+        [class.bg-success]="promotion.isActive === true"
+        [class.bg-danger]="promotion.isActive === false">
+    {{ promotion.isActive ===true ? 'Active' : 'InActive' }}
+  </span>
+          </td>
+
           <td>
             <button class="btn btn-primary btn-sm" [routerLink]="['/admin/update-promotion', promotion.promotion_id]">
               <i class="fa-regular fa-pen-to-square"></i> Update

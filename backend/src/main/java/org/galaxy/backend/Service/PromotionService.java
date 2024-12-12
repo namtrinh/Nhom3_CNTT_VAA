@@ -1,6 +1,8 @@
 package org.galaxy.backend.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.Repository.PromotionRepository;
@@ -37,7 +39,9 @@ public class PromotionService {
         existPromotion.setPr_name(promotion.getPr_name());
         existPromotion.setTime_end(promotion.getTime_end());
         existPromotion.setTime_started(promotion.getTime_started());
+        existPromotion.setIsActive(promotion.getIsActive());
 
         return promotionRepository.save(promotion);
     }
+
 }

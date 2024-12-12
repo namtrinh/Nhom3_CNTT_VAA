@@ -1,8 +1,12 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$4f2963d1-d19a-4ee6-a7a1-c6af61679d86
-	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$47a0630d-395e-44c5-9540-b047abb3cbf4
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$13c4659d-1858-4d05-a712-876e58f30089
-	java:S116""WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÛªöüÿÿÿÿ8üÂÏÑº2J$283731b2-d5df-41f3-861d-d096723d99a8
-•	java:S116$"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”Òº8üÂÏÑº2J$5277891d-ef75-4e80-b41d-1b39583243d6
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$a0c9205d-3208-4bb0-80f5-a174d6d26555
+	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$d1b03678-2e6e-48d7-bc37-bb372f161e64
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$6246a6c9-6f80-4227-938c-b7fba4ac4a3e
+™	java:S116$"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ìÓ8üÂÏÑº2J$de535eff-b30c-4795-86b9-756feed22075
+š	java:S116&"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œĞÕ†úÿÿÿÿ8üÂÏÑº2J$43f4af3b-d1ab-404b-8e88-ab620982c915
+K
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ä­¼Ğ»2
 Š
-java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$3327108a-c5cd-41e5-b5b8-b2bc8c0f18d3
+java:S1128	"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$4c558885-902f-4e84-9439-699aefc28ade
+^
+java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû8ä­¼Ğ»2
