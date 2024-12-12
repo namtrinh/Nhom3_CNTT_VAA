@@ -20,42 +20,39 @@ import {OrderDetailProduct} from "../../../model/order_detail_product.model";
   templateUrl: './order-detail.component.html',
   styleUrl: './order-detail.component.css'
 })
-export class OrderDetailComponent implements OnInit{
+export class OrderDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.router.snapshot.params['order_detail_id'];
     this.getOrderDetails(id);
     this.order = this.sharedDataService.getData()
     this.order.time_created = new Date(this.order.time_created).toISOString().slice(0, 16); // YYYY-MM-DDTHH:mm
-    }
+  }
 
-  orderDetail:OrderDetail = new OrderDetail();
-  order:Order = new Order();
-  orderDetailProduct:OrderDetailProduct[] = [];
-  totalPrice:number = 0;
-  totalPriceSale:number = 0;
+  orderDetail: OrderDetail = new OrderDetail();
+  order: Order = new Order();
+  orderDetailProduct: OrderDetailProduct[] = [];
+  totalPrice: number = 0;
+  totalPriceSale: number = 0;
 
   constructor(private orderDetailService: OrderDetailService,
-              private router:ActivatedRoute,
+              private router: ActivatedRoute,
               private sharedDataService: SharedDataService,
               private printService: NgxPrintService,
-              private orderDetailProductService:OrderDetailProductService) {
+              private orderDetailProductService: OrderDetailProductService) {
   }
 
   getOrderDetails(orderDetailId: string): void {
     this.orderDetailService.getById(orderDetailId).subscribe((response: any) => {
-       this.orderDetail = response.result;
+      this.orderDetail = response.result;
       this.orderDetailProductService.findByOrderDetailId(orderDetailId).subscribe((response: any) => {
-         this.orderDetailProduct = response.result;
-         console.log(this.orderDetailProduct)
+        this.orderDetailProduct = response.result;
         this.orderDetailProduct.forEach(data => {
-        if (data.products_product_id.price !== undefined) {
-          this.totalPrice += data.products_product_id.price;
-          this.totalPriceSale += data.products_product_id.price * (data.discount / 100);
-          console.log(this.totalPrice)
-        }
+          if (data.products_product_id.price !== undefined) {
+            this.totalPrice += data.products_product_id.price * data.quantity;
+            this.totalPriceSale += data.products_product_id.price * (data.discount / 100);
+          }
         });
-
       });
     });
   }

@@ -1,0 +1,10 @@
+
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊJ$efc97811-dba3-48f0-aba6-9923cdd4ed4f
+š	java:S116"ZRename this field "order_detail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú½ÁúÿÿÿÿJ$3cbec789-f031-4454-be59-a4e1b414ccd9
+	java:S116"^Rename this field "products_product_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡³³¨şÿÿÿÿJ$baaf7199-b293-45a1-8ec2-129a3bcad077
+
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnoreProperties'.(ô’ˆîJ$6ee4c21b-94f3-488a-af94-d68469d733b7
+ƒ
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉJ$ec695efc-c106-4ed3-8df7-21392eb38689
+k
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿJ$0aeffc18-5d8b-486c-ac71-175dbe86f738

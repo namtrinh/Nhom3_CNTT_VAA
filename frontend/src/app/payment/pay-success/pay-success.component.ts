@@ -62,7 +62,6 @@ export class PaySuccessComponent implements OnInit {
       };
       this.user = this.selectedProduct.user;
       this.product = this.selectedProduct.products;
-      console.log("day nef", this.product)
       this.userInf = this.selectedProduct.userInf;
       // this.promotion = this.selectedProduct.promotions;
       this.createOrderDetail();
@@ -82,10 +81,9 @@ export class PaySuccessComponent implements OnInit {
     this.order.phoneNumber = this.userInf.phoneNumber;
     this.order.address = this.userInf.address;
     this.order.status = 'Completed';
-
     this.orderService.create(this.order).subscribe((data: any) => {
       this.sendEmail();
-      // sessionStorage.removeItem("myArray");
+       sessionStorage.removeItem("myArray");
     });
   }
 
@@ -94,7 +92,6 @@ export class PaySuccessComponent implements OnInit {
     this.orderDetail.total_amount = this.selectedProduct.totalQuantityProduct;
     this.orderDetail.total_price = this.selectedProduct.totalPrice;
     this.orderDetail.products = this.product
-    console.log(this.orderDetail.products);
     const updatedProducts: Product[] = [];
     this.orderDetail.products?.forEach((selectedProduct: any) => {
       if (selectedProduct.product) {
@@ -119,7 +116,6 @@ export class PaySuccessComponent implements OnInit {
     this.orderDetail.products = updatedProducts;
     this.updateQuantityProduct();
     this.orderDetailService.create(this.orderDetail).subscribe((data: any) => {
-      console.log(data.result);
       const detail_id = data.result.order_detail_id;
       this.createOrder(detail_id);
       this.updateQuantityDiscount(detail_id)
@@ -131,9 +127,7 @@ export class PaySuccessComponent implements OnInit {
     this.product.forEach((item: any) => {
       this.productService.getById(item.product).subscribe((data: any) => {
         this.updateProduct = data.result;
-        console.log(data.result);
         this.decreateQuantity = this.updateProduct.quantity - item.quantity;
-        console.log(this.decreateQuantity);
         const formData = new FormData();
         formData.append('quantity', this.decreateQuantity.toString())
         formData.append('name', this.updateProduct.name);
@@ -142,7 +136,9 @@ export class PaySuccessComponent implements OnInit {
         formData.append('price', this.updateProduct.price.toString());
         formData.append('description', this.updateProduct.description);
         formData.append('category', this.updateProduct.category.category_id.toString());
-        //  formData.append('promotion', this.updateProduct.promotion.promotion_id)
+        if (this.updateProduct.promotion && this.updateProduct.promotion.promotion_id !== null) {
+          formData.append('promotion', this.updateProduct.promotion.promotion_id.toString());
+        }
         formData.append('image', this.updateProduct.image)
         formData.append('stock_stastus', "In_Stock")
         this.productService.editById(item.product, formData).subscribe((data: any) => {
@@ -166,19 +162,15 @@ export class PaySuccessComponent implements OnInit {
 
   // cập nhật giá hiện tại và số lượng từng sản phẩm
   updateQuantityDiscount(orderDetailId: string) {
-    console.log("here", this.product);
     this.product.forEach((item: any) => {
         this.productService.getById(item.product).subscribe((data: any) => {
           this.orderDetailProduct.discount = item.discount;
           this.orderDetailProduct.price = data.result.price * (1 - (item.discount / 100));
           this.orderDetailProduct.quantity = item.quantity;
           this.orderDetailProductService.getById(orderDetailId, item.product, this.orderDetailProduct).subscribe((data: any) => {
-            console.log(data);
           })
         })
       }
     )
   }
-
-
 }

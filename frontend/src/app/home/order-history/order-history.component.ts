@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CommonModule, CurrencyPipe, DatePipe} from "@angular/common";
+import {CommonModule, CurrencyPipe, DatePipe, DecimalPipe} from "@angular/common";
 import {OrderService} from "../../service/order-service.service";
 import {ActivatedRoute} from "@angular/router";
 import {Order} from "../../model/order.model";
@@ -8,6 +8,8 @@ import {OrderDetail} from "../../model/order_detail.model";
 import {SwiperConfigInterface, SwiperModule} from "ngx-swiper-wrapper";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from "@angular/material/card";
 import {MatList, MatListItem} from "@angular/material/list";
+import {OrderDetailProductService} from "../../service/orderDetailProduct-service.service";
+import {OrderDetailProduct} from "../../model/order_detail_product.model";
 
 @Component({
   selector: 'app-order-history',
@@ -21,6 +23,7 @@ import {MatList, MatListItem} from "@angular/material/list";
     MatList,
     CurrencyPipe,
     DatePipe,
+    DecimalPipe,
 
   ],
   templateUrl: './order-history.component.html',
@@ -31,6 +34,10 @@ export class OrderHistoryComponent implements OnInit {
   orderDetail: OrderDetail = new OrderDetail();
   hiddenDetail!: [orderDetailId: number];
   selectedOrderDetailId: any;
+  orderDetailProduct: OrderDetailProduct[] = [];
+  subTotalPrice: number = 0;
+  totalPriceSale: number = 0;
+  finalTotalPrice:number = 0;
 
   swiperConfig: SwiperConfigInterface = {
     slidesPerView: 1,
@@ -45,8 +52,10 @@ export class OrderHistoryComponent implements OnInit {
   constructor(
     private orderService: OrderService,
     private activeRoute: ActivatedRoute,
-    private orderDetailService: OrderDetailService
-  ) {}
+    private orderDetailService: OrderDetailService,
+    private orderDetailProductService: OrderDetailProductService
+  ) {
+  }
 
   ngOnInit(): void {
     const userId = this.activeRoute.snapshot.params['user_id'];
@@ -58,6 +67,7 @@ export class OrderHistoryComponent implements OnInit {
   getByUser(userId: string): void {
     this.orderService.findAllByUser(userId).subscribe((data: any) => {
       this.orders = data.result;
+      this.orderDetailService.getById
     });
   }
 
@@ -67,9 +77,20 @@ export class OrderHistoryComponent implements OnInit {
       this.orderDetail = new OrderDetail();
     } else {
       this.selectedOrderDetailId = orderDetailId;
-      this.orderDetailService.getById(orderDetailId).subscribe((data: any) => {
-        this.orderDetail = data.result;
+      this.subTotalPrice = 0;
+      this.totalPriceSale = 0;
+      this.finalTotalPrice = 0;
+      this.orderDetailProductService.findByOrderDetailId(orderDetailId).subscribe((data: any) => {
+        this.orderDetailProduct = data.result;
+        this.orderDetailProduct.forEach(data => {
+          if (data.products_product_id.price !== undefined) {
+            this.subTotalPrice += data.products_product_id.price * data.quantity;
+            this.totalPriceSale += data.products_product_id.price * data.quantity * (data.discount / 100);
+            this.finalTotalPrice += (data.products_product_id.price * (1 - data.discount / 100)) * data.quantity;
+          }
+        });
       });
     }
   }
+
 }

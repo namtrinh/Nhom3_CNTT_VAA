@@ -595,3 +595,7 @@ b
 0frontend/src/app/home/footer/footer.component.ts,a\b\ab99a7783e1cb295795aeb37358551facc28f499
 U
 %frontend/src/app/model/roles.model.ts,6\2\62ee150faf71213f28f8ce925a6f729668903b29
+v
+Fbackend/src/main/java/org/galaxy/backend/Model/OrderDetailProduct.java,8\a\8a46dbbf2a752135db6c8eea7cf6199542b276f0
+d
+4frontend/src/app/model/order_detail_product.model.ts,6\0\60a348f7ff50bbe65afd52e6d3ea9bb905be7015
