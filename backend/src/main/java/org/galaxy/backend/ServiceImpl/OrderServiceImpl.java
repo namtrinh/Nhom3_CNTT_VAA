@@ -86,7 +86,10 @@ public class OrderServiceImpl implements OrderService {
                 productService.UpdateStatus(productExisting.getProduct_id(), productExisting);
             }
         }
-        return orderRepository.save(entity);
+        Order order = orderRepository.save(entity);
+        hashOperations.put(HASH_ORDER, order.getOrder_id() ,order);
+        TTL();
+        return order;
     }
 
     @Override
@@ -96,6 +99,7 @@ public class OrderServiceImpl implements OrderService {
         }else {
             Order order = orderRepository.findById(integer).orElseThrow(() -> new RuntimeException("Not found"));
             hashOperations.put(HASH_ORDER, order.getOrder_id(), order);
+            TTL();
             return order;
         }
     }

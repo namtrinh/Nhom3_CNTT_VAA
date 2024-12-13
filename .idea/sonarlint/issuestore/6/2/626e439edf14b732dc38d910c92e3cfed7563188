@@ -1,30 +1,24 @@
 
-“	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8ñ©é‚¼2J$8c2d3d89-5219-4fc7-94a5-0cc1e99be067
-˜	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8ò©é‚¼2J$0845ba69-8b44-4ad0-837c-02adac98b5b4
-”	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8ò©é‚¼2J$ff821477-b34e-4dc7-9f4b-2aa1c189046f
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8ò©é‚¼2J$3dc48b3c-d89d-4e3d-8d45-fa2f7cbe8ad4
+“	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8¬¶š…¼2J$c0187890-a11a-41fb-910a-bc3a38a6c1f8
+˜	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8¬¶š…¼2J$47f27741-a261-4fe5-b3a0-4cb9b4a48fee
+”	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8¬¶š…¼2J$cb93fea2-27b6-464b-ad4b-8a05bbf2bc1a
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¬¶š…¼2J$864380f4-b48c-4560-8ebd-1b24d47588f8
 p
-java:S5411@"(Use a primitive boolean expression here.(ÚØş÷ÿÿÿÿÿ8ò©é‚¼2J$e7b55f80-45e0-4b88-afc5-edbe7253f38c
-p
-java:S5411U"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8ò©é‚¼2J$1bc7e671-8d10-4719-ba94-789bb71d0b0f
+java:S5411?"(Use a primitive boolean expression here.(ÚØş÷ÿÿÿÿÿ8¬¶š…¼2J$250a0c17-356e-4d58-8dac-324c15a09dde
 q
-java:S5411"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8§ñê‚¼2J$a3acf142-7055-4176-980d-cbfad0543b74
-	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8÷©é‚¼2J$3f90174c-aaef-4767-8857-9e9ba7e99f10
-	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8÷©é‚¼2J$93bfe033-b720-41fa-8eb5-b6b372fb02c0
+java:S5411‡"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8¬¶š…¼2J$8988d084-8bda-478b-b114-6aeb565de9b6
+	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8¯¶š…¼2J$4545ceba-1214-4281-a6f8-3465d8479ca0
+	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8¯¶š…¼2J$37317749-ad43-40d2-a9a2-02b9cf6088b2
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8û©é‚¼2J$e4d8eb79-cc7a-4047-97c8-2972ad27ef00
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±¶š…¼2J$eca7238e-a0f2-49ae-a8d6-7aa00cb5b66f
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8û©é‚¼2J$c830bc7c-cc56-4de8-84f1-84ca6c85caae
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8²¶š…¼2J$2155f4a2-43f2-4cb4-b9aa-f2c82860ad36
 …
-java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8û©é‚¼2J$95605b68-8de2-4d7c-8ebc-f98d9dbc0ef6
-•	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‰Šûÿÿÿÿ8„ªé‚¼2J$7be593d7-7ece-45da-b20f-c3d3c7602fa3
-	java:S1006"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùãŠ8…ªé‚¼2J$2972283d-982e-4434-9265-05f12675be0b
-m	java:S1067"+Replace this use of System.out by a logger.(¦ûĞ8†ªé‚¼2J$efdb4686-d11b-45d8-bf83-64959b8bc244
-m	java:S106A"+Replace this use of System.out by a logger.(…™ò¾8‡ªé‚¼2J$660e3d7c-4c17-4484-9103-bba33d9d7dcf
-m	java:S106D"+Replace this use of System.out by a logger.(Şà†8‰ªé‚¼2J$fab565d6-f502-4f55-93c6-f6ca0e51c820
-m	java:S106V"+Replace this use of System.out by a logger.(¤ß¡ã8ªé‚¼2J$1214523b-34dc-4552-a7f1-9b121c90bd15
-m	java:S106Y"+Replace this use of System.out by a logger.(İ¤Ì8ªé‚¼2J$23ab5ab1-0408-4b13-9bcf-bf403da69c64
+java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8³¶š…¼2J$aa0c16cd-8d55-4042-8fa4-ad640c1e2426
+•	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‰Šûÿÿÿÿ8¹¶š…¼2J$e2b7fd22-b21d-42c5-894e-664918eb5189
+	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùãŠ8º¶š…¼2J$37084764-c145-4d32-bac2-525de3201d84
+m	java:S1066"+Replace this use of System.out by a logger.(¦ûĞ8¼¶š…¼2J$651549e9-de90-4dad-8ad0-2b63e5bcca2a
+m	java:S106@"+Replace this use of System.out by a logger.(…™ò¾8½¶š…¼2J$33a19dde-ba99-43bb-b3f3-18bb71563cb6
+m	java:S106C"+Replace this use of System.out by a logger.(Şà†8½¶š…¼2J$b6781bf0-ba85-49de-8248-c26376efc3a5
 œ
-java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8Êõì‚¼2J$df2003d8-3a7d-4bbc-9de3-131e78433708
-
-java:S1068&"7Remove this unused "HASH_PR_BY_SEOTITLE" private field.(¡¸†øÿÿÿÿ8™ªé‚¼2J$b79fbd30-cc79-4f1a-92e4-13063fc17479
+java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8È¶š…¼2J$cf659b65-1af9-483c-aee4-fe5482b71f83

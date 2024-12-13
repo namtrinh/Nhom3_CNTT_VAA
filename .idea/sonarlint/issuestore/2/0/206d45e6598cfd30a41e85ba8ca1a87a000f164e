@@ -1,13 +1,13 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$5f81f3c2-5b58-4115-a337-befaf91b0d87
-	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$e2027058-3143-4253-9904-1ff5238e628a
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$d81ba743-6b38-4e63-8966-a82f8d8f2142
-™	java:S116%"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ìÓ8üÂÏÑº2J$1e2cb1c9-a2f1-4798-9f13-8abf2f77376b
-š	java:S116'"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œĞÕ†úÿÿÿÿ8üÂÏÑº2J$9123b43c-3fd2-4048-9b11-d0022793c16b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$22f24dc3-76e9-48ee-8787-665b3616f589
+	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$5c711b27-26ba-4299-9a48-c86f82010985
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$ff7b09dc-7c97-4e67-abb7-96fe65769628
+™	java:S116%"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ìÓ8üÂÏÑº2J$714c060f-1e6e-405f-84fb-57e47c9c4e29
+š	java:S116'"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œĞÕ†úÿÿÿÿ8üÂÏÑº2J$94364e04-f918-44f6-a11a-9b67ba56b392
 q
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ä­¼Ğ»2J$eb16fdb1-853c-4390-878c-f55ff5449bf6
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ä­¼Ğ»2J$5f177013-a679-46ae-b07b-5a7f61a66c47
 Š
 java:S1128
-"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$fef3eba0-0633-4a19-a99b-f8e7572f8092
+"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$e90846ac-f7a8-46d3-8ce0-7766637d9d00
 „
-java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû8ä­¼Ğ»2J$9227ad15-bc93-409b-a036-081ae8c952b5
+java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû8ä­¼Ğ»2J$3d004340-a51c-49bd-aca1-f3ad7bc02a4e

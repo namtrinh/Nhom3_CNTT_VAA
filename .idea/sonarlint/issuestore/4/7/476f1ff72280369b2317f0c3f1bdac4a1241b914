@@ -1,13 +1,13 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ô¡òĞ»2J$de92ce52-ac27-4b4f-a82c-44ae46881167
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ô¡òĞ»2J$b72e420a-e80b-4ed9-b65b-9aed31895785
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷¡òĞ»2J$04c60a36-a8fb-4623-82e6-2ece7101e34d
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷¡òĞ»2J$8c846c79-1a39-4abb-afdd-8cf093d3a899
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷¡òĞ»2J$5fa7a437-791f-4db6-ba48-c99683932503
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8÷¡òĞ»2J$d089fc0f-e965-4910-aa23-896265d61c82
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ø¡òĞ»2J$0e02a922-a436-42fc-accb-a113e20ed0da
-l	java:S106!"+Replace this use of System.out by a logger.(ƒÒ	8ş¡òĞ»2J$0347b9b0-f73c-4188-ad8f-c75c4449a736
-l	java:S1064"+Replace this use of System.out by a logger.(»™­8¢¢òĞ»2J$c1592234-82ff-4e34-b09b-99f3bf709ed8
-r	java:S1066"+Replace this use of System.out by a logger.(óÊ£Ğûÿÿÿÿ8¢¢òĞ»2J$2ff73b00-7a12-4f77-ab91-149928387ad7
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ø¡òĞ»2J$1608d282-56d1-470f-b8dd-46a55a0faca9
+l	java:S106!"+Replace this use of System.out by a logger.(ƒÒ	8ş¡òĞ»2J$32238123-4537-495f-a49d-fcb258a9a279
+l	java:S1064"+Replace this use of System.out by a logger.(»™­8¢¢òĞ»2J$34dbab14-2ea0-4403-9d96-283cd445c01f
+r	java:S1066"+Replace this use of System.out by a logger.(óÊ£Ğûÿÿÿÿ8¢¢òĞ»2J$bbd71b1b-6878-499b-9c75-0b5118926262
 w
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ÎôĞ»2J$3e940040-8429-422f-89e9-e2088f397b9b
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ÎôĞ»2J$a2d35b12-7685-429b-92de-956a9982662e

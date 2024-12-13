@@ -90,8 +90,10 @@ public class ProductController {
 
         Product product = new Product();
 
-        String fileUrl = cloudinaryService.uploadFile(image);
-        product.setImage(fileUrl);
+        if (params.get("image") != null) {
+            String fileUrl = cloudinaryService.uploadFile(image);
+            product.setImage(fileUrl);
+        }
 
         product.setName(params.get("name"));
         product.setSeotitle(params.get("seotitle"));

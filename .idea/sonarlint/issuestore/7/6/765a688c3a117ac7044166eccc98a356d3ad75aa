@@ -1,23 +1,23 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8ŸÛÅƒ¼2
-J
-java:S5411^"(Use a primitive boolean expression here.(—ÇÕõÿÿÿÿÿ8 ÛÅƒ¼2
-J
-java:S5411i"(Use a primitive boolean expression here.(—ÇÕõÿÿÿÿÿ8 ÛÅƒ¼2
-g	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(¨’Áıÿÿÿÿ8£ÛÅƒ¼2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
-_
-java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
-_
-java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
-_
-java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
-o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñš¸Õüÿÿÿÿ8¯ÛÅƒ¼2
-o	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¤—Àşÿÿÿÿ8°ÛÅƒ¼2
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8ûí¦…¼2J$e9ec1d26-ed06-442c-83a0-a9ed327094a0
+p
+java:S5411a"(Use a primitive boolean expression here.(—ÇÕõÿÿÿÿÿ8ûí¦…¼2J$ace9a1a3-4528-45ba-9c30-cf3e33436761
+p
+java:S5411m"(Use a primitive boolean expression here.(—ÇÕõÿÿÿÿÿ8ûí¦…¼2J$fd3aa024-5830-487b-8cf6-51602270ddaf
+	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(¨’Áıÿÿÿÿ8ıí¦…¼2J$80964823-1f1e-400d-a7d4-c2a9906fffba
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8şí¦…¼2J$33ccfd88-a413-4723-870a-779f83a656bd
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8şí¦…¼2J$b1b52348-b750-4504-9ce3-3e4c269aec07
+…
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8şí¦…¼2J$b12d11bc-54eb-4309-b1ca-9dabfa77e4b2
+…
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8şí¦…¼2J$cea0d8a9-85b1-4794-b991-e272699108ad
+…
+java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8şí¦…¼2J$70710fab-b706-4332-9563-67957c12309a
+•	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñš¸Õüÿÿÿÿ8ƒî¦…¼2J$746ed168-d97e-4b41-8f76-2af3d8b9918c
+•	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¤—Àşÿÿÿÿ8ƒî¦…¼2J$d57109a4-f004-4543-ad5b-9c077a8cfac2
 M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¹ÛÅƒ¼2
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8‰¾Á…¼2
 v
-java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8»ÛÅƒ¼2
+java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8‰¾Á…¼2

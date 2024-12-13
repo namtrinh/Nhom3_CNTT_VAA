@@ -35,7 +35,6 @@ public class ProductServiceImpl implements ProductService {
 
     private static final String HASH_PR_PROMOTION = "PR_PROMOTION";
 
-    private static final String HASH_PR_BY_SEOTITLE = "PR_PROMOTION";
 
     @Autowired
     RedisTemplate<String, Object> redisTemplate;
@@ -82,15 +81,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public Product findById(String product_id) {
-        if (hashOperations.hasKey(HASH_PR, product_id)) {
-            System.out.println("getProductById from redis");
-            return hashOperations.get(HASH_PR, product_id);
-        } else {
-            System.out.println("getProductById from database");
-            Product product = productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
-            hashOperations.put(HASH_PR, product.getProduct_id(), product);
-            return product;
-        }
+        return productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
+
     }
 
     @Transactional
@@ -103,7 +95,7 @@ public class ProductServiceImpl implements ProductService {
 
         if (product.getImage() != null && !product.getImage().isEmpty()) {
             String publicId = product.getImage();
-          cloudinaryService.deleteFile(publicId);
+            cloudinaryService.deleteFile(publicId);
         }
         productRepository.delete(product);
     }
@@ -140,7 +132,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public Product UpdateStatus(String product_id, Product product) {
-        if (hashOperations.hasKey(HASH_PR, product_id)){
+        if (hashOperations.hasKey(HASH_PR, product_id)) {
             hashOperations.put(HASH_PR, product_id, product);
         }
         product.setProduct_id(product_id);
