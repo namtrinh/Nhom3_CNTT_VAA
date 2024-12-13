@@ -3,11 +3,13 @@ package org.galaxy.backend.ServiceImpl;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.galaxy.backend.Exception.AppException;
 import org.galaxy.backend.Exception.ErrorCode;
 import org.galaxy.backend.Mapper.UsersMapper;
+import org.galaxy.backend.Model.Order;
 import org.galaxy.backend.Model.Permission.PredefinedRole;
 import org.galaxy.backend.Model.Permission.Roles;
 import org.galaxy.backend.Model.User;
@@ -18,6 +20,8 @@ import org.galaxy.backend.Repository.UserRepository;
 import org.galaxy.backend.Service.UserService;
 import org.galaxy.backend.Service.VerifyUser.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.HashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -36,6 +40,28 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RoleRepository roleRepository;
+
+    @Autowired
+    RedisTemplate<String, Object> redisTemplate;
+    HashOperations<String, String, Order> hashOperations;
+
+    public OrderServiceImpl(RedisTemplate<String, Object> redisTemplate){
+        this.redisTemplate = redisTemplate;
+        this.hashOperations = redisTemplate.opsForHash();
+    }
+
+    public void TTL(){
+        redisTemplate.expire(HASH_ORDER, 10, TimeUnit.MINUTES);
+    }
+
+    @Scheduled(fixedRate = 300000)
+    public void SetCache(){
+        List<Order> orders = orderRepository.findAll();
+        for(Order order : orders){
+            hashOperations.put(HASH_ORDER, order.getOrder_id(), order);
+        }
+        TTL();
+    }
 
 
     public UsersResponse CreateUser(UsersRequest usersRequest) {

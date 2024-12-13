@@ -1,32 +1,28 @@
 package org.galaxy.backend.ServiceImpl;
 
 import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
-import com.cloudinary.utils.ObjectUtils;
 import jakarta.persistence.EntityNotFoundException;
-
 import org.galaxy.backend.Model.Product;
-import org.galaxy.backend.Model.Review;
 import org.galaxy.backend.Repository.ProductRepository;
-import org.galaxy.backend.Repository.Reviewrepository;
-import org.galaxy.backend.Repository.UserRepository;
 import org.galaxy.backend.Service.CloudinaryService;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.redis.core.HashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
-@Transactional
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
@@ -35,11 +31,47 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private CloudinaryService cloudinaryService;
 
+    private static final String HASH_PR = "PR";
+
+    private static final String HASH_PR_PROMOTION = "PR_PROMOTION";
+
+    private static final String HASH_PR_BY_SEOTITLE = "PR_PROMOTION";
+
     @Autowired
-    private Reviewrepository reviewrepository;
+    RedisTemplate<String, Object> redisTemplate;
+    HashOperations<String, String, Product> hashOperations;
+
+    public ProductServiceImpl(RedisTemplate<String, Object> redisTemplate) {
+        this.redisTemplate = redisTemplate;
+        this.hashOperations = redisTemplate.opsForHash();
+    }
+
+    public void TTL(String hashKey) {
+        redisTemplate.expire(hashKey, 10, TimeUnit.MINUTES);
+    }
+
+    @Scheduled(fixedRate = 300000)
+    public void UpdateCache() {
+        System.out.println("save to redis");
+        List<Product> products = productRepository.findAll();
+        for (Product product : products) {
+            hashOperations.put(HASH_PR, product.getProduct_id(), product);
+        }
+        TTL(HASH_PR);
+    }
 
     public List<Product> findAllProductsWithPromotion() {
-        return productRepository.findAllProductsWithPromotion();
+        if (redisTemplate.hasKey(HASH_PR_PROMOTION)) {
+            System.out.println("get product sale in redis");
+            return hashOperations.values(HASH_PR_PROMOTION);
+        } else {
+            System.out.println("get product sale in database");
+            List<Product> products = productRepository.findAllProductsWithPromotion();
+            for (Product product : products) {
+                hashOperations.put(HASH_PR_PROMOTION, product.getProduct_id(), product);
+            }
+            return products;
+        }
     }
 
     public Product save(Product entity) {
@@ -50,7 +82,15 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public Product findById(String product_id) {
-        return productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
+        if (hashOperations.hasKey(HASH_PR, product_id)) {
+            System.out.println("getProductById from redis");
+            return hashOperations.get(HASH_PR, product_id);
+        } else {
+            System.out.println("getProductById from database");
+            Product product = productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
+            hashOperations.put(HASH_PR, product.getProduct_id(), product);
+            return product;
+        }
     }
 
     @Transactional
@@ -63,7 +103,7 @@ public class ProductServiceImpl implements ProductService {
 
         if (product.getImage() != null && !product.getImage().isEmpty()) {
             String publicId = product.getImage();
-            String deleteResult = cloudinaryService.deleteFile(publicId);
+          cloudinaryService.deleteFile(publicId);
         }
         productRepository.delete(product);
     }
@@ -95,12 +135,14 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.getByCategory(category);
     }
 
-
     public List<Product> searchProductsByName(String name, String category) {
         return productRepository.searchByNameOrCategory(name, category);
     }
 
     public Product UpdateStatus(String product_id, Product product) {
+        if (hashOperations.hasKey(HASH_PR, product_id)){
+            hashOperations.put(HASH_PR, product_id, product);
+        }
         product.setProduct_id(product_id);
         return productRepository.save(product);
     }

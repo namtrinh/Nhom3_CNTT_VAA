@@ -1,5 +1,6 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import jakarta.persistence.*;
@@ -17,7 +18,7 @@ import lombok.*;
 @AllArgsConstructor
 @Table(name = "orders")
 @NoArgsConstructor
-public class Order {
+public class Order implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")

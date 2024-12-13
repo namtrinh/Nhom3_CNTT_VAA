@@ -1,5 +1,6 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -16,7 +17,7 @@ import lombok.*;
 @AllArgsConstructor
 @Table(name = "order_detail")
 @NoArgsConstructor
-public class OrderDetail {
+public class OrderDetail implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")

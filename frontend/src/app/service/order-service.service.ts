@@ -13,10 +13,6 @@ export class OrderService {
   constructor(private http: HttpClient) {
   }
 
-  findAll(): Observable<Order[]> {
-    return this.http.get<Order[]>(`${this.pathUrl}/all`)
-  }
-
   findAllByUser(user:string):Observable<Order[]>{
     return this.http.get<Order[]>(`${this.pathUrl}/my-order/${user}`)
   }

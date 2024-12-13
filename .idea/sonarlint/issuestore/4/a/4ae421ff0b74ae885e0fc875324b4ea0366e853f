@@ -1,7 +1,8 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ñÑà¸2J$2a28ad00-d9ac-422e-8c7f-4b8fab484dd4
-”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8ñÑà¸2J$f3e7e9dd-71c1-4f45-a929-9a4bb7a05ea8
-™	java:S1161"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÍÜéà¸2J$d915ad94-210c-4f55-a948-01e47ccc33ae
-Š
-java:S1128
-"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8šñÑà¸2J$61cadae9-0c43-473d-b5cb-2c7a8f7f5646
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8ñÑà¸2J$1ec04309-81ca-4a95-97e8-9a4fc05f4ae0
+”	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡Ü8ñÑà¸2J$1190976e-c6a9-495a-abec-cba98cbef6c8
+™	java:S1162"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÍÜéà¸2J$23b00e30-9691-45c5-96a9-b59eb339a9fe
+D
+java:S1948:"'Make "roles" transient or serializable.(•¦Ø8ª³ƒ¼2
+d
+java:S1128"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8¬³ƒ¼2

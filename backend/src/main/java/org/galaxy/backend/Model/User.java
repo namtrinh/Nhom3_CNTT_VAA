@@ -1,5 +1,6 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -21,7 +22,7 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Table(name = "users")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id")

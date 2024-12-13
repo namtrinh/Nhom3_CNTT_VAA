@@ -17,14 +17,6 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @GetMapping(value = "/all")
-    public ApiResponse<List<Order>> findAll() {
-        return ApiResponse.<List<Order>>builder()
-                .code(200)
-                .result(orderService.getAll())
-                .build();
-    }
-
     @GetMapping
     public ApiResponse<Page<Order>> getAll(
             @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {

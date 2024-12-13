@@ -14,14 +14,6 @@ public class DetailOrderController {
     @Autowired
     private OrderDetailService orderDetailService;
 
-    @GetMapping
-    public ApiResponse<List<OrderDetail>> getAll() {
-        return ApiResponse.<List<OrderDetail>>builder()
-                .code(200)
-                .result(orderDetailService.findAll())
-                .build();
-    }
-
     @GetMapping(value = "/{order_detail_id}")
     public ApiResponse<OrderDetail> getById(@PathVariable String order_detail_id) {
         return ApiResponse.<OrderDetail>builder()

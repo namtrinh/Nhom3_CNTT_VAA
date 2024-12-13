@@ -1,12 +1,12 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Ğÿƒ«2J$d2a0476e-d40c-421e-9cb9-784aa3e11f97
-•	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8ÑñÕß¸2J$8db81230-f838-49bc-8e9d-bffc3ef2dec0
-œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8ÒñÕß¸2J$bab63b5a-4194-4407-a97b-07210136d407
-™	java:S116,"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÓñÕß¸2J$acb4492b-d885-48a7-b4b2-7af08b832b00
-›	java:S116."YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8ÔñÕß¸2J$a3dc9ae7-8d45-446b-a37d-7eb57fda574a
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Ğÿƒ«2J$06e01754-6db8-41fb-9586-200906ff1048
+•	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«àÿ­8ÑñÕß¸2J$34c88553-5101-4ec9-920f-119f445e4508
+œ	java:S116"URename this field "payment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰š§Ñıÿÿÿÿ8ÒñÕß¸2J$ef35a96f-0445-46e7-8241-de6acc76964d
+™	java:S116-"WRename this field "time_created" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–“Ÿ8ÓñÕß¸2J$d5cf7d03-6a1d-49d7-8e76-14b908a76105
+›	java:S116/"YRename this field "orderDetail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÜ¤¶8ÔñÕß¸2J$3ef31039-d61b-4fa3-8423-ee55b4b6bc73
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ùü–¶¹2J$4f2e7dd3-d9de-42e1-ba9b-67cf8df5a8d6
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8ùü–¶¹2J$4cee55b4-2c15-409c-ba7f-7485fced3ba8
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ùü–¶¹2J$86640e0a-0b71-4b5f-b527-c68ff711be03
-œ	java:S1151"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Í¸õ±8öÉ¾¶¹2J$dd31d75a-3f80-412a-a29f-4bbae2b70e49
-œ	java:S1151"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Í¸õ±8öÉ¾¶¹2J$1cf3ac9f-f132-4ff0-a39a-e6a670fb76a3
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8ùü–¶¹2J$4a4a7d54-f61e-4251-bfec-2f185881a007
+œ	java:S1152"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Í¸õ±8öÉ¾¶¹2J$2acb1e53-1f7b-45b9-a707-8290a3a56f21
+œ	java:S1152"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Í¸õ±8öÉ¾¶¹2J$a24d680d-01a1-404e-8f2a-b660a5a04c6c

@@ -1,9 +1,11 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Î´áş¹2J$2a9da836-6ccf-4d9e-8fae-574d3e89a456
-¡	java:S116"ZRename this field "order_detail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùõúÿÿÿÿ8Ï´áş¹2J$14df5667-60dc-444f-926e-aef3ca1fc362
-	java:S116"WRename this field "total_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Œ÷íøÿÿÿÿ8Ï´áş¹2J$0b3ae240-dd34-4772-b5cc-bc50779e7d48
-	java:S116"VRename this field "total_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’èš¥ıÿÿÿÿ8Ï´áş¹2J$eb3e36eb-e9ef-43a8-a43f-4e9b09588494
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8Î´áş¹2J$949afe5d-cf4b-456d-bf8e-0211820a2d99
+¡	java:S116"ZRename this field "order_detail_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñùõúÿÿÿÿ8Ï´áş¹2J$6072b71b-4548-4a9f-ab48-ca97b3c9f292
+	java:S116"WRename this field "total_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Œ÷íøÿÿÿÿ8Ï´áş¹2J$73d13e19-bb68-4aa0-a60e-148ee5007a66
+	java:S116"VRename this field "total_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’èš¥ıÿÿÿÿ8Ï´áş¹2J$3ea149a8-fd77-429c-9295-c540d8558b68
 {
-java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8Ò´áş¹2J$fd036de1-a835-4d3a-bb03-b9f493bdfbcd
+java:S1874"8Remove this use of "GenericGenerator"; it is deprecated.(Øë¢„8Ò´áş¹2J$00bd0e40-61eb-4b68-bb8f-4e18f105b220
 s
-java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8Ó´áş¹2J$acfd6de0-5673-40f7-b189-5973ee10dd39
+java:S1874"0Remove this use of "strategy"; it is deprecated.(Øë¢„8Ó´áş¹2J$e6ce2cf1-39c8-4492-8adb-0ea2232cf164
+e
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„8Äğ„¼2

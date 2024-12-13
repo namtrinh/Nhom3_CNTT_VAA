@@ -1,12 +1,23 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8®§äş¹2J$91a41ac2-a24b-4ea6-a804-b97de25a955b
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8³§äş¹2J$cf65dc8f-e339-4e45-87f1-56372f889ae2
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8³§äş¹2J$143ee109-da46-4be9-a290-eba962b54e02
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8³§äş¹2J$ab95b365-7da6-4783-af36-5932116dc27f
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8³§äş¹2J$b2d79a7d-2a4a-4e05-a060-e414e2e2ce0a
-s
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ûì•º2J$f5acfb2e-279d-4091-9b27-e509367bfb4d
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8ŸÛÅƒ¼2
+J
+java:S5411^"(Use a primitive boolean expression here.(—ÇÕõÿÿÿÿÿ8 ÛÅƒ¼2
+J
+java:S5411i"(Use a primitive boolean expression here.(—ÇÕõÿÿÿÿÿ8 ÛÅƒ¼2
+g	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(¨’Áıÿÿÿÿ8£ÛÅƒ¼2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
+_
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
+_
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
+_
+java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8©ÛÅƒ¼2
+o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñš¸Õüÿÿÿÿ8¯ÛÅƒ¼2
+o	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¤—Àşÿÿÿÿ8°ÛÅƒ¼2
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¹ÛÅƒ¼2
+v
+java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8»ÛÅƒ¼2

@@ -1,5 +1,6 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import jakarta.persistence.*;
@@ -16,7 +17,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "category")
-public class Category {
+public class Category implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String category_id;

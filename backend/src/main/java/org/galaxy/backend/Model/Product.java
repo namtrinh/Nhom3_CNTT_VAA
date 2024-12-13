@@ -1,5 +1,6 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
@@ -31,7 +32,7 @@ import lombok.*;
 
  */
 @Table(name = "product")
-public class Product {
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String product_id;

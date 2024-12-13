@@ -19,12 +19,12 @@ public class OrderDetailProductController {
     private OrderDetailProductRepository orderDetailProductRepository;
 
     @PostMapping
-    public ApiResponse<OrderDetailProduct> getOrderDetailProduct(@RequestParam String orderDetailId,
+    public ApiResponse<OrderDetailProduct> UpdateOrderDetailProduct(@RequestParam String orderDetailId,
                                                                  @RequestParam String productId,
                                                                  @RequestBody OrderDetailProduct orderDetailProduct){
         return ApiResponse.<OrderDetailProduct>builder()
                 .code(200)
-                .result(orderDetailProductService.findById(orderDetailId, productId, orderDetailProduct))
+                .result(orderDetailProductService.UpdateById(orderDetailId, productId, orderDetailProduct))
                 .build();
     }
 

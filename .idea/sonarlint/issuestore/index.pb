@@ -599,3 +599,11 @@ v
 Fbackend/src/main/java/org/galaxy/backend/Model/OrderDetailProduct.java,8\a\8a46dbbf2a752135db6c8eea7cf6199542b276f0
 d
 4frontend/src/app/model/order_detail_product.model.ts,6\0\60a348f7ff50bbe65afd52e6d3ea9bb905be7015
+p
+@backend/src/main/java/org/galaxy/backend/Config/RedisConfig.java,d\c\dce6a08f0c88760cf2d00e18dc229234dfb5e868
+
+Obackend/src/main/java/org/galaxy/backend/Service/OrderDetailProductService.java,2\1\21cf5e04f36256278b537e98348bad0d4a4c8d9c
+n
+>frontend/src/app/service/orderDetailProduct-service.service.ts,6\a\6a44c912e2b02d2e5cdf5dc2ed722477dcc97051
+…
+Ubackend/src/main/java/org/galaxy/backend/Controller/OrderDetailProductController.java,4\f\4fda5ec9a4244cc5ba5922f45f9d6a4fe024ff70

@@ -1,0 +1,13 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8®ùìƒ¼2J$cde4564c-2016-45d8-924b-0e483da93674
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ùìƒ¼2J$53cda809-22e1-439c-a09b-7ba46e3d0ced
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş‚ëª8ÁÒôƒ¼2J$473e0bc6-739b-44d8-a64e-1cf31d67ea5b
+„
+java:S1128"ARemove this unused import 'org.galaxy.backend.Model.OrderDetail'.(‰˜°º8¶ùìƒ¼2J$32ca6dbc-196d-4a95-bc04-7934ebcb344b
+q
+java:S1128"ORemove this unused import 'org.springframework.data.redis.core.HashOperations'.(šèÏşÿÿÿÿ8şŸúƒ¼2
+p
+java:S1128"NRemove this unused import 'org.springframework.data.redis.core.RedisTemplate'.(–ª¡Çøÿÿÿÿ8şŸúƒ¼2
+W
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8şŸúƒ¼2

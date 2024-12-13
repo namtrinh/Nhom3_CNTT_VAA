@@ -1,12 +1,13 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$a0c9205d-3208-4bb0-80f5-a174d6d26555
-	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$d1b03678-2e6e-48d7-bc37-bb372f161e64
-™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$6246a6c9-6f80-4227-938c-b7fba4ac4a3e
-™	java:S116$"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ìÓ8üÂÏÑº2J$de535eff-b30c-4795-86b9-756feed22075
-š	java:S116&"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œĞÕ†úÿÿÿÿ8üÂÏÑº2J$43f4af3b-d1ab-404b-8e88-ab620982c915
-K
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ä­¼Ğ»2
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÏõÊ8øÂÏÑº2J$5f81f3c2-5b58-4115-a337-befaf91b0d87
+	java:S116"WRename this field "promotion_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÔ×”ûÿÿÿÿ8üÂÏÑº2J$e2027058-3143-4253-9904-1ff5238e628a
+™	java:S116"RRename this field "pr_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œïÅ¢ıÿÿÿÿ8üÂÏÑº2J$d81ba743-6b38-4e63-8966-a82f8d8f2142
+™	java:S116%"WRename this field "time_started" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ìÓ8üÂÏÑº2J$1e2cb1c9-a2f1-4798-9f13-8abf2f77376b
+š	java:S116'"SRename this field "time_end" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œĞÕ†úÿÿÿÿ8üÂÏÑº2J$9123b43c-3fd2-4048-9b11-d0022793c16b
+q
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ä­¼Ğ»2J$eb16fdb1-853c-4390-878c-f55ff5449bf6
 Š
-java:S1128	"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$4c558885-902f-4e84-9439-699aefc28ade
-^
-java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû8ä­¼Ğ»2
+java:S1128
+"GRemove this unused import 'org.hibernate.annotations.GenericGenerator'.(ƒİŸÉ8‚ÃÏÑº2J$fef3eba0-0633-4a19-a99b-f8e7572f8092
+„
+java:S1128"ARemove this unused import 'org.springframework.cglib.core.Local'.(ÁÒû8ä­¼Ğ»2J$9227ad15-bc93-409b-a036-081ae8c952b5

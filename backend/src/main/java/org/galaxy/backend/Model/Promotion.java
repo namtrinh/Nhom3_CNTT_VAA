@@ -1,5 +1,6 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -22,7 +23,7 @@ import org.springframework.cglib.core.Local;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Table(name = "promotion")
-public class Promotion {
+public class Promotion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String promotion_id;
