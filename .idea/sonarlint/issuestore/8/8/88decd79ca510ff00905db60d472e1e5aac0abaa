@@ -1,24 +1,32 @@
 
-˜	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8’Á®„¼2J$46f382b8-bf44-45a7-85b5-61e3c2e4779a
-˜	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8’Á®„¼2J$c32e89f9-86d8-4dbf-8728-239819d70bae
-˜	java:S117s"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8’Á®„¼2J$9cc3fc7b-0b73-4794-9bf1-f3c7ac08c601
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8’Á®„¼2J$8846f5b0-6c50-4058-8c00-0c97833b07a1
-	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8˜Á®„¼2J$4416fc14-8d41-4db5-af8c-39f63b7a9c5b
+˜	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾—ÉŸøÿÿÿÿ8’Á®„¼2J$fbbc9319-7855-4781-8c64-4b248889ee13
+˜	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ˆèûÿÿÿÿ8’Á®„¼2J$4e6c0ce2-be2a-4cdc-833f-b481962eae1f
+˜	java:S117\"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğà¨îşÿÿÿÿ8’Á®„¼2J$598b6c4d-1c51-4495-a36c-7756412b051c
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8’Á®„¼2J$6986cb10-b6e5-4706-93d9-b9a4a691d514
+	java:S112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(©š´µûÿÿÿÿ8˜Á®„¼2J$5b5167c2-8c7d-4205-ac10-2b4d96d4ffe7
 —
-java:S1192d"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8™Á®„¼2J$b07895cb-76ba-464e-91a4-1cf22c47f680
+java:S1192M"ODefine a constant instead of duplicating this literal "User not found" 5 times.(ÖÕ³ÿÿÿÿÿ8™Á®„¼2J$23dfe881-4d2f-473e-83da-52575921b089
 …
-java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$f0146912-49cc-4845-bc78-a447a0519d43
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$47f4d5fe-cb9b-4759-b1e2-21f1e48bac4d
 …
-java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$bcd56d45-7d7d-49d3-9296-9d5c303de37c
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$10ce17c4-6eba-4612-af25-0cc3b2dbc9cb
 …
-java:S6813)"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$ae0a4cd4-3465-4638-91be-8549c148c289
-…
-java:S6813,"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$b45e34ac-afb1-456a-b357-398eb19aa9f5
-•	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñš¸Õüÿÿÿÿ8¥Á®„¼2J$b3ef3ca1-e2ad-40a9-81d9-8180f5d553e9
-•	java:S100:"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¤—Àşÿÿÿÿ8¦Á®„¼2J$e1ff5cfd-8ebb-4734-9ac8-21fea36a90ea
+java:S6813)"BRemove this field injection and use constructor injection instead.(êæÄŞ8›Á®„¼2J$71bb63a5-8233-4a69-9428-f657bf9b5b0f
 ½
-java:S6204p"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÁÁ®„¼2J$422f601d-1dce-4eef-a2a7-7bc20e4741bd
-n	java:S106€"+Replace this use of System.out by a logger.(…Çº8»Á®„¼2J$c96b53e9-00b7-4c4e-be9e-3e8d23e2761a
-s	java:S106ƒ"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8¼Á®„¼2J$22a8be9a-f6ef-4e0a-9f0f-caa610733550
+java:S6204Y"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8ÁÁ®„¼2J$a27006e7-6100-42bc-a84d-d820c085de24
+m	java:S106i"+Replace this use of System.out by a logger.(…Çº8»Á®„¼2J$b58a8a34-02bb-4431-b2d6-41f638af391e
+r	java:S106l"+Replace this use of System.out by a logger.(¸ÎÅôûÿÿÿÿ8¼Á®„¼2J$3621fe2b-776f-42e9-851d-f3796fa23083
+½
+java:S6204z"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8“Œ¯„¼2J$7edbf199-31d4-4f5a-a60a-ce6f86c769e2
+}
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8Âü¾„¼2J$3e4ebc08-3a8b-46b8-9752-dd3dd090bd36
+ƒ
+java:S1128";Remove this unused import 'org.galaxy.backend.Model.Order'.(Ù‘“ˆşÿÿÿÿ8¤¢¿„¼2J$6e451a80-482b-4c08-aa22-16cf5069381f
+—
+java:S1128"ORemove this unused import 'org.galaxy.backend.Service.VerifyUser.EmailService'.(”Øşßüÿÿÿÿ8Âü¾„¼2J$92b077c8-93ff-47d0-a9f3-6c534db19bf7
+—
+java:S1128"ORemove this unused import 'org.springframework.data.redis.core.HashOperations'.(šèÏşÿÿÿÿ8¤¢¿„¼2J$845a5e92-8404-4bd2-9fa1-e8c6618416a3
+p
+java:S1128"NRemove this unused import 'org.springframework.data.redis.core.RedisTemplate'.(–ª¡Çøÿÿÿÿ8ÚÁ¿„¼2
 ˜
-java:S6204‘"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(éö¶Ç8“Œ¯„¼2
+java:S1128"PRemove this unused import 'org.springframework.scheduling.annotation.Scheduled'.(‚¡®Üûÿÿÿÿ8Âü¾„¼2J$364598a7-6821-4e1c-932e-f09e643e016b

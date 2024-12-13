@@ -41,29 +41,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleRepository roleRepository;
 
-    @Autowired
-    RedisTemplate<String, Object> redisTemplate;
-    HashOperations<String, String, Order> hashOperations;
-
-    public OrderServiceImpl(RedisTemplate<String, Object> redisTemplate){
-        this.redisTemplate = redisTemplate;
-        this.hashOperations = redisTemplate.opsForHash();
-    }
-
-    public void TTL(){
-        redisTemplate.expire(HASH_ORDER, 10, TimeUnit.MINUTES);
-    }
-
-    @Scheduled(fixedRate = 300000)
-    public void SetCache(){
-        List<Order> orders = orderRepository.findAll();
-        for(Order order : orders){
-            hashOperations.put(HASH_ORDER, order.getOrder_id(), order);
-        }
-        TTL();
-    }
-
-
     public UsersResponse CreateUser(UsersRequest usersRequest) {
         if (userRepository.existsByEmail(usersRequest.getEmail())) {
             throw new AppException(ErrorCode.USERS_EXISTED);
