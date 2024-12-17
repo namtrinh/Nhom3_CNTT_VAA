@@ -1,24 +1,25 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8£Õ›„¼2
-J
-java:S54112"(Use a primitive boolean expression here.(Ú¢½áùÿÿÿÿ8£Õ›„¼2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¦Õ›„¼2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¦Õ›„¼2
-o	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñš¸Õüÿÿÿÿ8ªÕ›„¼2
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¬Õ›„¼2
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¬Õ›„¼2
-e
-java:S1128"HRemove this unused import 'java.util.concurrent.atomic.AtomicReference'.(×‡µó8¬Õ›„¼2
-\
-java:S1128	":Remove this unused import 'org.galaxy.backend.Model.Cart'.(×ş‡¿ûÿÿÿÿ8¬Õ›„¼2
-]
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8ÍÍê´½2J$1f4bd7ca-ae05-4c65-ab0e-9957511234ed
+p
+java:S5411@"(Use a primitive boolean expression here.(àµªœøÿÿÿÿ8ÆÊ¶µ½2J$61c3956d-3e2a-4be5-9be1-a0d128355577
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÑÍê´½2J$99654151-9675-452c-99d9-17021b187dac
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÑÍê´½2J$dc9986a8-31f2-4fc4-b216-81d9c150152d
+•	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñš¸Õüÿÿÿÿ8×Íê´½2J$6d34d14d-02c2-4024-916d-815995bce11b
+•	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¤—Àşÿÿÿÿ8İœ¶µ½2J$10517f6f-3233-4395-b028-c1f0e81abe69
+r	java:S106A"+Replace this use of System.out by a logger.(áØ¢Ûúÿÿÿÿ8èÊ¶µ½2J$fe480b8e-427e-48c0-9409-957b02b7cff2
+m	java:S106D"+Replace this use of System.out by a logger.(¨©î8ëÊ¶µ½2J$22f9d215-266f-4009-9b5f-2f8bf5cf3aa9
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ßÍê´½2J$1d98a8c1-1b31-4e48-961e-df6f3c1f001f
+‹
+java:S1128"HRemove this unused import 'java.util.concurrent.atomic.AtomicReference'.(×‡µó8ßÍê´½2J$f0832b48-c44d-4bc9-a5e0-8d8fadc115d6
+‚
+java:S1128	":Remove this unused import 'org.galaxy.backend.Model.Cart'.(×ş‡¿ûÿÿÿÿ8ßÍê´½2J$ba88c27d-bae7-4d7e-9a3a-fbf3d3909da3
+ƒ
 java:S1128
-";Remove this unused import 'org.galaxy.backend.Model.Order'.(Ù‘“ˆşÿÿÿÿ8¬Õ›„¼2
-_
-java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8¬Õ›„¼2
-k
-java:S1128"IRemove this unused import 'org.galaxy.backend.Repository.CartRepository'.(²ìû²şÿÿÿÿ8¬Õ›„¼2
+";Remove this unused import 'org.galaxy.backend.Model.Order'.(Ù‘“ˆşÿÿÿÿ8ßÍê´½2J$1745b978-9ce3-419d-91e9-888745588eb1
+…
+java:S1128"=Remove this unused import 'org.galaxy.backend.Model.Product'.(¥Î–úúÿÿÿÿ8ßÍê´½2J$56ce6aa5-d14d-4a82-a34d-cb3c572d4d38
+‘
+java:S1128"IRemove this unused import 'org.galaxy.backend.Repository.CartRepository'.(²ìû²şÿÿÿÿ8ßÍê´½2J$1425640c-528e-411e-bf5e-8da3afe33c02
