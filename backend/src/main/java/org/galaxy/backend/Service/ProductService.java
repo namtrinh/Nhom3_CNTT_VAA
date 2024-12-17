@@ -21,7 +21,7 @@ public interface ProductService {
 
     Page<Product> findAllByPage(int pageNo, int pageSize);
 
-    void savePrEx(MultipartFile file);
+    String savePrEx(MultipartFile file);
 
     List<Product> getByCategory(String category);
 

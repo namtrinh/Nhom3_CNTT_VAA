@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import com.cloudinary.Api;
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Model.Promotion;
@@ -177,21 +178,26 @@ public class ProductController {
 
 
     @PostMapping("/excel/upload")
-    public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
-        String message = "";
+    public ApiResponse<String> uploadFile(@RequestParam("file") MultipartFile file) {
         if (ReadExelProduct.hasExcelFormat(file)) {
             try {
-                productService.savePrEx(file);
-                message = "The Excel file is uploaded: " + file.getOriginalFilename();
-                return ResponseEntity.status(HttpStatus.OK).body(message);
+                return ApiResponse.<String>builder()
+                        .code(200)
+                        .message("The Excel file is uploaded: " + file.getOriginalFilename())
+                        .result(productService.savePrEx(file))
+                        .build();
             } catch (Exception exp) {
-                System.out.println(exp);
-                message = "The Excel file is not upload: " + file.getOriginalFilename() + "!";
-                return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(message);
+                return ApiResponse.<String>builder()
+                        .code(400)
+                        .message("The Excel file is not upload: " + file.getOriginalFilename() + "!")
+                        .build();
             }
         }
-        message = "Please upload an excel file!";
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
+        return ApiResponse.<String>builder()
+                .code(200)
+                .message("The Excel file is uploaded: " + file.getOriginalFilename())
+                .result(productService.savePrEx(file))
+                .build();
     }
 
     @GetMapping(value = "/search")

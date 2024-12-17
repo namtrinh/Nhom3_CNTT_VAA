@@ -28,8 +28,8 @@ export class ListProductComponent implements OnInit {
   category: Category[] = []
   isLoading: boolean = false;
   imageUrl: any;
-  categoryId:string = '';
-  message:string = '';
+  categoryId: string = '';
+  message: string = '';
   showMessage: boolean = false;
 
   constructor(private productService: ProductService,
@@ -96,7 +96,7 @@ export class ListProductComponent implements OnInit {
       if (this.products == null || this.products.length == 0) {
         this.showMessage = true;
         this.message = 'Cannot find any products!'
-      }else{
+      } else {
         this.showMessage = false;
       }
       console.log(this.products);
@@ -108,13 +108,11 @@ export class ListProductComponent implements OnInit {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
       const file = input.files[0];
-      this.productService.uploadFile(file).subscribe({
-        next: (response) => {
+      this.productService.uploadFile(file).subscribe(
+        (response) => {
           alert("Import Successfully!");
-          console.log('File uploaded successfully', response);
-        }
-      });
+          console.log('File uploaded successfully');
+        })
     }
   }
-
 }

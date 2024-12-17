@@ -11,7 +11,6 @@ import org.galaxy.backend.Service.CloudinaryService;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -115,13 +114,14 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findAll(pageable);
     }
 
-    public void savePrEx(MultipartFile file) {
+    public String savePrEx(MultipartFile file) {
         try {
             List<Product> stuList = ReadExelProduct.excelToStuList(file.getInputStream());
             productRepository.saveAll(stuList);
         } catch (IOException ex) {
             throw new RuntimeException("Excel data is failed to store: " + ex.getMessage());
         }
+        return null;
     }
 
     public List<Product> getByCategory(String category) {
