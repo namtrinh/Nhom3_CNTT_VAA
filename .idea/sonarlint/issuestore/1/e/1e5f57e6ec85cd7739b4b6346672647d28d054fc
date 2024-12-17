@@ -1,27 +1,27 @@
 
-m	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8úÑ†³½2
-r	java:S117y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8ƒÒ†³½2
-s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8ƒÒ†³½2
-u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8ƒÒ†³½2
+m	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8¡àİ·½2
+r	java:S117y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8¡àİ·½2
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8¢àİ·½2
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8£àİ·½2
 f
-java:S1192a"IDefine a constant instead of duplicating this literal "quantity" 3 times.(µ¿›³8ƒÒ†³½2
+java:S1192a"IDefine a constant instead of duplicating this literal "quantity" 3 times.(µ¿›³8°àİ·½2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8„Ò†³½2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8·àİ·½2
 _
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8„Ò†³½2
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8¸àİ·½2
 _
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8„Ò†³½2
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸àİ·½2
 ‰
-java:S1130|"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8ÊÒ†³½2
+java:S1130|"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8”áİ·½2
 D
-java:S1452´"&Remove usage of generic wildcard type.(Á’Û¯8ÖÒ†³½2
-M	java:S106¼"+Replace this use of System.out by a logger.(×ëÊ—ûÿÿÿÿ8ÜÒ†³½2
-Y	java:S125Î"<This block of commented-out lines of code should be removed.(…² ö8çÒ†³½2
+java:S1452´"&Remove usage of generic wildcard type.(Á’Û¯8»áİ·½2
+M	java:S106¼"+Replace this use of System.out by a logger.(×ëÊ—ûÿÿÿÿ8¾áİ·½2
+Y	java:S125Î"<This block of commented-out lines of code should be removed.(…² ö8Äáİ·½2
 F
-java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8çÒ†³½2
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8Êáİ·½2
 K
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8çÒ†³½2
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8Ìáİ·½2
 K
-java:S1128	".Remove this unused import 'java.util.Objects'.(¼¸õ›8çÒ†³½2
+java:S1128	".Remove this unused import 'java.util.Objects'.(¼¸õ›8Ìáİ·½2
 l
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çÒ†³½2
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8Íáİ·½2

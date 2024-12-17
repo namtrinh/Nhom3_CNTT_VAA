@@ -104,4 +104,17 @@ export class ListProductComponent implements OnInit {
     });
   }
 
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      const file = input.files[0];
+      this.productService.uploadFile(file).subscribe({
+        next: (response) => {
+          alert("Import Successfully!");
+          console.log('File uploaded successfully', response);
+        }
+      });
+    }
+  }
+
 }

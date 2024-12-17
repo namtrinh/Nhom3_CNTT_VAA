@@ -461,8 +461,6 @@ x
 Hbackend/src/main/java/org/galaxy/backend/Service/RunRealTimeService.java,4\7\476f1ff72280369b2317f0c3f1bdac4a1241b914
 z
 Jbackend/src/main/java/org/galaxy/backend/ServiceImpl/OrderServiceImpl.java,7\6\765a688c3a117ac7044166eccc98a356d3ad75aa
-m
-=frontend/src/app/home/detail-user/user-details.component.html,7\c\7c5693b3c9fabecc7f1cf8bb4cc028c656b0e7be
 r
 Bfrontend/src/app/home/review-product/review-product.component.html,9\d\9ddb0a6b9a65eca7a3acdcd513f54230818edb42
 q
@@ -581,10 +579,6 @@ Kfrontend/src/app/admin/manage-user/user-details/user-details.component.html,4\
 Kfrontend/src/app/admin/manage-user/user-details/user-details.component.scss,4\9\49ce97f5d2b9129245d36cea9750b6f4fa21278f
 y
 Ifrontend/src/app/auth/required-reset-pass/required-reset-pas.component.ts,d\9\d9daf9bad35c5d61db7692b87227a21d7b54dd42
-m
-=frontend/src/app/home/detail-user/user-details.component.scss,d\2\d28d8627ebc38c8eafe102863590c808e5a465e6
-k
-;frontend/src/app/home/detail-user/user-details.component.ts,e\3\e33ad9f90733d5fffcb095432617d5192cc40b54
 h
 8frontend/src/app/home/edit-user/edit-user.component.scss,9\2\926427a65bf99f222487394bd7a20aeb3ce8f897
 b

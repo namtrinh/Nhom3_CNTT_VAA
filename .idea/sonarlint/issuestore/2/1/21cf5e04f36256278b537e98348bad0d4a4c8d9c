@@ -1,13 +1,13 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8®ùìƒ¼2J$cde4564c-2016-45d8-924b-0e483da93674
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8®ùìƒ¼2J$61ad4928-33a1-4fd2-807c-cc5122e1a66c
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ùìƒ¼2J$53cda809-22e1-439c-a09b-7ba46e3d0ced
-	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş‚ëª8ÁÒôƒ¼2J$473e0bc6-739b-44d8-a64e-1cf31d67ea5b
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±ùìƒ¼2J$58c88f18-23e5-4a9c-b1df-dc330846d059
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş‚ëª8ÁÒôƒ¼2J$e20d7ac9-c7da-4874-af62-6c329ccaf2e3
 „
-java:S1128"ARemove this unused import 'org.galaxy.backend.Model.OrderDetail'.(‰˜°º8¶ùìƒ¼2J$32ca6dbc-196d-4a95-bc04-7934ebcb344b
-q
-java:S1128"ORemove this unused import 'org.springframework.data.redis.core.HashOperations'.(šèÏşÿÿÿÿ8şŸúƒ¼2
-p
-java:S1128"NRemove this unused import 'org.springframework.data.redis.core.RedisTemplate'.(–ª¡Çøÿÿÿÿ8şŸúƒ¼2
-W
-java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8şŸúƒ¼2
+java:S1128"ARemove this unused import 'org.galaxy.backend.Model.OrderDetail'.(‰˜°º8¶ùìƒ¼2J$bdf573d1-8b8a-4c91-90aa-6aea23db4637
+—
+java:S1128"ORemove this unused import 'org.springframework.data.redis.core.HashOperations'.(šèÏşÿÿÿÿ8şŸúƒ¼2J$1c17f670-de6b-48cf-8674-b3d65936e6b1
+–
+java:S1128"NRemove this unused import 'org.springframework.data.redis.core.RedisTemplate'.(–ª¡Çøÿÿÿÿ8şŸúƒ¼2J$bc7031d2-0efc-4f58-adb6-93d74365d5dd
+}
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8şŸúƒ¼2J$814b3e4e-87b5-46e1-af83-72e941ece806

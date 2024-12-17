@@ -92,6 +92,7 @@ public class ProductServiceImpl implements ProductService {
 
         product.setCategory(null);
         product.setPromotion(null);
+        this.cloudinaryService.deleteFile(product.getImage());
 
         if (product.getImage() != null && !product.getImage().isEmpty()) {
             String publicId = product.getImage();

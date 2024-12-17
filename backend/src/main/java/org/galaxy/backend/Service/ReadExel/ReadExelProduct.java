@@ -6,15 +6,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.springframework.web.multipart.MultipartFile;
 
+@Slf4j
 public class ReadExelProduct {
     public static String TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
     static String[] HEADERs = {"Product ID", "Name", "SEO Title", "Image", "Quantity", "Price"};
@@ -66,15 +65,24 @@ public class ReadExelProduct {
                             product.setPrice((double) currentCell.getNumericCellValue());
                             break;
                         case 6:
-                            Category category = new Category();
-                            category.setCategory_id(currentCell.getStringCellValue());
-                            product.setCategory(category);
+                            if (currentCell.getCellType() == CellType.STRING) {
+                                Category category = new Category();
+                                category.setCategory_id(currentCell.getStringCellValue());
+                                product.setCategory(category);
+                            } else {
+                                log.warn("Invalid category_id at cell: " + cellIdx);
+                            }
                             break;
                         default:
-
+                            log.warn("Unknown cell index: " + cellIdx);
                             break;
                     }
                     cellIdx++;
+                }
+                if (product.getQuantity() > 0){
+                    product.setStockStatus(Product.StockStatusPr.In_Stock);
+                }else if (product.getQuantity() == 0){
+                    product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
                 }
                 productList.add(product);
             }

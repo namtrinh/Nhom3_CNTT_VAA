@@ -1,24 +1,24 @@
 
-“	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8¬¶š…¼2J$e68b7a9d-1726-43c2-bec6-42adab012c1e
-˜	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8¬¶š…¼2J$b8b7537f-9cdf-4559-8339-d1dba2555083
-”	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8¬¶š…¼2J$bfed0fc3-204f-4594-be68-79398060acd6
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¬¶š…¼2J$8de18d43-1a2d-41db-84b0-d6110dee564a
-p
-java:S5411?"(Use a primitive boolean expression here.(ÚØş÷ÿÿÿÿÿ8¬¶š…¼2J$084f9fd9-7bcb-41fd-bf04-47b99205020f
-q
-java:S5411‡"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8¬¶š…¼2J$b0115198-9979-4574-9aaa-73780d2146fe
-	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8¯¶š…¼2J$ae7915cd-9994-4b28-a7ed-c4938770f4a3
-	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8¯¶š…¼2J$cbed5660-e905-44ed-a731-f35844844192
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8±¶š…¼2J$6bef8369-bdef-4964-a78d-b5a84f1353c9
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8²¶š…¼2J$7f9fbba7-2492-43bc-a6f7-46ee0e14a29b
-…
-java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8³¶š…¼2J$a9e2d470-4044-46f5-b1e7-6122a993aa56
-•	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‰Šûÿÿÿÿ8¹¶š…¼2J$fafdbdf2-12a5-4c92-aa2c-ce979366b346
-	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùãŠ8º¶š…¼2J$4b8ed10a-cab1-436f-a7c6-10cf05eec3fe
-m	java:S1066"+Replace this use of System.out by a logger.(¦ûĞ8¼¶š…¼2J$c3de9421-a1e4-4a88-acc6-c9353be43b4f
-m	java:S106@"+Replace this use of System.out by a logger.(…™ò¾8½¶š…¼2J$cd38c59a-f3d7-499b-b017-984f7e87a7f9
-m	java:S106C"+Replace this use of System.out by a logger.(Şà†8½¶š…¼2J$93e23c95-fd5e-458e-a2d5-d2fb99d94c9a
-œ
-java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8È¶š…¼2J$27a32f6b-4588-483a-96d6-c14db94bd520
+m	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8®ƒß·½2
+r	java:S117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8¯ƒß·½2
+n	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8¯ƒß·½2
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯ƒß·½2
+J
+java:S5411?"(Use a primitive boolean expression here.(ÚØş÷ÿÿÿÿÿ8¯ƒß·½2
+K
+java:S5411ˆ"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8°ƒß·½2
+g	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8µƒß·½2
+g	java:S112{"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8µƒß·½2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸ƒß·½2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸ƒß·½2
+_
+java:S6813'"BRemove this field injection and use constructor injection instead.(êæÄŞ8¹ƒß·½2
+o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‰Šûÿÿÿÿ8Åƒß·½2
+i	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùãŠ8Çƒß·½2
+G	java:S1066"+Replace this use of System.out by a logger.(¦ûĞ8Íƒß·½2
+G	java:S106@"+Replace this use of System.out by a logger.(…™ò¾8Õƒß·½2
+G	java:S106C"+Replace this use of System.out by a logger.(Şà†8Õƒß·½2
+v
+java:S1128"YRemove this unused import 'org.springframework.boot.autoconfigure.cache.CacheProperties'.(”şÊ8îƒß·½2
