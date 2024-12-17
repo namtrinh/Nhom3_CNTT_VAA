@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { UserService } from '../../service/user-service.service';
-import { AuthService } from '../../auth/auth.service';
-import { FormsModule } from '@angular/forms';
-import { CategoryService } from '../../service/categoy-service.service';
-import { Category } from '../../model/category.model';
-import { ProductService } from '../../service/product-service.service';
-import { ProductByCategoryComponent } from "../product-by-category/product-by-category.component";
-import { FooterComponent } from "../footer/footer.component";
-import { ProductExtendComponent } from "../product-extend/product-extend.component";
+import {Component, OnInit} from '@angular/core';
+import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {UserService} from '../../service/user-service.service';
+import {AuthService} from '../../auth/auth.service';
+import {FormsModule} from '@angular/forms';
+import {CategoryService} from '../../service/categoy-service.service';
+import {Category} from '../../model/category.model';
+import {ProductService} from '../../service/product-service.service';
+import {ProductByCategoryComponent} from "../product-by-category/product-by-category.component";
+import {FooterComponent} from "../footer/footer.component";
+import {ProductExtendComponent} from "../product-extend/product-extend.component";
 import {Product} from "../../model/product.model";
 
 @Component({
@@ -21,23 +21,29 @@ import {Product} from "../../model/product.model";
 export class ViewHomeComponent implements OnInit {
   selectedCategory!: number;
   category_id: any;
-  name!:string;
-  products:Product[] = [];
+  name!: string;
+  products: Product[] = [];
 
   ngOnInit(): void {
     this.checktoken();
     this.getinf();
     this.getAllMenu();
   }
+
   category: Category[] = [];
   checktokenkey: boolean = true;
   inf: any;
   showProduct: boolean = false;
-  categoryId:string = ''
+  categoryId: string = ''
 
   showProductSale: boolean = false;
-  constructor(private router: Router, private userService: UserService, private productService: ProductService,
-    private auth: AuthService, private categoryService: CategoryService) { }
+
+  constructor(private router: Router,
+              private userService: UserService,
+              private productService: ProductService,
+              private auth: AuthService,
+              private categoryService: CategoryService) {
+  }
 
   getinf() {
     this.userService.getmyinf().subscribe((data: any) => {
@@ -75,28 +81,26 @@ export class ViewHomeComponent implements OnInit {
       this.category = data.result;
     })
   }
-  search(){
 
-    if (this.name == null){
+  search() {
+    if (this.name == null) {
       alert("Please input name !");
     }
-
-    this.productService.searchProduct(this.name, this.categoryId).subscribe((data:any) => {
+    this.productService.searchProduct(this.name, this.categoryId).subscribe((data: any) => {
       this.products = data.result;
-      console.log(this.products);
-        this.router.navigate(['/search',this.name])
-      setTimeout(() =>{
+      this.router.navigate(['/search', this.name])
+      setTimeout(() => {
         window.location.reload();
-      },0)
+      }, 0)
     })
   }
 
-  OnSubmit(){
+  OnSubmit() {
     this.search();
   }
 
-  navigateToOrder(){
+  navigateToOrder() {
     const userId = localStorage.getItem('user_Id')
-    this.router.navigate(['/my_order',userId])
+    this.router.navigate(['/my_order', userId])
   }
 }

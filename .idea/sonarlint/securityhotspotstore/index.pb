@@ -607,3 +607,9 @@ n
 >frontend/src/app/service/orderDetailProduct-service.service.ts,6\a\6a44c912e2b02d2e5cdf5dc2ed722477dcc97051
 …
 Ubackend/src/main/java/org/galaxy/backend/Controller/OrderDetailProductController.java,4\f\4fda5ec9a4244cc5ba5922f45f9d6a4fe024ff70
+X
+(frontend/src/app/test/test.component.css,7\5\75b0d2cad2c64a6d693c4889f6ca228979751bc3
+Y
+)frontend/src/app/test/test.component.html,5\b\5b46716098b893b29e13a81ff5839789381fa84f
+h
+8frontend/src/app/home/edit-user/edit-user.component.html,d\4\d4894ff3bcad4c9ce07c30dd261416382dbaef51

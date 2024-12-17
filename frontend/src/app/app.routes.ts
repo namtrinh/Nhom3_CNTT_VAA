@@ -23,7 +23,6 @@ import {CreateCategoryComponent} from './admin/manage-category/create-category/c
 import {EditCategoryComponent} from './admin/manage-category/edit-category/edit-category.component';
 import {PayFailComponent} from './payment/pay-fail/pay-fail.component';
 import {PaySuccessComponent} from './payment/pay-success/pay-success.component';
-import {MyInfComponent} from './home/detail-user/user-details.component';
 import {DetailProductComponent} from './home/detail-product/detail-product.component';
 import {ProductSaleComponent} from './home/product-sale/product-sale.component';
 import {AuthCodeComponent} from './auth/auth-code/auth-code.component';
@@ -61,7 +60,6 @@ export const routes: Routes = [
     path: '', component: ViewHomeComponent, children: [
       {path: '', component: ProductSaleComponent},
       {path: 'category/:seotitle/:seotitle', component: DetailProductComponent},
-      {path: 'myinf/:user_id', component: MyInfComponent},
       {path: 'edit_my_inf/:user_id', component: EditMyInfComponent},
       {path: 'cart', component: CartComponent},
       {path: 'category/:seotitle', component: ProductByCategoryComponent},

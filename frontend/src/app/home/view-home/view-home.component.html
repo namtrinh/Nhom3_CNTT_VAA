@@ -35,14 +35,11 @@
           <ul class="dropdown-menu">
             @if (inf) {
               <li>
-                <button class="dropdown-item" [routerLink]="['/myinf',inf.user_id]">My information</button>
+                <button class="dropdown-item" [routerLink]="['/edit_my_inf',inf.user_id]">My information</button>
               </li>
             }
             <li>
               <button class="dropdown-item " (click)="logout()">Logout</button>
-            </li>
-            <li>
-              <button class="dropdown-item" [routerLink]="['/admin']">Go to Admin</button>
             </li>
           </ul>
         </div>

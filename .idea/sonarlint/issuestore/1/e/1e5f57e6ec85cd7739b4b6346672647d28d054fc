@@ -1,29 +1,27 @@
 
-“	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8áğÉ…¼2J$16e80abd-bd66-4c41-bc33-fe5c4529e62a
-r	java:S117|"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8‚ÅÊ…¼2
-s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8‚ÅÊ…¼2
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8âğÉ…¼2J$aeb12c0f-a181-4301-9c3d-fe3a6fceb732
+m	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8úÑ†³½2
+r	java:S117y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8ƒÒ†³½2
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8ƒÒ†³½2
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8ƒÒ†³½2
 f
-java:S1192d"IDefine a constant instead of duplicating this literal "quantity" 3 times.(µ¿›³8†ÅÊ…¼2
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8çğÉ…¼2J$e92ad0aa-dd7e-45c4-aa96-e20c43fc00c3
-…
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8çğÉ…¼2J$e5977e8d-740b-400d-93a4-4f24a29fda5c
-…
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8çğÉ…¼2J$a210e532-8db2-4f45-988a-d4dd63fc8590
-¯
-java:S1130Y"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8ñğÉ…¼2J$6d3bb8c7-f82a-49b8-9876-f13c92659b98
+java:S1192a"IDefine a constant instead of duplicating this literal "quantity" 3 times.(µ¿›³8ƒÒ†³½2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8„Ò†³½2
+_
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8„Ò†³½2
+_
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8„Ò†³½2
 ‰
-java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8”ÅÊ…¼2
+java:S1130|"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8ÊÒ†³½2
 D
-java:S1452¶"&Remove usage of generic wildcard type.(Á’Û¯8˜ÅÊ…¼2
-M	java:S106¾"+Replace this use of System.out by a logger.(×ëÊ—ûÿÿÿÿ8™ÅÊ…¼2
-Y	java:S125Ğ"<This block of commented-out lines of code should be removed.(…² ö8›ÅÊ…¼2
+java:S1452´"&Remove usage of generic wildcard type.(Á’Û¯8ÖÒ†³½2
+M	java:S106¼"+Replace this use of System.out by a logger.(×ëÊ—ûÿÿÿÿ8ÜÒ†³½2
+Y	java:S125Î"<This block of commented-out lines of code should be removed.(…² ö8çÒ†³½2
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8çÒ†³½2
+K
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8çÒ†³½2
+K
+java:S1128	".Remove this unused import 'java.util.Objects'.(¼¸õ›8çÒ†³½2
 l
-java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8ÿğÉ…¼2J$3580c31e-9b60-4a5b-a039-5d5622ce418b
-q
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ÿğÉ…¼2J$5b0b406a-6073-46b9-ab01-11a2115e7b9b
-q
-java:S1128	".Remove this unused import 'java.util.Objects'.(¼¸õ›8€ñÉ…¼2J$1b42228e-98ab-4645-8e4d-f526a657e83f
-’
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8€ñÉ…¼2J$423f0f33-bec8-4ac5-9dc5-5306e8d87d84
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8çÒ†³½2

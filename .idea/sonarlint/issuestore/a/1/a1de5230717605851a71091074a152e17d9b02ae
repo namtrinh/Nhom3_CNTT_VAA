@@ -1,6 +1,6 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘ÃJ$b1e8a236-fc65-4d87-9c3d-76ecb330216c
-ˆ	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ù¥é8¿†µØ³2J$f57ef425-8165-4b22-8412-33b97bb5a5c2
-	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(Š‰øıÿÿÿÿ8ÓóÏÙ³2J$7d50fa2b-2f38-475a-9d29-32d30c51ab69
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘ÃJ$60263300-12ae-4aef-bd3b-4e94a1e448f7
+ˆ	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ù¥é8¿†µØ³2J$d853aa86-08fe-4ac5-9af5-1ae1e0bca0e6
+	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(Š‰øıÿÿÿÿ8ÓóÏÙ³2J$30177a8b-2b4f-493a-869c-b8a58332ca5d
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¿†µØ³2J$fa7ef9e7-9264-4910-a748-0f38f1629948
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¿†µØ³2J$1decbd7c-fa5d-452f-b62e-63b0b66e15a8

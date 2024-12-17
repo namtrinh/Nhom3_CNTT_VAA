@@ -1,9 +1,6 @@
 @for (category of categorys; track $index) {
   <div class="container">
     <h1 class="title">{{ category.ct_name }}</h1>
-    @if (category.poster) {
-      <img class="poster" src="/assets/poster/{{category.poster}}.png">
-    }
     <div class="listproduct listproduct-block">
       @for (product of category.products; track product.product_id) {
         <div class="item"[routerLink]="['/category',category.ct_seotitle, product.seotitle]">

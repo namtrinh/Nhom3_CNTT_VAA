@@ -49,6 +49,9 @@ export class AuthService {
         tap(response => {
           const res = response;
           this.router.navigate(['/login']);
+          localStorage.removeItem('auth_token');
+          localStorage.removeItem('user_Id');
+          localStorage.removeItem('useremail');
         }),
       );
   }

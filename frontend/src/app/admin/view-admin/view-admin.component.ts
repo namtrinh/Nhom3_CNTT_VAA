@@ -32,6 +32,7 @@ export class ViewAdminComponent {
       const token = localStorage.getItem("auth_token");
       this.auth.logout(token).subscribe((data: any) => {
         localStorage.removeItem('auth_token');
+        localStorage.removeItem('userId');
       })
     }
   }

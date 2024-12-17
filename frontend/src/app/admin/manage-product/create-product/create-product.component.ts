@@ -31,10 +31,10 @@ export class CreateProductComponent implements OnInit {
   categorys: Category[] = [];
   categoryId: string = '';
   selectedFile: File | null = null;
-  imgAvatar!: string;
   default: string = '';
   stockStatus: string = '';
   products: Product[] = [];
+  imageUrl!:string;
 
   constructor(
     public productService: ProductService,
@@ -61,10 +61,9 @@ export class CreateProductComponent implements OnInit {
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] as File;
-    // đọc file và hiện
     const reader = new FileReader();
     reader.onload = (e: any) => {
-      this.imgAvatar = e.target.result;
+      this.imageUrl = e.target.result;
     };
     reader.readAsDataURL(this.selectedFile);
   }

@@ -1,10 +1,5 @@
-<div class="douple-img">
-  <div class="douple 1" style="margin-right:15px;">
-    <img [src]="imgLeft">
-  </div>
-  <div class="douple 2">
-    <img [src]="imgRight">
-  </div>
+<div class="poster-big mt-2">
+  <img [src]="imgLeft" class="poster-img" [ngClass]="{'active': isActive, 'inactive': !isActive}">
 </div>
 
 <div class="product-container">

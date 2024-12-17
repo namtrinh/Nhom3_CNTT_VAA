@@ -37,11 +37,13 @@ export class ListReviewComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    const { scrollTop, scrollHeight } = document.documentElement;
-    const windowHeight = window.innerHeight;
-    if (scrollTop + windowHeight >= scrollHeight - 100 && !this.isLoading) {
-      this.page++;
-      this.getAll();
+    if (!this.searchTerm && !this.rating) {
+      const {scrollTop, scrollHeight} = document.documentElement;
+      const windowHeight = window.innerHeight;
+      if (scrollTop + windowHeight >= scrollHeight - 100 && !this.isLoading) {
+        this.page++;
+        this.getAll();
+      }
     }
   }
 

@@ -17,10 +17,8 @@ import {ProductCategoryComponent} from "../product-category/product-category.com
   styleUrl: './product-sale.component.scss'
 })
 export class ProductSaleComponent implements OnInit {
-  sale!: number;
   products: Partial<Product>[] = [];
   category: Category[] = [];
-  imgAvatars: { [key: string]: string } = {};
   imgLeft: string = '';
   imgRight: string = '';
   private intervalId: any;
@@ -34,22 +32,24 @@ export class ProductSaleComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllProducts();
+    this.imgLeft = this.images[this.index];
+    this.isActive = true;
     this.loadImg();
   }
+  isActive: boolean = false;
+  images: string[] = ['/assets/douple-1.png', '/assets/douple-2.png', '/assets/douple-3.png' ];
+  index: number = 0;
 
   loadImg() {
-    const images_left = ['/assets/douple-1.png', '/assets/douple-2.png'];
-    const images_right = ['/assets/douple-2.png', '/assets/douple-1.png'];
-    let index = 0;
-
     this.intervalId = setInterval(() => {
-      this.imgLeft = images_left[index];
-      this.imgRight = images_right[index];
-
-      index = (index + 1) % images_left.length;
-    }, 2000);
+      this.isActive = false;
+      setTimeout(() => {
+        this.index = (this.index + 1) % this.images.length;
+        this.imgLeft = this.images[this.index];
+        this.isActive = true;
+      }, 400);
+    }, 5000);
   }
-
 
   getAllProducts() {
     this.productService.findAllProductsWithPromotion().subscribe((data: any) => {
@@ -58,6 +58,4 @@ export class ProductSaleComponent implements OnInit {
       });
     })
   }
-
-
 }

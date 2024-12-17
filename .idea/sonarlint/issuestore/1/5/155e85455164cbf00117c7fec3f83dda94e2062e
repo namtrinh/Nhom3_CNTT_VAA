@@ -1,30 +1,30 @@
 
-“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í‘ğ8„ä¬Û³2J$e15222ac-64f4-4e5d-8ca9-a91e57f4c744
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Îº‡úÿÿÿÿ8†ä¬Û³2J$b9798fdc-fdc9-45f2-8e85-f9eac4342eed
-“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ºÖ‰8†ä¬Û³2J$7e8d83f3-11cb-4e67-b64d-4afa377e0cf3
-’	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¿;8‡ä¬Û³2J$d68ab7ea-db21-4f1a-b50a-511d0eee0e16
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–âÚ›ıÿÿÿÿ8‡ä¬Û³2J$f554eaa7-9fdb-4a1d-8393-c34ad23f2747
-˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ñ¹²ùÿÿÿÿ8ˆä¬Û³2J$324a3abf-4593-498d-9fa2-34f41ecf31b7
-˜	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âò“øşÿÿÿÿ8ˆä¬Û³2J$ba3802a0-f96f-4f59-b10d-4abeaf914ff8
-’	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó²Ş8Œä¬Û³2J$331f9a85-928d-411a-8eb3-29dd2711d5cd
-˜	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µä”Çşÿÿÿÿ8Œä¬Û³2J$e6e3229f-5799-4c54-b4a6-5b36d4a21a6c
-“	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á×—Æ8Œä¬Û³2J$a9c2d307-de22-4504-9d62-749b1062fe2e
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8Œä¬Û³2J$edc8208e-fe9e-4f31-8dee-aa829f7c4e24
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í‘ğ8„ä¬Û³2J$04ca2805-b46b-41dc-a858-812aa6148e2e
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Îº‡úÿÿÿÿ8†ä¬Û³2J$e873b9c0-87e9-4f4a-b674-5430aab7d1b3
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ºÖ‰8†ä¬Û³2J$5107932b-a654-4855-a6b7-7a76ec32ff49
+’	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¿;8‡ä¬Û³2J$503b6e1a-5efb-4326-98a3-9a1c957da966
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–âÚ›ıÿÿÿÿ8‡ä¬Û³2J$87ab1b5f-f650-4e38-8a7c-8c86d82e7738
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ñ¹²ùÿÿÿÿ8ˆä¬Û³2J$92abe7e2-7676-4311-bc39-e61f14846df7
+˜	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âò“øşÿÿÿÿ8ˆä¬Û³2J$abe9b5ca-a28d-4aad-b497-e108e52629c8
+’	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó²Ş8Œä¬Û³2J$a0b9a3ba-ae76-47a4-8485-14d339bbe358
+˜	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µä”Çşÿÿÿÿ8Œä¬Û³2J$c1e94f78-7475-44e7-a3b8-fb70cfd1f721
+“	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á×—Æ8Œä¬Û³2J$28581cb8-4396-4002-99ab-4874025871fe
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëù‘Ã8Œä¬Û³2J$1e269485-83e9-46e0-9795-f3cccace1c71
 ¥
-java:S1488R"bImmediately return this expression instead of assigning it to the temporary variable "paymentUrl".(¸É¶Ï8ä¬Û³2J$54191952-3cc4-4a49-a406-da2e3931d71c
+java:S1488R"bImmediately return this expression instead of assigning it to the temporary variable "paymentUrl".(¸É¶Ï8ä¬Û³2J$62363e1b-abde-4639-8659-7c00eb21f90d
 r
-java:S37404"/Provide the parametrized type for this generic.(›µ´ê8ä¬Û³2J$d66c9e72-2bcf-421c-b2d9-a54b139a55de
+java:S37404"/Provide the parametrized type for this generic.(›µ´ê8ä¬Û³2J$39cfffec-afc9-4555-bd88-b8f3612be555
 r
-java:S37404"/Provide the parametrized type for this generic.(›µ´ê8‘ä¬Û³2J$8fcca338-fbd9-476f-98e9-0747bd96d72e
+java:S37404"/Provide the parametrized type for this generic.(›µ´ê8‘ä¬Û³2J$f723a4b2-fee3-4849-be70-3ed0bf5e9b25
 w
-java:S37408"/Provide the parametrized type for this generic.(ÔöŠÿÿÿÿÿ8‘ä¬Û³2J$b7d64319-14b2-4149-a057-dbcb56cf89fd
+java:S37408"/Provide the parametrized type for this generic.(ÔöŠÿÿÿÿÿ8‘ä¬Û³2J$9f3cbdbd-a3bd-43e3-9563-554b8989d61b
 r
-java:S3740W"/Provide the parametrized type for this generic.(ùúÔó8‘ä¬Û³2J$03364ccd-86e9-4371-a851-f7af6ff882ac
+java:S3740W"/Provide the parametrized type for this generic.(ùúÔó8‘ä¬Û³2J$4b19925f-85d0-48de-adf1-d10d2b7a2811
 r
-java:S3740W"/Provide the parametrized type for this generic.(ùúÔó8‘ä¬Û³2J$6e50c17f-0e66-4d61-a2b6-4c368c26c152
+java:S3740W"/Provide the parametrized type for this generic.(ùúÔó8‘ä¬Û³2J$6dd7c5ba-38a8-4fae-9bd4-fa135c7d0ed2
 r
-java:S3740X"/Provide the parametrized type for this generic.(á§äÖ8‘ä¬Û³2J$89056b50-4beb-4c22-a20e-bd942328a47c
+java:S3740X"/Provide the parametrized type for this generic.(á§äÖ8‘ä¬Û³2J$0f23be4e-be50-4c82-b169-e46a7f149910
 ’
-java:S1192f"ODefine a constant instead of duplicating this literal "vnp_SecureHash" 3 times.(Á×—Æ8’ä¬Û³2J$4a0b0886-c1e1-4254-bd35-8c7e2c357f39
+java:S1192f"ODefine a constant instead of duplicating this literal "vnp_SecureHash" 3 times.(Á×—Æ8’ä¬Û³2J$5ada5df1-84cc-45a0-9208-d1e8fc3394e1
 q
-java:S1905;")Remove this unnecessary cast to "String".(­Óµûÿÿÿÿ8å¬Û³2J$ab81265f-1c59-498f-b5c0-03860ec4f5a3
+java:S1905;")Remove this unnecessary cast to "String".(­Óµûÿÿÿÿ8å¬Û³2J$ed5d607d-e2a9-4a00-80af-608fb4c34ba9

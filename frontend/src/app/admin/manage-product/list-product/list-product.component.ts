@@ -55,12 +55,14 @@ export class ListProductComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    const { scrollTop, scrollHeight } = document.documentElement;
-    const windowHeight = window.innerHeight;
-    if (scrollTop + windowHeight >= scrollHeight - 100 && !this.isLoading) {
-      this.isLoading = true;
-      this.page++;
-      this.getAllProduct();
+    if (!this.searchTerm && !this.categoryId) {
+      const {scrollTop, scrollHeight} = document.documentElement;
+      const windowHeight = window.innerHeight;
+      if (scrollTop + windowHeight >= scrollHeight - 100 && !this.isLoading) {
+        this.isLoading = true;
+        this.page++;
+        this.getAllProduct();
+      }
     }
   }
 

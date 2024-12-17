@@ -155,6 +155,7 @@ export class PaySuccessComponent implements OnInit {
       paymentTime: new Date().toLocaleString(),
       transactionId: this.transactionId,
     };
+    console.log(this.userInf.email);
     this.http.post('http://localhost:8888/identity/email/send', emailData).subscribe(
       (response) => {
       });

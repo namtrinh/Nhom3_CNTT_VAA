@@ -85,15 +85,12 @@ public class ProductController {
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ApiResponse<Product> createProduct(
             @RequestParam Map<String, String> params,
-            @RequestParam(value = "image", required = false) MultipartFile image)
-            throws IOException {
+            @RequestParam(value = "image", required = false) MultipartFile image){
 
         Product product = new Product();
 
-        if (params.get("image") != null) {
-            String fileUrl = cloudinaryService.uploadFile(image);
-            product.setImage(fileUrl);
-        }
+        String fileUrl = cloudinaryService.uploadFile(image);
+        product.setImage(fileUrl);
 
         product.setName(params.get("name"));
         product.setSeotitle(params.get("seotitle"));
@@ -102,7 +99,7 @@ public class ProductController {
         product.setDescription(params.get("description"));
         product.setTime_created(LocalDateTime.now());
 
-        if (params.get("stockStatus").equals("In_Stock")){
+        if (params.get("stockStatus").equals("In_Stock")) {
             product.setStockStatus(Product.StockStatusPr.In_Stock);
         }
 
@@ -128,6 +125,7 @@ public class ProductController {
 
         Product product = productService.findById(product_id);
         if (image != null && !image.isEmpty()) {
+            cloudinaryService.deleteFile(product.getImage());
             String fileUrl = cloudinaryService.uploadFile(image);
             product.setImage(fileUrl);
         }
@@ -142,15 +140,15 @@ public class ProductController {
         category.setCategory_id(categoryValue);
         product.setCategory(category);
 
-        if (params.get("stock_stastus").equals("In_Stock")){
+        if (params.get("stock_stastus").equals("In_Stock")) {
             product.setStockStatus(Product.StockStatusPr.In_Stock);
-        }else{
+        } else {
             product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
         }
 
-        if (params.get("quantity").equals("0")){
+        if (params.get("quantity").equals("0")) {
             product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
-        }else{
+        } else {
             product.setStockStatus(Product.StockStatusPr.In_Stock);
         }
 
@@ -170,11 +168,11 @@ public class ProductController {
 
     @DeleteMapping(value = "/del/{product_id}")
     public ApiResponse<String> deleteProduct(@PathVariable String product_id) {
-            productService.deleteById(product_id);
-            return ApiResponse.<String>builder()
-                    .result("Product has been deleted")
-                    .code(200)
-                    .build();
+        productService.deleteById(product_id);
+        return ApiResponse.<String>builder()
+                .result("Product has been deleted")
+                .code(200)
+                .build();
     }
 
 
@@ -197,10 +195,10 @@ public class ProductController {
     }
 
     @GetMapping(value = "/search")
-    public ApiResponse<List<Product>> searchProduct(@RequestParam String name,@RequestParam String category) {
+    public ApiResponse<List<Product>> searchProduct(@RequestParam String name, @RequestParam String category) {
         return ApiResponse.<List<Product>>builder()
                 .code(200)
-                .result(productService.searchProductsByName(name,category))
+                .result(productService.searchProductsByName(name, category))
                 .build();
     }
 }

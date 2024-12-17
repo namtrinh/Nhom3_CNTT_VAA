@@ -61,7 +61,7 @@
         <div class="mb-3">
           <select class="form-select" [(ngModel)]="user.roles" name="roles" multiple required >
             <option value="" disabled>-- Choose Role --</option>
-            @for (roleItem of role; track role) {
+            @for (roleItem of role; track $index) {
               <option [ngValue]="roleItem.name" (click)="selectRole()">{{ roleItem.name }}</option>
             }
           </select>
