@@ -83,7 +83,7 @@ export class PaySuccessComponent implements OnInit {
     this.order.status = 'Completed';
     this.orderService.create(this.order).subscribe((data: any) => {
       this.sendEmail();
-     //  sessionStorage.removeItem("myArray");
+       sessionStorage.removeItem("myArray");
     });
   }
 
