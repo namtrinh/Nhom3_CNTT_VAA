@@ -99,7 +99,6 @@ export class ListProductComponent implements OnInit {
       } else {
         this.showMessage = false;
       }
-      console.log(this.products);
       this.isLoading = false;
     });
   }
