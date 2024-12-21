@@ -47,7 +47,7 @@ public class  AuthenticateController {
     }
 
     @PostMapping("/refresh")
-    public ApiResponse<AuthenticateResponse> authenticate(@RequestBody RefreshTokenRequest refreshTokenRequest)
+    public ApiResponse<AuthenticateResponse> refreshToken(@RequestBody RefreshTokenRequest refreshTokenRequest)
             throws ParseException, JOSEException {
         var result = authenticateService.refreshToken(refreshTokenRequest);
         return ApiResponse.<AuthenticateResponse>builder()
@@ -57,7 +57,7 @@ public class  AuthenticateController {
     }
 
     @PostMapping("/check_token")
-    public ApiResponse<CheckTokenResponse> authenticate(@RequestBody CheckTokenRequest checkTokenRequest)
+    public ApiResponse<CheckTokenResponse> authenticateToken(@RequestBody CheckTokenRequest checkTokenRequest)
             throws ParseException, JOSEException {
         var result = authenticateService.checkToken(checkTokenRequest);
         return ApiResponse.<CheckTokenResponse>builder()

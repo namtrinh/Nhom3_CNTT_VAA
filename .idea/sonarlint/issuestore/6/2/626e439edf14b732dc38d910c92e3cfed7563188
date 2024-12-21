@@ -1,22 +1,22 @@
 
-“	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8®ƒß·½2J$61b74e35-040e-4953-a48d-15f3768285da
-˜	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8¯ƒß·½2J$3472715e-2e7c-431c-ad26-10a7c8a18656
-”	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8¯ƒß·½2J$da387604-bf91-4b9b-8512-f0337b8ccf23
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯ƒß·½2J$9d39c350-fc18-46be-bb34-ab9942885e6d
+“	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÁÀ8®ƒß·½2J$66978755-1ac9-438d-a19f-d30f0286ce9b
+˜	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËàŸ”ÿÿÿÿÿ8¯ƒß·½2J$1f933696-7b19-4c71-9768-979c688d8f4e
+”	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( µ¶•8¯ƒß·½2J$1c44c137-c882-401d-8bab-66fe8eb55bdb
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ãàäİÿÿÿÿÿ8¯ƒß·½2J$00e19f03-5d3d-4731-a52f-544c0f4ae044
 p
-java:S5411>"(Use a primitive boolean expression here.(ÚØş÷ÿÿÿÿÿ8¯ƒß·½2J$f51b0397-e1f1-497c-a8e3-8e321c4a503b
+java:S5411>"(Use a primitive boolean expression here.(ÚØş÷ÿÿÿÿÿ8¯ƒß·½2J$5f175466-c408-4cd1-a99f-823161fc51d8
 q
-java:S5411ˆ"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8°ƒß·½2J$28bc93b3-58ef-47b7-9a1b-7f9e18e87ae8
-	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8µƒß·½2J$63b5255c-22b5-44aa-9920-0b416c18478b
-	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8µƒß·½2J$f2162aca-bde0-43f6-a609-f3e92ef5a54c
+java:S5411ˆ"(Use a primitive boolean expression here.(©ÔÍæúÿÿÿÿ8°ƒß·½2J$adb783ce-62d0-4e0b-9926-658a431d7637
+	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(«ï†¼ûÿÿÿÿ8µƒß·½2J$18f25424-d129-40a4-b8d9-043ece6587a3
+	java:S112z"FDefine and throw a dedicated exception instead of using a generic one.(µ¦Ûâşÿÿÿÿ8µƒß·½2J$5c4c3377-dd3e-41e4-8a30-2f3fa033c4da
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸ƒß·½2J$036afac1-c5b6-4c38-ab5e-99b820295225
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸ƒß·½2J$03de662e-ee51-4aec-aad6-44753579e1f1
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸ƒß·½2J$0098bb0b-031b-4a3d-b70e-a091e9ed4a32
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸ƒß·½2J$c451df93-613a-403f-9cba-b4c5bef0ad3a
 …
-java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8¹ƒß·½2J$890e8960-725c-4539-859d-576d41fd8aa4
-•	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‰Šûÿÿÿÿ8Åƒß·½2J$b4fb7039-147c-41d8-a48a-7d2191237216
-	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùãŠ8Çƒß·½2J$95e1650c-dfa4-4ace-bc42-570c0e2d62c7
-m	java:S1065"+Replace this use of System.out by a logger.(¦ûĞ8Íƒß·½2J$36f3b3de-fa75-4d19-b67e-9dd0f2d02089
-m	java:S106?"+Replace this use of System.out by a logger.(…™ò¾8Õƒß·½2J$15b170b4-07cf-47ad-96f2-618bf3df252b
-m	java:S106B"+Replace this use of System.out by a logger.(Şà†8Õƒß·½2J$e7c52c26-851a-4343-af0e-1f5464b1216e
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8¹ƒß·½2J$6cfeb1ff-6d93-4301-a736-bc23d2166536
+•	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È‰Šûÿÿÿÿ8Åƒß·½2J$16b5b1df-2be0-4873-8272-320c0b7f9052
+	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùãŠ8Çƒß·½2J$9eec8956-3555-4cdf-aa9b-c381de855ef6
+m	java:S1065"+Replace this use of System.out by a logger.(¦ûĞ8Íƒß·½2J$f6223c8c-ce4f-497d-b3b2-287baf7eac70
+m	java:S106?"+Replace this use of System.out by a logger.(…™ò¾8Õƒß·½2J$d5e6cb89-f6c5-43f8-9736-9d89814f7fb6
+m	java:S106B"+Replace this use of System.out by a logger.(Şà†8Õƒß·½2J$6e08093a-4ff0-4f04-bb3d-3f8508e201b7

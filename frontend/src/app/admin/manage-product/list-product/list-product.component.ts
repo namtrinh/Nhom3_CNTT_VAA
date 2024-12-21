@@ -1,10 +1,9 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {Router, RouterLink, RouterOutlet} from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {ProductService} from '../../../service/product-service.service';
 import {Product} from '../../../model/product.model';
 import {ImageService} from '../../../service/img-service.service';
 import {FormsModule} from '@angular/forms';
-import {PromotionService} from '../../../service/promotion-service.service';
 import {Promotion} from '../../../model/promotion.model';
 import {CommonModule} from '@angular/common';
 import {CategoryService} from "../../../service/categoy-service.service";
