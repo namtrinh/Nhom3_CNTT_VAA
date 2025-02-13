@@ -37,7 +37,7 @@ services:
       - "6379:6379"
     networks:
       - mynetwork
-    command: [ "redis-server", "--requirepass", "12345N@m" ]  # Đặt mật khẩu Redis
+    command: [ "redis-server", "--requirepass", "12345N@m" ]
 
 networks:
   mynetwork:
