@@ -6,12 +6,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.springframework.web.multipart.MultipartFile;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class ReadExelProduct {
@@ -79,9 +80,9 @@ public class ReadExelProduct {
                     }
                     cellIdx++;
                 }
-                if (product.getQuantity() > 0){
+                if (product.getQuantity() > 0) {
                     product.setStockStatus(Product.StockStatusPr.In_Stock);
-                }else if (product.getQuantity() == 0){
+                } else if (product.getQuantity() == 0) {
                     product.setStockStatus(Product.StockStatusPr.Out_of_Stock);
                 }
                 productList.add(product);

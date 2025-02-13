@@ -88,6 +88,12 @@ export class CreateProductComponent implements OnInit {
       formData.append('image', this.selectedFile);
     }
 
+    formData.forEach((value, key) => {
+      console.log(`${key}: ${value}`);
+    });
+
+
+
     console.log(formData)
     this.productService.createProduct(formData).subscribe(
       (data: any) => {

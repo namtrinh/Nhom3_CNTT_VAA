@@ -16,13 +16,13 @@ public class RedisConfig {
     private String host;
 
     @Value("${spring.redis.port}")
-    private int port ;
+    private int port;
 
     @Value("${spring.redis.password}")
     private String password;
 
     @Bean
-    LettuceConnectionFactory lettuceConnectionFactory(){
+    LettuceConnectionFactory lettuceConnectionFactory() {
         LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory();
         lettuceConnectionFactory.setHostName(host);
         lettuceConnectionFactory.setPort(port);
@@ -31,15 +31,14 @@ public class RedisConfig {
     }
 
     @Bean
-    RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory){
+    RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(redisConnectionFactory);
         redisTemplate.setStringSerializer(StringRedisSerializer.UTF_8);
         redisTemplate.setKeySerializer(new StringRedisSerializer());
-        //chuyển đổi tượng thành json khi lưu vào redis và chuyển thành ọbject khi lấy ra , hay chưa
-        //Jackson2JsonRedisSerializer
+        // chuyển đổi tượng thành json khi lưu vào redis và chuyển thành ọbject khi lấy ra , hay chưa
+        // Jackson2JsonRedisSerializer
         redisTemplate.setValueSerializer(new Jackson2JsonRedisSerializer<>(Object.class));
         return redisTemplate;
     }
-
 }

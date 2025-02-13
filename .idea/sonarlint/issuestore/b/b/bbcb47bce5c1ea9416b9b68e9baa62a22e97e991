@@ -1,0 +1,10 @@
+
+Ntypescript:S1128"&Remove this unused import of 'OnInit'.(‹ÙÊ˜ùÿÿÿÿ8 ˆ¤ÌÄ2
+štypescript:S3863"r'C:\My_Documents\KI_7\DACN\firefly-galaxyy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(Õ·ÿìùÿÿÿÿ8 ˆ¤ÌÄ2
+•typescript:S3863"r'C:\My_Documents\KI_7\DACN\firefly-galaxyy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(ƒ“˜Õ8 ˆ¤ÌÄ2
+•typescript:S3863"r'C:\My_Documents\KI_7\DACN\firefly-galaxyy\frontend\node_modules\rxjs\dist\esm5\index.js' imported multiple times.(¨í«ê8¡ˆ¤ÌÄ2
+Ltypescript:S1128")Remove this unused import of 'jwtDecode'.(äíÍ®8¡ˆ¤ÌÄ2
+[typescript:S1854"3Remove this useless assignment to variable "token".(°éËËøÿÿÿÿ8¢ˆ¤ÌÄ2
+vtypescript:S1874)"NThe signature '(error: any): Observable<never>' of 'throwError' is deprecated.(»¤ĞŠúÿÿÿÿ8¢ˆ¤ÌÄ2
+Ytypescript:S18542"1Remove this useless assignment to variable "res".(À’˜Ìøÿÿÿÿ8£ˆ¤ÌÄ2
+[typescript:S1854D"3Remove this useless assignment to variable "token".(°éËËøÿÿÿÿ8£ˆ¤ÌÄ2

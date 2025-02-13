@@ -1,14 +1,9 @@
 package org.galaxy.backend.Service;
 
-import org.galaxy.backend.Model.OrderDetail;
 import org.galaxy.backend.Model.OrderDetailProduct;
 import org.galaxy.backend.Repository.OrderDetailProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.HashOperations;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.TimeUnit;
 
 @Service
 public class OrderDetailProductService {
@@ -19,8 +14,10 @@ public class OrderDetailProductService {
         return orderDetailProductRepository.save(entity);
     }
 
-    public OrderDetailProduct UpdateById(String orderDetailId, String productId, OrderDetailProduct orderDetailProduct) {
-        OrderDetailProduct existOrderDetailProduct = orderDetailProductRepository.findByProducts_product_idAndOrder_detail_id(orderDetailId, productId);
+    public OrderDetailProduct UpdateById(
+            String orderDetailId, String productId, OrderDetailProduct orderDetailProduct) {
+        OrderDetailProduct existOrderDetailProduct =
+                orderDetailProductRepository.findByProducts_product_idAndOrder_detail_id(orderDetailId, productId);
         existOrderDetailProduct.setDiscount(orderDetailProduct.getDiscount());
         existOrderDetailProduct.setPrice(orderDetailProduct.getPrice());
         existOrderDetailProduct.setQuantity(orderDetailProduct.getQuantity());

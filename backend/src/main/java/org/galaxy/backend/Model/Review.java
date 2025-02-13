@@ -1,14 +1,14 @@
 package org.galaxy.backend.Model;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-
-
-import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -23,7 +23,7 @@ public class Review implements Serializable {
     private String reviewId;
 
     @ManyToOne
-    @JoinColumn(nullable =false)
+    @JoinColumn(nullable = false)
     private Product product;
 
     @Column(nullable = false)
@@ -31,13 +31,13 @@ public class Review implements Serializable {
 
     private String customerName;
 
-    @Column(nullable =true)
+    @Column(nullable = true)
     private int phoneNumber;
 
     @Column(columnDefinition = "TEXT")
     private String comment;
 
-    @Column(nullable =true)
+    @Column(nullable = true)
     private boolean sharedWith;
 
     @Column(name = "review_date", nullable = false)
@@ -46,7 +46,8 @@ public class Review implements Serializable {
     @Enumerated(EnumType.STRING)
     private StatusCmt statusCmt;
 
-    public enum StatusCmt{
-        PENDING, APPROVED
+    public enum StatusCmt {
+        PENDING,
+        APPROVED
     }
 }

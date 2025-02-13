@@ -22,7 +22,7 @@ public enum ErrorCode {
     INVALID_PASSWORD(9999, "The password cannot contain special characters.", HttpStatus.BAD_REQUEST),
     VERIFY_CODE_EXPIRED(401, "The code has expired", HttpStatus.UNAUTHORIZED),
     REQUEST_LIMIT_EXCEEDED(401, "The request limit is exceeded", HttpStatus.UNAUTHORIZED),
-    ACCOUNT_NOT_ACTIVATED(200, "Your account is not activated yet!",HttpStatus.UNAUTHORIZED );
+    ACCOUNT_NOT_ACTIVATED(200, "Your account is not activated yet!", HttpStatus.UNAUTHORIZED);
 
     private int code;
     private String message;

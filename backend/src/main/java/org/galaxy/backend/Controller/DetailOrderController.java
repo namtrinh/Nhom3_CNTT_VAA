@@ -1,7 +1,5 @@
 package org.galaxy.backend.Controller;
 
-import java.util.List;
-
 import org.galaxy.backend.Model.OrderDetail;
 import org.galaxy.backend.ModelDTO.response.ApiResponse;
 import org.galaxy.backend.Service.OrderDetailService;

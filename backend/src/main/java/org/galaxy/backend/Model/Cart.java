@@ -4,8 +4,6 @@ import java.sql.Timestamp;
 
 import jakarta.persistence.*;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.*;

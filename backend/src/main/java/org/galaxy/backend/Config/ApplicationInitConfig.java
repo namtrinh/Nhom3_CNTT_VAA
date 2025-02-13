@@ -30,7 +30,8 @@ public class ApplicationInitConfig {
     ApplicationRunner applicationRunner(UserRepository userRepository) {
         return args -> {
             if (userRepository.findByEmail("admin@admin.com").isEmpty()) {
-                Roles adminRole = roleRepository.findByName(PredefinedRole.ADMIN_ROLE)
+                Roles adminRole = roleRepository
+                        .findByName(PredefinedRole.ADMIN_ROLE)
                         .orElseGet(() -> roleRepository.save(Roles.builder()
                                 .name(PredefinedRole.ADMIN_ROLE)
                                 .description("Admin role")
@@ -50,7 +51,6 @@ public class ApplicationInitConfig {
                 userRepository.save(user);
                 log.warn("account admin has been created, please change it");
             }
-
         };
     }
 }

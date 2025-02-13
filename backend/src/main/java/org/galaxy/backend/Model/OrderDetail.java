@@ -3,7 +3,6 @@ package org.galaxy.backend.Model;
 import java.io.Serializable;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -31,8 +30,7 @@ public class OrderDetail implements Serializable {
     @JoinTable(
             name = "order_detail_products", // Tên bảng trung gian
             joinColumns = @JoinColumn(name = "order_detail_order_detail_id"),
-            inverseJoinColumns = @JoinColumn(name = "products_product_id")
-    )
+            inverseJoinColumns = @JoinColumn(name = "products_product_id"))
     private Set<Product> products;
 
     @ManyToMany(fetch = FetchType.EAGER)

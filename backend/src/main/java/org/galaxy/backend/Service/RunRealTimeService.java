@@ -1,5 +1,8 @@
 package org.galaxy.backend.Service;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.Repository.ProductRepository;
@@ -9,10 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class RunRealTimeService {
@@ -33,9 +32,8 @@ public class RunRealTimeService {
         System.out.println("Expired unactivated users cleaned up.");
     }
 
-
     @Scheduled(cron = "0 0 0 * * ?")
-   // @Scheduled(fixedRate = 2000)
+    // @Scheduled(fixedRate = 2000)
     public void checkAndUpdateDiscountProgramStatus() {
         List<Promotion> discountProgramOptional = promotionRepository.findByIsActiveTrue();
         discountProgramOptional.forEach(promotion -> {

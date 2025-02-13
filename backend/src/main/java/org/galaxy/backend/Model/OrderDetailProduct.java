@@ -1,11 +1,8 @@
 package org.galaxy.backend.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
-import java.util.Set;
+import lombok.*;
 
 @Entity
 @Getter
@@ -16,9 +13,8 @@ import java.util.Set;
 @NoArgsConstructor
 public class OrderDetailProduct {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // UUID tự động
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // UUID tự động
     private int id;
-
 
     @ManyToOne
     @JoinColumn(name = "order_detail_order_detail_id")

@@ -34,8 +34,8 @@ public class CategoryService {
     }
 
     public Category editCategory(String integer, Category category) {
-        Category existingCategory = categoryRepository.findById(integer)
-                .orElseThrow(() -> new RuntimeException("Category not found"));
+        Category existingCategory =
+                categoryRepository.findById(integer).orElseThrow(() -> new RuntimeException("Category not found"));
         existingCategory.setCt_name(category.getCt_name());
         existingCategory.setCt_seotitle(category.getCt_seotitle());
         existingCategory.setSort(category.getSort());

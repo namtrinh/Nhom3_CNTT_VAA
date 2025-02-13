@@ -1,8 +1,6 @@
 package org.galaxy.backend.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 import org.galaxy.backend.Model.Promotion;
 import org.galaxy.backend.Repository.PromotionRepository;
@@ -31,7 +29,8 @@ public class PromotionService {
     }
 
     public Promotion updateById(String promotion_id, Promotion promotion) {
-        Promotion existPromotion = promotionRepository.findById(promotion_id)
+        Promotion existPromotion = promotionRepository
+                .findById(promotion_id)
                 .orElseThrow(() -> new RuntimeException("Could not find promotion"));
         existPromotion.setPromotion_id(promotion.getPromotion_id());
         existPromotion.setSort(promotion.getSort());
@@ -43,5 +42,4 @@ public class PromotionService {
 
         return promotionRepository.save(promotion);
     }
-
 }

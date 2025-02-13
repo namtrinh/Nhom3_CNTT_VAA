@@ -1,30 +1,30 @@
 
-“	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8ïÒ„¸½2J$af693af5-dfa6-488a-9a41-b6b003edef61
-˜	java:S117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8ğÒ„¸½2J$29e5d538-5cf8-4daf-9bb7-2668d2731036
-™	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8ñÒ„¸½2J$5261fa01-b4c2-4c24-8248-c18ba8b3ad1a
-›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8ñÒ„¸½2J$cfe8907a-5a27-47e5-b4b7-ea68c8cf59bf
+“	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÎÃİ8ïÒ„¸½2J$56a510ca-efe3-4bf0-8c09-e518a6dda0f7
+˜	java:S117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Íû‚úÿÿÿÿ8ğÒ„¸½2J$ee62b088-ce41-4f80-bdb7-c880a9815337
+™	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤ğ˜ûÿÿÿÿ8ñÒ„¸½2J$c2de85dd-8300-4708-a99f-9dc3b82aff2a
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³§“O8ñÒ„¸½2J$8b57a072-9a74-49a7-a8b6-97684751df42
 Œ
-java:S1192b"IDefine a constant instead of duplicating this literal "quantity" 3 times.(µ¿›³8ùÒ„¸½2J$69ec7318-9b78-476e-be77-26bb3a286fd3
+java:S1192b"IDefine a constant instead of duplicating this literal "quantity" 3 times.(µ¿›³8ùÒ„¸½2J$e474e2b4-aa45-4cb7-a7be-bdfbe2a49c8e
 …
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8şÒ„¸½2J$3c38a5ce-8453-4a23-84cf-730b2605b571
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8şÒ„¸½2J$4681fe3c-8b4a-4a9c-a388-d69f0a74ece7
 …
-java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8şÒ„¸½2J$a75e670c-9756-44c6-98bd-70d6416d5a80
+java:S6813#"BRemove this field injection and use constructor injection instead.(êæÄŞ8şÒ„¸½2J$fe0002b6-7237-4fba-abf2-323d48ac18fb
 …
-java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8şÒ„¸½2J$02032791-bd48-4562-b9e0-36ccd3d42cc2
+java:S6813&"BRemove this field injection and use constructor injection instead.(êæÄŞ8şÒ„¸½2J$63f85839-0c90-41e9-9c63-0a6424b17a36
 ¯
-java:S1130}"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8Ï«Š¸½2J$0c3c4d08-d545-493e-9222-f728c661b990
-	java:S125Ô"<This block of commented-out lines of code should be removed.(…² ö8¯Ó„¸½2J$2602c68d-9f06-462b-94ac-9d77e92e3aea
+java:S1130}"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¹£ş8Ï«Š¸½2J$9d1ea352-6c1a-4644-b10b-00679d4a2dc0
+	java:S125Ô"<This block of commented-out lines of code should be removed.(…² ö8¯Ó„¸½2J$909de3d5-3dc2-4d8e-8fa7-6328a15fe334
 l
-java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8å«Š¸½2J$5b97d16d-287e-41cf-bd30-cafc080fdc45
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8å«Š¸½2J$96a326e2-df51-4b3b-9c69-db3b5454bf4d
 q
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ç«Š¸½2J$f02aa07c-2fde-41b2-ab49-2ff98a2a824c
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ç«Š¸½2J$38ee26b1-0efd-49b1-84c7-5c3633107d6c
 q
-java:S1128	".Remove this unused import 'java.util.Objects'.(¼¸õ›8ç«Š¸½2J$ac503c26-6a3c-4263-91eb-988b4fb4b34a
+java:S1128	".Remove this unused import 'java.util.Objects'.(¼¸õ›8ç«Š¸½2J$1918d76b-b337-4ddd-b0fc-01771e48713d
 r
-java:S1128"/Remove this unused import 'com.cloudinary.Api'.(¹¼£¨8ç«Š¸½2J$e6b972c6-60f6-4707-881f-1b7335de50a3
+java:S1128"/Remove this unused import 'com.cloudinary.Api'.(¹¼£¨8ç«Š¸½2J$1f2fc34f-1b69-4101-857b-8d9fde916e02
 ’
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8ç«Š¸½2J$58276dd6-e944-4dd5-b6ce-07f23f07a224
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8ç«Š¸½2J$27c9ea23-4f6a-459b-9bb1-72ba868ac0cb
 ˆ
-java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8ç«Š¸½2J$c013c455-d331-4c46-ab93-41d0126b5fa4
+java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ8ç«Š¸½2J$373c5d22-291b-4ecf-bf5f-c790631c33b0
 Œ
-java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8ë«Š¸½2J$decb75ce-0303-4ec6-8c7e-fdbfef2e3c53
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8ë«Š¸½2J$10061adf-3bfe-4e7d-a916-4aa3a9164627

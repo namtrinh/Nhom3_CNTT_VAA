@@ -607,3 +607,7 @@ Y
 )frontend/src/app/test/test.component.html,5\b\5b46716098b893b29e13a81ff5839789381fa84f
 h
 8frontend/src/app/home/edit-user/edit-user.component.html,d\4\d4894ff3bcad4c9ce07c30dd261416382dbaef51
+B
+backend/Dockerfile,1\2\1299d064ef40647d5147370c3665f2bb07ec76d8
+J
+backend/docker-compose.yml,a\7\a78d734279d0159f1961e1f3594c47c0a0bda032

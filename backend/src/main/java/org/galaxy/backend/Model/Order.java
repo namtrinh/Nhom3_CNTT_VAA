@@ -46,7 +46,8 @@ public class Order implements Serializable {
 
     private String orderDetail_id;
 
-    enum StatusPayment{
-        Cancelled, Completed
+    enum StatusPayment {
+        Cancelled,
+        Completed
     }
 }

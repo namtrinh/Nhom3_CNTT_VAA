@@ -1,14 +1,10 @@
 package org.galaxy.backend.Controller;
 
-import java.io.File;
 import java.io.IOException;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
-import com.cloudinary.Api;
 import org.galaxy.backend.Model.Category;
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Model.Promotion;
@@ -18,11 +14,8 @@ import org.galaxy.backend.Service.CloudinaryService;
 import org.galaxy.backend.Service.ProductService;
 import org.galaxy.backend.Service.ReadExel.ReadExelProduct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -82,11 +75,10 @@ public class ProductController {
                 .build();
     }
 
-
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ApiResponse<Product> createProduct(
             @RequestParam Map<String, String> params,
-            @RequestParam(value = "image", required = false) MultipartFile image){
+            @RequestParam(value = "image", required = false) MultipartFile image) {
 
         Product product = new Product();
 
@@ -115,7 +107,6 @@ public class ProductController {
                 .result(productService.save(product))
                 .build();
     }
-
 
     @PutMapping(value = "/{product_id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ApiResponse<Product> updateProduct(
@@ -176,7 +167,6 @@ public class ProductController {
                 .build();
     }
 
-
     @PostMapping("/excel/upload")
     public ApiResponse<String> uploadFile(@RequestParam("file") MultipartFile file) {
         if (ReadExelProduct.hasExcelFormat(file)) {
@@ -209,10 +199,10 @@ public class ProductController {
     }
 }
 
- /*      if (image != null && !image.isEmpty()) {
-            String imagePath = "C:/My_Documents/KI_7/DACN/firefly-galaxy/" + uploadDir + image.getOriginalFilename();
-            image.transferTo(new File(imagePath));
-            product.setImage(image.getOriginalFilename());
-        }
+/*      if (image != null && !image.isEmpty()) {
+			String imagePath = "C:/My_Documents/KI_7/DACN/firefly-galaxy/" + uploadDir + image.getOriginalFilename();
+			image.transferTo(new File(imagePath));
+			product.setImage(image.getOriginalFilename());
+		}
 
-   */
+*/

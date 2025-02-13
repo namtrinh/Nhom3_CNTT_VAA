@@ -8,7 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
 public class ApiResponse<T> {
     private int code = 1000;
     private String message = "success";

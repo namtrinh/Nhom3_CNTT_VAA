@@ -26,5 +26,4 @@ public interface UserService {
     UsersResponse getUserByEmail(String email);
 
     UsersResponse updatePassByEmail(String email, String password);
-
 }

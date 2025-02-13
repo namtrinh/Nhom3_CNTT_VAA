@@ -1,8 +1,8 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†’ßŽÿÿÿÿÿJ$d6d0c26a-8a9b-4721-a30b-7c649ce23c9e
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†’ßŽÿÿÿÿÿJ$6deb3a6b-6698-4269-8653-4beb8bbf0f57
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$8d113de1-c666-433b-972a-514aadaf525f
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$ea2fabed-7898-421c-aacf-3bcac4360ab4
 ‚
-java:S1126"AReplace this if-then-else statement by a single return statement.(ªˆ“€ÿÿÿÿÿJ$4b73706b-27f0-42dd-b343-a528f40c2917
+java:S1126"AReplace this if-then-else statement by a single return statement.(ªˆ“€ÿÿÿÿÿJ$bfa6a3ff-1734-41cc-a2f1-a4ec6020f5bf
 §
-java:S2178"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(ªˆ“€ÿÿÿÿÿJ$520981dc-3ba2-4d42-b529-31398aa853a1
+java:S2178"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(ªˆ“€ÿÿÿÿÿJ$fe0e51e5-b8cd-4faf-9c7b-f5217702f215

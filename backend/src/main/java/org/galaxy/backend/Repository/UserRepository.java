@@ -29,10 +29,9 @@ public interface UserRepository extends JpaRepository<User, String> {
     User findUsersByEmail(String email);
 
     @Modifying
-    @Query(value = "DELETE FROM users " +
-            "WHERE (activated = 'FALSE' OR activated IS NULL) " +
-            "AND CAST(time_created AS DATETIME) <= DATEADD(SECOND, -600000, GETDATE())",
+    @Query(
+            value = "DELETE FROM users " + "WHERE (activated = 'FALSE' OR activated IS NULL) "
+                    + "AND CAST(time_created AS DATETIME) <= DATEADD(SECOND, -600000, GETDATE())",
             nativeQuery = true)
     void deleteExpiredUsers();
-
 }

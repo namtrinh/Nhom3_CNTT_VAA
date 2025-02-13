@@ -18,7 +18,6 @@ import org.galaxy.backend.Service.OrderDetailService;
 import org.galaxy.backend.Service.OrderService;
 import org.galaxy.backend.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -35,14 +34,18 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private ProductService productService;
+
     @Autowired
     private CartRepository cartRepository;
+
     @Autowired
     private OrderDetailService orderDetailService;
 
     private static final String HASH_ORDER = "order";
+
     @Autowired
     RedisTemplate<String, Object> redisTemplate;
+
     HashOperations<String, String, Order> hashOperations;
 
     public OrderServiceImpl(RedisTemplate<String, Object> redisTemplate) {
@@ -153,5 +156,4 @@ public class OrderServiceImpl implements OrderService {
         System.out.println("get order from database");
         return orderRepository.findByTime_createdBetween(startDate, endDate);
     }
-
 }

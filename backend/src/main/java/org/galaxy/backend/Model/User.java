@@ -8,12 +8,11 @@ import java.util.Set;
 import jakarta.persistence.*;
 
 import org.galaxy.backend.Model.Permission.Roles;
-import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
 
+import lombok.*;
 
 @Entity
 @Getter

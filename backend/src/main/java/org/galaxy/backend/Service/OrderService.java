@@ -19,7 +19,9 @@ public interface OrderService {
 
     void deleteById(String integer);
 
-    @Query(value = "SELECT * FROM orders WHERE orders.time_created := startDate " +
-            "and orders.time_created And orders.status = 'Completed' ", nativeQuery = true)
+    @Query(
+            value = "SELECT * FROM orders WHERE orders.time_created := startDate "
+                    + "and orders.time_created And orders.status = 'Completed' ",
+            nativeQuery = true)
     List<Order> getByTime(String startDate, String endDate);
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import jakarta.persistence.EntityNotFoundException;
+
 import org.galaxy.backend.Model.Product;
 import org.galaxy.backend.Repository.ProductRepository;
 import org.galaxy.backend.Service.CloudinaryService;
@@ -34,9 +35,9 @@ public class ProductServiceImpl implements ProductService {
 
     private static final String HASH_PR_PROMOTION = "PR_PROMOTION";
 
-
     @Autowired
     RedisTemplate<String, Object> redisTemplate;
+
     HashOperations<String, String, Product> hashOperations;
 
     public ProductServiceImpl(RedisTemplate<String, Object> redisTemplate) {
@@ -81,12 +82,12 @@ public class ProductServiceImpl implements ProductService {
 
     public Product findById(String product_id) {
         return productRepository.findById(product_id).orElseThrow(() -> new RuntimeException("Not found "));
-
     }
 
     @Transactional
     public void deleteById(String productId) {
-        Product product = productRepository.findById(productId)
+        Product product = productRepository
+                .findById(productId)
                 .orElseThrow(() -> new EntityNotFoundException("Product with ID " + productId + " not found"));
 
         product.setCategory(null);
